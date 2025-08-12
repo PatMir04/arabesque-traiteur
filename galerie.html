@@ -1,1 +1,71 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Galerie | Arabesque Traiteur</title>
+  <meta name="description" content="Galerie photo en noir & blanc – remplacez les placeholders par vos images." />
+  <link rel="icon" href="/favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="/assets/css/style.css" />
+</head>
+<body class="bg-white text-black">
+  <!-- Header -->
+  <eaderh class="sticky top-0 z-50 bg-white/90 backdrop-blur border-b border-black/10">
+    <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
+      <a href="/" class="flex items-center gap-2" aria-label="Accueil">
+        <span class="logo serif text-2xl tracking-wide">Arabesque <strong>Traiteur</strong></span>
+      </a>
+      <nav class="hidden md:flex items-center gap-6 text-sm" aria-label="Navigation principale">
+        <a href="/a-propos.html" class="nav-link">À propos</a>
+        <a href="/services.html" class="nav-link">Services</a>
+        <a href="/menu.html" class="nav-link">Menu</a>
+        <a href="/galerie.html" class="nav-link active">Galerie</a>
+        <a href="/contact.html" class="nav-link">Devis</a>
+        <a href="https://www.instagram.com/arabesque_traiteur/" target="_blank" rel="noopener" class="inline-flex items-center gap-2 border border-black rounded-full px-3 py-1.5 hover:bg-black hover:text-white">Instagram</a>
+      </nav>
+      <button id="openNav" class="md:hidden border border-black rounded-lg px-3 py-2" aria-haspopup="true" aria-controls="mobileNav" aria-expanded="false">Menu</button>
+    </div>
+    <div id="mobileNav" class="md:hidden hidden border-t border-black/10">
+      <div class="max-w-6xl mx-auto px-4 py-3 grid gap-2 text-sm">
+        <a href="/a-propos.html" class="py-2">À propos</a>
+        <a href="/services.html" class="py-2">Services</a>
+        <a href="/menu.html" class="py-2">Menu</a>
+        <a href="/galerie.html" class="py-2">Galerie</a>
+        <a href="/contact.html" class="py-2">Devis</a>
+        <a href="https://www.instagram.com/arabesque_traiteur/" target="_blank" rel="noopener" class="py-2">Instagram</a>
+      </div>
+    </div>
+  </header>
 
+  <main>
+    <section class="max-w-6xl mx-auto px-4 py-16">
+      <h1 class="serif text-4xl">Galerie</h1>
+      <p class="mt-2 muted">Placeholders – remplacez par vos photos haute résolution.</p>
+      <div class="mt-8 grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+        <img class="w-full rounded-2xl border" src="https://placehold.co/800x600/FFFFFF/000000?text=Buffet+%E2%80%93+Placeholder" alt="Buffet – placeholder"/>
+        <img class="w-full rounded-2xl border" src="https://placehold.co/800x600/000000/FFFFFF?text=Verrines+%E2%80%93+Placeholder" alt="Verrines – placeholder"/>
+        <img class="w-full rounded-2xl border" src="https://placehold.co/800x600/FFFFFF/000000?text=Mini+%C3%89clats+%E2%80%93+Placeholder" alt="Mini délices – placeholder"/>
+        <img class="w-full rounded-2xl border" src="https://placehold.co/800x600/000000/FFFFFF?text=Brochettes+%E2%80%93+Placeholder" alt="Brochettes – placeholder"/>
+        <img class="w-full rounded-2xl border" src="https://placehold.co/800x600/FFFFFF/000000?text=Service+%E2%80%93+Placeholder" alt="Service en salle – placeholder"/>
+        <img class="w-full rounded-2xl border" src="https://placehold.co/800x600/000000/FFFFFF?text=Pr%C3%A9sentation+%E2%80%93+Placeholder" alt="Présentation – placeholder"/>
+      </div>
+    </section>
+  </main>
+
+  <footer class="border-t border-black/10">
+    <div class="max-w-6xl mx-auto px-4 py-10 text-sm flex flex-col md:flex-row items-center justify-between gap-4">
+      <p>© <span id="year"></span> Arabesque Traiteur • Kinshasa</p>
+      <div class="flex items-center gap-4">
+        <a href="/contact.html#politique" class="hover:underline">Politique de confidentialité</a>
+        <a href="/contact.html#cgv" class="hover:underline">Conditions générales</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/assets/js/main.js"></script>
+</body>
+</html>
