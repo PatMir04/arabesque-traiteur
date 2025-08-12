@@ -1,411 +1,880 @@
 {
   "branding": {
     "signature_phrase": "Élégance • Saveurs • Excellence",
-    "chef_signature": "Créations culinaires de Sylvie Feruzi",
-    "location": "Kinshasa, République Démocratique du Congo"
+    "chef_signature": "Créations culinaires authentiques de Sylvie Feruzi",
+    "location": "Kinshasa, République Démocratique du Congo",
+    "speciality": "Cuisine congolaise authentique et internationale"
+  },
+  "pricing_structure": {
+    "small_events": {
+      "description": "1 à 50 personnes",
+      "price_per_person": 35,
+      "currency": "USD",
+      "note": "Tarif premium pour événements intimes"
+    },
+    "medium_events": {
+      "description": "50 à 100 personnes", 
+      "price_per_person": 20,
+      "currency": "USD",
+      "note": "Tarif optimal pour événements moyens"
+    },
+    "large_events": {
+      "description": "100 personnes et plus",
+      "currency": "USD",
+      "note": "Tarifs dégressifs selon le nombre de repas choisis"
+    }
   },
   "formules": [
     {
-      "id": "premium",
-      "nom": "Formule Premium 10 $",
-      "description": "Choisissez 5 éléments du menu + amuse-bouche offert",
-      "prix": 10,
-      "nombre_elements": 5,
+      "id": "intime",
+      "nom": "Formule Intime",
+      "description": "Pour événements de 1 à 50 personnes",
+      "prix": 35,
+      "nombre_repas": "Selon choix",
+      "groupe_cible": "1-50 personnes",
+      "badge": "INTIME",
+      "avantages": [
+        "Service personnalisé",
+        "Attention particulière aux détails",
+        "Flexibilité maximale dans les choix",
+        "Présentation raffinée",
+        "Service à table inclus"
+      ],
+      "color_theme": "rose",
+      "recommended": false
+    },
+    {
+      "id": "optimale",
+      "nom": "Formule Optimale",
+      "description": "Pour événements de 50 à 100 personnes",
+      "prix": 20,
+      "nombre_repas": "Selon choix",
+      "groupe_cible": "50-100 personnes",
       "badge": "POPULAIRE",
       "avantages": [
-        "Amuse-bouche de bienvenue",
+        "Excellent rapport qualité-prix",
+        "Service buffet organisé",
+        "Variété de choix garantie",
         "Présentation soignée",
-        "Service à table inclus",
-        "Décoration basique incluse"
+        "Gestion professionnelle"
       ],
-      "video_preview": "assets/videos/formule-premium.mp4",
+      "color_theme": "green",
+      "recommended": true
+    },
+    {
+      "id": "essentielle",
+      "nom": "Formule Essentielle",
+      "description": "14 repas au choix pour 100+ personnes",
+      "prix": 15,
+      "nombre_repas": 14,
+      "groupe_cible": "100+ personnes",
+      "badge": "ÉCONOMIQUE",
+      "avantages": [
+        "14 repas au choix dans toute la liste",
+        "Salades fraîches incluses",
+        "Plateau de fruits de saison",
+        "Accompagnements traditionnels",
+        "Service buffet efficace"
+      ],
+      "color_theme": "blue",
+      "recommended": false
+    },
+    {
+      "id": "premium",
+      "nom": "Formule Premium",
+      "description": "18 repas au choix pour 100+ personnes",
+      "prix": 20,
+      "nombre_repas": 18,
+      "groupe_cible": "100+ personnes", 
+      "badge": "ÉQUILIBRÉE",
+      "avantages": [
+        "18 repas au choix dans toute la liste",
+        "Plus de variété de plats",
+        "Salades premium incluses",
+        "Plateau de fruits tropical",
+        "Accompagnements diversifiés",
+        "Présentation améliorée"
+      ],
       "color_theme": "gold",
       "recommended": true
     },
     {
-      "id": "classic",
-      "nom": "Formule Classic 8 $",
-      "description": "Choisissez 4 éléments du menu",
-      "prix": 8,
-      "nombre_elements": 4,
-      "badge": "ÉCONOMIQUE",
+      "id": "excellence",
+      "nom": "Formule Excellence",
+      "description": "20 repas au choix pour 100+ personnes",
+      "prix": 25,
+      "nombre_repas": 20,
+      "groupe_cible": "100+ personnes",
+      "badge": "PRESTIGE",
       "avantages": [
-        "Présentation soignée",
-        "Service buffet",
-        "Qualité garantie"
+        "20 repas au choix dans toute la liste",
+        "Sélection élargie de spécialités",
+        "Salades d'exception incluses",
+        "Fruits exotiques premium",
+        "Accompagnements complets",
+        "Service amélioré"
       ],
-      "video_preview": "assets/videos/formule-classic.mp4",
-      "color_theme": "black",
+      "color_theme": "purple",
       "recommended": false
     },
     {
-      "id": "bespoke",
-      "nom": "Sur Mesure",
-      "description": "Menu personnalisé pour mariages, galas et réceptions VIP",
-      "prix": null,
-      "nombre_elements": null,
-      "badge": "EXCLUSIF",
+      "id": "deluxe",
+      "nom": "Formule Deluxe",
+      "description": "24 repas au choix pour 100+ personnes",
+      "prix": 30,
+      "nombre_repas": 24,
+      "groupe_cible": "100+ personnes",
+      "badge": "DELUXE",
       "avantages": [
-        "Consultation personnalisée",
-        "Menu sur mesure",
-        "Service VIP complet",
-        "Décoration premium",
-        "Coordination événement",
-        "Chef sur site si souhaité"
+        "24 repas au choix dans toute la liste",
+        "Accès aux spécialités rares",
+        "Salades gastronomiques incluses",
+        "Buffet de fruits d'exception",
+        "Tous accompagnements disponibles",
+        "Service personnalisé"
       ],
-      "video_preview": "assets/videos/sur-mesure-showcase.mp4",
+      "color_theme": "gold-dark",
+      "recommended": false
+    },
+    {
+      "id": "vip",
+      "nom": "Formule VIP",
+      "description": "28 repas au choix pour 100+ personnes",
+      "prix": 35,
+      "nombre_repas": 28,
+      "groupe_cible": "100+ personnes",
+      "badge": "VIP",
+      "avantages": [
+        "28 repas au choix - accès total",
+        "Toutes les spécialités incluses",
+        "Salades signature du chef",
+        "Fruits et desserts premium",
+        "Accompagnements illimités",
+        "Service VIP complet",
+        "Présentation gastronomique"
+      ],
       "color_theme": "gold",
-      "contact_required": true
+      "recommended": false
     }
   ],
+  "service_cocktail": {
+    "nom": "Service Cocktail Clé en Main",
+    "description": "Prestation complète pour vos événements",
+    "inclus": [
+      "Cocktails préparés sur place (2 tournées par personne)",
+      "Équipe de barmen professionnels", 
+      "Glaçons, bacs, verrerie, ustensiles",
+      "Transport et installation"
+    ],
+    "tarification": [
+      {
+        "groupe": "Moins de 55 personnes",
+        "prix": 500,
+        "currency": "USD"
+      },
+      {
+        "groupe": "Moins de 105 personnes", 
+        "prix": 750,
+        "currency": "USD"
+      },
+      {
+        "groupe": "Moins de 155 personnes",
+        "prix": 900,
+        "currency": "USD"
+      },
+      {
+        "groupe": "Moins de 205 personnes",
+        "prix": 1200,
+        "currency": "USD"
+      }
+    ]
+  },
   "categories": [
     {
       "id": "entrees",
       "nom": "Entrées & Amuse-Bouches",
-      "description": "Premiers instants de délice pour éveiller les papilles",
+      "description": "Mises en bouche savoureuses pour commencer en beauté",
       "icon": "🥂",
-      "video_bg": "assets/videos/entrees-preparation.mp4",
+      "video_bg": "assets/videos/entrees-appetizers.mp4",
       "elements": [
         {
-          "id": "canapes",
-          "nom": "Canapés Signature Arabesque",
-          "description": "Trio raffiné : saumon fumé aux câpres, chèvre aux noix, légumes croquants",
-          "allergenes": ["poisson", "lactose", "noix"],
-          "origine": "Création maison",
-          "temps_preparation": "45 min",
-          "image": "assets/images/canapes-signature.jpg",
-          "video_demo": "assets/videos/canapes-demo.mp4",
-          "price_indicator": "€€"
+          "id": "samoussa-viande",
+          "nom": "Samoussa à la Viande",
+          "description": "Pâte croustillante farcie de viande épicée, recette traditionnelle",
+          "type": "entree",
+          "origine": "Spécialité maison",
+          "image": "assets/images/samoussa-viande.jpg"
         },
         {
-          "id": "brochettes",
-          "nom": "Mini Brochettes de Poulet Épicé",
-          "description": "Poulet fermier mariné aux épices congolaises, grillé à la perfection",
-          "allergenes": [],
-          "origine": "Recette traditionnelle revisitée",
-          "temps_preparation": "30 min",
-          "image": "assets/images/brochettes-poulet.jpg",
-          "video_demo": "assets/videos/brochettes-grill.mp4",
-          "price_indicator": "€"
+          "id": "brochette-beignets", 
+          "nom": "Brochette de Beignets",
+          "description": "Beignets moelleux en brochette, accompagnement sauce piquante",
+          "type": "entree",
+          "origine": "Création Arabesque",
+          "image": "assets/images/brochette-beignets.jpg"
         },
         {
-          "id": "salade-quinoa",
-          "nom": "Salade Fraîcheur au Quinoa",
-          "description": "Quinoa bio, légumes croquants, vinaigrette passion-citron vert",
-          "allergenes": [],
-          "origine": "Inspiration santé",
-          "temps_preparation": "20 min",
-          "image": "assets/images/salade-quinoa.jpg",
-          "dietary": ["vegetarien", "sans_gluten", "healthy"],
-          "price_indicator": "€"
+          "id": "saucisse-pili",
+          "nom": "Saucisses Pili", 
+          "description": "Saucisses locales grillées aux épices congolaises",
+          "type": "entree",
+          "origine": "Tradition locale",
+          "image": "assets/images/saucisse-pili.jpg"
         },
         {
-          "id": "verrines",
-          "nom": "Verrines Avocat & Crevettes",
-          "description": "Émulsion d'avocat, crevettes grillées, caviar de tomate",
-          "allergenes": ["crustaces"],
-          "origine": "Fusion cuisine",
-          "temps_preparation": "25 min",
-          "image": "assets/images/verrines-avocat.jpg",
-          "price_indicator": "€€"
-        },
-        {
-          "id": "samoussas",
-          "nom": "Samoussas aux Légumes du Potager",
-          "description": "Légumes de saison, pâte croustillante, sauce épicée maison",
-          "allergenes": ["gluten"],
-          "origine": "Inspiration orientale",
-          "temps_preparation": "40 min",
-          "image": "assets/images/samoussas-legumes.jpg",
-          "dietary": ["vegetarien"],
-          "price_indicator": "€"
-        }
-      ]
-    },
-    {
-      "id": "plats_chauds",
-      "nom": "Plats Chauds Signature",
-      "description": "Le cœur de nos créations, mijotés avec passion",
-      "icon": "🔥",
-      "video_bg": "assets/videos/cuisine-chaude.mp4",
-      "elements": [
-        {
-          "id": "poulet-herbes",
-          "nom": "Poulet Fermier aux Herbes de Provence",
-          "description": "Poulet fermier rôti, herbes fraîches, jus corsé aux échalotes",
-          "allergenes": [],
-          "origine": "Tradition française revisitée",
-          "temps_preparation": "90 min",
-          "image": "assets/images/poulet-herbes.jpg",
-          "accompaniments": ["Riz pilaf", "Légumes rôtis", "Sauce aux herbes"],
-          "price_indicator": "€€"
-        },
-        {
-          "id": "poisson-citron",
-          "nom": "Poisson du Jour Grillé",
-          "description": "Poisson frais du marché, marinade citron-coriandre, légumes croquants",
-          "allergenes": ["poisson"],
-          "origine": "Inspiration méditerranéenne",
-          "temps_preparation": "35 min",
-          "image": "assets/images/poisson-grille.jpg",
-          "seasonal": true,
-          "price_indicator": "€€€"
-        },
-        {
-          "id": "boeuf-congolais",
-          "nom": "Bœuf Braisé à la Congolaise",
-          "description": "Bœuf tendre braisé, sauce tomate épicée, légumes racines",
-          "allergenes": [],
-          "origine": "Recette familiale Feruzi",
-          "temps_preparation": "120 min",
-          "image": "assets/images/boeuf-congolais.jpg",
-          "chef_special": true,
-          "price_indicator": "€€"
-        },
-        {
-          "id": "riz-pilaf",
-          "nom": "Riz Pilaf aux Légumes Colorés",
-          "description": "Riz basmati parfumé, légumes de saison, bouillon maison",
-          "allergenes": [],
-          "origine": "Accompagnement signature",
-          "temps_preparation": "45 min",
-          "image": "assets/images/riz-pilaf.jpg",
-          "dietary": ["vegetarien", "sans_gluten"],
-          "price_indicator": "€"
-        },
-        {
-          "id": "legumes-sautes",
-          "nom": "Sauté de Légumes Croquants",
-          "description": "Wok de légumes frais, sauce soja-gingembre, graines de sésame",
-          "allergenes": ["soja", "sesame"],
-          "origine": "Fusion asiatique",
-          "temps_preparation": "15 min",
-          "image": "assets/images/legumes-sautes.jpg",
-          "dietary": ["vegetarien", "vegan"],
-          "price_indicator": "€"
-        }
-      ]
-    },
-    {
-      "id": "plats_froids",
-      "nom": "Délices Froids & Fraîcheur",
-      "description": "Élégance et fraîcheur pour tous les palais",
-      "icon": "🥗",
-      "video_bg": "assets/videos/plats-froids.mp4",
-      "elements": [
-        {
-          "id": "taboule",
-          "nom": "Taboulé Menthe & Citron Confit",
-          "description": "Boulgour fin, herbes fraîches, tomates cerises, citron confit",
-          "allergenes": ["gluten"],
-          "origine": "Tradition libanaise",
-          "temps_preparation": "30 min",
-          "image": "assets/images/taboule.jpg",
-          "dietary": ["vegetarien"],
-          "price_indicator": "€"
-        },
-        {
-          "id": "charcuterie",
-          "nom": "Sélection Charcuterie Premium",
-          "description": "Jambon de Parme, chorizo, bresaola, cornichons, pain artisanal",
-          "allergenes": ["gluten"],
-          "origine": "Sélection européenne",
-          "temps_preparation": "20 min",
-          "image": "assets/images/charcuterie.jpg",
-          "premium": true,
-          "price_indicator": "€€€"
-        },
-        {
-          "id": "carpaccio",
-          "nom": "Carpaccio de Poisson Exotique",
-          "description": "Poisson frais, marinade agrumes-passion, roquette, parmesan",
-          "allergenes": ["poisson", "lactose"],
-          "origine": "Création fusion",
-          "temps_preparation": "40 min",
-          "image": "assets/images/carpaccio.jpg",
-          "chef_special": true,
-          "price_indicator": "€€€"
-        },
-        {
-          "id": "salade-pates",
-          "nom": "Salade de Pâtes à l'Italienne",
-          "description": "Pennes, tomates séchées, mozzarella, basilic, vinaigrette balsamique",
-          "allergenes": ["gluten", "lactose"],
-          "origine": "Tradition italienne",
-          "temps_preparation": "25 min",
-          "image": "assets/images/salade-pates.jpg",
-          "dietary": ["vegetarien"],
-          "price_indicator": "€"
-        },
-        {
-          "id": "plateau-fromages",
-          "nom": "Plateau de Fromages d'Exception",
-          "description": "Sélection affinée : camembert, roquefort, chèvre, accompagnements",
-          "allergenes": ["lactose"],
-          "origine": "Sélection française",
-          "temps_preparation": "15 min",
-          "image": "assets/images/plateau-fromages.jpg",
-          "premium": true,
-          "price_indicator": "€€"
-        }
-      ]
-    },
-    {
-      "id": "desserts",
-      "nom": "Desserts & Douceurs",
-      "description": "Finalité sucrée créée par Julie Feruzi, notre chef pâtissière",
-      "icon": "🍰",
-      "video_bg": "assets/videos/patisserie.mp4",
-      "elements": [
-        {
-          "id": "wedding-cake",
-          "nom": "Wedding Cake Personnalisé",
-          "description": "Création unique selon vos souhaits, décoration sur mesure",
-          "allergenes": ["gluten", "lactose", "œufs"],
-          "origine": "Création Julie Feruzi",
-          "temps_preparation": "240 min",
-          "image": "assets/images/wedding-cake.jpg",
-          "customizable": true,
-          "chef_signature": "Julie Feruzi",
-          "price_indicator": "€€€€"
-        },
-        {
-          "id": "tartelette-citron",
-          "nom": "Tartelette Citron & Meringue Italienne",
-          "description": "Pâte sablée, crème citron acidulée, meringue torchée",
-          "allergenes": ["gluten", "lactose", "œufs"],
-          "origine": "Grande pâtisserie française",
-          "temps_preparation": "90 min",
-          "image": "assets/images/tartelette-citron.jpg",
-          "technique_advanced": true,
-          "price_indicator": "€€"
-        },
-        {
-          "id": "mousse-chocolat",
-          "nom": "Mousse au Chocolat Noir 70%",
-          "description": "Chocolat de Madagascar, texture aérienne, copeaux de cacao",
-          "allergenes": ["lactose", "œufs"],
-          "origine": "Recette traditionnelle",
-          "temps_preparation": "120 min",
-          "image": "assets/images/mousse-chocolat.jpg",
-          "premium_ingredient": true,
-          "price_indicator": "€€"
-        },
-        {
-          "id": "salade-fruits",
-          "nom": "Salade de Fruits Tropicaux",
-          "description": "Ananas, mangue, papaye, passion, sirop vanille-coco",
-          "allergenes": [],
-          "origine": "Fraîcheur tropicale",
-          "temps_preparation": "20 min",
-          "image": "assets/images/salade-fruits.jpg",
-          "dietary": ["vegetarien", "vegan", "sans_gluten", "healthy"],
-          "price_indicator": "€"
-        },
-        {
-          "id": "eclairs-mini",
-          "nom": "Mini Éclairs Vanille & Chocolat",
-          "description": "Pâte à choux, crème pâtissière vanille bourbon, glaçage chocolat",
-          "allergenes": ["gluten", "lactose", "œufs"],
-          "origine": "Pâtisserie française miniature",
-          "temps_preparation": "150 min",
-          "image": "assets/images/eclairs-mini.jpg",
-          "presentation": "buffet",
-          "price_indicator": "€€"
-        }
-      ]
-    },
-    {
-      "id": "boissons",
-      "nom": "Boissons & Cocktails",
-      "description": "Créations rafraîchissantes par David Nsenga",
-      "icon": "🍹",
-      "video_bg": "assets/videos/cocktails.mp4",
-      "elements": [
-        {
-          "id": "cocktail-maison",
-          "nom": "Cocktail Signature Arabesque",
-          "description": "Création maison : jus de fruits locaux, menthe fraîche, eau pétillante",
-          "allergenes": [],
-          "origine": "Création David Nsenga",
-          "temps_preparation": "5 min",
-          "image": "assets/images/cocktail-maison.jpg",
-          "signature_drink": true,
-          "dietary": ["sans_alcool"],
-          "price_indicator": "€€"
-        },
-        {
-          "id": "smoothie-exotique",
-          "nom": "Smoothie Fruits Exotiques",
-          "description": "Mangue, ananas, banane, lait de coco, glaçons",
-          "allergenes": [],
-          "origine": "Fraîcheur tropicale",
-          "temps_preparation": "3 min",
-          "image": "assets/images/smoothie-exotique.jpg",
-          "dietary": ["sans_alcool", "vegan", "healthy"],
-          "price_indicator": "€"
-        },
-        {
-          "id": "eau-minerale",
-          "nom": "Eau Minérale Premium",
-          "description": "Sélection d'eaux plates et gazeuses, service en carafe glacée",
-          "allergenes": [],
-          "origine": "Sources naturelles",
-          "temps_preparation": "1 min",
-          "image": "assets/images/eau-minerale.jpg",
-          "basic": true,
-          "price_indicator": "€"
-        },
-        {
-          "id": "sodas",
-          "nom": "Sodas Artisanaux",
-          "description": "Cola bio, limonade maison, orangeade fraîche",
-          "allergenes": [],
+          "id": "plateau-fromage",
+          "nom": "Plateau de Fromages",
+          "description": "Sélection de fromages internationaux et locaux",
+          "type": "entree",
           "origine": "Sélection premium",
-          "temps_preparation": "2 min",
-          "image": "assets/images/sodas.jpg",
-          "dietary": ["sans_alcool"],
-          "price_indicator": "€"
+          "image": "assets/images/plateau-fromages.jpg"
         },
         {
-          "id": "cafe-the",
-          "nom": "Café & Thé de Plantation",
-          "description": "Café arabica du Kivu, thés verts et noirs sélectionnés",
-          "allergenes": [],
-          "origine": "Plantations locales et internationales",
-          "temps_preparation": "5 min",
-          "image": "assets/images/cafe-the.jpg",
-          "local_product": true,
-          "price_indicator": "€"
+          "id": "rouleau-printemps",
+          "nom": "Rouleaux de Printemps",
+          "description": "Rouleaux frais aux légumes croquants et herbes fraîches",
+          "type": "entree",
+          "origine": "Fusion asiatique",
+          "image": "assets/images/rouleau-printemps.jpg"
+        },
+        {
+          "id": "mini-burger",
+          "nom": "Mini Burgers",
+          "description": "Petits burgers gourmands, viande locale, pain artisanal",
+          "type": "entree",
+          "origine": "Style américain revisité",
+          "image": "assets/images/mini-burger.jpg"
+        }
+      ]
+    },
+    {
+      "id": "salades",
+      "nom": "Salades Fraîcheur",
+      "description": "Accompagnements frais et colorés",
+      "icon": "🥗",
+      "video_bg": "assets/videos/salades-fresh.mp4",
+      "elements": [
+        {
+          "id": "salade-grecque",
+          "nom": "Salade Grecque",
+          "description": "Tomates, concombres, olives, feta, oignon rouge, vinaigrette à l'huile d'olive",
+          "type": "salade",
+          "origine": "Méditerranéenne",
+          "image": "assets/images/salade-grecque.jpg",
+          "dietary": ["vegetarien"]
+        },
+        {
+          "id": "salade-nicoise",
+          "nom": "Salade Niçoise", 
+          "description": "Thon, œufs durs, tomates, anchois, olives, haricots verts",
+          "type": "salade",
+          "origine": "Française classique",
+          "image": "assets/images/salade-nicoise.jpg"
+        },
+        {
+          "id": "macedoine-legumes",
+          "nom": "Macédoine de Légumes",
+          "description": "Mélange coloré de légumes frais en dés, mayonnaise légère",
+          "type": "salade",
+          "origine": "Classique international",
+          "image": "assets/images/macedoine-legumes.jpg",
+          "dietary": ["vegetarien"]
+        }
+      ]
+    },
+    {
+      "id": "repas_viandes",
+      "nom": "Viandes & Spécialités",
+      "description": "Le cœur de la cuisine congolaise authentique",
+      "icon": "🥩",
+      "video_bg": "assets/videos/viandes-grillades.mp4",
+      "elements": [
+        {
+          "id": "cochon-lait-farci",
+          "nom": "Cochon de Lait Farci",
+          "description": "Cochon de lait tendre, farci aux herbes et épices locales",
+          "type": "viande",
+          "origine": "Spécialité festive congolaise",
+          "chef_special": true,
+          "image": "assets/images/cochon-lait-farci.jpg"
+        },
+        {
+          "id": "viande-chevre-nga-nda",
+          "nom": "Viande de Chèvre façon Nga Nda",
+          "description": "Chèvre mijotée selon la tradition Nga Nda, sauce authentique",
+          "type": "viande",
+          "origine": "Tradition ancestrale congolaise",
+          "chef_special": true,
+          "image": "assets/images/chevre-nga-nda.jpg"
+        },
+        {
+          "id": "maboke-ngulu",
+          "nom": "Maboke y'a Ngulu", 
+          "description": "Porc fumé traditionnel dans les feuilles, cuisson ancestrale",
+          "type": "viande",
+          "origine": "Technique traditionnelle congolaise",
+          "chef_special": true,
+          "image": "assets/images/maboke-ngulu.jpg"
+        },
+        {
+          "id": "brochette-boeuf",
+          "nom": "Brochette de Bœuf",
+          "description": "Bœuf tendre grillé aux épices, marinade maison",
+          "type": "viande", 
+          "origine": "Grillades Arabesque",
+          "image": "assets/images/brochette-boeuf.jpg"
+        },
+        {
+          "id": "emince-boeuf-legumes",
+          "nom": "Émincé de Bœuf aux Légumes",
+          "description": "Lamelles de bœuf sautées, légumes croquants de saison",
+          "type": "viande",
+          "origine": "Cuisine moderne",
+          "image": "assets/images/emince-boeuf.jpg"
+        },
+        {
+          "id": "cote-porc",
+          "nom": "Côte de Porc",
+          "description": "Côtes de porc grillées, sauce barbecue maison",
+          "type": "viande",
+          "origine": "Grillade premium",
+          "image": "assets/images/cote-porc.jpg"
+        },
+        {
+          "id": "tripes-chevre",
+          "nom": "Tripes de Chèvre aux Pommes de Terre",
+          "description": "Tripes mijotées, pommes de terre ou bisamunyu",
+          "type": "viande",
+          "origine": "Plat traditionnel congolais",
+          "image": "assets/images/tripes-chevre.jpg"
+        },
+        {
+          "id": "cotes-agneau",
+          "nom": "Côtes d'Agneau",
+          "description": "Côtes d'agneau grillées, herbes de Provence",
+          "type": "viande",
+          "origine": "Cuisine raffinée",
+          "premium": true,
+          "image": "assets/images/cotes-agneau.jpg"
+        },
+        {
+          "id": "gigot-agneau",
+          "nom": "Gigot d'Agneau",
+          "description": "Gigot d'agneau rôti, jus corsé aux épices",
+          "type": "viande",
+          "origine": "Grande cuisine",
+          "premium": true,
+          "image": "assets/images/gigot-agneau.jpg"
+        },
+        {
+          "id": "dinde",
+          "nom": "Dinde Rôtie",
+          "description": "Dinde fermière rôtie, farce traditionnelle",
+          "type": "viande",
+          "origine": "Classique des fêtes",
+          "image": "assets/images/dinde-rotie.jpg"
+        }
+      ]
+    },
+    {
+      "id": "poissons",
+      "nom": "Poissons & Fruits de Mer",
+      "description": "Trésors du fleuve Congo et spécialités aquatiques",
+      "icon": "🐟",
+      "video_bg": "assets/videos/poissons-congo.mp4",
+      "elements": [
+        {
+          "id": "gros-capitaine-braise",
+          "nom": "Gros Capitaine Braisé",
+          "description": "Poisson capitaine du Congo, braisé aux épices locales",
+          "type": "poisson",
+          "origine": "Spécialité du fleuve Congo",
+          "chef_special": true,
+          "image": "assets/images/capitaine-braise.jpg"
+        },
+        {
+          "id": "capitaine-sauce-maniere", 
+          "nom": "Capitaine à la Sauce Manière",
+          "description": "Capitaine en sauce traditionelle congolaise",
+          "type": "poisson",
+          "origine": "Recette authentique congolaise",
+          "chef_special": true,
+          "image": "assets/images/capitaine-sauce.jpg"
+        },
+        {
+          "id": "mbinzo",
+          "nom": "Mbinzo",
+          "description": "Poisson séché traditionnel, préparé selon la coutume",
+          "type": "poisson",
+          "origine": "Tradition congolaise ancestrale",
+          "image": "assets/images/mbinzo.jpg"
+        },
+        {
+          "id": "ndakala",
+          "nom": "Ndakala",
+          "description": "Petits poissons séchés, spécialité du Congo",
+          "type": "poisson",
+          "origine": "Tradition du fleuve Congo", 
+          "image": "assets/images/ndakala.jpg"
+        },
+        {
+          "id": "poisson-fume",
+          "nom": "Poisson Fumé",
+          "description": "Poisson fumé artisanalement, saveur authentique",
+          "type": "poisson",
+          "origine": "Technique traditionnelle",
+          "image": "assets/images/poisson-fume.jpg"
+        },
+        {
+          "id": "maboke-poisson-fleuve",
+          "nom": "Maboke Poisson du Fleuve",
+          "description": "Poisson du Congo cuit dans les feuilles, méthode ancestrale",
+          "type": "poisson",
+          "origine": "Technique traditionnelle congolaise",
+          "chef_special": true,
+          "image": "assets/images/maboke-poisson.jpg"
+        },
+        {
+          "id": "poisson-sale",
+          "nom": "Poisson Salé",
+          "description": "Poisson salé et séché, préparation traditionnelle",
+          "type": "poisson",
+          "origine": "Conservation traditionnelle",
+          "image": "assets/images/poisson-sale.jpg"
+        },
+        {
+          "id": "tilapia-braise",
+          "nom": "Tilapia Braisé",
+          "description": "Tilapia frais braisé aux tomates et épices",
+          "type": "poisson",
+          "origine": "Poisson d'élevage local",
+          "image": "assets/images/tilapia-braise.jpg"
+        },
+        {
+          "id": "crevettes",
+          "nom": "Crevettes Sautées",
+          "description": "Crevettes fraîches sautées à l'ail et aux herbes",
+          "type": "fruits_mer",
+          "origine": "Fruits de mer premium",
+          "premium": true,
+          "image": "assets/images/crevettes-sautees.jpg"
+        }
+      ]
+    },
+    {
+      "id": "volailles",
+      "nom": "Volailles",
+      "description": "Poulet, canard et spécialités de volaille",
+      "icon": "🐔", 
+      "video_bg": "assets/videos/volailles-grillees.mp4",
+      "elements": [
+        {
+          "id": "poulet-braise",
+          "nom": "Poulet Braisé",
+          "description": "Poulet fermier braisé, sauce tomate épicée",
+          "type": "volaille",
+          "origine": "Classique congolais",
+          "image": "assets/images/poulet-braise.jpg"
+        },
+        {
+          "id": "cuisse-poulet-fume",
+          "nom": "Cuisse de Poulet Fumé",
+          "description": "Cuisses de poulet fumées artisanalement",
+          "type": "volaille",
+          "origine": "Technique de fumage local",
+          "image": "assets/images/cuisse-poulet-fume.jpg"
+        },
+        {
+          "id": "aile-rond-poulet",
+          "nom": "Aile Rond de Poulet",
+          "description": "Ailes de poulet marinées et grillées",
+          "type": "volaille",
+          "origine": "Grillade populaire",
+          "image": "assets/images/aile-poulet.jpg"
+        },
+        {
+          "id": "makayabu-goma",
+          "nom": "Makayabu (Goma)",
+          "description": "Spécialité de Goma, viande séchée et épicée",
+          "type": "volaille",
+          "origine": "Spécialité de Goma",
+          "regional_specialty": true,
+          "image": "assets/images/makayabu.jpg"
+        }
+      ]
+    },
+    {
+      "id": "legumes_verts",
+      "nom": "Légumes Verts & Accompagnements",
+      "description": "Légumes traditionnels congolais et légumes verts",
+      "icon": "🥬",
+      "video_bg": "assets/videos/legumes-traditionnels.mp4",
+      "elements": [
+        {
+          "id": "pondu",
+          "nom": "Pondu",
+          "description": "Feuilles de manioc pilées, plat emblématique congolais",
+          "type": "legume",
+          "origine": "Plat national congolais",
+          "chef_special": true,
+          "dietary": ["vegetarien"],
+          "image": "assets/images/pondu.jpg"
+        },
+        {
+          "id": "fum-bwa",
+          "nom": "Fum Bwa",
+          "description": "Légumes verts traditionnels, feuilles locales",
+          "type": "legume",
+          "origine": "Tradition villageoise",
+          "dietary": ["vegetarien"],
+          "image": "assets/images/fum-bwa.jpg"
+        },
+        {
+          "id": "haricots-verts",
+          "nom": "Haricots Verts",
+          "description": "Haricots verts frais sautés à l'ail",
+          "type": "legume",
+          "origine": "Légume classique",
+          "dietary": ["vegetarien"],
+          "image": "assets/images/haricots-verts.jpg"
+        },
+        {
+          "id": "aubergines-vertes",
+          "nom": "Aubergines Vertes (Nyanya/Solo)",
+          "description": "Aubergines locales mijotées, sauce traditionnelle",
+          "type": "legume", 
+          "origine": "Légume local congolais",
+          "dietary": ["vegetarien"],
+          "image": "assets/images/aubergines-vertes.jpg"
+        },
+        {
+          "id": "ratatouille",
+          "nom": "Ratatouille",
+          "description": "Mélange de légumes méditerranéens mijotés",
+          "type": "legume",
+          "origine": "Cuisine française",
+          "dietary": ["vegetarien"],
+          "image": "assets/images/ratatouille.jpg"
+        },
+        {
+          "id": "epinards",
+          "nom": "Épinards",
+          "description": "Épinards frais sautés aux oignons",
+          "type": "legume",
+          "origine": "Légume santé",
+          "dietary": ["vegetarien"],
+          "image": "assets/images/epinards.jpg"
+        },
+        {
+          "id": "champignons",
+          "nom": "Champignons Sautés",
+          "description": "Champignons frais sautés aux herbes",
+          "type": "legume",
+          "origine": "Accompagnement raffiné",
+          "dietary": ["vegetarien"],
+          "image": "assets/images/champignons.jpg"
+        },
+        {
+          "id": "petits-pois-carottes",
+          "nom": "Petits Pois aux Carottes",
+          "description": "Mélange coloré de petits pois et carottes",
+          "type": "legume",
+          "origine": "Classique français",
+          "dietary": ["vegetarien"],
+          "image": "assets/images/petits-pois-carottes.jpg"
+        },
+        {
+          "id": "misili",
+          "nom": "Misili",
+          "description": "Légume-feuille traditionnel congolais",
+          "type": "legume",
+          "origine": "Tradition congolaise",
+          "dietary": ["vegetarien"],
+          "image": "assets/images/misili.jpg"
+        },
+        {
+          "id": "safu",
+          "nom": "Safu",
+          "description": "Fruit/légume local, préparation traditionnelle",
+          "type": "legume",
+          "origine": "Spécialité locale Congo",
+          "dietary": ["vegetarien"],
+          "image": "assets/images/safu.jpg"
+        },
+        {
+          "id": "feuille-courge-arachides",
+          "nom": "Feuille de Courge aux Arachides",
+          "description": "Feuilles de courge, pâte d'arachide, recette ancestrale",
+          "type": "legume",
+          "origine": "Tradition culinaire congolaise",
+          "dietary": ["vegetarien"],
+          "image": "assets/images/feuille-courge.jpg"
+        },
+        {
+          "id": "dongo-dongo",
+          "nom": "Dongo Dongo",
+          "description": "Légume visqueux traditionnel, sauce onctueuse",
+          "type": "legume",
+          "origine": "Plat traditionnel congolais",
+          "dietary": ["vegetarien"],
+          "image": "assets/images/dongo-dongo.jpg"
+        },
+        {
+          "id": "matembele-poisson-fume",
+          "nom": "Matembele au Poisson Fumé",
+          "description": "Feuilles de patate douce, poisson fumé",
+          "type": "legume",
+          "origine": "Plat complet traditionnel",
+          "image": "assets/images/matembele.jpg"
+        },
+        {
+          "id": "mbika",
+          "nom": "Mbika",
+          "description": "Légume-feuille congolais, préparation authentique",
+          "type": "legume",
+          "origine": "Tradition congolaise",
+          "dietary": ["vegetarien"],
+          "image": "assets/images/mbika.jpg"
+        }
+      ]
+    },
+    {
+      "id": "accompaniments",
+      "nom": "Accompagnements & Féculents",
+      "description": "Base nutritive traditionnelle congolaise",
+      "icon": "🍚",
+      "video_bg": "assets/videos/feculents-traditionnels.mp4",
+      "elements": [
+        {
+          "id": "riz-blanc",
+          "nom": "Riz Blanc",
+          "description": "Riz parfumé cuit à la vapeur",
+          "type": "accompagnement",
+          "origine": "Classique universel",
+          "dietary": ["vegetarien", "sans_gluten"],
+          "image": "assets/images/riz-blanc.jpg"
+        },
+        {
+          "id": "riz-cantonais",
+          "nom": "Riz Cantonais",
+          "description": "Riz sauté aux légumes et œufs",
+          "type": "accompagnement",
+          "origine": "Cuisine asiatique",
+          "dietary": ["vegetarien"],
+          "image": "assets/images/riz-cantonais.jpg"
+        },
+        {
+          "id": "riz-persille",
+          "nom": "Riz Persillé",
+          "description": "Riz blanc aux herbes fraîches",
+          "type": "accompagnement",
+          "origine": "Cuisine française",
+          "dietary": ["vegetarien", "sans_gluten"],
+          "image": "assets/images/riz-persille.jpg"
+        },
+        {
+          "id": "fufu",
+          "nom": "Fufu",
+          "description": "Pâte de manioc traditionnelle, accompagnement emblématique",
+          "type": "accompagnement",
+          "origine": "Tradition congolaise ancestrale",
+          "chef_special": true,
+          "dietary": ["vegetarien", "sans_gluten"],
+          "image": "assets/images/fufu.jpg"
+        },
+        {
+          "id": "lituma",
+          "nom": "Lituma",
+          "description": "Pâte de maïs traditionnelle congolaise",
+          "type": "accompagnement",
+          "origine": "Tradition congolaise",
+          "dietary": ["vegetarien", "sans_gluten"],
+          "image": "assets/images/lituma.jpg"
+        },
+        {
+          "id": "pommes-terre-beurre",
+          "nom": "Pommes de Terre au Beurre",
+          "description": "Pommes de terre fondantes au beurre frais",
+          "type": "accompagnement",
+          "origine": "Classique français",
+          "dietary": ["vegetarien"],
+          "image": "assets/images/pommes-terre-beurre.jpg"
+        },
+        {
+          "id": "makemba",
+          "nom": "Makemba",
+          "description": "Bananes plantain, préparation traditionnelle congolaise",
+          "type": "accompagnement",
+          "origine": "Tradition congolaise",
+          "dietary": ["vegetarien", "sans_gluten"],
+          "image": "assets/images/makemba.jpg"
+        },
+        {
+          "id": "frites",
+          "nom": "Frites Maison",
+          "description": "Pommes de terre frites, croustillantes et dorées",
+          "type": "accompagnement",
+          "origine": "Classique international",
+          "dietary": ["vegetarien"],
+          "image": "assets/images/frites.jpg"
+        },
+        {
+          "id": "bisamunyu",
+          "nom": "Bisamunyu",
+          "description": "Tubercule local, préparation traditionnelle congolaise",
+          "type": "accompagnement",
+          "origine": "Spécialité locale Congo",
+          "dietary": ["vegetarien", "sans_gluten"],
+          "image": "assets/images/bisamunyu.jpg"
+        },
+        {
+          "id": "patate-douce",
+          "nom": "Patate Douce",
+          "description": "Patates douces cuites, naturellement sucrées",
+          "type": "accompagnement",
+          "origine": "Légume traditionnel",
+          "dietary": ["vegetarien", "sans_gluten"],
+          "image": "assets/images/patate-douce.jpg"
+        },
+        {
+          "id": "manioc-frais",
+          "nom": "Manioc Frais",
+          "description": "Manioc frais bouilli, base alimentaire congolaise",
+          "type": "accompagnement",
+          "origine": "Aliment de base congolais",
+          "dietary": ["vegetarien", "sans_gluten"],
+          "image": "assets/images/manioc-frais.jpg"
+        }
+      ]
+    },
+    {
+      "id": "fruits",
+      "nom": "Fruits & Desserts Naturels",
+      "description": "Fraîcheur tropicale et desserts aux fruits",
+      "icon": "🍓",
+      "video_bg": "assets/videos/fruits-tropicaux.mp4",
+      "elements": [
+        {
+          "id": "plateau-fruits-saison",
+          "nom": "Plateau de Fruits de Saison",
+          "description": "Sélection quotidienne des meilleurs fruits locaux et importés",
+          "type": "fruit",
+          "origine": "Fraîcheur garantie",
+          "dietary": ["vegetarien", "vegan", "sans_gluten"],
+          "image": "assets/images/plateau-fruits.jpg"
+        },
+        {
+          "id": "fruits-tropicaux",
+          "nom": "Fruits Tropicaux",
+          "description": "Ananas, mangue, papaye, banane, fruit de la passion",
+          "type": "fruit",
+          "origine": "Tropiques africains",
+          "dietary": ["vegetarien", "vegan", "sans_gluten"],
+          "image": "assets/images/fruits-tropicaux.jpg"
+        }
+      ]
+    },
+    {
+      "id": "specialites_rares",
+      "nom": "Spécialités Rares & Exceptionnelles",
+      "description": "Plats uniques et expériences culinaires d'exception",
+      "icon": "🦎",
+      "video_bg": "assets/videos/specialites-rares.mp4",
+      "elements": [
+        {
+          "id": "mashanza-patates-douces",
+          "nom": "Mashanza et Patates Douces",
+          "description": "Spécialité locale rare, préparation traditionnelle authentique",
+          "type": "specialite",
+          "origine": "Tradition rare congolaise",
+          "rare_specialty": true,
+          "image": "assets/images/mashanza.jpg"
+        },
+        {
+          "id": "crocodile",
+          "nom": "Crocodile",
+          "description": "Viande de crocodile préparée selon les techniques traditionnelles, expérience unique",
+          "type": "specialite",
+          "origine": "Spécialité exceptionnelle",
+          "rare_specialty": true,
+          "premium": true,
+          "image": "assets/images/crocodile.jpg",
+          "note": "Sur commande spéciale uniquement"
+        },
+        {
+          "id": "tortue",
+          "nom": "Tortue",
+          "description": "Préparation traditionnelle de tortue, mets d'exception très rare",
+          "type": "specialite",
+          "origine": "Mets d'exception congolais",
+          "rare_specialty": true,
+          "premium": true,
+          "image": "assets/images/tortue.jpg",
+          "note": "Sur commande spéciale uniquement - Soumis à réglementation"
         }
       ]
     }
   ],
   "dietary_filters": [
-    { "id": "vegetarien", "label": "Végétarien", "icon": "🌱", "color": "green" },
-    { "id": "vegan", "label": "Vegan", "icon": "🌿", "color": "darkgreen" },
-    { "id": "sans_gluten", "label": "Sans Gluten", "icon": "🌾", "color": "orange" },
-    { "id": "healthy", "label": "Healthy", "icon": "💚", "color": "lightgreen" },
-    { "id": "sans_alcool", "label": "Sans Alcool", "icon": "🚫", "color": "blue" }
+    {
+      "id": "vegetarien",
+      "label": "Végétarien",
+      "icon": "🌱",
+      "color": "green"
+    },
+    {
+      "id": "vegan",
+      "label": "Vegan",
+      "icon": "🌿",
+      "color": "darkgreen"
+    },
+    {
+      "id": "sans_gluten",
+      "label": "Sans Gluten",
+      "icon": "🌾",
+      "color": "orange"
+    },
+    {
+      "id": "tradition_congolaise",
+      "label": "Tradition Congolaise",
+      "icon": "🇨🇩",
+      "color": "blue"
+    },
+    {
+      "id": "specialite_rare",
+      "label": "Spécialité Rare",
+      "icon": "⭐",
+      "color": "gold"
+    }
   ],
   "chef_specialties": {
     "sylvie_feruzi": {
       "name": "Sylvie Feruzi",
       "title": "Chef Exécutive & Directrice",
-      "signature_dishes": ["boeuf-congolais", "cocktail-maison"],
-      "philosophy": "Mariage parfait entre tradition congolaise et raffinement international"
+      "signature_dishes": [
+        "cochon-lait-farci",
+        "viande-chevre-nga-nda",
+        "maboke-ngulu",
+        "pondu"
+      ],
+      "philosophy": "Préservation et modernisation de la cuisine congolaise authentique"
     },
     "julie_feruzi": {
       "name": "Julie Feruzi",
       "title": "Chef Pâtissière",
-      "signature_dishes": ["wedding-cake", "tartelette-citron"],
-      "philosophy": "Créations sucrées où l'art rencontre la gourmandise"
-    },
-    "david_nsenga": {
-      "name": "David Nsenga",
-      "title": "Chef Cuisine Froide & Cocktails",
-      "signature_dishes": ["cocktail-maison", "carpaccio"],
-      "philosophy": "Fraîcheur et créativité dans chaque création"
+      "signature_dishes": [
+        "plateau-fruits-saison"
+      ],
+      "philosophy": "Sublimer les fruits tropicaux en créations sucrées"
+    }
+  },
+  "contact_info": {
+    "custom_pricing": {
+      "enabled": true,
+      "message": "Pour d'autres tarifs, contactez-nous pour une discussion personnalisée",
+      "phone": "+243859993833",
+      "whatsapp": "https://wa.me/243859993833",
+      "email": "etarabesque@gmail.com"
     }
   }
 }
