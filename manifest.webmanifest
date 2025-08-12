@@ -1,1 +1,28 @@
-
+{
+  "name": "Arabesque Traiteur",
+  "short_name": "Arabesque",
+  "description": "Élégance & saveurs pour vos événements à Kinshasa. Traiteur haut de gamme pour mariages et anniversaires.",
+  "start_url": "https://patmir04.github.io/arabesque-traiteur/",
+  "display": "standalone",
+  "background_color": "#fff",
+  "theme_color": "#000",
+  "lang": "fr",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "favicon.svg",
+      "type": "image/svg+xml",
+      "sizes": "any"
+    },
+    {
+      "src": "assets/icon-192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "assets/icon-512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ]
+}
