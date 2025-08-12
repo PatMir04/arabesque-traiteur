@@ -1,1 +1,86 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>À propos | Arabesque Traiteur</title>
+  <meta name="description" content="Découvrez Arabesque Traiteur, dirigé par Sylvie Feruzi, et son équipe de cuisiniers à Kinshasa." />
+  <link rel="icon" href="/favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="/assets/css/style.css" />
+</head>
+<body class="bg-white text-black">
+  <!-- Header (même que index) -->
+  <header class="sticky top-0 z-50 bg-white/90 backdrop-blur border-b border-black/10">
+    <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
+      <a href="/" class="flex items-center gap-2" aria-label="Accueil">
+        <span class="logo serif text-2xl tracking-wide">Arabesque <strong>Traiteur</strong></span>
+      </a>
+      <nav class="hidden md:flex items-center gap-6 text-sm" aria-label="Navigation principale">
+        <a href="/a-propos.html" class="nav-link active">À propos</a>
+        <a href="/services.html" class="nav-link">Services</a>
+        <a href="/menu.html" class="nav-link">Menu</a>
+        <a href="/galerie.html" class="nav-link">Galerie</a>
+        <a href="/contact.html" class="nav-link">Devis</a>
+        <a href="https://www.instagram.com/arabesque_traiteur/" target="_blank" rel="noopener" class="inline-flex items-center gap-2 border border-black rounded-full px-3 py-1.5 hover:bg-black hover:text-white">Instagram</a>
+      </nav>
+      <button id="openNav" class="md:hidden border border-black rounded-lg px-3 py-2" aria-haspopup="true" aria-controls="mobileNav" aria-expanded="false">Menu</button>
+    </div>
+    <div id="mobileNav" class="md:hidden hidden border-t border-black/10">
+      <div class="max-w-6xl mx-auto px-4 py-3 grid gap-2 text-sm">
+        <a href="/a-propos.html" class="py-2">À propos</a>
+        <a href="/services.html" class="py-2">Services</a>
+        <a href="/menu.html" class="py-2">Menu</a>
+        <a href="/galerie.html" class="py-2">Galerie</a>
+        <a href="/contact.html" class="py-2">Devis</a>
+        <a href="https://www.instagram.com/arabesque_traiteur/" target="_blank" rel="noopener" class="py-2">Instagram</a>
+      </div>
+    </div>
+  </header>
 
+  <main>
+    <section class="max-w-6xl mx-auto px-4 py-16 grid md:grid-cols-2 gap-10 items-start">
+      <div>
+        <h1 class="serif text-4xl">Notre histoire</h1>
+        <p class="mt-4 muted">Née d’une passion pour l’art culinaire, Arabesque Traiteur propose une gastronomie élégante en noir & blanc, pensée pour sublimer vos moments forts. Sous la direction de <strong>Sylvie Feruzi</strong>, notre équipe de cuisiniers imagine des menus qui allient produits locaux, précision et esthétique.</p>
+        <ul class="mt-6 grid gap-2 text-sm">
+          <li>• Expertise mariages, anniversaires, réceptions privées et d’entreprise</li>
+          <li>• Dressage raffiné, décor en noir & blanc</li>
+          <li>• Engagement hygiène, traçabilité, ponctualité</li>
+        </ul>
+      </div>
+      <div class="grid gap-4">
+        <img class="rounded-2xl border" src="https://placehold.co/900x550/000000/FFFFFF?text=Portrait+DG+%E2%80%93+Placeholder" alt="Portrait de la Directrice générale – placeholder"/>
+        <img class="rounded-2xl border" src="https://placehold.co/900x350/FFFFFF/000000?text=%C3%89quipe+de+cuisine+%E2%80%93+Placeholder" alt="Équipe de cuisine – placeholder"/>
+      </div>
+    </section>
+
+    <section class="border-y border-black/10">
+      <div class="max-w-6xl mx-auto px-4 py-14">
+        <h2 class="serif text-3xl">Nos valeurs</h2>
+        <div class="mt-6 grid sm:grid-cols-2 lg:grid-cols-4 gap-6 text-sm">
+          <div class="card"><strong>Excellence</strong><p class="muted mt-2">Cuisine précise, saveurs équilibrées, service irréprochable.</p></div>
+          <div class="card"><strong>Créativité</strong><p class="muted mt-2">Associations contemporaines, verrines signature, mini‑délices.</p></div>
+          <div class="card"><strong>Fiabilité</strong><p class="muted mt-2">Planning tenu, logistique rodée, équipe formée.</p></div>
+          <div class="card"><strong>Local</strong><p class="muted mt-2">Approvisionnement à Kinshasa, partenariats de confiance.</p></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="border-t border-black/10">
+    <div class="max-w-6xl mx-auto px-4 py-10 text-sm flex flex-col md:flex-row items-center justify-between gap-4">
+      <p>© <span id="year"></span> Arabesque Traiteur • Kinshasa</p>
+      <div class="flex items-center gap-4">
+        <a href="/contact.html#politique" class="hover:underline">Politique de confidentialité</a>
+        <a href="/contact.html#cgv" class="hover:underline">Conditions générales</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/assets/js/main.js"></script>
+</body>
+</html>
