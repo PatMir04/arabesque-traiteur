@@ -1,1 +1,74 @@
-
+{
+  "formules": [
+    {
+      "nom": "Formule 10 $",
+      "description": "Choisissez 5 éléments du menu",
+      "prix": 10,
+      "nombre_elements": 5
+    },
+    {
+      "nom": "Formule 8 $",
+      "description": "Choisissez 4 éléments du menu",
+      "prix": 8,
+      "nombre_elements": 4
+    },
+    {
+      "nom": "Sur mesure",
+      "description": "Menu personnalisé pour mariages, galas et réceptions VIP",
+      "prix": null,
+      "nombre_elements": null
+    }
+  ],
+  "menu": [
+    {
+      "categorie": "Entrées",
+      "elements": [
+        "Canapés variés (saumon, fromage, légumes)",
+        "Mini brochettes de poulet",
+        "Salade fraîcheur au quinoa",
+        "Verrines avocat crevettes",
+        "Samoussas légumes"
+      ]
+    },
+    {
+      "categorie": "Plats chauds",
+      "elements": [
+        "Poulet rôti aux herbes",
+        "Poisson grillé sauce citron",
+        "Boeuf braisé à la congolaise",
+        "Riz pilaf aux légumes",
+        "Sauté de légumes croquants"
+      ]
+    },
+    {
+      "categorie": "Plats froids",
+      "elements": [
+        "Taboulé menthe et citron",
+        "Charcuterie sélection",
+        "Carpaccio de poisson",
+        "Salade de pâtes à l’italienne",
+        "Assiette de fromages"
+      ]
+    },
+    {
+      "categorie": "Desserts",
+      "elements": [
+        "Wedding cake personnalisé",
+        "Tartelette citron et meringue",
+        "Mousse au chocolat",
+        "Salade de fruits frais",
+        "Mini éclairs vanille et chocolat"
+      ]
+    },
+    {
+      "categorie": "Boissons & Cocktails",
+      "elements": [
+        "Cocktail maison (sans alcool)",
+        "Smoothie fruits exotiques",
+        "Eau minérale",
+        "Sodas variés",
+        "Café/thé"
+      ]
+    }
+  ]
+}
