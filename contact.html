@@ -1,1 +1,149 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Devis & Contact | Arabesque Traiteur</title>
+  <meta name="description" content="Demandez un devis : formulaire, e‑mail, WhatsApp. Zones desservies : Kinshasa." />
+  <link rel="icon" href="/favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="/assets/css/style.css" />
+</head>
+<body class="bg-white text-black">
+  <!-- Header -->
+  <header class="sticky top-0 z-50 bg-white/90 backdrop-blur border-b border-black/10">
+    <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
+      <a href="/" class="flex items-center gap-2" aria-label="Accueil">
+        <span class="logo serif text-2xl tracking-wide">Arabesque <strong>Traiteur</strong></span>
+      </a>
+      <nav class="hidden md:flex items-center gap-6 text-sm" aria-label="Navigation principale">
+        <a href="/a-propos.html" class="nav-link">À propos</a>
+        <a href="/services.html" class="nav-link">Services</a>
+        <a href="/menu.html" class="nav-link">Menu</a>
+        <a href="/galerie.html" class="nav-link">Galerie</a>
+        <a href="/contact.html" class="nav-link active">Devis</a>
+        <a href="https://www.instagram.com/arabesque_traiteur/" target="_blank" rel="noopener" class="inline-flex items-center gap-2 border border-black rounded-full px-3 py-1.5 hover:bg-black hover:text-white">Instagram</a>
+      </nav>
+      <button id="openNav" class="md:hidden border border-black rounded-lg px-3 py-2" aria-haspopup="true" aria-controls="mobileNav" aria-expanded="false">Menu</button>
+    </div>
+    <div id="mobileNav" class="md:hidden hidden border-t border-black/10">
+      <div class="max-w-6xl mx-auto px-4 py-3 grid gap-2 text-sm">
+        <a href="/a-propos.html" class="py-2">À propos</a>
+        <a href="/services.html" class="py-2">Services</a>
+        <a href="/menu.html" class="py-2">Menu</a>
+        <a href="/galerie.html" class="py-2">Galerie</a>
+        <a href="/contact.html" class="py-2">Devis</a>
+        <a href="https://www.instagram.com/arabesque_traiteur/" target="_blank" rel="noopener" class="py-2">Instagram</a>
+      </div>
+    </div>
+  </header>
 
+  <main>
+    <section class="max-w-6xl mx-auto px-4 py-16 grid lg:grid-cols-2 gap-10">
+      <div>
+        <h1 class="serif text-4xl">Demander un devis</h1>
+        <p class="mt-2 muted">Remplissez le formulaire — réponse rapide. Vous pouvez aussi écrire sur WhatsApp.</p>
+        <form id="quoteForm" class="mt-6 grid gap-4 text-sm" novalidate>
+          <div class="grid sm:grid-cols-2 gap-4">
+            <label class="grid gap-1">Nom complet
+              <input required type="text" name="name" class="input" />
+            </label>
+            <label class="grid gap-1">Téléphone (WhatsApp)
+              <input required type="tel" name="phone" class="input" />
+            </label>
+          </div>
+          <div class="grid sm:grid-cols-2 gap-4">
+            <label class="grid gap-1">E‑mail
+              <input required type="email" name="email" class="input" />
+            </label>
+            <label class="grid gap-1">Date de l’événement
+              <input required type="date" name="date" class="input" />
+            </label>
+          </div>
+          <div class="grid sm:grid-cols-2 gap-4">
+            <label class="grid gap-1">Lieu (Kinshasa)
+              <input required type="text" name="place" placeholder="Commune, salle…" class="input" />
+            </label>
+            <label class="grid gap-1">Nombre d’invités
+              <input required type="number" min="1" name="guests" class="input" />
+            </label>
+          </div>
+          <label class="grid gap-1">Type d’événement
+            <select name="type" class="input">
+              <option>Mariage</option>
+              <option>Anniversaire</option>
+              <option>Réception privée</option>
+              <option>Événement d’entreprise</option>
+            </select>
+          </label>
+          <label class="grid gap-1">Votre message
+            <textarea name="message" rows="4" class="input" placeholder="Précisez vos besoins, horaires, contraintes…"></textarea>
+          </label>
+          <input type="hidden" name="selection" id="selectionField" />
+
+          <div class="flex flex-wrap gap-3 pt-2">
+            <button type="submit" class="btn">Envoyer par e‑mail</button>
+            <a id="whBtn" href="#" target="_blank" rel="noopener" class="btn">Envoyer via WhatsApp</a>
+          </div>
+          <p id="formMsg" class="text-sm mt-3"></p>
+        </form>
+
+        <section id="politique" class="mt-12">
+          <h2 class="h3">Politique de confidentialité</h2>
+          <p class="mt-2 text-xs muted">Nous utilisons vos informations pour répondre à votre demande de devis. Aucune cession à des tiers.</p>
+        </section>
+        <section id="cgv" class="mt-8">
+          <h2 class="h3">Conditions générales</h2>
+          <ul class="mt-2 text-xs muted list-disc pl-5">
+            <li>Devis valable 15 jours.</li>
+            <li>Acompte requis pour confirmer la réservation.</li>
+            <li>Modifications possibles jusqu’à J‑7 (selon disponibilité).</li>
+          </ul>
+        </section>
+      </div>
+
+      <aside class="lg:pl-8">
+        <div class="border rounded-2xl p-6">
+          <h3 class="font-semibold">Coordonnées</h3>
+          <p class="mt-2 muted">Kinshasa, RD Congo — zones desservies : toutes communes (sur devis).</p>
+          <p class="mt-2 text-sm">Instagram : <a href="https://www.instagram.com/arabesque_traiteur/" target="_blank" rel="noopener" class="underline">@arabesque_traiteur</a></p>
+          <div class="mt-6">
+            <img src="https://placehold.co/900x500/FFFFFF/000000?text=Carte+Kinshasa+%E2%80%93+Placeholder" alt="Carte Kinshasa – placeholder" class="w-full rounded-xl border"/>
+          </div>
+        </div>
+
+        <div class="mt-6 border rounded-2xl p-6">
+          <h3 class="font-semibold">FAQ</h3>
+          <details class="mt-2">
+            <summary class="cursor-pointer">Proposez‑vous des options végétariennes/halal ?</summary>
+            <p class="mt-2 text-sm muted">Oui, à préciser dans votre demande de devis.</p>
+          </details>
+          <details class="mt-2">
+            <summary class="cursor-pointer">Livrez‑vous dans toutes les communes ?</summary>
+            <p class="mt-2 text-sm muted">Oui, selon disponibilité et frais logistiques.</p>
+          </details>
+          <details class="mt-2">
+            <summary class="cursor-pointer">Quel délai de réservation ?</summary>
+            <p class="mt-2 text-sm muted">Idéalement 2–3 semaines avant la date.</p>
+          </details>
+        </div>
+      </aside>
+    </section>
+  </main>
+
+  <footer class="border-t border-black/10">
+    <div class="max-w-6xl mx-auto px-4 py-10 text-sm flex flex-col md:flex-row items-center justify-between gap-4">
+      <p>© <span id="year"></span> Arabesque Traiteur • Kinshasa</p>
+      <div class="flex items-center gap-4">
+        <a href="#politique" class="hover:underline">Politique de confidentialité</a>
+        <a href="#cgv" class="hover:underline">Conditions générales</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/assets/js/main.js"></script>
+</body>
+</html>
