@@ -3,147 +3,1467 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Devis & Contact | Arabesque Traiteur</title>
-  <meta name="description" content="Demandez un devis : formulaire, e‑mail, WhatsApp. Zones desservies : Kinshasa." />
-  <link rel="icon" href="/favicon.svg" />
+  <title>Devis Gratuit & Contact | Arabesque Traiteur - Cuisine Congolaise Authentique</title>
+  <meta name="description" content="Demandez votre devis gratuit pour vos événements à Kinshasa. Formules 15$-35$ selon vos besoins. Menu congolais authentique, spécialités rares. Réponse sous 24h garantie." />
+  
+  <!-- Enhanced SEO & Social Media -->
+  <link rel="icon" href="favicon.svg" />
+  <link rel="manifest" href="manifest.webmanifest" />
+  <meta name="theme-color" content="#C9AB6D" />
+  <meta name="keywords" content="devis traiteur kinshasa, contact arabesque traiteur, sylvie feruzi contact, menu congolais prix, événement kinshasa" />
+  <meta name="author" content="Arabesque Traiteur - Sylvie Feruzi" />
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Devis Gratuit | Arabesque Traiteur Kinshasa" />
+  <meta property="og:description" content="Obtenez votre devis gratuit pour un événement d'exception avec notre cuisine congolaise authentique" />
+  <meta property="og:image" content="https://patmir04.github.io/arabesque-traiteur/assets/images/contact-og.jpg" />
+  <meta property="og:url" content="https://patmir04.github.io/arabesque-traiteur/contact.html" />
+  
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Devis Gratuit | Arabesque Traiteur" />
+  <meta name="twitter:description" content="Planifiez votre événement d'exception avec nous" />
+  <meta name="twitter:image" content="https://patmir04.github.io/arabesque-traiteur/assets/images/contact-og.jpg" />
+  
+  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700;900&display=swap" rel="stylesheet">
+  
+  <!-- Styles -->
   <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="stylesheet" href="/assets/css/style.css" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+  
+  <!-- Structured Data for Contact -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ContactPage",
+    "name": "Contact & Devis Arabesque Traiteur",
+    "description": "Formulaire de contact et demande de devis pour événements à Kinshasa",
+    "provider": {
+      "@type": "FoodEstablishment",
+      "name": "Arabesque Traiteur",
+      "founder": {
+        "@type": "Person",
+        "name": "Sylvie Feruzi Kabala"
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Kinshasa",
+        "addressCountry": "CD"
+      },
+      "telephone": "+243859993833",
+      "email": "etarabesque@gmail.com"
+    }
+  }
+  </script>
+  
+  <!-- Performance Hints -->
+  <link rel="dns-prefetch" href="//fonts.googleapis.com">
+  <link rel="preload" href="assets/css/style.css" as="style">
+  <link rel="preload" href="assets/js/main.js" as="script">
 </head>
-<body class="bg-white text-black">
-  <!-- Header -->
-  <header class="sticky top-0 z-50 bg-white/90 backdrop-blur border-b border-black/10">
-    <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
-      <a href="/" class="flex items-center gap-2" aria-label="Accueil">
-        <span class="logo serif text-2xl tracking-wide">Arabesque <strong>Traiteur</strong></span>
-      </a>
-      <nav class="hidden md:flex items-center gap-6 text-sm" aria-label="Navigation principale">
-        <a href="/a-propos.html" class="nav-link">À propos</a>
-        <a href="/services.html" class="nav-link">Services</a>
-        <a href="/menu.html" class="nav-link">Menu</a>
-        <a href="/galerie.html" class="nav-link">Galerie</a>
-        <a href="/contact.html" class="nav-link active">Devis</a>
-        <a href="https://www.instagram.com/arabesque_traiteur/" target="_blank" rel="noopener" class="inline-flex items-center gap-2 border border-black rounded-full px-3 py-1.5 hover:bg-black hover:text-white">Instagram</a>
-      </nav>
-      <button id="openNav" class="md:hidden border border-black rounded-lg px-3 py-2" aria-haspopup="true" aria-controls="mobileNav" aria-expanded="false">Menu</button>
+
+<body class="bg-white text-black overflow-x-hidden">
+  <!-- Scroll Progress Bar -->
+  <div class="scroll-progress fixed top-0 left-0 h-1 bg-gradient-to-r from-gold to-gold-light z-50 transition-all duration-300" style="width: 0%;"></div>
+  
+  <!-- Enhanced Header -->
+  <header class="fixed top-0 left-0 right-0 z-40 bg-white/95 backdrop-blur-md border-b border-black/10 transition-all duration-300" id="mainHeader">
+    <div class="container mx-auto px-4">
+      <div class="flex items-center justify-between py-4">
+        <!-- Logo -->
+        <a href="index.html" class="group flex items-center gap-3" aria-label="Retour à l'accueil">
+          <div class="w-10 h-10 bg-black rounded-full flex items-center justify-center group-hover:bg-gold transition-colors duration-300">
+            <span class="text-white group-hover:text-black font-bold text-lg">A</span>
+          </div>
+          <div class="flex flex-col">
+            <span class="font-display text-xl font-bold tracking-tight">Arabesque</span>
+            <span class="text-xs tracking-widest text-gray-600 uppercase">Traiteur</span>
+          </div>
+        </a>
+        
+        <!-- Desktop Navigation -->
+        <nav class="hidden lg:flex items-center gap-8" aria-label="Navigation principale">
+          <a href="a-propos.html" class="nav-link text-sm font-medium hover:text-gold transition-colors">À propos</a>
+          <a href="equipe.html" class="nav-link text-sm font-medium hover:text-gold transition-colors">Équipe</a>
+          <a href="services.html" class="nav-link text-sm font-medium hover:text-gold transition-colors">Services</a>
+          <a href="menu.html" class="nav-link text-sm font-medium hover:text-gold transition-colors">Menu</a>
+          <a href="galerie.html" class="nav-link text-sm font-medium hover:text-gold transition-colors">Galerie</a>
+          <a href="contact.html" class="nav-link active text-sm font-medium text-gold relative">
+            Contact
+            <span class="absolute -bottom-2 left-0 right-0 h-0.5 bg-gold rounded-full"></span>
+          </a>
+        </nav>
+        
+        <!-- Mobile Menu Button -->
+        <button id="openNav" class="lg:hidden p-2 rounded-lg border border-black/20 hover:bg-gray-50 transition-colors"
+                aria-label="Ouvrir le menu" aria-haspopup="true" aria-expanded="false">
+          <div class="w-6 h-6 flex flex-col justify-center space-y-1">
+            <span class="block w-full h-0.5 bg-black transition-all duration-300"></span>
+            <span class="block w-full h-0.5 bg-black transition-all duration-300"></span>
+            <span class="block w-full h-0.5 bg-black transition-all duration-300"></span>
+          </div>
+        </button>
+      </div>
     </div>
-    <div id="mobileNav" class="md:hidden hidden border-t border-black/10">
-      <div class="max-w-6xl mx-auto px-4 py-3 grid gap-2 text-sm">
-        <a href="/a-propos.html" class="py-2">À propos</a>
-        <a href="/services.html" class="py-2">Services</a>
-        <a href="/menu.html" class="py-2">Menu</a>
-        <a href="/galerie.html" class="py-2">Galerie</a>
-        <a href="/contact.html" class="py-2">Devis</a>
-        <a href="https://www.instagram.com/arabesque_traiteur/" target="_blank" rel="noopener" class="py-2">Instagram</a>
+    
+    <!-- Enhanced Mobile Navigation -->
+    <div id="mobileNav" class="lg:hidden fixed inset-0 top-0 z-50 hidden">
+      <div class="absolute inset-0 bg-black/50 backdrop-blur-sm" id="mobileNavOverlay"></div>
+      <div class="absolute right-0 top-0 h-full w-80 bg-white shadow-2xl transform translate-x-full transition-transform duration-300 ease-out">
+        <div class="flex items-center justify-between p-6 border-b border-gray-200">
+          <span class="font-display text-xl font-bold">Menu</span>
+          <button id="closeNav" class="p-2 rounded-lg hover:bg-gray-100 transition-colors" aria-label="Fermer le menu">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+            </svg>
+          </button>
+        </div>
+        
+        <nav class="p-6 space-y-6">
+          <a href="a-propos.html" class="block text-lg font-medium hover:text-gold transition-colors">À propos</a>
+          <a href="equipe.html" class="block text-lg font-medium hover:text-gold transition-colors">Notre équipe</a>
+          <a href="services.html" class="block text-lg font-medium hover:text-gold transition-colors">Services</a>
+          <a href="menu.html" class="block text-lg font-medium hover:text-gold transition-colors">Menu interactif</a>
+          <a href="galerie.html" class="block text-lg font-medium hover:text-gold transition-colors">Galerie photos</a>
+          <a href="contact.html" class="block text-lg font-medium text-gold">Contact & Devis</a>
+        </nav>
       </div>
     </div>
   </header>
 
-  <main>
-    <section class="max-w-6xl mx-auto px-4 py-16 grid lg:grid-cols-2 gap-10">
-      <div>
-        <h1 class="serif text-4xl">Demander un devis</h1>
-        <p class="mt-2 muted">Remplissez le formulaire — réponse rapide. Vous pouvez aussi écrire sur WhatsApp.</p>
-        <form id="quoteForm" class="mt-6 grid gap-4 text-sm" novalidate>
-          <div class="grid sm:grid-cols-2 gap-4">
-            <label class="grid gap-1">Nom complet
-              <input required type="text" name="name" class="input" />
-            </label>
-            <label class="grid gap-1">Téléphone (WhatsApp)
-              <input required type="tel" name="phone" class="input" />
-            </label>
-          </div>
-          <div class="grid sm:grid-cols-2 gap-4">
-            <label class="grid gap-1">E‑mail
-              <input required type="email" name="email" class="input" />
-            </label>
-            <label class="grid gap-1">Date de l’événement
-              <input required type="date" name="date" class="input" />
-            </label>
-          </div>
-          <div class="grid sm:grid-cols-2 gap-4">
-            <label class="grid gap-1">Lieu (Kinshasa)
-              <input required type="text" name="place" placeholder="Commune, salle…" class="input" />
-            </label>
-            <label class="grid gap-1">Nombre d’invités
-              <input required type="number" min="1" name="guests" class="input" />
-            </label>
-          </div>
-          <label class="grid gap-1">Type d’événement
-            <select name="type" class="input">
-              <option>Mariage</option>
-              <option>Anniversaire</option>
-              <option>Réception privée</option>
-              <option>Événement d’entreprise</option>
-            </select>
-          </label>
-          <label class="grid gap-1">Votre message
-            <textarea name="message" rows="4" class="input" placeholder="Précisez vos besoins, horaires, contraintes…"></textarea>
-          </label>
-          <input type="hidden" name="selection" id="selectionField" />
-
-          <div class="flex flex-wrap gap-3 pt-2">
-            <button type="submit" class="btn">Envoyer par e‑mail</button>
-            <a id="whBtn" href="#" target="_blank" rel="noopener" class="btn">Envoyer via WhatsApp</a>
-          </div>
-          <p id="formMsg" class="text-sm mt-3"></p>
-        </form>
-
-        <section id="politique" class="mt-12">
-          <h2 class="h3">Politique de confidentialité</h2>
-          <p class="mt-2 text-xs muted">Nous utilisons vos informations pour répondre à votre demande de devis. Aucune cession à des tiers.</p>
-        </section>
-        <section id="cgv" class="mt-8">
-          <h2 class="h3">Conditions générales</h2>
-          <ul class="mt-2 text-xs muted list-disc pl-5">
-            <li>Devis valable 15 jours.</li>
-            <li>Acompte requis pour confirmer la réservation.</li>
-            <li>Modifications possibles jusqu’à J‑7 (selon disponibilité).</li>
-          </ul>
-        </section>
+  <!-- Contact Hero Section -->
+  <section class="video-hero relative min-h-[60vh] flex items-center justify-center overflow-hidden pt-20">
+    <video autoplay muted loop playsinline data-auto-play class="absolute inset-0 w-full h-full object-cover opacity-80">
+      <source src="assets/videos/contact-consultation.mp4" type="video/mp4">
+      <source src="assets/videos/contact-consultation.webm" type="video/webm">
+    </video>
+    
+    <div class="relative z-10 text-center text-white max-w-4xl mx-auto px-4">
+      <div class="reveal">
+        <span class="inline-block px-4 py-2 bg-gold/20 text-gold font-semibold text-sm rounded-full mb-4">
+          📞 Contact & Devis
+        </span>
+        <h1 class="font-display text-4xl md:text-6xl font-bold mb-6 leading-tight">
+          Planifions votre événement <span class="text-gold">d'exception</span>
+        </h1>
+        <p class="text-xl md:text-2xl mb-8 max-w-3xl mx-auto leading-relaxed">
+          Devis gratuit sous 24h • Consultation personnalisée • Sylvie Feruzi à votre écoute
+        </p>
+        
+        <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+          <a href="#formulaire-devis" class="btn btn-gold text-lg px-8 py-4 animate-pulse">
+            📋 Formulaire intelligent
+          </a>
+          <a href="https://wa.me/243859993833?text=Bonjour%20Arabesque%20Traiteur!%20Je%20souhaite%20obtenir%20un%20devis%20pour%20mon%20événement" 
+             target="_blank" rel="noopener"
+             class="btn btn-outline border-white text-white hover:bg-white hover:text-black text-lg px-8 py-4">
+            💬 WhatsApp Direct
+          </a>
+        </div>
       </div>
+    </div>
+  </section>
 
-      <aside class="lg:pl-8">
-        <div class="border rounded-2xl p-6">
-          <h3 class="font-semibold">Coordonnées</h3>
-          <p class="mt-2 muted">Kinshasa, RD Congo — zones desservies : toutes communes (sur devis).</p>
-          <p class="mt-2 text-sm">Instagram : <a href="https://www.instagram.com/arabesque_traiteur/" target="_blank" rel="noopener" class="underline">@arabesque_traiteur</a></p>
-          <div class="mt-6">
-            <img src="https://placehold.co/900x500/FFFFFF/000000?text=Carte+Kinshasa+%E2%80%93+Placeholder" alt="Carte Kinshasa – placeholder" class="w-full rounded-xl border"/>
+  <!-- Contact Methods Section -->
+  <section class="py-16 bg-gradient-to-br from-white to-gray-50">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-12 reveal">
+        <span class="inline-block px-4 py-2 bg-gold/10 text-gold font-semibold text-sm rounded-full mb-4">
+          Plusieurs façons de nous contacter
+        </span>
+        <h2 class="font-display text-3xl md:text-4xl font-bold mb-4">
+          Choisissez votre méthode préférée
+        </h2>
+        <p class="text-lg text-gray-600">
+          Nous nous engageons à vous répondre rapidement, quel que soit le canal choisi
+        </p>
+      </div>
+      
+      <div class="grid md:grid-cols-3 gap-8">
+        <!-- WhatsApp -->
+        <article class="bg-gradient-to-br from-green-50 to-green-100 rounded-2xl p-8 text-center hover:shadow-lg transition-all duration-300 reveal">
+          <div class="w-16 h-16 bg-green-500 rounded-full flex items-center justify-center mx-auto mb-6">
+            <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.885 3.106"/>
+            </svg>
+          </div>
+          <h3 class="font-display text-xl font-bold mb-3">WhatsApp</h3>
+          <p class="text-gray-600 mb-6">Réponse immédiate • Photos en direct • Consultation rapide</p>
+          <div class="space-y-3">
+            <a href="https://wa.me/243859993833?text=Bonjour%20Arabesque%20Traiteur!%20Je%20souhaite%20obtenir%20un%20devis%20pour%20mon%20événement" 
+               target="_blank" rel="noopener"
+               class="btn bg-green-500 hover:bg-green-600 text-white w-full">
+              Ouvrir WhatsApp
+            </a>
+            <p class="text-sm text-gray-500">+243 859 993 833</p>
+          </div>
+        </article>
+        
+        <!-- Phone -->
+        <article class="bg-gradient-to-br from-blue-50 to-blue-100 rounded-2xl p-8 text-center hover:shadow-lg transition-all duration-300 reveal">
+          <div class="w-16 h-16 bg-blue-500 rounded-full flex items-center justify-center mx-auto mb-6">
+            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
+            </svg>
+          </div>
+          <h3 class="font-display text-xl font-bold mb-3">Téléphone</h3>
+          <p class="text-gray-600 mb-6">Discussion personnelle • Conseil expert • Disponible 8h-20h</p>
+          <div class="space-y-3">
+            <a href="tel:+243859993833" class="btn bg-blue-500 hover:bg-blue-600 text-white w-full">
+              Appeler maintenant
+            </a>
+            <p class="text-sm text-gray-500">Lun-Dim : 8h00-20h00</p>
+          </div>
+        </article>
+        
+        <!-- Email -->
+        <article class="bg-gradient-to-br from-gold/5 to-gold/15 rounded-2xl p-8 text-center hover:shadow-lg transition-all duration-300 reveal">
+          <div class="w-16 h-16 bg-gold rounded-full flex items-center justify-center mx-auto mb-6">
+            <svg class="w-8 h-8 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+            </svg>
+          </div>
+          <h3 class="font-display text-xl font-bold mb-3">Email</h3>
+          <p class="text-gray-600 mb-6">Devis détaillé • Documents joints • Réponse sous 24h</p>
+          <div class="space-y-3">
+            <a href="#formulaire-devis" class="btn btn-gold w-full">
+              Formulaire complet
+            </a>
+            <p class="text-sm text-gray-500">etarabesque@gmail.com</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Smart Quote Form -->
+  <section id="formulaire-devis" class="py-20 bg-white">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-16 reveal">
+        <span class="inline-block px-4 py-2 bg-gold/10 text-gold font-semibold text-sm rounded-full mb-4">
+          📋 Devis Intelligent
+        </span>
+        <h2 class="font-display text-4xl md:text-5xl font-bold mb-6">
+          Formulaire de devis personnalisé
+        </h2>
+        <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+          Notre formulaire intelligent calcule automatiquement votre estimation et récupère votre sélection de menu si vous en avez fait une
+        </p>
+      </div>
+      
+      <div class="max-w-4xl mx-auto">
+        <!-- Form Progress -->
+        <div class="mb-8 reveal">
+          <div class="flex items-center justify-center gap-4 mb-4">
+            <div class="step-indicator active" data-step="1">
+              <span class="step-number">1</span>
+              <span class="step-label">Événement</span>
+            </div>
+            <div class="step-line"></div>
+            <div class="step-indicator" data-step="2">
+              <span class="step-number">2</span>
+              <span class="step-label">Menu</span>
+            </div>
+            <div class="step-line"></div>
+            <div class="step-indicator" data-step="3">
+              <span class="step-number">3</span>
+              <span class="step-label">Contact</span>
+            </div>
+            <div class="step-line"></div>
+            <div class="step-indicator" data-step="4">
+              <span class="step-number">4</span>
+              <span class="step-label">Confirmation</span>
+            </div>
+          </div>
+          <div class="progress-bar">
+            <div class="progress-fill" style="width: 25%"></div>
           </div>
         </div>
+        
+        <form id="quoteForm" class="space-y-8" novalidate>
+          <!-- Step 1: Event Details -->
+          <div class="form-step active" data-step="1">
+            <div class="bg-gradient-to-br from-gray-50 to-white rounded-2xl p-8 reveal">
+              <h3 class="font-display text-2xl font-bold mb-6 text-center">📅 Détails de votre événement</h3>
+              
+              <div class="grid md:grid-cols-2 gap-6">
+                <div class="form-group">
+                  <label class="form-label">Type d'événement *</label>
+                  <select name="event_type" class="form-input" required>
+                    <option value="">Choisissez votre événement</option>
+                    <option value="mariage">💕 Mariage</option>
+                    <option value="anniversaire">🎂 Anniversaire</option>
+                    <option value="reception_privee">🏠 Réception privée</option>
+                    <option value="entreprise">🏢 Événement d'entreprise</option>
+                    <option value="gala">🎭 Gala & Réception officielle</option>
+                    <option value="bapteme">👶 Baptême / Cérémonie religieuse</option>
+                    <option value="autre">🎉 Autre (préciser)</option>
+                  </select>
+                  <div class="form-error"></div>
+                </div>
+                
+                <div class="form-group">
+                  <label class="form-label">Date de l'événement *</label>
+                  <input type="date" name="event_date" class="form-input" required>
+                  <div class="form-error"></div>
+                </div>
+                
+                <div class="form-group">
+                  <label class="form-label">Nombre d'invités *</label>
+                  <input type="number" name="guests_count" min="1" max="1000" class="form-input" required 
+                         placeholder="Ex: 50">
+                  <small class="form-help">Influence directement votre formule tarifaire</small>
+                  <div class="form-error"></div>
+                </div>
+                
+                <div class="form-group">
+                  <label class="form-label">Heure de début</label>
+                  <input type="time" name="event_time" class="form-input">
+                  <div class="form-error"></div>
+                </div>
+                
+                <div class="form-group md:col-span-2">
+                  <label class="form-label">Lieu (Kinshasa) *</label>
+                  <input type="text" name="event_location" class="form-input" required 
+                         placeholder="Ex: Salle de réception, Commune de Gombe">
+                  <small class="form-help">Précisez la commune, salle ou adresse</small>
+                  <div class="form-error"></div>
+                </div>
+              </div>
+              
+              <!-- Pricing Preview -->
+              <div id="pricingPreview" class="mt-8 p-6 bg-gold/10 rounded-xl hidden">
+                <h4 class="font-bold mb-3 text-gold">💰 Estimation automatique</h4>
+                <div id="pricingDetails"></div>
+              </div>
+              
+              <div class="text-center mt-8">
+                <button type="button" class="btn btn-gold next-step" data-next="2">
+                  Continuer vers le menu →
+                </button>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Step 2: Menu Selection -->
+          <div class="form-step" data-step="2">
+            <div class="bg-gradient-to-br from-gray-50 to-white rounded-2xl p-8 reveal">
+              <h3 class="font-display text-2xl font-bold mb-6 text-center">🍽️ Sélection de menu</h3>
+              
+              <!-- Detected Menu Selection -->
+              <div id="detectedMenu" class="mb-8 hidden">
+                <div class="bg-green-50 border border-green-200 rounded-lg p-4">
+                  <h4 class="font-bold text-green-800 mb-2">✅ Menu détecté automatiquement</h4>
+                  <p class="text-green-600 text-sm">Nous avons récupéré votre sélection du configurateur de menu</p>
+                  <div id="detectedMenuItems" class="mt-3"></div>
+                  <button type="button" class="text-green-600 text-sm underline mt-2" onclick="clearDetectedMenu()">
+                    Effacer et choisir manuellement
+                  </button>
+                </div>
+              </div>
+              
+              <!-- Manual Menu Selection -->
+              <div id="manualMenuSelection">
+                <div class="mb-6">
+                  <h4 class="font-bold mb-4">Préférences générales</h4>
+                  <div class="grid md:grid-cols-2 gap-4">
+                    <div class="form-group">
+                      <label class="form-label">Style de service préféré</label>
+                      <select name="service_style" class="form-input">
+                        <option value="">Pas de préférence</option>
+                        <option value="buffet">🍽️ Service buffet</option>
+                        <option value="table">🎩 Service à table</option>
+                        <option value="cocktail">🥂 Cocktail dinatoire</option>
+                        <option value="mixte">🔄 Service mixte</option>
+                      </select>
+                    </div>
+                    
+                    <div class="form-group">
+                      <label class="form-label">Spécialités souhaitées</label>
+                      <div class="checkbox-group">
+                        <label class="checkbox-item">
+                          <input type="checkbox" name="specialties[]" value="plats_congolais">
+                          <span class="checkmark"></span>
+                          🇨🇩 Plats congolais traditionnels
+                        </label>
+                        <label class="checkbox-item">
+                          <input type="checkbox" name="specialties[]" value="poissons_fleuve">
+                          <span class="checkmark"></span>
+                          🐟 Poissons du fleuve Congo
+                        </label>
+                        <label class="checkbox-item">
+                          <input type="checkbox" name="specialties[]" value="grillades">
+                          <span class="checkmark"></span>
+                          🔥 Grillades et viandes
+                        </label>
+                        <label class="checkbox-item">
+                          <input type="checkbox" name="specialties[]" value="vegetarien">
+                          <span class="checkmark"></span>
+                          🌱 Options végétariennes
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                
+                <!-- Rare Specialties -->
+                <div class="mb-6">
+                  <h4 class="font-bold mb-4">🦎 Spécialités rares (sur commande)</h4>
+                  <div class="bg-amber-50 border border-amber-200 rounded-lg p-4">
+                    <div class="checkbox-group">
+                      <label class="checkbox-item">
+                        <input type="checkbox" name="rare_specialties[]" value="crocodile">
+                        <span class="checkmark"></span>
+                        🐊 Crocodile (préparation traditionnelle)
+                      </label>
+                      <label class="checkbox-item">
+                        <input type="checkbox" name="rare_specialties[]" value="tortue">
+                        <span class="checkmark"></span>
+                        🐢 Tortue (mets d'exception - réglementation)
+                      </label>
+                      <label class="checkbox-item">
+                        <input type="checkbox" name="rare_specialties[]" value="mashanza">
+                        <span class="checkmark"></span>
+                        🌱 Mashanza et patates douces
+                      </label>
+                    </div>
+                    <p class="text-amber-600 text-sm mt-2">
+                      <strong>Note:</strong> Ces spécialités nécessitent une commande à l'avance et sont soumises à disponibilité.
+                    </p>
+                  </div>
+                </div>
+                
+                <!-- Service Cocktail Add-on -->
+                <div class="mb-6">
+                  <h4 class="font-bold mb-4">🍹 Service Cocktail (optionnel)</h4>
+                  <div class="bg-black text-white rounded-lg p-6">
+                    <label class="checkbox-item text-white">
+                      <input type="checkbox" name="cocktail_service" value="yes" id="cocktailService">
+                      <span class="checkmark"></span>
+                      Ajouter le service cocktail clé en main
+                    </label>
+                    <div id="cocktailDetails" class="hidden mt-4">
+                      <p class="text-gray-300 text-sm mb-3">Inclus: 2 tournées par personne, barmen professionnels, matériel complet</p>
+                      <div class="grid grid-cols-2 md:grid-cols-4 gap-2 text-center text-sm">
+                        <div class="bg-white/10 rounded p-2">
+                          <div class="text-gold font-bold">500$</div>
+                          <div class="text-xs">&lt; 55 pers.</div>
+                        </div>
+                        <div class="bg-white/10 rounded p-2">
+                          <div class="text-gold font-bold">750$</div>
+                          <div class="text-xs">&lt; 105 pers.</div>
+                        </div>
+                        <div class="bg-white/10 rounded p-2">
+                          <div class="text-gold font-bold">900$</div>
+                          <div class="text-xs">&lt; 155 pers.</div>
+                        </div>
+                        <div class="bg-white/10 rounded p-2">
+                          <div class="text-gold font-bold">1200$</div>
+                          <div class="text-xs">&lt; 205 pers.</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="form-group">
+                <label class="form-label">Demandes ou contraintes alimentaires spéciales</label>
+                <textarea name="dietary_requirements" rows="3" class="form-input" 
+                          placeholder="Ex: allergies, régime végétarien, halal, sans gluten..."></textarea>
+              </div>
+              
+              <div class="flex justify-between mt-8">
+                <button type="button" class="btn btn-outline prev-step" data-prev="1">
+                  ← Retour
+                </button>
+                <button type="button" class="btn btn-gold next-step" data-next="3">
+                  Continuer vers contact →
+                </button>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Step 3: Contact Information -->
+          <div class="form-step" data-step="3">
+            <div class="bg-gradient-to-br from-gray-50 to-white rounded-2xl p-8 reveal">
+              <h3 class="font-display text-2xl font-bold mb-6 text-center">📞 Vos coordonnées</h3>
+              
+              <div class="grid md:grid-cols-2 gap-6">
+                <div class="form-group">
+                  <label class="form-label">Nom complet *</label>
+                  <input type="text" name="client_name" class="form-input" required 
+                         placeholder="Prénom Nom">
+                  <div class="form-error"></div>
+                </div>
+                
+                <div class="form-group">
+                  <label class="form-label">Téléphone (WhatsApp) *</label>
+                  <input type="tel" name="client_phone" class="form-input" required 
+                         placeholder="+243 xxx xxx xxx">
+                  <small class="form-help">De préférence WhatsApp pour un suivi rapide</small>
+                  <div class="form-error"></div>
+                </div>
+                
+                <div class="form-group">
+                  <label class="form-label">Email *</label>
+                  <input type="email" name="client_email" class="form-input" required 
+                         placeholder="votre.email@exemple.com">
+                  <small class="form-help">Pour recevoir le devis détaillé</small>
+                  <div class="form-error"></div>
+                </div>
+                
+                <div class="form-group">
+                  <label class="form-label">Méthode de contact préférée</label>
+                  <select name="contact_preference" class="form-input">
+                    <option value="whatsapp">💬 WhatsApp</option>
+                    <option value="phone">📞 Téléphone</option>
+                    <option value="email">📧 Email</option>
+                  </select>
+                </div>
+                
+                <div class="form-group md:col-span-2">
+                  <label class="form-label">Budget approximatif (optionnel)</label>
+                  <select name="budget_range" class="form-input">
+                    <option value="">Pas de budget défini</option>
+                    <option value="500-1000">500$ - 1,000$</option>
+                    <option value="1000-2000">1,000$ - 2,000$</option>
+                    <option value="2000-5000">2,000$ - 5,000$</option>
+                    <option value="5000+">Plus de 5,000$</option>
+                  </select>
+                  <small class="form-help">Nous aide à personnaliser notre proposition</small>
+                </div>
+                
+                <div class="form-group md:col-span-2">
+                  <label class="form-label">Message personnalisé</label>
+                  <textarea name="personal_message" rows="4" class="form-input" 
+                            placeholder="Parlez-nous de votre vision, de l'ambiance souhaitée, de détails importants..."></textarea>
+                </div>
+              </div>
+              
+              <div class="flex justify-between mt-8">
+                <button type="button" class="btn btn-outline prev-step" data-prev="2">
+                  ← Retour
+                </button>
+                <button type="button" class="btn btn-gold next-step" data-next="4">
+                  Voir le récapitulatif →
+                </button>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Step 4: Summary & Confirmation -->
+          <div class="form-step" data-step="4">
+            <div class="bg-gradient-to-br from-gray-50 to-white rounded-2xl p-8 reveal">
+              <h3 class="font-display text-2xl font-bold mb-6 text-center">📋 Récapitulatif de votre demande</h3>
+              
+              <div id="quoteSummary" class="space-y-6 mb-8">
+                <!-- Summary content will be populated by JavaScript -->
+              </div>
+              
+              <!-- Total Estimation -->
+              <div id="totalEstimation" class="bg-gold/10 border border-gold/30 rounded-xl p-6 text-center mb-8">
+                <h4 class="font-bold text-lg mb-2">💰 Estimation totale</h4>
+                <div id="estimationDetails" class="text-gray-600">
+                  <!-- Estimation details will be populated by JavaScript -->
+                </div>
+                <p class="text-sm text-gray-500 mt-3">
+                  <strong>Cette estimation est indicative.</strong> Le devis final sera personnalisé selon vos besoins exacts.
+                </p>
+              </div>
+              
+              <!-- Consent & Legal -->
+              <div class="space-y-4 mb-8">
+                <label class="checkbox-item">
+                  <input type="checkbox" name="consent_contact" required>
+                  <span class="checkmark"></span>
+                  J'accepte d'être contacté par Arabesque Traiteur pour cette demande de devis
+                </label>
+                
+                <label class="checkbox-item">
+                  <input type="checkbox" name="consent_privacy" required>
+                  <span class="checkmark"></span>
+                  J'ai lu et j'accepte la <a href="#politique" class="text-gold underline">politique de confidentialité</a>
+                </label>
+                
+                <label class="checkbox-item">
+                  <input type="checkbox" name="newsletter_optin">
+                  <span class="checkmark"></span>
+                  Je souhaite recevoir les actualités et offres spéciales d'Arabesque Traiteur
+                </label>
+              </div>
+              
+              <!-- Submit Options -->
+              <div class="space-y-4">
+                <div class="grid md:grid-cols-2 gap-4">
+                  <button type="submit" name="submit_type" value="email" class="btn btn-gold">
+                    📧 Envoyer par email
+                  </button>
+                  <button type="submit" name="submit_type" value="whatsapp" class="btn bg-green-500 hover:bg-green-600 text-white">
+                    💬 Envoyer via WhatsApp
+                  </button>
+                </div>
+                
+                <button type="button" class="btn btn-outline prev-step w-full" data-prev="3">
+                  ← Modifier mes informations
+                </button>
+              </div>
+              
+              <!-- Success Message -->
+              <div id="formSuccess" class="hidden bg-green-50 border border-green-200 rounded-lg p-6 text-center">
+                <div class="text-green-600 text-4xl mb-4">✅</div>
+                <h4 class="font-bold text-green-800 mb-2">Demande envoyée avec succès !</h4>
+                <p class="text-green-600 mb-4">
+                  Nous vous contacterons sous 24h pour finaliser votre devis personnalisé.
+                </p>
+                <div class="flex justify-center gap-4">
+                  <a href="menu.html" class="btn btn-outline">Modifier mon menu</a>
+                  <a href="index.html" class="btn btn-gold">Retour à l'accueil</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Hidden fields -->
+          <input type="hidden" name="menu_selection" id="menuSelectionField">
+          <input type="hidden" name="estimated_total" id="estimatedTotalField">
+          <input type="hidden" name="form_timestamp" id="formTimestampField">
+        </form>
+      </div>
+    </div>
+  </section>
 
-        <div class="mt-6 border rounded-2xl p-6">
-          <h3 class="font-semibold">FAQ</h3>
-          <details class="mt-2">
-            <summary class="cursor-pointer">Proposez‑vous des options végétariennes/halal ?</summary>
-            <p class="mt-2 text-sm muted">Oui, à préciser dans votre demande de devis.</p>
-          </details>
-          <details class="mt-2">
-            <summary class="cursor-pointer">Livrez‑vous dans toutes les communes ?</summary>
-            <p class="mt-2 text-sm muted">Oui, selon disponibilité et frais logistiques.</p>
-          </details>
-          <details class="mt-2">
-            <summary class="cursor-pointer">Quel délai de réservation ?</summary>
-            <p class="mt-2 text-sm muted">Idéalement 2–3 semaines avant la date.</p>
-          </details>
+  <!-- Quick Contact Section -->
+  <section class="py-16 bg-gradient-to-br from-black to-gray-800 text-white">
+    <div class="container mx-auto px-4">
+      <div class="max-w-4xl mx-auto text-center">
+        <h2 class="font-display text-3xl md:text-4xl font-bold mb-6">
+          Besoin d'une réponse immédiate ?
+        </h2>
+        <p class="text-xl text-gray-300 mb-8">
+          Sylvie Feruzi et son équipe sont disponibles pour vous conseiller directement
+        </p>
+        
+        <div class="grid md:grid-cols-3 gap-6 mb-8">
+          <div class="bg-white/10 backdrop-blur rounded-lg p-6">
+            <div class="text-2xl mb-3">📞</div>
+            <h3 class="font-bold mb-2">Appel Direct</h3>
+            <p class="text-gray-300 text-sm mb-4">Lun-Dim : 8h00-20h00</p>
+            <a href="tel:+243859993833" class="text-gold hover:text-gold-light">
+              +243 859 993 833
+            </a>
+          </div>
+          
+          <div class="bg-white/10 backdrop-blur rounded-lg p-6">
+            <div class="text-2xl mb-3">💬</div>
+            <h3 class="font-bold mb-2">WhatsApp</h3>
+            <p class="text-gray-300 text-sm mb-4">Réponse garantie sous 2h</p>
+            <a href="https://wa.me/243859993833" target="_blank" rel="noopener" 
+               class="text-green-400 hover:text-green-300">
+              Chat direct
+            </a>
+          </div>
+          
+          <div class="bg-white/10 backdrop-blur rounded-lg p-6">
+            <div class="text-2xl mb-3">📧</div>
+            <h3 class="font-bold mb-2">Email</h3>
+            <p class="text-gray-300 text-sm mb-4">Réponse sous 24h</p>
+            <a href="mailto:etarabesque@gmail.com" class="text-gold hover:text-gold-light">
+              etarabesque@gmail.com
+            </a>
+          </div>
         </div>
-      </aside>
-    </section>
-  </main>
+        
+        <div class="bg-gold/20 rounded-2xl p-8">
+          <h3 class="font-display text-2xl font-bold mb-4">🏆 Notre engagement qualité</h3>
+          <div class="grid md:grid-cols-3 gap-6 text-sm">
+            <div>
+              <div class="font-bold mb-2">⚡ Réponse rapide</div>
+              <p class="text-gray-300">Devis personnalisé sous 24h maximum</p>
+            </div>
+            <div>
+              <div class="font-bold mb-2">🎯 Sur mesure</div>
+              <p class="text-gray-300">Adapté à votre budget et vos goûts</p>
+            </div>
+            <div>
+              <div class="font-bold mb-2">✨ Excellence</div>
+              <p class="text-gray-300">15 ans d'expertise à votre service</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-  <footer class="border-t border-black/10">
-    <div class="max-w-6xl mx-auto px-4 py-10 text-sm flex flex-col md:flex-row items-center justify-between gap-4">
-      <p>© <span id="year"></span> Arabesque Traiteur • Kinshasa</p>
-      <div class="flex items-center gap-4">
-        <a href="#politique" class="hover:underline">Politique de confidentialité</a>
-        <a href="#cgv" class="hover:underline">Conditions générales</a>
+  <!-- FAQ Section -->
+  <section class="py-20 bg-gradient-to-br from-white to-gray-50">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-16 reveal">
+        <span class="inline-block px-4 py-2 bg-gold/10 text-gold font-semibold text-sm rounded-full mb-4">
+          Questions Fréquentes
+        </span>
+        <h2 class="font-display text-4xl md:text-5xl font-bold mb-6">
+          Tout ce que vous devez savoir
+        </h2>
+        <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+          Réponses aux questions les plus courantes sur nos services et nos tarifs
+        </p>
+      </div>
+      
+      <div class="max-w-4xl mx-auto">
+        <div class="grid md:grid-cols-2 gap-8">
+          <!-- Left Column -->
+          <div class="space-y-6">
+            <details class="faq-item bg-white rounded-lg shadow-sm border border-gray-200 reveal">
+              <summary class="faq-question p-6 cursor-pointer font-semibold flex items-center justify-between">
+                Comment fonctionnent vos tarifs ?
+                <span class="faq-icon">+</span>
+              </summary>
+              <div class="faq-answer p-6 pt-0 text-gray-600">
+                <p>Nos tarifs dépendent du nombre d'invités :</p>
+                <ul class="list-disc pl-5 mt-2 space-y-1">
+                  <li><strong>1-50 personnes :</strong> 35$ par personne</li>
+                  <li><strong>50-100 personnes :</strong> 20$ par personne</li>
+                  <li><strong>100+ personnes :</strong> 15$ à 35$ selon le menu (14 à 28 plats au choix)</li>
+                </ul>
+                <p class="mt-3">Le service cocktail est optionnel (500$ à 1200$ selon l'effectif).</p>
+              </div>
+            </details>
+            
+            <details class="faq-item bg-white rounded-lg shadow-sm border border-gray-200 reveal">
+              <summary class="faq-question p-6 cursor-pointer font-semibold flex items-center justify-between">
+                Proposez-vous des options végétariennes ou halal ?
+                <span class="faq-icon">+</span>
+              </summary>
+              <div class="faq-answer p-6 pt-0 text-gray-600">
+                <p>Absolument ! Nous proposons :</p>
+                <ul class="list-disc pl-5 mt-2 space-y-1">
+                  <li>Options végétariennes et vegan</li>
+                  <li>Plats sans gluten</li>
+                  <li>Préparations halal sur demande</li>
+                  <li>Adaptations selon vos contraintes alimentaires</li>
+                </ul>
+                <p class="mt-3">Précisez vos besoins dans le formulaire de devis.</p>
+              </div>
+            </details>
+            
+            <details class="faq-item bg-white rounded-lg shadow-sm border border-gray-200 reveal">
+              <summary class="faq-question p-6 cursor-pointer font-semibold flex items-center justify-between">
+                Livrez-vous dans toutes les communes de Kinshasa ?
+                <span class="faq-icon">+</span>
+              </summary>
+              <div class="faq-answer p-6 pt-0 text-gray-600">
+                <p>Oui, nous livrons dans toutes les communes de Kinshasa :</p>
+                <ul class="list-disc pl-5 mt-2 space-y-1">
+                  <li>Gombe, Kinshasa, Barumbu, Lingwala</li>
+                  <li>Kasa-Vubu, Kalamu, Makala</li>
+                  <li>Ngiri-Ngiri, Kintambo, Bandalungwa</li>
+                  <li>Et toutes les autres communes</li>
+                </ul>
+                <p class="mt-3">Les frais de transport sont inclus dans nos tarifs pour Kinshasa.</p>
+              </div>
+            </details>
+            
+            <details class="faq-item bg-white rounded-lg shadow-sm border border-gray-200 reveal">
+              <summary class="faq-question p-6 cursor-pointer font-semibold flex items-center justify-between">
+                Les spécialités rares sont-elles vraiment disponibles ?
+                <span class="faq-icon">+</span>
+              </summary>
+              <div class="faq-answer p-6 pt-0 text-gray-600">
+                <p>Nos spécialités rares (crocodile, tortue, mashanza) sont authentiques mais nécessitent :</p>
+                <ul class="list-disc pl-5 mt-2 space-y-1">
+                  <li>Commande à l'avance (minimum 2 semaines)</li>
+                  <li>Disponibilité selon la saison</li>
+                  <li>Respect de la réglementation locale</li>
+                  <li>Supplément tarifaire selon rareté</li>
+                </ul>
+                <p class="mt-3">Contactez-nous pour vérifier la disponibilité.</p>
+              </div>
+            </details>
+          </div>
+          
+          <!-- Right Column -->
+          <div class="space-y-6">
+            <details class="faq-item bg-white rounded-lg shadow-sm border border-gray-200 reveal">
+              <summary class="faq-question p-6 cursor-pointer font-semibold flex items-center justify-between">
+                Quel est le délai minimum pour réserver ?
+                <span class="faq-icon">+</span>
+              </summary>
+              <div class="faq-answer p-6 pt-0 text-gray-600">
+                <p>Pour garantir la qualité optimale :</p>
+                <ul class="list-disc pl-5 mt-2 space-y-1">
+                  <li><strong>Événements standards :</strong> 1 semaine minimum</li>
+                  <li><strong>Mariages et grands événements :</strong> 2-3 semaines</li>
+                  <li><strong>Spécialités rares :</strong> 2-4 semaines</li>
+                  <li><strong>Urgences :</strong> Nous consulter (surcoût possible)</li>
+                </ul>
+                <p class="mt-3">Plus vous réservez tôt, plus nous pouvons personnaliser votre menu.</p>
+              </div>
+            </details>
+            
+            <details class="faq-item bg-white rounded-lg shadow-sm border border-gray-200 reveal">
+              <summary class="faq-question p-6 cursor-pointer font-semibold flex items-center justify-between">
+                Comment se déroule le paiement ?
+                <span class="faq-icon">+</span>
+              </summary>
+              <div class="faq-answer p-6 pt-0 text-gray-600">
+                <p>Notre processus de paiement sécurisé :</p>
+                <ul class="list-disc pl-5 mt-2 space-y-1">
+                  <li><strong>Acompte :</strong> 30% à la confirmation (reserve la date)</li>
+                  <li><strong>Solde :</strong> 70% 3 jours avant l'événement</li>
+                  <li><strong>Moyens :</strong> Espèces, virement bancaire, mobile money</li>
+                  <li><strong>Devis :</strong> Valable 15 jours</li>
+                </ul>
+                <p class="mt-3">Modifications possibles jusqu'à 7 jours avant (selon disponibilité).</p>
+              </div>
+            </details>
+            
+            <details class="faq-item bg-white rounded-lg shadow-sm border border-gray-200 reveal">
+              <summary class="faq-question p-6 cursor-pointer font-semibold flex items-center justify-between">
+                Fournissez-vous la décoration et le service ?
+                <span class="faq-icon">+</span>
+              </summary>
+              <div class="faq-answer p-6 pt-0 text-gray-600">
+                <p>Nos services incluent :</p>
+                <ul class="list-disc pl-5 mt-2 space-y-1">
+                  <li><strong>Service :</strong> Buffet, à table ou cocktail selon formule</li>
+                  <li><strong>Matériel :</strong> Vaisselle, couverts, nappes de base</li>
+                  <li><strong>Décoration :</strong> Basique incluse, premium en option</li>
+                  <li><strong>Personnel :</strong> Serveurs professionnels inclus</li>
+                </ul>
+                <p class="mt-3">Coordination complète disponible pour mariages et galas.</p>
+              </div>
+            </details>
+            
+            <details class="faq-item bg-white rounded-lg shadow-sm border border-gray-200 reveal">
+              <summary class="faq-question p-6 cursor-pointer font-semibold flex items-center justify-between">
+                Peut-on goûter avant de réserver ?
+                <span class="faq-icon">+</span>
+              </summary>
+              <div class="faq-answer p-6 pt-0 text-gray-600">
+                <p>Oui ! Nous proposons :</p>
+                <ul class="list-disc pl-5 mt-2 space-y-1">
+                  <li><strong>Dégustation :</strong> Sur RDV pour événements 100+ personnes</li>
+                  <li><strong>Portfolio gustatif :</strong> Échantillons de nos spécialités</li>
+                  <li><strong>Consultation :</strong> Rencontre avec Sylvie Feruzi</li>
+                  <li><strong>Galerie :</strong> Photos de nos réalisations récentes</li>
+                </ul>
+                <p class="mt-3">Frais de dégustation déduits du montant final si commande.</p>
+              </div>
+            </details>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Location & Service Area -->
+  <section class="py-16 bg-gradient-to-br from-gray-50 to-white">
+    <div class="container mx-auto px-4">
+      <div class="grid lg:grid-cols-2 gap-16 items-center">
+        <div class="reveal">
+          <span class="inline-block px-4 py-2 bg-gold/10 text-gold font-semibold text-sm rounded-full mb-4">
+            📍 Zone de Service
+          </span>
+          <h2 class="font-display text-3xl md:text-4xl font-bold mb-6">
+            Kinshasa et environs
+          </h2>
+          <p class="text-lg text-gray-600 mb-6">
+            Basés au cœur de Kinshasa, nous intervenons dans toute la ville et ses environs 
+            pour apporter l'excellence culinaire congolaise à votre événement.
+          </p>
+          
+          <div class="space-y-4 mb-8">
+            <div class="flex items-center gap-3">
+              <div class="w-8 h-8 bg-gold/20 rounded-full flex items-center justify-center">
+                <span class="text-gold">✓</span>
+              </div>
+              <span>Toutes les communes de Kinshasa</span>
+            </div>
+            <div class="flex items-center gap-3">
+              <div class="w-8 h-8 bg-gold/20 rounded-full flex items-center justify-center">
+                <span class="text-gold">✓</span>
+              </div>
+              <span>Périphérie de Kinshasa (Mont-Ngafula, N'sele...)</span>
+            </div>
+            <div class="flex items-center gap-3">
+              <div class="w-8 h-8 bg-gold/20 rounded-full flex items-center justify-center">
+                <span class="text-gold">✓</span>
+              </div>
+              <span>Sites événementiels spécialisés</span>
+            </div>
+            <div class="flex items-center gap-3">
+              <div class="w-8 h-8 bg-gold/20 rounded-full flex items-center justify-center">
+                <span class="text-gold">✓</span>
+              </div>
+              <span>Livraison incluse dans nos tarifs</span>
+            </div>
+          </div>
+          
+          <div class="bg-white rounded-2xl p-6 shadow-lg">
+            <h3 class="font-bold mb-4">Nos coordonnées</h3>
+            <div class="space-y-3 text-sm">
+              <div class="flex items-center gap-3">
+                <span class="text-gold">📞</span>
+                <a href="tel:+243859993833" class="hover:text-gold transition-colors">+243 859 993 833</a>
+              </div>
+              <div class="flex items-center gap-3">
+                <span class="text-gold">📧</span>
+                <a href="mailto:etarabesque@gmail.com" class="hover:text-gold transition-colors">etarabesque@gmail.com</a>
+              </div>
+              <div class="flex items-center gap-3">
+                <span class="text-gold">📍</span>
+                <span>Kinshasa, République Démocratique du Congo</span>
+              </div>
+              <div class="flex items-center gap-3">
+                <span class="text-gold">📷</span>
+                <a href="https://www.instagram.com/arabesque.traiteur/" target="_blank" rel="noopener" 
+                   class="hover:text-gold transition-colors">@arabesque.traiteur</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="reveal">
+          <div class="relative">
+            <!-- Map Placeholder -->
+            <div class="aspect-square bg-gradient-to-br from-gray-200 to-gray-300 rounded-2xl flex items-center justify-center shadow-lg">
+              <div class="text-center">
+                <div class="text-4xl mb-4">🗺️</div>
+                <h3 class="font-bold text-lg mb-2">Carte de Kinshasa</h3>
+                <p class="text-gray-600 text-sm">Zone de service Arabesque Traiteur</p>
+                <div class="mt-4">
+                  <span class="inline-block px-3 py-1 bg-gold/20 text-gold font-semibold text-xs rounded-full">
+                    Toutes communes desservies
+                  </span>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Service Areas Overlay -->
+            <div class="absolute top-4 right-4 bg-white/90 backdrop-blur rounded-lg p-4 shadow-lg">
+              <h4 class="font-bold text-sm mb-2">Zones principales</h4>
+              <div class="space-y-1 text-xs">
+                <div>🏛️ Gombe (Centre-ville)</div>
+                <div>🏘️ Kinshasa (Résidentiel)</div>
+                <div>🏪 Kalamu (Commercial)</div>
+                <div>🏫 Lemba (Universitaire)</div>
+                <div>🏭 Limete (Industriel)</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Legal & Privacy -->
+  <section class="py-16 bg-white">
+    <div class="container mx-auto px-4">
+      <div class="max-w-4xl mx-auto">
+        <div class="grid md:grid-cols-2 gap-16">
+          <!-- Privacy Policy -->
+          <div id="politique" class="reveal">
+            <h2 class="font-display text-2xl font-bold mb-6">Politique de confidentialité</h2>
+            <div class="prose prose-sm text-gray-600">
+              <h3 class="font-semibold text-black">Collecte d'informations</h3>
+              <p>
+                Nous collectons uniquement les informations nécessaires pour traiter votre demande de devis 
+                et assurer le suivi de votre événement.
+              </p>
+              
+              <h3 class="font-semibold text-black">Utilisation des données</h3>
+              <ul class="list-disc pl-5 space-y-1">
+                <li>Préparation de votre devis personnalisé</li>
+                <li>Communication sur votre événement</li>
+                <li>Amélioration de nos services</li>
+                <li>Envoi d'actualités (avec votre accord)</li>
+              </ul>
+              
+              <h3 class="font-semibold text-black">Protection</h3>
+              <p>
+                Vos données sont protégées et ne sont jamais cédées à des tiers. 
+                Elles sont conservées uniquement le temps nécessaire à la prestation de service.
+              </p>
+              
+              <h3 class="font-semibold text-black">Vos droits</h3>
+              <p>
+                Vous pouvez à tout moment demander l'accès, la modification ou la suppression 
+                de vos données personnelles en nous contactant.
+              </p>
+            </div>
+          </div>
+          
+          <!-- Terms & Conditions -->
+          <div id="cgv" class="reveal">
+            <h2 class="font-display text-2xl font-bold mb-6">Conditions générales</h2>
+            <div class="prose prose-sm text-gray-600">
+              <h3 class="font-semibold text-black">Devis et réservation</h3>
+              <ul class="list-disc pl-5 space-y-1">
+                <li>Devis gratuit valable 15 jours</li>
+                <li>Acompte de 30% requis pour confirmer</li>
+                <li>Solde à régler 3 jours avant l'événement</li>
+              </ul>
+              
+              <h3 class="font-semibold text-black">Modifications</h3>
+              <ul class="list-disc pl-5 space-y-1">
+                <li>Modifications possibles jusqu'à J-7</li>
+                <li>Selon disponibilité des ingrédients</li>
+                <li>Majorations possibles pour changements tardifs</li>
+              </ul>
+              
+              <h3 class="font-semibold text-black">Annulation</h3>
+              <ul class="list-disc pl-5 space-y-1">
+                <li>Plus de 15 jours : acompte remboursé à 100%</li>
+                <li>8 à 15 jours : acompte remboursé à 50%</li>
+                <li>Moins de 7 jours : acompte non remboursable</li>
+              </ul>
+              
+              <h3 class="font-semibold text-black">Responsabilité</h3>
+              <p>
+                Arabesque Traiteur s'engage à fournir des prestations de qualité conformes 
+                aux normes d'hygiène et de sécurité alimentaire en vigueur.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Enhanced Footer -->
+  <footer class="bg-gray-900 text-white">
+    <div class="container mx-auto px-4">
+      <!-- Main Footer Content -->
+      <div class="grid md:grid-cols-4 gap-8 py-16">
+        <div class="md:col-span-2">
+          <div class="flex items-center gap-3 mb-6">
+            <div class="w-12 h-12 bg-gold rounded-full flex items-center justify-center">
+              <span class="text-black font-bold text-xl">A</span>
+            </div>
+            <div>
+              <div class="font-display text-xl font-bold">Arabesque Traiteur</div>
+              <div class="text-sm text-gray-400">Contact & Devis Professionnel</div>
+            </div>
+          </div>
+          <p class="text-gray-300 mb-6 max-w-md">
+            Votre partenaire de confiance pour tous vos événements d'exception à Kinshasa. 
+            Devis gratuit sous 24h, consultation personnalisée avec Sylvie Feruzi.
+          </p>
+          <div class="flex items-center gap-4">
+            <a href="https://www.instagram.com/arabesque.traiteur/" target="_blank" rel="noopener"
+               class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-gold hover:text-black transition-colors">
+              📷
+            </a>
+            <a href="https://wa.me/243859993833" target="_blank" rel="noopener"
+               class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-green-500 transition-colors">
+              💬
+            </a>
+            <a href="mailto:etarabesque@gmail.com"
+               class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-gold hover:text-black transition-colors">
+              📧
+            </a>
+          </div>
+        </div>
+        
+        <div>
+          <h3 class="font-bold text-lg mb-4">Contact Rapide</h3>
+          <ul class="space-y-2 text-gray-300 text-sm">
+            <li><a href="#formulaire-devis" class="hover:text-gold transition-colors">Formulaire intelligent</a></li>
+            <li><a href="https://wa.me/243859993833" target="_blank" rel="noopener" class="hover:text-gold transition-colors">WhatsApp Direct</a></li>
+            <li><a href="tel:+243859993833" class="hover:text-gold transition-colors">Appel immédiat</a></li>
+            <li><a href="menu.html" class="hover:text-gold transition-colors">Retour au menu</a></li>
+          </ul>
+        </div>
+        
+        <div>
+          <h3 class="font-bold text-lg mb-4">Informations</h3>
+          <ul class="space-y-2 text-gray-300 text-sm">
+            <li class="flex items-center gap-2">
+              <span>📞</span> +243 859 993 833
+            </li>
+            <li class="flex items-center gap-2">
+              <span>📧</span> etarabesque@gmail.com
+            </li>
+            <li class="flex items-center gap-2">
+              <span>📍</span> Kinshasa, RD Congo
+            </li>
+            <li class="flex items-center gap-2">
+              <span>⏰</span> Réponse sous 24h
+            </li>
+          </ul>
+        </div>
+      </div>
+      
+      <!-- Footer Bottom -->
+      <div class="border-t border-gray-800 py-6 flex flex-col md:flex-row justify-between items-center gap-4 text-sm">
+        <p class="text-gray-400">
+          © <span id="year">2025</span> Arabesque Traiteur • Devis & Contact Professionnel
+        </p>
+        <div class="flex items-center gap-6 text-gray-400">
+          <a href="#politique" class="hover:text-gold transition-colors">Politique de confidentialité</a>
+          <a href="#cgv" class="hover:text-gold transition-colors">Conditions générales</a>
+          <span class="text-xs">💼 Service professionnel</span>
+        </div>
       </div>
     </div>
   </footer>
 
-  <script src="/assets/js/main.js"></script>
+  <!-- Scripts -->
+  <script src="assets/js/main.js"></script>
+  
+  <!-- Contact Form JavaScript -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      initializeContactForm();
+    });
+    
+    function initializeContactForm() {
+      // Load menu selection from localStorage
+      loadMenuSelection();
+      
+      // Initialize form steps
+      initializeFormSteps();
+      
+      // Initialize pricing calculator
+      initializePricingCalculator();
+      
+      // Initialize FAQ toggles
+      initializeFAQ();
+      
+      // Initialize form validation
+      initializeFormValidation();
+    }
+    
+    function loadMenuSelection() {
+      try {
+        const menuSelection = localStorage.getItem('arabesque_selection');
+        if (menuSelection) {
+          const selection = JSON.parse(menuSelection);
+          document.getElementById('menuSelectionField').value = menuSelection;
+          displayDetectedMenu(selection);
+        }
+      } catch (e) {
+        console.log('No menu selection found');
+      }
+    }
+    
+    function displayDetectedMenu(selection) {
+      const detectedMenuDiv = document.getElementById('detectedMenu');
+      const detectedItemsDiv = document.getElementById('detectedMenuItems');
+      
+      if (Object.keys(selection).length > 0) {
+        detectedMenuDiv.classList.remove('hidden');
+        detectedItemsDiv.innerHTML = Object.values(selection).map(item => 
+          `<span class="inline-block px-2 py-1 bg-green-100 text-green-800 rounded text-xs mr-2 mb-1">
+            ${item.nom}
+          </span>`
+        ).join('');
+      }
+    }
+    
+    function clearDetectedMenu() {
+      localStorage.removeItem('arabesque_selection');
+      document.getElementById('detectedMenu').classList.add('hidden');
+      document.getElementById('menuSelectionField').value = '';
+    }
+    
+    function initializeFormSteps() {
+      const nextButtons = document.querySelectorAll('.next-step');
+      const prevButtons = document.querySelectorAll('.prev-step');
+      
+      nextButtons.forEach(btn => {
+        btn.addEventListener('click', function() {
+          const nextStep = parseInt(this.dataset.next);
+          if (validateCurrentStep()) {
+            showStep(nextStep);
+            updateProgressBar(nextStep);
+          }
+        });
+      });
+      
+      prevButtons.forEach(btn => {
+        btn.addEventListener('click', function() {
+          const prevStep = parseInt(this.dataset.prev);
+          showStep(prevStep);
+          updateProgressBar(prevStep);
+        });
+      });
+    }
+    
+    function showStep(stepNumber) {
+      document.querySelectorAll('.form-step').forEach(step => {
+        step.classList.remove('active');
+      });
+      document.querySelector(`.form-step[data-step="${stepNumber}"]`).classList.add('active');
+      
+      document.querySelectorAll('.step-indicator').forEach(indicator => {
+        indicator.classList.remove('active');
+      });
+      document.querySelector(`.step-indicator[data-step="${stepNumber}"]`).classList.add('active');
+      
+      if (stepNumber === 4) {
+        generateQuoteSummary();
+      }
+    }
+    
+    function updateProgressBar(step) {
+      const progress = (step / 4) * 100;
+      document.querySelector('.progress-fill').style.width = `${progress}%`;
+    }
+    
+    function validateCurrentStep() {
+      // Add validation logic here
+      return true;
+    }
+    
+    function initializePricingCalculator() {
+      const guestsInput = document.querySelector('input[name="guests_count"]');
+      if (guestsInput) {
+        guestsInput.addEventListener('input', function() {
+          calculatePricing(parseInt(this.value) || 0);
+        });
+      }
+      
+      const cocktailCheckbox = document.getElementById('cocktailService');
+      if (cocktailCheckbox) {
+        cocktailCheckbox.addEventListener('change', function() {
+          const cocktailDetails = document.getElementById('cocktailDetails');
+          if (this.checked) {
+            cocktailDetails.classList.remove('hidden');
+          } else {
+            cocktailDetails.classList.add('hidden');
+          }
+          
+          const guests = parseInt(document.querySelector('input[name="guests_count"]').value) || 0;
+          if (guests > 0) calculatePricing(guests);
+        });
+      }
+    }
+    
+    function calculatePricing(guestCount) {
+      if (guestCount === 0) {
+        document.getElementById('pricingPreview').classList.add('hidden');
+        return;
+      }
+      
+      let basePrice = 0;
+      let formula = '';
+      
+      if (guestCount <= 50) {
+        basePrice = 35;
+        formula = 'Formule Intime (1-50 personnes)';
+      } else if (guestCount <= 100) {
+        basePrice = 20;
+        formula = 'Formule Optimale (50-100 personnes)';
+      } else {
+        basePrice = 20; // Default to Premium formula
+        formula = 'Formule Premium (100+ personnes)';
+      }
+      
+      const menuTotal = basePrice * guestCount;
+      
+      // Calculate cocktail service if selected
+      let cocktailPrice = 0;
+      const cocktailService = document.getElementById('cocktailService');
+      if (cocktailService && cocktailService.checked) {
+        if (guestCount < 55) cocktailPrice = 500;
+        else if (guestCount < 105) cocktailPrice = 750;
+        else if (guestCount < 155) cocktailPrice = 900;
+        else cocktailPrice = 1200;
+      }
+      
+      const total = menuTotal + cocktailPrice;
+      
+      const pricingDiv = document.getElementById('pricingPreview');
+      const detailsDiv = document.getElementById('pricingDetails');
+      
+      detailsDiv.innerHTML = `
+        <div class="text-sm space-y-2">
+          <div class="flex justify-between">
+            <span>${formula}</span>
+            <span class="font-bold">${menuTotal}$ (${basePrice}$ × ${guestCount})</span>
+          </div>
+          ${cocktailPrice > 0 ? `
+            <div class="flex justify-between">
+              <span>Service cocktail</span>
+              <span class="font-bold">${cocktailPrice}$</span>
+            </div>
+          ` : ''}
+          <hr class="border-gold/30">
+          <div class="flex justify-between text-lg font-bold text-gold">
+            <span>Total estimé</span>
+            <span>${total}$</span>
+          </div>
+        </div>
+      `;
+      
+      pricingDiv.classList.remove('hidden');
+      document.getElementById('estimatedTotalField').value = total;
+    }
+    
+    function generateQuoteSummary() {
+      const form = document.getElementById('quoteForm');
+      const formData = new FormData(form);
+      
+      // Generate summary HTML
+      const summary = document.getElementById('quoteSummary');
+      summary.innerHTML = `
+        <div class="space-y-4">
+          <div class="grid md:grid-cols-2 gap-4">
+            <div>
+              <h5 class="font-semibold mb-2">📅 Événement</h5>
+              <p><strong>Type:</strong> ${formData.get('event_type')}</p>
+              <p><strong>Date:</strong> ${formData.get('event_date')}</p>
+              <p><strong>Invités:</strong> ${formData.get('guests_count')}</p>
+              <p><strong>Lieu:</strong> ${formData.get('event_location')}</p>
+            </div>
+            <div>
+              <h5 class="font-semibold mb-2">👤 Contact</h5>
+              <p><strong>Nom:</strong> ${formData.get('client_name')}</p>
+              <p><strong>Téléphone:</strong> ${formData.get('client_phone')}</p>
+              <p><strong>Email:</strong> ${formData.get('client_email')}</p>
+            </div>
+          </div>
+        </div>
+      `;
+    }
+    
+    function initializeFAQ() {
+      const faqItems = document.querySelectorAll('.faq-item');
+      faqItems.forEach(item => {
+        const summary = item.querySelector('summary');
+        const icon = item.querySelector('.faq-icon');
+        
+        item.addEventListener('toggle', function() {
+          if (item.open) {
+            icon.textContent = '-';
+          } else {
+            icon.textContent = '+';
+          }
+        });
+      });
+    }
+    
+    function initializeFormValidation() {
+      const form = document.getElementById('quoteForm');
+      
+      form.addEventListener('submit', function(e) {
+        e.preventDefault();
+        
+        const submitType = e.submitter.value;
+        const formData = new FormData(form);
+        
+        if (submitType === 'whatsapp') {
+          sendViaWhatsApp(formData);
+        } else {
+          sendViaEmail(formData);
+        }
+      });
+    }
+    
+    function sendViaWhatsApp(formData) {
+      const message = formatWhatsAppMessage(formData);
+      const encodedMessage = encodeURIComponent(message);
+      const whatsappUrl = `https://wa.me/243859993833?text=${encodedMessage}`;
+      
+      window.open(whatsappUrl, '_blank');
+      showSuccessMessage();
+    }
+    
+    function sendViaEmail(formData) {
+      const subject = encodeURIComponent('Demande de devis - Arabesque Traiteur');
+      const body = encodeURIComponent(formatEmailMessage(formData));
+      const emailUrl = `mailto:etarabesque@gmail.com?subject=${subject}&body=${body}`;
+      
+      window.location.href = emailUrl;
+      showSuccessMessage();
+    }
+    
+    function formatWhatsAppMessage(formData) {
+      return `🌟 DEMANDE DE DEVIS - ARABESQUE TRAITEUR 🌟
+
+📅 ÉVÉNEMENT
+• Type: ${formData.get('event_type')}
+• Date: ${formData.get('event_date')}
+• Lieu: ${formData.get('event_location')}
+• Invités: ${formData.get('guests_count')} personnes
+• Heure: ${formData.get('event_time') || 'Non précisée'}
+
+👤 MES COORDONNÉES
+• Nom: ${formData.get('client_name')}
+• Téléphone: ${formData.get('client_phone')}
+• Email: ${formData.get('client_email')}
+
+🍽️ PRÉFÉRENCES MENU
+${formData.get('service_style') ? '• Style de service: ' + formData.get('service_style') : ''}
+${formData.get('cocktail_service') ? '• Service cocktail souhaité ✅' : ''}
+${formData.get('dietary_requirements') ? '• Contraintes alimentaires: ' + formData.get('dietary_requirements') : ''}
+
+💰 Budget: ${formData.get('budget_range') || 'Non précisé'}
+
+📝 MESSAGE: ${formData.get('personal_message') || 'Aucun message supplémentaire'}
+
+Merci pour votre service d'exception! 🙏`;
+    }
+    
+    function formatEmailMessage(formData) {
+      return `DEMANDE DE DEVIS - ARABESQUE TRAITEUR
+======================================
+
+INFORMATIONS ÉVÉNEMENT:
+• Type d'événement: ${formData.get('event_type')}
+• Date: ${formData.get('event_date')}
+• Heure: ${formData.get('event_time') || 'Non précisée'}
+• Lieu: ${formData.get('event_location')}
+• Nombre d'invités: ${formData.get('guests_count')} personnes
+
+COORDONNÉES CLIENT:
+• Nom: ${formData.get('client_name')}
+• Téléphone: ${formData.get('client_phone')}
+• Email: ${formData.get('client_email')}
+• Contact préféré: ${formData.get('contact_preference')}
+
+PRÉFÉRENCES MENU:
+• Style de service: ${formData.get('service_style') || 'Pas de préférence'}
+• Service cocktail: ${formData.get('cocktail_service') ? 'Oui' : 'Non'}
+• Contraintes alimentaires: ${formData.get('dietary_requirements') || 'Aucune'}
+
+BUDGET INDICATIF: ${formData.get('budget_range') || 'Non précisé'}
+
+MESSAGE PERSONNEL:
+${formData.get('personal_message') || 'Aucun message supplémentaire'}
+
+ESTIMATION CALCULÉE: ${formData.get('estimated_total')}$ (estimation automatique)
+
+---
+Demande envoyée via le formulaire intelligent du site web
+Date: ${new Date().toLocaleDateString('fr-FR')}`;
+    }
+    
+    function showSuccessMessage() {
+      document.getElementById('formSuccess').classList.remove('hidden');
+      document.getElementById('quoteForm').style.display = 'none';
+      
+      // Scroll to success message
+      document.getElementById('formSuccess').scrollIntoView({ 
+        behavior: 'smooth',
+        block: 'center'
+      });
+    }
+  </script>
+  
+  <!-- Analytics (Optional) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'GA_MEASUREMENT_ID');
+  </script>
 </body>
 </html>
