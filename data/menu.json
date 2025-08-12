@@ -1,74 +1,411 @@
 {
+  "branding": {
+    "signature_phrase": "Élégance • Saveurs • Excellence",
+    "chef_signature": "Créations culinaires de Sylvie Feruzi",
+    "location": "Kinshasa, République Démocratique du Congo"
+  },
   "formules": [
     {
-      "nom": "Formule 10 $",
-      "description": "Choisissez 5 éléments du menu",
+      "id": "premium",
+      "nom": "Formule Premium 10 $",
+      "description": "Choisissez 5 éléments du menu + amuse-bouche offert",
       "prix": 10,
-      "nombre_elements": 5
+      "nombre_elements": 5,
+      "badge": "POPULAIRE",
+      "avantages": [
+        "Amuse-bouche de bienvenue",
+        "Présentation soignée",
+        "Service à table inclus",
+        "Décoration basique incluse"
+      ],
+      "video_preview": "assets/videos/formule-premium.mp4",
+      "color_theme": "gold",
+      "recommended": true
     },
     {
-      "nom": "Formule 8 $",
+      "id": "classic",
+      "nom": "Formule Classic 8 $",
       "description": "Choisissez 4 éléments du menu",
       "prix": 8,
-      "nombre_elements": 4
+      "nombre_elements": 4,
+      "badge": "ÉCONOMIQUE",
+      "avantages": [
+        "Présentation soignée",
+        "Service buffet",
+        "Qualité garantie"
+      ],
+      "video_preview": "assets/videos/formule-classic.mp4",
+      "color_theme": "black",
+      "recommended": false
     },
     {
-      "nom": "Sur mesure",
+      "id": "bespoke",
+      "nom": "Sur Mesure",
       "description": "Menu personnalisé pour mariages, galas et réceptions VIP",
       "prix": null,
-      "nombre_elements": null
+      "nombre_elements": null,
+      "badge": "EXCLUSIF",
+      "avantages": [
+        "Consultation personnalisée",
+        "Menu sur mesure",
+        "Service VIP complet",
+        "Décoration premium",
+        "Coordination événement",
+        "Chef sur site si souhaité"
+      ],
+      "video_preview": "assets/videos/sur-mesure-showcase.mp4",
+      "color_theme": "gold",
+      "contact_required": true
     }
   ],
-  "menu": [
+  "categories": [
     {
-      "categorie": "Entrées",
+      "id": "entrees",
+      "nom": "Entrées & Amuse-Bouches",
+      "description": "Premiers instants de délice pour éveiller les papilles",
+      "icon": "🥂",
+      "video_bg": "assets/videos/entrees-preparation.mp4",
       "elements": [
-        "Canapés variés (saumon, fromage, légumes)",
-        "Mini brochettes de poulet",
-        "Salade fraîcheur au quinoa",
-        "Verrines avocat crevettes",
-        "Samoussas légumes"
+        {
+          "id": "canapes",
+          "nom": "Canapés Signature Arabesque",
+          "description": "Trio raffiné : saumon fumé aux câpres, chèvre aux noix, légumes croquants",
+          "allergenes": ["poisson", "lactose", "noix"],
+          "origine": "Création maison",
+          "temps_preparation": "45 min",
+          "image": "assets/images/canapes-signature.jpg",
+          "video_demo": "assets/videos/canapes-demo.mp4",
+          "price_indicator": "€€"
+        },
+        {
+          "id": "brochettes",
+          "nom": "Mini Brochettes de Poulet Épicé",
+          "description": "Poulet fermier mariné aux épices congolaises, grillé à la perfection",
+          "allergenes": [],
+          "origine": "Recette traditionnelle revisitée",
+          "temps_preparation": "30 min",
+          "image": "assets/images/brochettes-poulet.jpg",
+          "video_demo": "assets/videos/brochettes-grill.mp4",
+          "price_indicator": "€"
+        },
+        {
+          "id": "salade-quinoa",
+          "nom": "Salade Fraîcheur au Quinoa",
+          "description": "Quinoa bio, légumes croquants, vinaigrette passion-citron vert",
+          "allergenes": [],
+          "origine": "Inspiration santé",
+          "temps_preparation": "20 min",
+          "image": "assets/images/salade-quinoa.jpg",
+          "dietary": ["vegetarien", "sans_gluten", "healthy"],
+          "price_indicator": "€"
+        },
+        {
+          "id": "verrines",
+          "nom": "Verrines Avocat & Crevettes",
+          "description": "Émulsion d'avocat, crevettes grillées, caviar de tomate",
+          "allergenes": ["crustaces"],
+          "origine": "Fusion cuisine",
+          "temps_preparation": "25 min",
+          "image": "assets/images/verrines-avocat.jpg",
+          "price_indicator": "€€"
+        },
+        {
+          "id": "samoussas",
+          "nom": "Samoussas aux Légumes du Potager",
+          "description": "Légumes de saison, pâte croustillante, sauce épicée maison",
+          "allergenes": ["gluten"],
+          "origine": "Inspiration orientale",
+          "temps_preparation": "40 min",
+          "image": "assets/images/samoussas-legumes.jpg",
+          "dietary": ["vegetarien"],
+          "price_indicator": "€"
+        }
       ]
     },
     {
-      "categorie": "Plats chauds",
+      "id": "plats_chauds",
+      "nom": "Plats Chauds Signature",
+      "description": "Le cœur de nos créations, mijotés avec passion",
+      "icon": "🔥",
+      "video_bg": "assets/videos/cuisine-chaude.mp4",
       "elements": [
-        "Poulet rôti aux herbes",
-        "Poisson grillé sauce citron",
-        "Boeuf braisé à la congolaise",
-        "Riz pilaf aux légumes",
-        "Sauté de légumes croquants"
+        {
+          "id": "poulet-herbes",
+          "nom": "Poulet Fermier aux Herbes de Provence",
+          "description": "Poulet fermier rôti, herbes fraîches, jus corsé aux échalotes",
+          "allergenes": [],
+          "origine": "Tradition française revisitée",
+          "temps_preparation": "90 min",
+          "image": "assets/images/poulet-herbes.jpg",
+          "accompaniments": ["Riz pilaf", "Légumes rôtis", "Sauce aux herbes"],
+          "price_indicator": "€€"
+        },
+        {
+          "id": "poisson-citron",
+          "nom": "Poisson du Jour Grillé",
+          "description": "Poisson frais du marché, marinade citron-coriandre, légumes croquants",
+          "allergenes": ["poisson"],
+          "origine": "Inspiration méditerranéenne",
+          "temps_preparation": "35 min",
+          "image": "assets/images/poisson-grille.jpg",
+          "seasonal": true,
+          "price_indicator": "€€€"
+        },
+        {
+          "id": "boeuf-congolais",
+          "nom": "Bœuf Braisé à la Congolaise",
+          "description": "Bœuf tendre braisé, sauce tomate épicée, légumes racines",
+          "allergenes": [],
+          "origine": "Recette familiale Feruzi",
+          "temps_preparation": "120 min",
+          "image": "assets/images/boeuf-congolais.jpg",
+          "chef_special": true,
+          "price_indicator": "€€"
+        },
+        {
+          "id": "riz-pilaf",
+          "nom": "Riz Pilaf aux Légumes Colorés",
+          "description": "Riz basmati parfumé, légumes de saison, bouillon maison",
+          "allergenes": [],
+          "origine": "Accompagnement signature",
+          "temps_preparation": "45 min",
+          "image": "assets/images/riz-pilaf.jpg",
+          "dietary": ["vegetarien", "sans_gluten"],
+          "price_indicator": "€"
+        },
+        {
+          "id": "legumes-sautes",
+          "nom": "Sauté de Légumes Croquants",
+          "description": "Wok de légumes frais, sauce soja-gingembre, graines de sésame",
+          "allergenes": ["soja", "sesame"],
+          "origine": "Fusion asiatique",
+          "temps_preparation": "15 min",
+          "image": "assets/images/legumes-sautes.jpg",
+          "dietary": ["vegetarien", "vegan"],
+          "price_indicator": "€"
+        }
       ]
     },
     {
-      "categorie": "Plats froids",
+      "id": "plats_froids",
+      "nom": "Délices Froids & Fraîcheur",
+      "description": "Élégance et fraîcheur pour tous les palais",
+      "icon": "🥗",
+      "video_bg": "assets/videos/plats-froids.mp4",
       "elements": [
-        "Taboulé menthe et citron",
-        "Charcuterie sélection",
-        "Carpaccio de poisson",
-        "Salade de pâtes à l’italienne",
-        "Assiette de fromages"
+        {
+          "id": "taboule",
+          "nom": "Taboulé Menthe & Citron Confit",
+          "description": "Boulgour fin, herbes fraîches, tomates cerises, citron confit",
+          "allergenes": ["gluten"],
+          "origine": "Tradition libanaise",
+          "temps_preparation": "30 min",
+          "image": "assets/images/taboule.jpg",
+          "dietary": ["vegetarien"],
+          "price_indicator": "€"
+        },
+        {
+          "id": "charcuterie",
+          "nom": "Sélection Charcuterie Premium",
+          "description": "Jambon de Parme, chorizo, bresaola, cornichons, pain artisanal",
+          "allergenes": ["gluten"],
+          "origine": "Sélection européenne",
+          "temps_preparation": "20 min",
+          "image": "assets/images/charcuterie.jpg",
+          "premium": true,
+          "price_indicator": "€€€"
+        },
+        {
+          "id": "carpaccio",
+          "nom": "Carpaccio de Poisson Exotique",
+          "description": "Poisson frais, marinade agrumes-passion, roquette, parmesan",
+          "allergenes": ["poisson", "lactose"],
+          "origine": "Création fusion",
+          "temps_preparation": "40 min",
+          "image": "assets/images/carpaccio.jpg",
+          "chef_special": true,
+          "price_indicator": "€€€"
+        },
+        {
+          "id": "salade-pates",
+          "nom": "Salade de Pâtes à l'Italienne",
+          "description": "Pennes, tomates séchées, mozzarella, basilic, vinaigrette balsamique",
+          "allergenes": ["gluten", "lactose"],
+          "origine": "Tradition italienne",
+          "temps_preparation": "25 min",
+          "image": "assets/images/salade-pates.jpg",
+          "dietary": ["vegetarien"],
+          "price_indicator": "€"
+        },
+        {
+          "id": "plateau-fromages",
+          "nom": "Plateau de Fromages d'Exception",
+          "description": "Sélection affinée : camembert, roquefort, chèvre, accompagnements",
+          "allergenes": ["lactose"],
+          "origine": "Sélection française",
+          "temps_preparation": "15 min",
+          "image": "assets/images/plateau-fromages.jpg",
+          "premium": true,
+          "price_indicator": "€€"
+        }
       ]
     },
     {
-      "categorie": "Desserts",
+      "id": "desserts",
+      "nom": "Desserts & Douceurs",
+      "description": "Finalité sucrée créée par Julie Feruzi, notre chef pâtissière",
+      "icon": "🍰",
+      "video_bg": "assets/videos/patisserie.mp4",
       "elements": [
-        "Wedding cake personnalisé",
-        "Tartelette citron et meringue",
-        "Mousse au chocolat",
-        "Salade de fruits frais",
-        "Mini éclairs vanille et chocolat"
+        {
+          "id": "wedding-cake",
+          "nom": "Wedding Cake Personnalisé",
+          "description": "Création unique selon vos souhaits, décoration sur mesure",
+          "allergenes": ["gluten", "lactose", "œufs"],
+          "origine": "Création Julie Feruzi",
+          "temps_preparation": "240 min",
+          "image": "assets/images/wedding-cake.jpg",
+          "customizable": true,
+          "chef_signature": "Julie Feruzi",
+          "price_indicator": "€€€€"
+        },
+        {
+          "id": "tartelette-citron",
+          "nom": "Tartelette Citron & Meringue Italienne",
+          "description": "Pâte sablée, crème citron acidulée, meringue torchée",
+          "allergenes": ["gluten", "lactose", "œufs"],
+          "origine": "Grande pâtisserie française",
+          "temps_preparation": "90 min",
+          "image": "assets/images/tartelette-citron.jpg",
+          "technique_advanced": true,
+          "price_indicator": "€€"
+        },
+        {
+          "id": "mousse-chocolat",
+          "nom": "Mousse au Chocolat Noir 70%",
+          "description": "Chocolat de Madagascar, texture aérienne, copeaux de cacao",
+          "allergenes": ["lactose", "œufs"],
+          "origine": "Recette traditionnelle",
+          "temps_preparation": "120 min",
+          "image": "assets/images/mousse-chocolat.jpg",
+          "premium_ingredient": true,
+          "price_indicator": "€€"
+        },
+        {
+          "id": "salade-fruits",
+          "nom": "Salade de Fruits Tropicaux",
+          "description": "Ananas, mangue, papaye, passion, sirop vanille-coco",
+          "allergenes": [],
+          "origine": "Fraîcheur tropicale",
+          "temps_preparation": "20 min",
+          "image": "assets/images/salade-fruits.jpg",
+          "dietary": ["vegetarien", "vegan", "sans_gluten", "healthy"],
+          "price_indicator": "€"
+        },
+        {
+          "id": "eclairs-mini",
+          "nom": "Mini Éclairs Vanille & Chocolat",
+          "description": "Pâte à choux, crème pâtissière vanille bourbon, glaçage chocolat",
+          "allergenes": ["gluten", "lactose", "œufs"],
+          "origine": "Pâtisserie française miniature",
+          "temps_preparation": "150 min",
+          "image": "assets/images/eclairs-mini.jpg",
+          "presentation": "buffet",
+          "price_indicator": "€€"
+        }
       ]
     },
     {
-      "categorie": "Boissons & Cocktails",
+      "id": "boissons",
+      "nom": "Boissons & Cocktails",
+      "description": "Créations rafraîchissantes par David Nsenga",
+      "icon": "🍹",
+      "video_bg": "assets/videos/cocktails.mp4",
       "elements": [
-        "Cocktail maison (sans alcool)",
-        "Smoothie fruits exotiques",
-        "Eau minérale",
-        "Sodas variés",
-        "Café/thé"
+        {
+          "id": "cocktail-maison",
+          "nom": "Cocktail Signature Arabesque",
+          "description": "Création maison : jus de fruits locaux, menthe fraîche, eau pétillante",
+          "allergenes": [],
+          "origine": "Création David Nsenga",
+          "temps_preparation": "5 min",
+          "image": "assets/images/cocktail-maison.jpg",
+          "signature_drink": true,
+          "dietary": ["sans_alcool"],
+          "price_indicator": "€€"
+        },
+        {
+          "id": "smoothie-exotique",
+          "nom": "Smoothie Fruits Exotiques",
+          "description": "Mangue, ananas, banane, lait de coco, glaçons",
+          "allergenes": [],
+          "origine": "Fraîcheur tropicale",
+          "temps_preparation": "3 min",
+          "image": "assets/images/smoothie-exotique.jpg",
+          "dietary": ["sans_alcool", "vegan", "healthy"],
+          "price_indicator": "€"
+        },
+        {
+          "id": "eau-minerale",
+          "nom": "Eau Minérale Premium",
+          "description": "Sélection d'eaux plates et gazeuses, service en carafe glacée",
+          "allergenes": [],
+          "origine": "Sources naturelles",
+          "temps_preparation": "1 min",
+          "image": "assets/images/eau-minerale.jpg",
+          "basic": true,
+          "price_indicator": "€"
+        },
+        {
+          "id": "sodas",
+          "nom": "Sodas Artisanaux",
+          "description": "Cola bio, limonade maison, orangeade fraîche",
+          "allergenes": [],
+          "origine": "Sélection premium",
+          "temps_preparation": "2 min",
+          "image": "assets/images/sodas.jpg",
+          "dietary": ["sans_alcool"],
+          "price_indicator": "€"
+        },
+        {
+          "id": "cafe-the",
+          "nom": "Café & Thé de Plantation",
+          "description": "Café arabica du Kivu, thés verts et noirs sélectionnés",
+          "allergenes": [],
+          "origine": "Plantations locales et internationales",
+          "temps_preparation": "5 min",
+          "image": "assets/images/cafe-the.jpg",
+          "local_product": true,
+          "price_indicator": "€"
+        }
       ]
     }
-  ]
+  ],
+  "dietary_filters": [
+    { "id": "vegetarien", "label": "Végétarien", "icon": "🌱", "color": "green" },
+    { "id": "vegan", "label": "Vegan", "icon": "🌿", "color": "darkgreen" },
+    { "id": "sans_gluten", "label": "Sans Gluten", "icon": "🌾", "color": "orange" },
+    { "id": "healthy", "label": "Healthy", "icon": "💚", "color": "lightgreen" },
+    { "id": "sans_alcool", "label": "Sans Alcool", "icon": "🚫", "color": "blue" }
+  ],
+  "chef_specialties": {
+    "sylvie_feruzi": {
+      "name": "Sylvie Feruzi",
+      "title": "Chef Exécutive & Directrice",
+      "signature_dishes": ["boeuf-congolais", "cocktail-maison"],
+      "philosophy": "Mariage parfait entre tradition congolaise et raffinement international"
+    },
+    "julie_feruzi": {
+      "name": "Julie Feruzi",
+      "title": "Chef Pâtissière",
+      "signature_dishes": ["wedding-cake", "tartelette-citron"],
+      "philosophy": "Créations sucrées où l'art rencontre la gourmandise"
+    },
+    "david_nsenga": {
+      "name": "David Nsenga",
+      "title": "Chef Cuisine Froide & Cocktails",
+      "signature_dishes": ["cocktail-maison", "carpaccio"],
+      "philosophy": "Fraîcheur et créativité dans chaque création"
+    }
+  }
 }
