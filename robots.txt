@@ -1,1 +1,4 @@
+User-agent: *
+Allow: /
 
+Sitemap: https://patmir04.github.io/arabesque-traiteur/sitemap.xml
