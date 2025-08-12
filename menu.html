@@ -1,1 +1,90 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Menu & Configurateur | Arabesque Traiteur</title>
+  <meta name="description" content="Composez votre menu selon votre budget : 8$=4 éléments, 10$=5 éléments." />
+  <link rel="icon" href="/favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="/assets/css/style.css" />
+</head>
+<body class="bg-white text-black">
+  <!-- Header -->
+  <header class="sticky top-0 z-50 bg-white/90 backdrop-blur border-b border-black/10">
+    <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
+      <a href="/" class="flex items-center gap-2" aria-label="Accueil">
+        <span class="logo serif text-2xl tracking-wide">Arabesque <strong>Traiteur</strong></span>
+      </a>
+      <nav class="hidden md:flex items-center gap-6 text-sm" aria-label="Navigation principale">
+        <a href="/a-propos.html" class="nav-link">À propos</a>
+        <a href="/services.html" class="nav-link">Services</a>
+        <a href="/menu.html" class="nav-link active">Menu</a>
+        <a href="/galerie.html" class="nav-link">Galerie</a>
+        <a href="/contact.html" class="nav-link">Devis</a>
+        <a href="https://www.instagram.com/arabesque_traiteur/" target="_blank" rel="noopener" class="inline-flex items-center gap-2 border border-black rounded-full px-3 py-1.5 hover:bg-black hover:text-white">Instagram</a>
+      </nav>
+      <button id="openNav" class="md:hidden border border-black rounded-lg px-3 py-2" aria-haspopup="true" aria-controls="mobileNav" aria-expanded="false">Menu</button>
+    </div>
+    <div id="mobileNav" class="md:hidden hidden border-t border-black/10">
+      <div class="max-w-6xl mx-auto px-4 py-3 grid gap-2 text-sm">
+        <a href="/a-propos.html" class="py-2">À propos</a>
+        <a href="/services.html" class="py-2">Services</a>
+        <a href="/menu.html" class="py-2">Menu</a>
+        <a href="/galerie.html" class="py-2">Galerie</a>
+        <a href="/contact.html" class="py-2">Devis</a>
+        <a href="https://www.instagram.com/arabesque_traiteur/" target="_blank" rel="noopener" class="py-2">Instagram</a>
+      </div>
+    </div>
+  </header>
 
+  <main>
+    <section class="max-w-6xl mx-auto px-4 py-16">
+      <div class="flex items-end justify-between gap-6 flex-wrap">
+        <div>
+          <h1 class="serif text-4xl">Menu & Configurateur</h1>
+          <p class="mt-2 muted">Choisissez un budget puis sélectionnez vos éléments. <strong>8&nbsp;$ = 4</strong>, <strong>10&nbsp;$ = 5</strong>.</p>
+        </div>
+        <div class="text-sm">
+          <label class="mr-3">Budget :</label>
+          <span id="budgetOptions" class="inline-flex gap-2"></span>
+        </div>
+      </div>
+
+      <div class="mt-6 flex items-center justify-between">
+        <div class="text-sm">Sélections : <span id="selectionCount" class="font-semibold">0</span>/<span id="selectionMax">0</span></div>
+        <div class="flex gap-2">
+          <button id="resetBtn" class="text-sm btn" type="button">Réinitialiser</button>
+        </div>
+      </div>
+
+      <div id="menuGrid" class="mt-8 grid md:grid-cols-2 gap-6"></div>
+
+      <div class="mt-8 border rounded-2xl p-6">
+        <h3 class="font-semibold">Votre sélection</h3>
+        <ul id="selectionList" class="mt-3 text-sm grid gap-1"></ul>
+        <div class="mt-4 flex flex-wrap gap-3">
+          <a href="/contact.html" id="toQuote" class="btn">Ajouter au devis</a>
+        </div>
+        <p id="configNote" class="mt-3 text-xs text-black/60">Astuce : vous pouvez changer de budget à tout moment. Les éléments en trop seront automatiquement désélectionnés.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="border-t border-black/10">
+    <div class="max-w-6xl mx-auto px-4 py-10 text-sm flex flex-col md:flex-row items-center justify-between gap-4">
+      <p>© <span id="year"></span> Arabesque Traiteur • Kinshasa</p>
+      <div class="flex items-center gap-4">
+        <a href="/contact.html#politique" class="hover:underline">Politique de confidentialité</a>
+        <a href="/contact.html#cgv" class="hover:underline">Conditions générales</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/assets/js/main.js"></script>
+  <script src="/assets/js/menu.js"></script>
+</body>
+</html>
