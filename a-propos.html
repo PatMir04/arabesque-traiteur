@@ -3,84 +3,218 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>À propos | Arabesque Traiteur</title>
-  <meta name="description" content="Découvrez Arabesque Traiteur, dirigé par Sylvie Feruzi, et son équipe de cuisiniers à Kinshasa." />
-  <link rel="icon" href="/favicon.svg" />
+  <title>À Propos | Histoire d'Arabesque Traiteur - Sylvie Feruzi, Cuisine Congolaise Authentique depuis 2010</title>
+  <meta name="description" content="Découvrez l'histoire d'Arabesque Traiteur, fondé par Sylvie Feruzi Kabala en 2010. 15 ans d'excellence culinaire congolaise authentique, 500+ événements, mission de valorisation du patrimoine culinaire." />
+  
+  <!-- Enhanced SEO & Social Media -->
+  <link rel="icon" href="favicon.svg" />
+  <link rel="manifest" href="manifest.webmanifest" />
+  <meta name="theme-color" content="#C9AB6D" />
+  <meta name="keywords" content="histoire arabesque traiteur, sylvie feruzi fondatrice, cuisine congolaise authentique, traiteur kinshasa depuis 2010, mission patrimoine culinaire" />
+  <meta name="author" content="Arabesque Traiteur - Notre Histoire" />
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Notre Histoire | Arabesque Traiteur depuis 2010" />
+  <meta property="og:description" content="L'histoire authentique d'Arabesque Traiteur : de la passion de Sylvie Feruzi à l'excellence culinaire congolaise reconnue" />
+  <meta property="og:image" content="https://patmir04.github.io/arabesque-traiteur/assets/images/histoire-og.jpg" />
+  <meta property="og:url" content="https://patmir04.github.io/arabesque-traiteur/a-propos.html" />
+  
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Histoire Arabesque | 15 ans d'Excellence" />
+  <meta name="twitter:description" content="De la passion familiale à l'entreprise leader : notre parcours authentique" />
+  <meta name="twitter:image" content="https://patmir04.github.io/arabesque-traiteur/assets/images/histoire-og.jpg" />
+  
+  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700;900&display=swap" rel="stylesheet">
+  
+  <!-- Styles -->
   <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="stylesheet" href="/assets/css/style.css" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+  
+  <!-- Timeline styles -->
+  <style>
+    .timeline {
+      position: relative;
+    }
+    .timeline::before {
+      content: '';
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 4px;
+      height: 100%;
+      background: linear-gradient(to bottom, #C9AB6D, #E5C675);
+    }
+    @media (max-width: 768px) {
+      .timeline::before {
+        left: 20px;
+      }
+    }
+    .timeline-item {
+      position: relative;
+      margin-bottom: 4rem;
+    }
+    .timeline-item::before {
+      content: '';
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%) translateY(-50%);
+      width: 20px;
+      height: 20px;
+      background: #C9AB6D;
+      border: 4px solid white;
+      border-radius: 50%;
+      box-shadow: 0 0 0 4px rgba(201, 171, 109, 0.2);
+    }
+    @media (max-width: 768px) {
+      .timeline-item::before {
+        left: 20px;
+      }
+    }
+    .timeline-content {
+      width: 45%;
+      padding: 2rem;
+      background: white;
+      border-radius: 1rem;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      position: relative;
+    }
+    .timeline-item:nth-child(odd) .timeline-content {
+      margin-left: auto;
+    }
+    @media (max-width: 768px) {
+      .timeline-content {
+        width: calc(100% - 60px);
+        margin-left: 60px !important;
+      }
+    }
+  </style>
+  
+  <!-- Structured Data for About -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "AboutPage",
+    "name": "À Propos d'Arabesque Traiteur",
+    "description": "Histoire et mission d'Arabesque Traiteur, fondé par Sylvie Feruzi Kabala",
+    "mainEntity": {
+      "@type": "Organization",
+      "name": "Arabesque Traiteur",
+      "foundingDate": "2010",
+      "founder": {
+        "@type": "Person",
+        "name": "Sylvie Feruzi Kabala",
+        "jobTitle": "Chef Exécutive et Fondatrice"
+      },
+      "location": {
+        "@type": "Place",
+        "address": "Kinshasa, République Démocratique du Congo"
+      },
+      "mission": "Valoriser et promouvoir la cuisine congolaise authentique à travers des événements d'exception"
+    }
+  }
+  </script>
+  
+  <!-- Performance Hints -->
+  <link rel="dns-prefetch" href="//fonts.googleapis.com">
+  <link rel="preload" href="assets/css/style.css" as="style">
+  <link rel="preload" href="assets/js/main.js" as="script">
 </head>
-<body class="bg-white text-black">
-  <!-- Header (même que index) -->
-  <header class="sticky top-0 z-50 bg-white/90 backdrop-blur border-b border-black/10">
-    <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
-      <a href="/" class="flex items-center gap-2" aria-label="Accueil">
-        <span class="logo serif text-2xl tracking-wide">Arabesque <strong>Traiteur</strong></span>
-      </a>
-      <nav class="hidden md:flex items-center gap-6 text-sm" aria-label="Navigation principale">
-        <a href="/a-propos.html" class="nav-link active">À propos</a>
-        <a href="/services.html" class="nav-link">Services</a>
-        <a href="/menu.html" class="nav-link">Menu</a>
-        <a href="/galerie.html" class="nav-link">Galerie</a>
-        <a href="/contact.html" class="nav-link">Devis</a>
-        <a href="https://www.instagram.com/arabesque_traiteur/" target="_blank" rel="noopener" class="inline-flex items-center gap-2 border border-black rounded-full px-3 py-1.5 hover:bg-black hover:text-white">Instagram</a>
-      </nav>
-      <button id="openNav" class="md:hidden border border-black rounded-lg px-3 py-2" aria-haspopup="true" aria-controls="mobileNav" aria-expanded="false">Menu</button>
+
+<body class="bg-white text-black overflow-x-hidden">
+  <!-- Scroll Progress Bar -->
+  <div class="scroll-progress fixed top-0 left-0 h-1 bg-gradient-to-r from-gold to-gold-light z-50 transition-all duration-300" style="width: 0%;"></div>
+  
+  <!-- Enhanced Header -->
+  <header class="fixed top-0 left-0 right-0 z-40 bg-white/95 backdrop-blur-md border-b border-black/10 transition-all duration-300" id="mainHeader">
+    <div class="container mx-auto px-4">
+      <div class="flex items-center justify-between py-4">
+        <!-- Logo -->
+        <a href="index.html" class="group flex items-center gap-3" aria-label="Retour à l'accueil">
+          <div class="w-10 h-10 bg-black rounded-full flex items-center justify-center group-hover:bg-gold transition-colors duration-300">
+            <span class="text-white group-hover:text-black font-bold text-lg">A</span>
+          </div>
+          <div class="flex flex-col">
+            <span class="font-display text-xl font-bold tracking-tight">Arabesque</span>
+            <span class="text-xs tracking-widest text-gray-600 uppercase">Traiteur</span>
+          </div>
+        </a>
+        
+        <!-- Desktop Navigation -->
+        <nav class="hidden lg:flex items-center gap-8" aria-label="Navigation principale">
+          <a href="a-propos.html" class="nav-link active text-sm font-medium text-gold relative">
+            À propos
+            <span class="absolute -bottom-2 left-0 right-0 h-0.5 bg-gold rounded-full"></span>
+          </a>
+          <a href="equipe.html" class="nav-link text-sm font-medium hover:text-gold transition-colors">Équipe</a>
+          <a href="services.html" class="nav-link text-sm font-medium hover:text-gold transition-colors">Services</a>
+          <a href="menu.html" class="nav-link text-sm font-medium hover:text-gold transition-colors">Menu</a>
+          <a href="galerie.html" class="nav-link text-sm font-medium hover:text-gold transition-colors">Galerie</a>
+          <a href="contact.html" class="btn btn-gold text-sm">Devis Gratuit</a>
+        </nav>
+        
+        <!-- Mobile Menu Button -->
+        <button id="openNav" class="lg:hidden p-2 rounded-lg border border-black/20 hover:bg-gray-50 transition-colors"
+                aria-label="Ouvrir le menu" aria-haspopup="true" aria-expanded="false">
+          <div class="w-6 h-6 flex flex-col justify-center space-y-1">
+            <span class="block w-full h-0.5 bg-black transition-all duration-300"></span>
+            <span class="block w-full h-0.5 bg-black transition-all duration-300"></span>
+            <span class="block w-full h-0.5 bg-black transition-all duration-300"></span>
+          </div>
+        </button>
+      </div>
     </div>
-    <div id="mobileNav" class="md:hidden hidden border-t border-black/10">
-      <div class="max-w-6xl mx-auto px-4 py-3 grid gap-2 text-sm">
-        <a href="/a-propos.html" class="py-2">À propos</a>
-        <a href="/services.html" class="py-2">Services</a>
-        <a href="/menu.html" class="py-2">Menu</a>
-        <a href="/galerie.html" class="py-2">Galerie</a>
-        <a href="/contact.html" class="py-2">Devis</a>
-        <a href="https://www.instagram.com/arabesque_traiteur/" target="_blank" rel="noopener" class="py-2">Instagram</a>
+    
+    <!-- Enhanced Mobile Navigation -->
+    <div id="mobileNav" class="lg:hidden fixed inset-0 top-0 z-50 hidden">
+      <div class="absolute inset-0 bg-black/50 backdrop-blur-sm" id="mobileNavOverlay"></div>
+      <div class="absolute right-0 top-0 h-full w-80 bg-white shadow-2xl transform translate-x-full transition-transform duration-300 ease-out">
+        <div class="flex items-center justify-between p-6 border-b border-gray-200">
+          <span class="font-display text-xl font-bold">Menu</span>
+          <button id="closeNav" class="p-2 rounded-lg hover:bg-gray-100 transition-colors" aria-label="Fermer le menu">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+            </svg>
+          </button>
+        </div>
+        
+        <nav class="p-6 space-y-6">
+          <a href="a-propos.html" class="block text-lg font-medium text-gold">Notre histoire</a>
+          <a href="equipe.html" class="block text-lg font-medium hover:text-gold transition-colors">Notre équipe</a>
+          <a href="services.html" class="block text-lg font-medium hover:text-gold transition-colors">Services premium</a>
+          <a href="menu.html" class="block text-lg font-medium hover:text-gold transition-colors">Menu interactif</a>
+          <a href="galerie.html" class="block text-lg font-medium hover:text-gold transition-colors">Galerie portfolio</a>
+          <a href="contact.html" class="block text-lg font-medium hover:text-gold transition-colors">Contact</a>
+        </nav>
       </div>
     </div>
   </header>
 
-  <main>
-    <section class="max-w-6xl mx-auto px-4 py-16 grid md:grid-cols-2 gap-10 items-start">
-      <div>
-        <h1 class="serif text-4xl">Notre histoire</h1>
-        <p class="mt-4 muted">Née d’une passion pour l’art culinaire, Arabesque Traiteur propose une gastronomie élégante en noir & blanc, pensée pour sublimer vos moments forts. Sous la direction de <strong>Sylvie Feruzi</strong>, notre équipe de cuisiniers imagine des menus qui allient produits locaux, précision et esthétique.</p>
-        <ul class="mt-6 grid gap-2 text-sm">
-          <li>• Expertise mariages, anniversaires, réceptions privées et d’entreprise</li>
-          <li>• Dressage raffiné, décor en noir & blanc</li>
-          <li>• Engagement hygiène, traçabilité, ponctualité</li>
-        </ul>
-      </div>
-      <div class="grid gap-4">
-        <img class="rounded-2xl border" src="https://placehold.co/900x550/000000/FFFFFF?text=Portrait+DG+%E2%80%93+Placeholder" alt="Portrait de la Directrice générale – placeholder"/>
-        <img class="rounded-2xl border" src="https://placehold.co/900x350/FFFFFF/000000?text=%C3%89quipe+de+cuisine+%E2%80%93+Placeholder" alt="Équipe de cuisine – placeholder"/>
-      </div>
-    </section>
-
-    <section class="border-y border-black/10">
-      <div class="max-w-6xl mx-auto px-4 py-14">
-        <h2 class="serif text-3xl">Nos valeurs</h2>
-        <div class="mt-6 grid sm:grid-cols-2 lg:grid-cols-4 gap-6 text-sm">
-          <div class="card"><strong>Excellence</strong><p class="muted mt-2">Cuisine précise, saveurs équilibrées, service irréprochable.</p></div>
-          <div class="card"><strong>Créativité</strong><p class="muted mt-2">Associations contemporaines, verrines signature, mini‑délices.</p></div>
-          <div class="card"><strong>Fiabilité</strong><p class="muted mt-2">Planning tenu, logistique rodée, équipe formée.</p></div>
-          <div class="card"><strong>Local</strong><p class="muted mt-2">Approvisionnement à Kinshasa, partenariats de confiance.</p></div>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer class="border-t border-black/10">
-    <div class="max-w-6xl mx-auto px-4 py-10 text-sm flex flex-col md:flex-row items-center justify-between gap-4">
-      <p>© <span id="year"></span> Arabesque Traiteur • Kinshasa</p>
-      <div class="flex items-center gap-4">
-        <a href="/contact.html#politique" class="hover:underline">Politique de confidentialité</a>
-        <a href="/contact.html#cgv" class="hover:underline">Conditions générales</a>
-      </div>
-    </div>
-  </footer>
-
-  <script src="/assets/js/main.js"></script>
-</body>
-</html>
+  <!-- About Hero Section -->
+  <section class="video-hero relative min-h-[80vh] flex items-center justify-center overflow-hidden pt-20">
+    <video autoplay muted loop playsinline data-auto-play class="absolute inset-0 w-full h-full object-cover opacity-80">
+      <source src="assets/videos/histoire-arabesque.mp4" type="video/mp4">
+      <source src="assets/videos/histoire-arabesque.webm" type="video/webm">
+    </video>
+    
+    <div class="relative z-10 text-center text-white max-w-5xl mx-auto px-4">
+      <div class="reveal">
+        <span class="inline-block px-6 py-3 bg-gold/20 text-gold font-semibold text-sm rounded-full border border-gold/30 backdrop-blur mb-6">
+          📖 Notre Histoire Authentique
+        </span>
+        <h1 class="font-display text-4xl md:text-7xl font-bold mb-6 leading-tight">
+          <span class="block" data-typewriter="Une passion" data-speed="100"></span>
+          <span class="block text-gold mt-2" data-typewriter="devenue référence" data-speed="100"></span>
+        </h1>
+        <p class="text-xl md:text-2xl mb-8 max-w-4xl mx-auto leading-relaxed">
+          Depuis <strong>2010</strong>, Arabesque Traiteur incarne l'excellence de la cuisine congolaise authentique. 
+          L'histoire d'une femme passionnée, <strong>Sylvie Feruzi Kabala</strong>, qui a transformé 
+          l'amour de sa culture culinaire en entreprise de référence à <strong>Kinshasa</strong>
+        </p>
+        
+        <div class="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
+          <a href="#notre-histoire" class="btn btn-
