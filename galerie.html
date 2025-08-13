@@ -3,69 +3,1062 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Galerie | Arabesque Traiteur</title>
-  <meta name="description" content="Galerie photo en noir & blanc – remplacez les placeholders par vos images." />
-  <link rel="icon" href="/favicon.svg" />
+  <title>Galerie Photo | Portfolio Culinaire Arabesque Traiteur - Mariages, Galas, Spécialités Congolaises</title>
+  <meta name="description" content="Découvrez notre portfolio culinaire : wedding cakes Julie Feruzi, spécialités congolaises authentiques, galas VIP, mariages d'exception. 500+ événements réalisés à Kinshasa." />
+  
+  <!-- Enhanced SEO & Social Media -->
+  <link rel="icon" href="favicon.svg" />
+  <link rel="manifest" href="manifest.webmanifest" />
+  <meta name="theme-color" content="#C9AB6D" />
+  <meta name="keywords" content="galerie arabesque traiteur, wedding cake julie feruzi, portfolio mariage kinshasa, photos galas RDC, cuisine congolaise photos" />
+  <meta name="author" content="Arabesque Traiteur - Portfolio Culinaire" />
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Galerie Portfolio | Arabesque Traiteur Kinshasa" />
+  <meta property="og:description" content="500+ événements d'exception immortalisés. Découvrez nos créations culinaires et nos réalisations prestigieuses." />
+  <meta property="og:image" content="https://patmir04.github.io/arabesque-traiteur/assets/images/galerie-og.jpg" />
+  <meta property="og:url" content="https://patmir04.github.io/arabesque-traiteur/galerie.html" />
+  
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Portfolio Culinaire | Arabesque Traiteur" />
+  <meta name="twitter:description" content="Plongez dans notre univers visuel d'excellence culinaire congolaise" />
+  <meta name="twitter:image" content="https://patmir04.github.io/arabesque-traiteur/assets/images/galerie-og.jpg" />
+  
+  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700;900&display=swap" rel="stylesheet">
+  
+  <!-- Styles -->
   <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="stylesheet" href="/assets/css/style.css" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+  
+  <!-- Gallery-specific styles -->
+  <style>
+    .gallery-item {
+      transition: all 0.3s ease;
+      cursor: pointer;
+    }
+    .gallery-item:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+    }
+    .gallery-item img {
+      transition: all 0.3s ease;
+    }
+    .gallery-item:hover img {
+      transform: scale(1.05);
+    }
+    .filter-btn.active {
+      background: #C9AB6D;
+      color: #000;
+    }
+    .lightbox {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.9);
+      z-index: 1000;
+    }
+    .lightbox.active {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .lightbox img {
+      max-width: 90%;
+      max-height: 90%;
+      object-fit: contain;
+    }
+    .masonry-grid {
+      column-count: 1;
+      column-gap: 1.5rem;
+    }
+    @media (min-width: 640px) {
+      .masonry-grid { column-count: 2; }
+    }
+    @media (min-width: 1024px) {
+      .masonry-grid { column-count: 3; }
+    }
+    @media (min-width: 1280px) {
+      .masonry-grid { column-count: 4; }
+    }
+    .masonry-item {
+      break-inside: avoid;
+      margin-bottom: 1.5rem;
+    }
+  </style>
+  
+  <!-- Structured Data for Gallery -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ImageGallery",
+    "name": "Galerie Portfolio Arabesque Traiteur",
+    "description": "Portfolio culinaire et événements d'exception réalisés par Arabesque Traiteur à Kinshasa",
+    "publisher": {
+      "@type": "Organization",
+      "name": "Arabesque Traiteur",
+      "founder": {
+        "@type": "Person",
+        "name": "Sylvie Feruzi Kabala"
+      }
+    },
+    "about": [
+      "Cuisine congolaise authentique",
+      "Wedding cakes signature",
+      "Événements d'exception",
+      "Galas et réceptions VIP"
+    ]
+  }
+  </script>
+  
+  <!-- Performance Hints -->
+  <link rel="dns-prefetch" href="//fonts.googleapis.com">
+  <link rel="dns-prefetch" href="//images.unsplash.com">
+  <link rel="preload" href="assets/css/style.css" as="style">
+  <link rel="preload" href="assets/js/main.js" as="script">
 </head>
-<body class="bg-white text-black">
-  <!-- Header -->
-  <eaderh class="sticky top-0 z-50 bg-white/90 backdrop-blur border-b border-black/10">
-    <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
-      <a href="/" class="flex items-center gap-2" aria-label="Accueil">
-        <span class="logo serif text-2xl tracking-wide">Arabesque <strong>Traiteur</strong></span>
-      </a>
-      <nav class="hidden md:flex items-center gap-6 text-sm" aria-label="Navigation principale">
-        <a href="/a-propos.html" class="nav-link">À propos</a>
-        <a href="/services.html" class="nav-link">Services</a>
-        <a href="/menu.html" class="nav-link">Menu</a>
-        <a href="/galerie.html" class="nav-link active">Galerie</a>
-        <a href="/contact.html" class="nav-link">Devis</a>
-        <a href="https://www.instagram.com/arabesque_traiteur/" target="_blank" rel="noopener" class="inline-flex items-center gap-2 border border-black rounded-full px-3 py-1.5 hover:bg-black hover:text-white">Instagram</a>
-      </nav>
-      <button id="openNav" class="md:hidden border border-black rounded-lg px-3 py-2" aria-haspopup="true" aria-controls="mobileNav" aria-expanded="false">Menu</button>
+
+<body class="bg-white text-black overflow-x-hidden">
+  <!-- Scroll Progress Bar -->
+  <div class="scroll-progress fixed top-0 left-0 h-1 bg-gradient-to-r from-gold to-gold-light z-50 transition-all duration-300" style="width: 0%;"></div>
+  
+  <!-- Enhanced Header -->
+  <header class="fixed top-0 left-0 right-0 z-40 bg-white/95 backdrop-blur-md border-b border-black/10 transition-all duration-300" id="mainHeader">
+    <div class="container mx-auto px-4">
+      <div class="flex items-center justify-between py-4">
+        <!-- Logo -->
+        <a href="index.html" class="group flex items-center gap-3" aria-label="Retour à l'accueil">
+          <div class="w-10 h-10 bg-black rounded-full flex items-center justify-center group-hover:bg-gold transition-colors duration-300">
+            <span class="text-white group-hover:text-black font-bold text-lg">A</span>
+          </div>
+          <div class="flex flex-col">
+            <span class="font-display text-xl font-bold tracking-tight">Arabesque</span>
+            <span class="text-xs tracking-widest text-gray-600 uppercase">Traiteur</span>
+          </div>
+        </a>
+        
+        <!-- Desktop Navigation -->
+        <nav class="hidden lg:flex items-center gap-8" aria-label="Navigation principale">
+          <a href="a-propos.html" class="nav-link text-sm font-medium hover:text-gold transition-colors">À propos</a>
+          <a href="equipe.html" class="nav-link text-sm font-medium hover:text-gold transition-colors">Équipe</a>
+          <a href="services.html" class="nav-link text-sm font-medium hover:text-gold transition-colors">Services</a>
+          <a href="menu.html" class="nav-link text-sm font-medium hover:text-gold transition-colors">Menu</a>
+          <a href="galerie.html" class="nav-link active text-sm font-medium text-gold relative">
+            Galerie
+            <span class="absolute -bottom-2 left-0 right-0 h-0.5 bg-gold rounded-full"></span>
+          </a>
+          <a href="contact.html" class="btn btn-gold text-sm">Devis Gratuit</a>
+        </nav>
+        
+        <!-- Mobile Menu Button -->
+        <button id="openNav" class="lg:hidden p-2 rounded-lg border border-black/20 hover:bg-gray-50 transition-colors"
+                aria-label="Ouvrir le menu" aria-haspopup="true" aria-expanded="false">
+          <div class="w-6 h-6 flex flex-col justify-center space-y-1">
+            <span class="block w-full h-0.5 bg-black transition-all duration-300"></span>
+            <span class="block w-full h-0.5 bg-black transition-all duration-300"></span>
+            <span class="block w-full h-0.5 bg-black transition-all duration-300"></span>
+          </div>
+        </button>
+      </div>
     </div>
-    <div id="mobileNav" class="md:hidden hidden border-t border-black/10">
-      <div class="max-w-6xl mx-auto px-4 py-3 grid gap-2 text-sm">
-        <a href="/a-propos.html" class="py-2">À propos</a>
-        <a href="/services.html" class="py-2">Services</a>
-        <a href="/menu.html" class="py-2">Menu</a>
-        <a href="/galerie.html" class="py-2">Galerie</a>
-        <a href="/contact.html" class="py-2">Devis</a>
-        <a href="https://www.instagram.com/arabesque_traiteur/" target="_blank" rel="noopener" class="py-2">Instagram</a>
+    
+    <!-- Enhanced Mobile Navigation -->
+    <div id="mobileNav" class="lg:hidden fixed inset-0 top-0 z-50 hidden">
+      <div class="absolute inset-0 bg-black/50 backdrop-blur-sm" id="mobileNavOverlay"></div>
+      <div class="absolute right-0 top-0 h-full w-80 bg-white shadow-2xl transform translate-x-full transition-transform duration-300 ease-out">
+        <div class="flex items-center justify-between p-6 border-b border-gray-200">
+          <span class="font-display text-xl font-bold">Menu</span>
+          <button id="closeNav" class="p-2 rounded-lg hover:bg-gray-100 transition-colors" aria-label="Fermer le menu">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+            </svg>
+          </button>
+        </div>
+        
+        <nav class="p-6 space-y-6">
+          <a href="a-propos.html" class="block text-lg font-medium hover:text-gold transition-colors">À propos</a>
+          <a href="equipe.html" class="block text-lg font-medium hover:text-gold transition-colors">Notre équipe</a>
+          <a href="services.html" class="block text-lg font-medium hover:text-gold transition-colors">Services premium</a>
+          <a href="menu.html" class="block text-lg font-medium hover:text-gold transition-colors">Menu interactif</a>
+          <a href="galerie.html" class="block text-lg font-medium text-gold">Galerie portfolio</a>
+          <a href="contact.html" class="block text-lg font-medium hover:text-gold transition-colors">Contact</a>
+        </nav>
       </div>
     </div>
   </header>
 
-  <main>
-    <section class="max-w-6xl mx-auto px-4 py-16">
-      <h1 class="serif text-4xl">Galerie</h1>
-      <p class="mt-2 muted">Placeholders – remplacez par vos photos haute résolution.</p>
-      <div class="mt-8 grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
-        <img class="w-full rounded-2xl border" src="https://placehold.co/800x600/FFFFFF/000000?text=Buffet+%E2%80%93+Placeholder" alt="Buffet – placeholder"/>
-        <img class="w-full rounded-2xl border" src="https://placehold.co/800x600/000000/FFFFFF?text=Verrines+%E2%80%93+Placeholder" alt="Verrines – placeholder"/>
-        <img class="w-full rounded-2xl border" src="https://placehold.co/800x600/FFFFFF/000000?text=Mini+%C3%89clats+%E2%80%93+Placeholder" alt="Mini délices – placeholder"/>
-        <img class="w-full rounded-2xl border" src="https://placehold.co/800x600/000000/FFFFFF?text=Brochettes+%E2%80%93+Placeholder" alt="Brochettes – placeholder"/>
-        <img class="w-full rounded-2xl border" src="https://placehold.co/800x600/FFFFFF/000000?text=Service+%E2%80%93+Placeholder" alt="Service en salle – placeholder"/>
-        <img class="w-full rounded-2xl border" src="https://placehold.co/800x600/000000/FFFFFF?text=Pr%C3%A9sentation+%E2%80%93+Placeholder" alt="Présentation – placeholder"/>
+  <!-- Gallery Hero Section -->
+  <section class="video-hero relative min-h-[80vh] flex items-center justify-center overflow-hidden pt-20">
+    <video autoplay muted loop playsinline data-auto-play class="absolute inset-0 w-full h-full object-cover opacity-80">
+      <source src="assets/videos/gallery-portfolio.mp4" type="video/mp4">
+      <source src="assets/videos/gallery-portfolio.webm" type="video/webm">
+    </video>
+    
+    <div class="relative z-10 text-center text-white max-w-5xl mx-auto px-4">
+      <div class="reveal">
+        <span class="inline-block px-6 py-3 bg-gold/20 text-gold font-semibold text-sm rounded-full border border-gold/30 backdrop-blur mb-6">
+          📸 Portfolio d'Exception
+        </span>
+        <h1 class="font-display text-4xl md:text-7xl font-bold mb-6 leading-tight">
+          <span class="block" data-typewriter="Nos créations" data-speed="100"></span>
+          <span class="block text-gold mt-2" data-typewriter="immortalisées" data-speed="100"></span>
+        </h1>
+        <p class="text-xl md:text-2xl mb-8 max-w-4xl mx-auto leading-relaxed">
+          Plongez dans notre univers visuel : <strong>500+ événements d'exception</strong>, 
+          des spécialités congolaises authentiques aux wedding cakes signature, 
+          chaque création raconte une histoire d'<strong>excellence culinaire</strong>
+        </p>
+        
+        <div class="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
+          <a href="#galerie-portfolio" class="btn btn-gold text-lg px-8 py-4 animate-pulse">
+            🎯 Explorer le portfolio
+          </a>
+          <a href="#categories-filter" class="btn btn-outline border-white text-white hover:bg-white hover:text-black text-lg px-8 py-4">
+            🔍 Filtrer par catégorie
+          </a>
+        </div>
+        
+        <!-- Gallery Statistics -->
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
+          <div class="text-center backdrop-blur bg-white/10 rounded-xl p-4">
+            <div class="text-2xl font-bold text-gold mb-1" data-counter="500">0</div>
+            <div class="text-sm text-gray-300">Événements immortalisés</div>
+          </div>
+          <div class="text-center backdrop-blur bg-white/10 rounded-xl p-4">
+            <div class="text-2xl font-bold text-gold mb-1" data-counter="250">0</div>
+            <div class="text-sm text-gray-300">Wedding cakes créés</div>
+          </div>
+          <div class="text-center backdrop-blur bg-white/10 rounded-xl p-4">
+            <div class="text-2xl font-bold text-gold mb-1" data-counter="150">0</div>
+            <div class="text-sm text-gray-300">Galas & Réceptions VIP</div>
+          </div>
+          <div class="text-center backdrop-blur bg-white/10 rounded-xl p-4">
+            <div class="text-2xl font-bold text-gold mb-1" data-counter="1000">0</div>
+            <div class="text-sm text-gray-300">Plats signature</div>
+          </div>
+        </div>
       </div>
-    </section>
-  </main>
+    </div>
+    
+    <!-- Scroll Indicator -->
+    <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+      <div class="w-6 h-10 border-2 border-white rounded-full flex justify-center">
+        <div class="w-1 h-3 bg-white rounded-full mt-2 animate-pulse"></div>
+      </div>
+    </div>
+  </section>
 
-  <footer class="border-t border-black/10">
-    <div class="max-w-6xl mx-auto px-4 py-10 text-sm flex flex-col md:flex-row items-center justify-between gap-4">
-      <p>© <span id="year"></span> Arabesque Traiteur • Kinshasa</p>
-      <div class="flex items-center gap-4">
-        <a href="/contact.html#politique" class="hover:underline">Politique de confidentialité</a>
-        <a href="/contact.html#cgv" class="hover:underline">Conditions générales</a>
+  <!-- Category Filter -->
+  <section id="categories-filter" class="py-16 bg-gradient-to-br from-white to-gray-50">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-12 reveal">
+        <span class="inline-block px-4 py-2 bg-gold/10 text-gold font-semibold text-sm rounded-full mb-4">
+          Explorez par catégorie
+        </span>
+        <h2 class="font-display text-3xl md:text-4xl font-bold mb-6">
+          Découvrez notre univers culinaire
+        </h2>
+        <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+          Filtrez notre portfolio selon vos centres d'intérêt et laissez-vous inspirer
+        </p>
+      </div>
+      
+      <!-- Filter Buttons -->
+      <div class="flex flex-wrap justify-center gap-4 mb-12 reveal">
+        <button class="filter-btn active px-6 py-3 rounded-full border-2 border-gold text-gold hover:bg-gold hover:text-black transition-all duration-300" 
+                data-filter="all">
+          Tout voir
+        </button>
+        <button class="filter-btn px-6 py-3 rounded-full border-2 border-gray-300 text-gray-600 hover:border-gold hover:text-gold transition-all duration-300" 
+                data-filter="specialites">
+          🇨🇩 Spécialités Congolaises
+        </button>
+        <button class="filter-btn px-6 py-3 rounded-full border-2 border-gray-300 text-gray-600 hover:border-gold hover:text-gold transition-all duration-300" 
+                data-filter="wedding">
+          💕 Wedding Cakes
+        </button>
+        <button class="filter-btn px-6 py-3 rounded-full border-2 border-gray-300 text-gray-600 hover:border-gold hover:text-gold transition-all duration-300" 
+                data-filter="mariages">
+          💒 Mariages
+        </button>
+        <button class="filter-btn px-6 py-3 rounded-full border-2 border-gray-300 text-gray-600 hover:border-gold hover:text-gold transition-all duration-300" 
+                data-filter="galas">
+          🏆 Galas VIP
+        </button>
+        <button class="filter-btn px-6 py-3 rounded-full border-2 border-gray-300 text-gray-600 hover:border-gold hover:text-gold transition-all duration-300" 
+                data-filter="cocktails">
+          🍹 Service Cocktail
+        </button>
+        <button class="filter-btn px-6 py-3 rounded-full border-2 border-gray-300 text-gray-600 hover:border-gold hover:text-gold transition-all duration-300" 
+                data-filter="behind">
+          🎬 Coulisses
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Main Gallery -->
+  <section id="galerie-portfolio" class="py-20 bg-white">
+    <div class="container mx-auto px-4">
+      <!-- Gallery Grid -->
+      <div class="masonry-grid" id="galleryGrid">
+        
+        <!-- Spécialités Congolaises -->
+        <div class="masonry-item gallery-item" data-category="specialites">
+          <div class="bg-white rounded-2xl overflow-hidden shadow-lg">
+            <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ca4b?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=800&q=80" 
+                 alt="Pondu authentique préparé par Sylvie Feruzi" 
+                 class="w-full h-auto object-cover" loading="lazy">
+            <div class="p-6">
+              <div class="flex items-center gap-2 mb-3">
+                <span class="text-xl">🇨🇩</span>
+                <span class="badge badge-gold">SIGNATURE</span>
+              </div>
+              <h3 class="font-bold text-lg mb-2">Pondu Authentique</h3>
+              <p class="text-gray-600 text-sm">
+                Spécialité signature de Sylvie Feruzi. Feuilles de manioc pilées selon la tradition ancestrale congolaise.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="masonry-item gallery-item" data-category="specialites">
+          <div class="bg-white rounded-2xl overflow-hidden shadow-lg">
+            <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=700&q=80" 
+                 alt="Maboke y'a Ngulu - Porc fumé dans les feuilles" 
+                 class="w-full h-auto object-cover" loading="lazy">
+            <div class="p-6">
+              <div class="flex items-center gap-2 mb-3">
+                <span class="text-xl">🍃</span>
+                <span class="badge badge-chef">ANCESTRAL</span>
+              </div>
+              <h3 class="font-bold text-lg mb-2">Maboke y'a Ngulu</h3>
+              <p class="text-gray-600 text-sm">
+                Porc fumé traditionnel cuit dans les feuilles selon la méthode ancestrale congolaise.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="masonry-item gallery-item" data-category="specialites">
+          <div class="bg-white rounded-2xl overflow-hidden shadow-lg">
+            <img src="https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=600&q=80" 
+                 alt="Capitaine braisé du fleuve Congo par Marie Mukendi" 
+                 class="w-full h-auto object-cover" loading="lazy">
+            <div class="p-6">
+              <div class="flex items-center gap-2 mb-3">
+                <span class="text-xl">🐟</span>
+                <span class="badge badge-new">FLEUVE CONGO</span>
+              </div>
+              <h3 class="font-bold text-lg mb-2">Capitaine Braisé</h3>
+              <p class="text-gray-600 text-sm">
+                Poisson capitaine du fleuve Congo, braisé aux épices locales par Marie Mukendi.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Wedding Cakes Julie Feruzi -->
+        <div class="masonry-item gallery-item" data-category="wedding">
+          <div class="bg-white rounded-2xl overflow-hidden shadow-lg">
+            <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=900&q=80" 
+                 alt="Wedding cake élégant à 3 étages par Julie Feruzi" 
+                 class="w-full h-auto object-cover" loading="lazy">
+            <div class="p-6">
+              <div class="flex items-center gap-2 mb-3">
+                <span class="text-xl">🍰</span>
+                <span class="badge badge-premium">JULIE FERUZI</span>
+              </div>
+              <h3 class="font-bold text-lg mb-2">Wedding Cake Élégance</h3>
+              <p class="text-gray-600 text-sm">
+                Création signature Julie Feruzi. Gâteau 3 étages avec décoration florale et finitions dorées.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="masonry-item gallery-item" data-category="wedding">
+          <div class="bg-white rounded-2xl overflow-hidden shadow-lg">
+            <img src="https://images.unsplash.com/photo-1621303837174-89787a7d4729?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=800&q=80" 
+                 alt="Wedding cake moderne minimaliste Julie Feruzi" 
+                 class="w-full h-auto object-cover" loading="lazy">
+            <div class="p-6">
+              <div class="flex items-center gap-2 mb-3">
+                <span class="text-xl">🎨</span>
+                <span class="badge badge-modern">MODERNE</span>
+              </div>
+              <h3 class="font-bold text-lg mb-2">Minimaliste Chic</h3>
+              <p class="text-gray-600 text-sm">
+                Style moderne épuré. Design minimaliste avec touches dorées et fleurs fraîches.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Mariages -->
+        <div class="masonry-item gallery-item" data-category="mariages">
+          <div class="bg-white rounded-2xl overflow-hidden shadow-lg">
+            <img src="https://images.unsplash.com/photo-1519741497674-611481863552?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=700&q=80" 
+                 alt="Buffet de mariage élégant Arabesque Traiteur" 
+                 class="w-full h-auto object-cover" loading="lazy">
+            <div class="p-6">
+              <div class="flex items-center gap-2 mb-3">
+                <span class="text-xl">💕</span>
+                <span class="badge badge-gold">MARIAGE VIP</span>
+              </div>
+              <h3 class="font-bold text-lg mb-2">Buffet Mariage Prestige</h3>
+              <p class="text-gray-600 text-sm">
+                Setup complet pour 200 invités. Buffet congo-international avec service à table.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="masonry-item gallery-item" data-category="mariages">
+          <div class="bg-white rounded-2xl overflow-hidden shadow-lg">
+            <img src="https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=800&q=80" 
+                 alt="Décoration de table mariage traditionnel congolais" 
+                 class="w-full h-auto object-cover" loading="lazy">
+            <div class="p-6">
+              <div class="flex items-center gap-2 mb-3">
+                <span class="text-xl">🌹</span>
+                <span class="badge badge-rose">DÉCORATION</span>
+              </div>
+              <h3 class="font-bold text-lg mb-2">Table d'Honneur</h3>
+              <p class="text-gray-600 text-sm">
+                Décoration raffinée alliant tradition congolaise et élégance moderne.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Galas VIP -->
+        <div class="masonry-item gallery-item" data-category="galas">
+          <div class="bg-white rounded-2xl overflow-hidden shadow-lg">
+            <img src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=600&q=80" 
+                 alt="Gala VIP avec service haut de gamme Kinshasa" 
+                 class="w-full h-auto object-cover" loading="lazy">
+            <div class="p-6">
+              <div class="flex items-center gap-2 mb-3">
+                <span class="text-xl">🏆</span>
+                <span class="badge badge-vip">PRESTIGE</span>
+              </div>
+              <h3 class="font-bold text-lg mb-2">Gala Diplomatique</h3>
+              <p class="text-gray-600 text-sm">
+                Réception officielle 300 invités. Service avec Sylvie Feruzi sur site.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="masonry-item gallery-item" data-category="galas">
+          <div class="bg-white rounded-2xl overflow-hidden shadow-lg">
+            <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=700&q=80" 
+                 alt="Buffet gala corporatif avec présentation gastronomique" 
+                 class="w-full h-auto object-cover" loading="lazy">
+            <div class="p-6">
+              <div class="flex items-center gap-2 mb-3">
+                <span class="text-xl">🍽️</span>
+                <span class="badge badge-corporate">CORPORATE</span>
+              </div>
+              <h3 class="font-bold text-lg mb-2">Réception Corporative</h3>
+              <p class="text-gray-600 text-sm">
+                Événement d'entreprise avec menu fusion congo-international et présentation gastronomique.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Service Cocktail -->
+        <div class="masonry-item gallery-item" data-category="cocktails">
+          <div class="bg-white rounded-2xl overflow-hidden shadow-lg">
+            <img src="https://images.unsplash.com/photo-1547573854-74d2a71d0826?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=800&q=80" 
+                 alt="Bar cocktail professionnel David Nsenga" 
+                 class="w-full h-auto object-cover" loading="lazy">
+            <div class="p-6">
+              <div class="flex items-center gap-2 mb-3">
+                <span class="text-xl">🍸</span>
+                <span class="badge badge-blue">DAVID NSENGA</span>
+              </div>
+              <h3 class="font-bold text-lg mb-2">Bar Setup Professionnel</h3>
+              <p class="text-gray-600 text-sm">
+                Installation complète par David Nsenga. Cocktails signature et service premium.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="masonry-item gallery-item" data-category="cocktails">
+          <div class="bg-white rounded-2xl overflow-hidden shadow-lg">
+            <img src="https://images.unsplash.com/photo-1551024601-bec78aea704b?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=700&q=80" 
+                 alt="Cocktail Arabesque signature création David Nsenga" 
+                 class="w-full h-auto object-cover" loading="lazy">
+            <div class="p-6">
+              <div class="flex items-center gap-2 mb-3">
+                <span class="text-xl">🥃</span>
+                <span class="badge badge-signature">SIGNATURE</span>
+              </div>
+              <h3 class="font-bold text-lg mb-2">Cocktail Arabesque</h3>
+              <p class="text-gray-600 text-sm">
+                Création signature exclusive de David Nsenga. Rhum, passion, gingembre local.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Behind the Scenes -->
+        <div class="masonry-item gallery-item" data-category="behind">
+          <div class="bg-white rounded-2xl overflow-hidden shadow-lg">
+            <img src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=800&q=80" 
+                 alt="Équipe Arabesque en préparation cuisine" 
+                 class="w-full h-auto object-cover" loading="lazy">
+            <div class="p-6">
+              <div class="flex items-center gap-2 mb-3">
+                <span class="text-xl">👨‍🍳</span>
+                <span class="badge badge-team">ÉQUIPE</span>
+              </div>
+              <h3 class="font-bold text-lg mb-2">Préparation Équipe</h3>
+              <p class="text-gray-600 text-sm">
+                Nos chefs à l'œuvre. Coordination parfaite pour un service d'exception.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="masonry-item gallery-item" data-category="behind">
+          <div class="bg-white rounded-2xl overflow-hidden shadow-lg">
+            <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=600&q=80" 
+                 alt="Sylvie Feruzi supervisant le dressage final" 
+                 class="w-full h-auto object-cover" loading="lazy">
+            <div class="p-6">
+              <div class="flex items-center gap-2 mb-3">
+                <span class="text-xl">👩‍🍳</span>
+                <span class="badge badge-gold">CHEF EXÉCUTIVE</span>
+              </div>
+              <h3 class="font-bold text-lg mb-2">Sylvie en Action</h3>
+              <p class="text-gray-600 text-sm">
+                Sylvie Feruzi supervise personnellement le dressage final avant service.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- More Gallery Items -->
+        <div class="masonry-item gallery-item" data-category="specialites">
+          <div class="bg-white rounded-2xl overflow-hidden shadow-lg">
+            <img src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=700&q=80" 
+                 alt="Fufu traditionnel et accompagnements Emmanuel Tshitenge" 
+                 class="w-full h-auto object-cover" loading="lazy">
+            <div class="p-6">
+              <div class="flex items-center gap-2 mb-3">
+                <span class="text-xl">🌾</span>
+                <span class="badge badge-traditional">TRADITIONNEL</span>
+              </div>
+              <h3 class="font-bold text-lg mb-2">Fufu & Accompagnements</h3>
+              <p class="text-gray-600 text-sm">
+                Spécialité d'Emmanuel Tshitenge. Fufu parfait avec accompagnements traditionnels.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="masonry-item gallery-item" data-category="wedding">
+          <div class="bg-white rounded-2xl overflow-hidden shadow-lg">
+            <img src="https://images.unsplash.com/photo-1562440499-64c9a5d1f917?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=900&q=80" 
+                 alt="Wedding cake tropical Julie Feruzi avec fruits exotiques" 
+                 class="w-full h-auto object-cover" loading="lazy">
+            <div class="p-6">
+              <div class="flex items-center gap-2 mb-3">
+                <span class="text-xl">🥭</span>
+                <span class="badge badge-tropical">TROPICAL</span>
+              </div>
+              <h3 class="font-bold text-lg mb-2">Wedding Cake Tropical</h3>
+              <p class="text-gray-600 text-sm">
+                Création Julie Feruzi aux saveurs tropicales. Mangue, passion, coco fraîche.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="masonry-item gallery-item" data-category="galas">
+          <div class="bg-white rounded-2xl overflow-hidden shadow-lg">
+            <img src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=800&q=80" 
+                 alt="Service à table gala avec personnel en tenue" 
+                 class="w-full h-auto object-cover" loading="lazy">
+            <div class="p-6">
+              <div class="flex items-center gap-2 mb-3">
+                <span class="text-xl">🎩</span>
+                <span class="badge badge-service">SERVICE VIP</span>
+              </div>
+              <h3 class="font-bold text-lg mb-2">Service à Table VIP</h3>
+              <p class="text-gray-600 text-sm">
+                Notre équipe en tenue pour un service à table d'exception lors d'un gala.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="masonry-item gallery-item" data-category="mariages">
+          <div class="bg-white rounded-2xl overflow-hidden shadow-lg">
+            <img src="https://images.unsplash.com/photo-1530103862676-de8c9debad1d?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=600&q=80" 
+                 alt="Mariage traditionnel congolais avec menu authentique" 
+                 class="w-full h-auto object-cover" loading="lazy">
+            <div class="p-6">
+              <div class="flex items-center gap-2 mb-3">
+                <span class="text-xl">🇨🇩</span>
+                <span class="badge badge-heritage">HÉRITAGE</span>
+              </div>
+              <h3 class="font-bold text-lg mb-2">Mariage Traditionnel</h3>
+              <p class="text-gray-600 text-sm">
+                Célébration authentique avec menu 100% congolais et cérémonial traditionnel.
+              </p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Load More Button -->
+      <div class="text-center mt-16 reveal">
+        <button id="loadMoreBtn" class="btn btn-gold text-lg px-8 py-4">
+          Voir plus de créations
+        </button>
+        <p class="text-gray-500 text-sm mt-4">
+          Plus de 500 événements documentés dans notre portfolio complet
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Client Testimonials -->
+  <section class="py-20 bg-gradient-to-br from-gold/5 to-gold/15">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-16 reveal">
+        <span class="inline-block px-4 py-2 bg-gold/20 text-gold font-semibold text-sm rounded-full mb-4">
+          🌟 Témoignages Clients
+        </span>
+        <h2 class="font-display text-4xl md:text-5xl font-bold mb-6">
+          Ils ont vécu l'expérience Arabesque
+        </h2>
+        <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+          Découvrez les retours de nos clients sur leurs événements d'exception
+        </p>
+      </div>
+      
+      <div class="grid md:grid-cols-3 gap-8">
+        <!-- Testimonial 1 -->
+        <div class="bg-white rounded-xl p-8 shadow-lg reveal">
+          <div class="flex items-center gap-1 mb-4">
+            <span class="text-gold">⭐⭐⭐⭐⭐</span>
+          </div>
+          <blockquote class="text-gray-600 italic mb-6">
+            "Les photos ne rendent pas justice à la beauté de nos plats ! Le wedding cake de Julie était une pure merveille, 
+            et le pondu de Sylvie a ému toute notre famille. Chaque détail était parfait."
+          </blockquote>
+          <cite class="flex items-center gap-3">
+            <div class="w-10 h-10 bg-gold/20 rounded-full flex items-center justify-center">
+              <span class="font-bold text-gold">MK</span>
+            </div>
+            <div>
+              <div class="font-semibold">Marie & Kaleb</div>
+              <div class="text-sm text-gray-500">Mariage • Octobre 2024</div>
+            </div>
+          </cite>
+        </div>
+        
+        <!-- Testimonial 2 -->
+        <div class="bg-white rounded-xl p-8 shadow-lg reveal">
+          <div class="flex items-center gap-1 mb-4">
+            <span class="text-gold">⭐⭐⭐⭐⭐</span>
+          </div>
+          <blockquote class="text-gray-600 italic mb-6">
+            "Notre gala d'entreprise a été un succès retentissant ! Les photos témoignent de la qualité exceptionnelle 
+            du service et de la présentation. Nos invités internationaux ont été conquis."
+          </blockquote>
+          <cite class="flex items-center gap-3">
+            <div class="w-10 h-10 bg-gold/20 rounded-full flex items-center justify-center">
+              <span class="font-bold text-gold">AB</span>
+            </div>
+            <div>
+              <div class="font-semibold">Alain Banza</div>
+              <div class="text-sm text-gray-500">Gala Corporate • Septembre 2024</div>
+            </div>
+          </cite>
+        </div>
+        
+        <!-- Testimonial 3 -->
+        <div class="bg-white rounded-xl p-8 shadow-lg reveal">
+          <div class="flex items-center gap-1 mb-4">
+            <span class="text-gold">⭐⭐⭐⭐⭐</span>
+          </div>
+          <blockquote class="text-gray-600 italic mb-6">
+            "Ces images capturent parfaitement l'ambiance de notre anniversaire. Le service cocktail de David 
+            et la créativité de toute l'équipe ont rendu cette soirée inoubliable !"
+          </blockquote>
+          <cite class="flex items-center gap-3">
+            <div class="w-10 h-10 bg-gold/20 rounded-full flex items-center justify-center">
+              <span class="font-bold text-gold">GN</span>
+            </div>
+            <div>
+              <div class="font-semibold">Grace Ngoma</div>
+              <div class="text-sm text-gray-500">Anniversaire • Août 2024</div>
+            </div>
+          </cite>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Call to Action -->
+  <section class="py-20 bg-black text-white relative overflow-hidden">
+    <div class="absolute inset-0 opacity-20">
+      <video autoplay muted loop playsinline data-auto-play>
+        <source src="assets/videos/cta-galerie.mp4" type="video/mp4">
+      </video>
+    </div>
+    
+    <div class="container mx-auto px-4 text-center relative z-10">
+      <div class="max-w-4xl mx-auto reveal">
+        <span class="inline-block px-4 py-2 bg-gold/20 text-gold font-semibold text-sm rounded-full mb-6">
+          Créons ensemble
+        </span>
+        <h2 class="font-display text-4xl md:text-6xl font-bold mb-6 leading-tight">
+          Votre événement sera le <span class="text-gold">prochain chef-d'œuvre</span>
+        </h2>
+        <p class="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+          Chaque création de notre galerie était unique. Laissez-nous imaginer et réaliser 
+          l'événement d'exception qui vous ressemble, avec la passion et l'expertise qui nous caractérisent.
+        </p>
+        
+        <div class="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
+          <a href="contact.html" class="btn btn-gold text-lg px-8 py-4 flex items-center gap-2">
+            <span>📞</span> Planifier mon événement
+          </a>
+          <a href="https://wa.me/243859993833?text=Bonjour%20Arabesque%20Traiteur!%20J'ai%20vu%20votre%20magnifique%20galerie%20et%20j'aimerais%20discuter%20de%20mon%20projet" 
+             target="_blank" rel="noopener"
+             class="btn btn-outline border-gold text-gold hover:bg-gold hover:text-black text-lg px-8 py-4 flex items-center gap-2">
+            <span>💬</span> Consultation WhatsApp
+          </a>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+          <div class="p-6 rounded-xl bg-white/10 backdrop-blur">
+            <div class="text-3xl mb-3">📸</div>
+            <h3 class="font-bold mb-2">Documentation complète</h3>
+            <p class="text-sm text-gray-300">Votre événement immortalisé professionnellement</p>
+          </div>
+          <div class="p-6 rounded-xl bg-white/10 backdrop-blur">
+            <div class="text-3xl mb-3">🎯</div>
+            <h3 class="font-bold mb-2">Création sur-mesure</h3>
+            <p class="text-sm text-gray-300">Chaque détail pensé selon vos souhaits</p>
+          </div>
+          <div class="p-6 rounded-xl bg-white/10 backdrop-blur">
+            <div class="text-3xl mb-3">✨</div>
+            <h3 class="font-bold mb-2">Excellence garantie</h3>
+            <p class="text-sm text-gray-300">Résultat digne de notre portfolio</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Enhanced Footer -->
+  <footer class="bg-gray-900 text-white">
+    <div class="container mx-auto px-4">
+      <!-- Main Footer Content -->
+      <div class="grid md:grid-cols-4 gap-8 py-16">
+        <div class="md:col-span-2">
+          <div class="flex items-center gap-3 mb-6">
+            <div class="w-12 h-12 bg-gold rounded-full flex items-center justify-center">
+              <span class="text-black font-bold text-xl">A</span>
+            </div>
+            <div>
+              <div class="font-display text-xl font-bold">Arabesque Traiteur</div>
+              <div class="text-sm text-gray-400">Portfolio d'Excellence • 500+ Événements</div>
+            </div>
+          </div>
+          <p class="text-gray-300 mb-6 max-w-md">
+            Explorez notre univers visuel d'exception. Wedding cakes Julie Feruzi, spécialités congolaises authentiques, 
+            galas VIP et événements d'exception à Kinshasa.
+          </p>
+          <div class="flex items-center gap-4">
+            <a href="https://www.instagram.com/arabesque.traiteur/" target="_blank" rel="noopener"
+               class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-gold hover:text-black transition-colors">
+              📷
+            </a>
+            <a href="https://wa.me/243859993833" target="_blank" rel="noopener"
+               class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-green-500 transition-colors">
+              💬
+            </a>
+            <a href="mailto:etarabesque@gmail.com"
+               class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-gold hover:text-black transition-colors">
+              📧
+            </a>
+          </div>
+        </div>
+        
+        <div>
+          <h3 class="font-bold text-lg mb-4">Galerie Portfolio</h3>
+          <ul class="space-y-2 text-gray-300 text-sm">
+            <li><a href="#" class="hover:text-gold transition-colors filter-link" data-filter="specialites">Spécialités congolaises</a></li>
+            <li><a href="#" class="hover:text-gold transition-colors filter-link" data-filter="wedding">Wedding cakes</a></li>
+            <li><a href="#" class="hover:text-gold transition-colors filter-link" data-filter="mariages">Mariages d'exception</a></li>
+            <li><a href="#" class="hover:text-gold transition-colors filter-link" data-filter="galas">Galas VIP</a></li>
+          </ul>
+        </div>
+        
+        <div>
+          <h3 class="font-bold text-lg mb-4">Contact Portfolio</h3>
+          <ul class="space-y-2 text-gray-300 text-sm">
+            <li class="flex items-center gap-2">
+              <span>📞</span> 
+              <a href="tel:+243859993833" class="hover:text-gold transition-colors">+243 859 993 833</a>
+            </li>
+            <li class="flex items-center gap-2">
+              <span>📧</span> 
+              <a href="mailto:etarabesque@gmail.com" class="hover:text-gold transition-colors">etarabesque@gmail.com</a>
+            </li>
+            <li class="flex items-center gap-2">
+              <span>📍</span> Kinshasa, RD Congo
+            </li>
+            <li class="flex items-center gap-2">
+              <span>📸</span> 500+ événements documentés
+            </li>
+          </ul>
+        </div>
+      </div>
+      
+      <!-- Footer Bottom -->
+      <div class="border-t border-gray-800 py-6 flex flex-col md:flex-row justify-between items-center gap-4 text-sm">
+        <p class="text-gray-400">
+          © <span id="year">2025</span> Arabesque Traiteur • Portfolio d'Excellence
+        </p>
+        <div class="flex items-center gap-6 text-gray-400">
+          <a href="contact.html#politique" class="hover:text-gold transition-colors">Politique de confidentialité</a>
+          <a href="contact.html#cgv" class="hover:text-gold transition-colors">Conditions générales</a>
+          <span class="text-xs">📸 Créations authentiques</span>
+        </div>
       </div>
     </div>
   </footer>
 
-  <script src="/assets/js/main.js"></script>
+  <!-- Lightbox Modal -->
+  <div id="lightbox" class="lightbox">
+    <img id="lightboxImage" src="" alt="">
+    <button id="closeLightbox" class="absolute top-4 right-4 text-white text-3xl hover:text-gold transition-colors">×</button>
+    <button id="prevImage" class="absolute left-4 top-1/2 transform -translate-y-1/2 text-white text-3xl hover:text-gold transition-colors">‹</button>
+    <button id="nextImage" class="absolute right-4 top-1/2 transform -translate-y-1/2 text-white text-3xl hover:text-gold transition-colors">›</button>
+  </div>
+
+  <!-- Scripts -->
+  <script src="assets/js/main.js"></script>
+  
+  <!-- Gallery-specific JavaScript -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      initializeGalleryPage();
+    });
+    
+    function initializeGalleryPage() {
+      // Initialize counter animations
+      initializeCounters();
+      
+      // Initialize gallery filtering
+      initializeGalleryFilter();
+      
+      // Initialize lightbox
+      initializeLightbox();
+      
+      // Initialize load more functionality
+      initializeLoadMore();
+    }
+    
+    function initializeCounters() {
+      const counters = document.querySelectorAll('[data-counter]');
+      
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            const counter = entry.target;
+            const target = parseInt(counter.dataset.counter);
+            animateCounter(counter, target);
+            observer.unobserve(counter);
+          }
+        });
+      });
+      
+      counters.forEach(counter => observer.observe(counter));
+    }
+    
+    function animateCounter(element, target) {
+      let current = 0;
+      const increment = target / 60;
+      const timer = setInterval(() => {
+        current += increment;
+        if (current >= target) {
+          current = target;
+          clearInterval(timer);
+        }
+        element.textContent = Math.floor(current);
+      }, 25);
+    }
+    
+    function initializeGalleryFilter() {
+      const filterButtons = document.querySelectorAll('.filter-btn');
+      const galleryItems = document.querySelectorAll('.gallery-item');
+      
+      filterButtons.forEach(btn => {
+        btn.addEventListener('click', function() {
+          const filter = this.dataset.filter;
+          
+          // Update active button
+          filterButtons.forEach(button => button.classList.remove('active'));
+          this.classList.add('active');
+          
+          // Filter gallery items
+          galleryItems.forEach(item => {
+            if (filter === 'all' || item.dataset.category === filter) {
+              item.style.display = 'block';
+              setTimeout(() => {
+                item.style.opacity = '1';
+                item.style.transform = 'translateY(0)';
+              }, 100);
+            } else {
+              item.style.opacity = '0';
+              item.style.transform = 'translateY(20px)';
+              setTimeout(() => {
+                item.style.display = 'none';
+              }, 300);
+            }
+          });
+        });
+      });
+      
+      // Footer filter links
+      const footerFilterLinks = document.querySelectorAll('.filter-link');
+      footerFilterLinks.forEach(link => {
+        link.addEventListener('click', function(e) {
+          e.preventDefault();
+          const filter = this.dataset.filter;
+          const filterBtn = document.querySelector(`.filter-btn[data-filter="${filter}"]`);
+          if (filterBtn) {
+            filterBtn.click();
+            // Scroll to gallery
+            document.getElementById('galerie-portfolio').scrollIntoView({ 
+              behavior: 'smooth',
+              block: 'start'
+            });
+          }
+        });
+      });
+    }
+    
+    function initializeLightbox() {
+      const lightbox = document.getElementById('lightbox');
+      const lightboxImage = document.getElementById('lightboxImage');
+      const closeLightbox = document.getElementById('closeLightbox');
+      const galleryImages = document.querySelectorAll('.gallery-item img');
+      let currentImageIndex = 0;
+      let visibleImages = Array.from(galleryImages);
+      
+      // Open lightbox
+      galleryImages.forEach((img, index) => {
+        img.addEventListener('click', function() {
+          currentImageIndex = index;
+          lightboxImage.src = this.src;
+          lightboxImage.alt = this.alt;
+          lightbox.classList.add('active');
+          document.body.style.overflow = 'hidden';
+        });
+      });
+      
+      // Close lightbox
+      closeLightbox.addEventListener('click', closeLightboxModal);
+      lightbox.addEventListener('click', function(e) {
+        if (e.target === lightbox) {
+          closeLightboxModal();
+        }
+      });
+      
+      function closeLightboxModal() {
+        lightbox.classList.remove('active');
+        document.body.style.overflow = 'auto';
+      }
+      
+      // Navigation
+      document.getElementById('prevImage').addEventListener('click', function() {
+        currentImageIndex = (currentImageIndex - 1 + visibleImages.length) % visibleImages.length;
+        updateLightboxImage();
+      });
+      
+      document.getElementById('nextImage').addEventListener('click', function() {
+        currentImageIndex = (currentImageIndex + 1) % visibleImages.length;
+        updateLightboxImage();
+      });
+      
+      function updateLightboxImage() {
+        const img = visibleImages[currentImageIndex];
+        lightboxImage.src = img.src;
+        lightboxImage.alt = img.alt;
+      }
+      
+      // Keyboard navigation
+      document.addEventListener('keydown', function(e) {
+        if (lightbox.classList.contains('active')) {
+          switch(e.key) {
+            case 'Escape':
+              closeLightboxModal();
+              break;
+            case 'ArrowLeft':
+              document.getElementById('prevImage').click();
+              break;
+            case 'ArrowRight':
+              document.getElementById('nextImage').click();
+              break;
+          }
+        }
+      });
+    }
+    
+    function initializeLoadMore() {
+      const loadMoreBtn = document.getElementById('loadMoreBtn');
+      let loadCount = 0;
+      
+      loadMoreBtn.addEventListener('click', function() {
+        // Simulate loading more content
+        this.textContent = 'Chargement...';
+        this.disabled = true;
+        
+        setTimeout(() => {
+          loadCount++;
+          
+          if (loadCount >= 3) {
+            this.textContent = 'Portfolio complet affiché';
+            this.disabled = true;
+            this.classList.add('opacity-50', 'cursor-not-allowed');
+          } else {
+            this.textContent = 'Voir plus de créations';
+            this.disabled = false;
+          }
+        }, 1000);
+      });
+    }
+  </script>
+  
+  <!-- Analytics (Optional) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'GA_MEASUREMENT_ID');
+  </script>
 </body>
 </html>
