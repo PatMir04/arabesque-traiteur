@@ -1,0 +1,985 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Notre Équipe Culinaire | Sylvie Feruzi & Chefs Passionnés - Arabesque Traiteur</title>
+  <meta name="description" content="Découvrez l'équipe d'exception d'Arabesque Traiteur : Sylvie Feruzi Kabala, Julie Feruzi, David Nsenga et nos 8 chefs spécialisés dans la cuisine congolaise authentique à Kinshasa." />
+  
+  <!-- Enhanced SEO & Social Media -->
+  <link rel="icon" href="favicon.svg" />
+  <link rel="manifest" href="manifest.webmanifest" />
+  <meta name="theme-color" content="#C9AB6D" />
+  <meta name="keywords" content="sylvie feruzi chef, equipe arabesque traiteur, julie feruzi patissiere, david nsenga cocktail, chefs congolais kinshasa" />
+  <meta name="author" content="Arabesque Traiteur - Équipe Culinaire" />
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Notre Équipe Culinaire | Arabesque Traiteur" />
+  <meta property="og:description" content="Rencontrez les visages passionnés derrière la cuisine d'exception d'Arabesque Traiteur" />
+  <meta property="og:image" content="https://patmir04.github.io/arabesque-traiteur/assets/images/equipe-og.jpg" />
+  <meta property="og:url" content="https://patmir04.github.io/arabesque-traiteur/equipe.html" />
+  
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Équipe Culinaire Arabesque | Chefs Congolais" />
+  <meta name="twitter:description" content="11 chefs passionnés unis par l'amour de la cuisine congolaise" />
+  <meta name="twitter:image" content="https://patmir04.github.io/arabesque-traiteur/assets/images/equipe-og.jpg" />
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700;900&display=swap" rel="stylesheet">
+  
+  <!-- Styles -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="assets/css/style.css" />
+  
+  <!-- Structured Data for Team -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Arabesque Traiteur",
+    "description": "Équipe culinaire d'exception spécialisée en cuisine congolaise authentique",
+    "founder": {
+      "@type": "Person",
+      "name": "Sylvie Feruzi Kabala",
+      "jobTitle": "Chef Exécutive & Directrice"
+    },
+    "employee": [
+      {
+        "@type": "Person",
+        "name": "Julie Feruzi",
+        "jobTitle": "Chef Pâtissière"
+      },
+      {
+        "@type": "Person",
+        "name": "David Nsenga",
+        "jobTitle": "Chef Cuisine Froide & Cocktails"
+      }
+    ],
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Kinshasa",
+      "addressCountry": "CD"
+    }
+  }
+  </script>
+  
+  <!-- Performance Hints -->
+  <link rel="dns-prefetch" href="//fonts.googleapis.com">
+  <link rel="preload" href="assets/css/style.css" as="style">
+  <link rel="preload" href="assets/js/main.js" as="script">
+</head>
+
+<body class="bg-white text-black overflow-x-hidden">
+  <!-- Scroll Progress Bar -->
+  <div class="scroll-progress fixed top-0 left-0 h-1 bg-gradient-to-r from-gold to-gold-light z-50 transition-all duration-300" style="width: 0%;"></div>
+  
+  <!-- Enhanced Header -->
+  <header class="fixed top-0 left-0 right-0 z-40 bg-white/95 backdrop-blur-md border-b border-black/10 transition-all duration-300" id="mainHeader">
+    <div class="container mx-auto px-4">
+      <div class="flex items-center justify-between py-4">
+        <!-- Logo -->
+        <a href="index.html" class="group flex items-center gap-3" aria-label="Retour à l'accueil">
+          <div class="w-10 h-10 bg-black rounded-full flex items-center justify-center group-hover:bg-gold transition-colors duration-300">
+            <span class="text-white group-hover:text-black font-bold text-lg">A</span>
+          </div>
+          <div class="flex flex-col">
+            <span class="font-display text-xl font-bold tracking-tight">Arabesque</span>
+            <span class="text-xs tracking-widest text-gray-600 uppercase">Traiteur</span>
+          </div>
+        </a>
+        
+        <!-- Desktop Navigation -->
+        <nav class="hidden lg:flex items-center gap-8" aria-label="Navigation principale">
+          <a href="a-propos.html" class="nav-link text-sm font-medium hover:text-gold transition-colors">À propos</a>
+          <a href="equipe.html" class="nav-link active text-sm font-medium text-gold relative">
+            Équipe
+            <span class="absolute -bottom-2 left-0 right-0 h-0.5 bg-gold rounded-full"></span>
+          </a>
+          <a href="services.html" class="nav-link text-sm font-medium hover:text-gold transition-colors">Services</a>
+          <a href="menu.html" class="nav-link text-sm font-medium hover:text-gold transition-colors">Menu</a>
+          <a href="galerie.html" class="nav-link text-sm font-medium hover:text-gold transition-colors">Galerie</a>
+          <a href="contact.html" class="btn btn-gold text-sm">Devis Gratuit</a>
+        </nav>
+        
+        <!-- Mobile Menu Button -->
+        <button id="openNav" class="lg:hidden p-2 rounded-lg border border-black/20 hover:bg-gray-50 transition-colors"
+                aria-label="Ouvrir le menu" aria-haspopup="true" aria-expanded="false">
+          <div class="w-6 h-6 flex flex-col justify-center space-y-1">
+            <span class="block w-full h-0.5 bg-black transition-all duration-300"></span>
+            <span class="block w-full h-0.5 bg-black transition-all duration-300"></span>
+            <span class="block w-full h-0.5 bg-black transition-all duration-300"></span>
+          </div>
+        </button>
+      </div>
+    </div>
+    
+    <!-- Enhanced Mobile Navigation -->
+    <div id="mobileNav" class="lg:hidden fixed inset-0 top-0 z-50 hidden">
+      <div class="absolute inset-0 bg-black/50 backdrop-blur-sm" id="mobileNavOverlay"></div>
+      <div class="absolute right-0 top-0 h-full w-80 bg-white shadow-2xl transform translate-x-full transition-transform duration-300 ease-out">
+        <div class="flex items-center justify-between p-6 border-b border-gray-200">
+          <span class="font-display text-xl font-bold">Menu</span>
+          <button id="closeNav" class="p-2 rounded-lg hover:bg-gray-100 transition-colors" aria-label="Fermer le menu">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+            </svg>
+          </button>
+        </div>
+        
+        <nav class="p-6 space-y-6">
+          <a href="a-propos.html" class="block text-lg font-medium hover:text-gold transition-colors">À propos</a>
+          <a href="equipe.html" class="block text-lg font-medium text-gold">Notre équipe</a>
+          <a href="services.html" class="block text-lg font-medium hover:text-gold transition-colors">Services premium</a>
+          <a href="menu.html" class="block text-lg font-medium hover:text-gold transition-colors">Menu interactif</a>
+          <a href="galerie.html" class="block text-lg font-medium hover:text-gold transition-colors">Galerie photos</a>
+          <a href="contact.html" class="block text-lg font-medium hover:text-gold transition-colors">Contact</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <!-- Team Hero Section -->
+  <section class="video-hero relative min-h-[80vh] flex items-center justify-center overflow-hidden pt-20">
+    <video autoplay muted loop playsinline data-auto-play class="absolute inset-0 w-full h-full object-cover opacity-80">
+      <source src="assets/videos/equipe-cuisine.mp4" type="video/mp4">
+      <source src="assets/videos/equipe-cuisine.webm" type="video/webm">
+    </video>
+    
+    <div class="relative z-10 text-center text-white max-w-5xl mx-auto px-4">
+      <div class="reveal">
+        <span class="inline-block px-6 py-3 bg-gold/20 text-gold font-semibold text-sm rounded-full border border-gold/30 backdrop-blur mb-6">
+          👥 Notre Équipe Passionnée
+        </span>
+        <h1 class="font-display text-4xl md:text-7xl font-bold mb-6 leading-tight">
+          <span class="block" data-typewriter="Les visages de" data-speed="100"></span>
+          <span class="block text-gold mt-2" data-typewriter="l'excellence culinaire" data-speed="100"></span>
+        </h1>
+        <p class="text-xl md:text-2xl mb-8 max-w-4xl mx-auto leading-relaxed">
+          Découvrez les <strong>11 chefs passionnés</strong> qui donnent vie à notre vision culinaire, 
+          dirigés par <strong>Sylvie Feruzi Kabala</strong> et unis par l'amour de la cuisine congolaise authentique
+        </p>
+        
+        <div class="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
+          <a href="#equipe-direction" class="btn btn-gold text-lg px-8 py-4 animate-pulse">
+            👩‍🍳 Rencontrer nos chefs
+          </a>
+          <a href="#philosophie-equipe" class="btn btn-outline border-white text-white hover:bg-white hover:text-black text-lg px-8 py-4">
+            💫 Notre philosophie
+          </a>
+        </div>
+        
+        <!-- Team Statistics -->
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
+          <div class="text-center backdrop-blur bg-white/10 rounded-xl p-4">
+            <div class="text-2xl font-bold text-gold mb-1" data-counter="11">0</div>
+            <div class="text-sm text-gray-300">Chefs d'exception</div>
+          </div>
+          <div class="text-center backdrop-blur bg-white/10 rounded-xl p-4">
+            <div class="text-2xl font-bold text-gold mb-1" data-counter="45">0</div>
+            <div class="text-sm text-gray-300">Années d'expérience</div>
+          </div>
+          <div class="text-center backdrop-blur bg-white/10 rounded-xl p-4">
+            <div class="text-2xl font-bold text-gold mb-1" data-counter="8">0</div>
+            <div class="text-sm text-gray-300">Spécialités uniques</div>
+          </div>
+          <div class="text-center backdrop-blur bg-white/10 rounded-xl p-4">
+            <div class="text-2xl font-bold text-gold mb-1" data-counter="100">0</div>
+            <div class="text-sm text-gray-300">% Passion congolaise</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Scroll Indicator -->
+    <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+      <div class="w-6 h-10 border-2 border-white rounded-full flex justify-center">
+        <div class="w-1 h-3 bg-white rounded-full mt-2 animate-pulse"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Direction Team -->
+  <section id="equipe-direction" class="py-20 bg-gradient-to-br from-white to-gray-50">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-16 reveal">
+        <span class="inline-block px-4 py-2 bg-gold/10 text-gold font-semibold text-sm rounded-full mb-4">
+          👑 Direction Culinaire
+        </span>
+        <h2 class="font-display text-4xl md:text-5xl font-bold mb-6">
+          L'âme d'Arabesque Traiteur
+        </h2>
+        <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+          Nos trois piliers dirigent avec passion et expertise l'ensemble de notre équipe culinaire
+        </p>
+      </div>
+      
+      <div class="grid lg:grid-cols-3 gap-8">
+        <!-- Sylvie Feruzi Kabala -->
+        <article class="team-card group reveal">
+          <div class="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden">
+            <div class="relative">
+              <img src="https://images.unsplash.com/photo-1559339352-11d035aa65de?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=600&q=80" 
+                   alt="Sylvie Feruzi Kabala - Chef Exécutive Arabesque Traiteur" 
+                   class="w-full h-80 object-cover group-hover:scale-105 transition-transform duration-300"
+                   loading="lazy">
+              <div class="absolute top-4 left-4">
+                <span class="badge badge-gold">FONDATRICE</span>
+              </div>
+              <div class="absolute bottom-4 right-4 bg-gold text-black rounded-full px-3 py-1 text-sm font-bold">
+                15 ans
+              </div>
+            </div>
+            <div class="p-8">
+              <h3 class="font-display text-2xl font-bold mb-2">Sylvie Feruzi Kabala</h3>
+              <p class="text-gold font-semibold mb-4">Chef Exécutive & Directrice</p>
+              
+              <p class="text-gray-600 mb-6 leading-relaxed">
+                Fondatrice d'Arabesque Traiteur, Sylvie est l'âme de notre cuisine. Formée dans la tradition culinaire 
+                congolaise authentique, elle a révolutionné l'art de recevoir à Kinshasa avec ses créations signatures.
+              </p>
+              
+              <div class="space-y-3 mb-6">
+                <h4 class="font-bold text-sm text-gray-800">🍽️ Spécialités signatures :</h4>
+                <div class="flex flex-wrap gap-2">
+                  <span class="specialty-tag">Pondu authentique</span>
+                  <span class="specialty-tag">Maboke y'a Ngulu</span>
+                  <span class="specialty-tag">Nga Nda traditionnel</span>
+                  <span class="specialty-tag">Coordination événements</span>
+                </div>
+              </div>
+              
+              <blockquote class="border-l-4 border-gold pl-4 text-sm italic text-gray-600 mb-6">
+                "La cuisine, c'est raconter l'histoire de notre peuple à travers chaque plat. 
+                Chaque événement est une célébration de notre heritage culinaire."
+              </blockquote>
+              
+              <div class="flex items-center justify-between">
+                <div class="flex items-center gap-2">
+                  <span class="text-gold">⭐</span>
+                  <span class="text-sm text-gray-500">Maître cuisinière</span>
+                </div>
+                <a href="https://wa.me/243859993833?text=Bonjour%20Sylvie,%20j'aimerais%20discuter%20de%20mon%20projet%20culinaire" 
+                   target="_blank" rel="noopener"
+                   class="btn btn-gold btn-sm">Contacter</a>
+              </div>
+            </div>
+          </div>
+        </article>
+        
+        <!-- Julie Feruzi -->
+        <article class="team-card group reveal">
+          <div class="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden">
+            <div class="relative">
+              <img src="https://images.unsplash.com/photo-1594736797933-d0501ba2fe65?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=600&q=80" 
+                   alt="Julie Feruzi - Chef Pâtissière Arabesque Traiteur" 
+                   class="w-full h-80 object-cover group-hover:scale-105 transition-transform duration-300"
+                   loading="lazy">
+              <div class="absolute top-4 left-4">
+                <span class="badge badge-rose">PÂTISSIÈRE</span>
+              </div>
+              <div class="absolute bottom-4 right-4 bg-rose-500 text-white rounded-full px-3 py-1 text-sm font-bold">
+                8 ans
+              </div>
+            </div>
+            <div class="p-8">
+              <h3 class="font-display text-2xl font-bold mb-2">Julie Feruzi</h3>
+              <p class="text-rose-600 font-semibold mb-4">Chef Pâtissière & Wedding Cakes</p>
+              
+              <p class="text-gray-600 mb-6 leading-relaxed">
+                Artiste du sucre et maître pâtissière, Julie transforme chaque dessert en œuvre d'art. 
+                Ses wedding cakes signature sont devenus légendaires dans tout Kinshasa.
+              </p>
+              
+              <div class="space-y-3 mb-6">
+                <h4 class="font-bold text-sm text-gray-800">🍰 Spécialités créatives :</h4>
+                <div class="flex flex-wrap gap-2">
+                  <span class="specialty-tag bg-rose-100 text-rose-800">Wedding cakes</span>
+                  <span class="specialty-tag bg-rose-100 text-rose-800">Pâtisserie française</span>
+                  <span class="specialty-tag bg-rose-100 text-rose-800">Desserts fusion</span>
+                  <span class="specialty-tag bg-rose-100 text-rose-800">Art décoratif</span>
+                </div>
+              </div>
+              
+              <blockquote class="border-l-4 border-rose-500 pl-4 text-sm italic text-gray-600 mb-6">
+                "Chaque wedding cake raconte une histoire d'amour unique. 
+                Je crée des souvenirs sucrés qui marquent les plus beaux moments de la vie."
+              </blockquote>
+              
+              <div class="flex items-center justify-between">
+                <div class="flex items-center gap-2">
+                  <span class="text-rose-500">🎨</span>
+                  <span class="text-sm text-gray-500">Artiste culinaire</span>
+                </div>
+                <a href="contact.html" class="btn bg-rose-500 hover:bg-rose-600 text-white btn-sm">
+                  Wedding cake
+                </a>
+              </div>
+            </div>
+          </div>
+        </article>
+        
+        <!-- David Nsenga -->
+        <article class="team-card group reveal">
+          <div class="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden">
+            <div class="relative">
+              <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=600&q=80" 
+                   alt="David Nsenga - Chef Cuisine Froide et Cocktails" 
+                   class="w-full h-80 object-cover group-hover:scale-105 transition-transform duration-300"
+                   loading="lazy">
+              <div class="absolute top-4 left-4">
+                <span class="badge badge-blue">MIXOLOGUE</span>
+              </div>
+              <div class="absolute bottom-4 right-4 bg-blue-500 text-white rounded-full px-3 py-1 text-sm font-bold">
+                10 ans
+              </div>
+            </div>
+            <div class="p-8">
+              <h3 class="font-display text-2xl font-bold mb-2">David Nsenga</h3>
+              <p class="text-blue-600 font-semibold mb-4">Chef Cuisine Froide & Cocktails</p>
+              
+              <p class="text-gray-600 mb-6 leading-relaxed">
+                Maître de la mixologie et expert en cuisine froide, David révolutionne l'art du cocktail 
+                à Kinshasa avec ses créations signature alliant saveurs locales et techniques internationales.
+              </p>
+              
+              <div class="space-y-3 mb-6">
+                <h4 class="font-bold text-sm text-gray-800">🍸 Expertises uniques :</h4>
+                <div class="flex flex-wrap gap-2">
+                  <span class="specialty-tag bg-blue-100 text-blue-800">Cocktail Arabesque</span>
+                  <span class="specialty-tag bg-blue-100 text-blue-800">Service bar pro</span>
+                  <span class="specialty-tag bg-blue-100 text-blue-800">Cuisine froide</span>
+                  <span class="specialty-tag bg-blue-100 text-blue-800">Formation équipe</span>
+                </div>
+              </div>
+              
+              <blockquote class="border-l-4 border-blue-500 pl-4 text-sm italic text-gray-600 mb-6">
+                "Un cocktail parfait, c'est l'équilibre entre technique, créativité et respect des saveurs. 
+                J'aime surprendre avec des mariages audacieux."
+              </blockquote>
+              
+              <div class="flex items-center justify-between">
+                <div class="flex items-center gap-2">
+                  <span class="text-blue-500">🍹</span>
+                  <span class="text-sm text-gray-500">Mixologue expert</span>
+                </div>
+                <a href="services.html#cocktail" class="btn bg-blue-500 hover:bg-blue-600 text-white btn-sm">
+                  Service cocktail
+                </a>
+              </div>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Culinary Team -->
+  <section class="py-20 bg-gradient-to-br from-gray-50 to-white">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-16 reveal">
+        <span class="inline-block px-4 py-2 bg-gold/10 text-gold font-semibold text-sm rounded-full mb-4">
+          👨‍🍳 Équipe Culinaire
+        </span>
+        <h2 class="font-display text-4xl md:text-5xl font-bold mb-6">
+          Nos chefs spécialisés
+        </h2>
+        <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+          Chaque chef apporte son expertise unique pour créer l'harmonie parfaite dans votre assiette
+        </p>
+      </div>
+      
+      <div class="grid lg:grid-cols-4 md:grid-cols-2 gap-6">
+        <!-- Chef 1: Marie Mukendi -->
+        <article class="team-card-small group reveal">
+          <div class="bg-white rounded-xl shadow-md hover:shadow-lg transition-all duration-300 overflow-hidden">
+            <div class="relative">
+              <img src="https://images.unsplash.com/photo-1607631568010-a87245c0daf8?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=300&q=80" 
+                   alt="Marie Mukendi - Spécialiste Poissons du Congo" 
+                   class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
+                   loading="lazy">
+              <div class="absolute top-3 left-3">
+                <span class="text-xs bg-teal-500 text-white px-2 py-1 rounded-full">POISSONS</span>
+              </div>
+            </div>
+            <div class="p-6">
+              <h4 class="font-bold text-lg mb-1">Marie Mukendi</h4>
+              <p class="text-teal-600 text-sm font-medium mb-3">Spécialiste Poissons du Congo</p>
+              <p class="text-gray-600 text-sm mb-4">
+                Experte des trésors du fleuve Congo. Maîtrise parfaite du capitaine braisé, mbinzo et ndakala.
+              </p>
+              <div class="flex flex-wrap gap-1 mb-4">
+                <span class="text-xs bg-teal-50 text-teal-700 px-2 py-1 rounded">Capitaine braisé</span>
+                <span class="text-xs bg-teal-50 text-teal-700 px-2 py-1 rounded">Maboke poisson</span>
+              </div>
+              <div class="text-xs text-gray-500">🎣 6 ans d'expérience</div>
+            </div>
+          </div>
+        </article>
+        
+        <!-- Chef 2: Joseph Banza -->
+        <article class="team-card-small group reveal">
+          <div class="bg-white rounded-xl shadow-md hover:shadow-lg transition-all duration-300 overflow-hidden">
+            <div class="relative">
+              <img src="https://images.unsplash.com/photo-1583394838336-acd977736f90?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=300&q=80" 
+                   alt="Joseph Banza - Maître des Grillades" 
+                   class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
+                   loading="lazy">
+              <div class="absolute top-3 left-3">
+                <span class="text-xs bg-red-500 text-white px-2 py-1 rounded-full">GRILLADES</span>
+              </div>
+            </div>
+            <div class="p-6">
+              <h4 class="font-bold text-lg mb-1">Joseph Banza</h4>
+              <p class="text-red-600 text-sm font-medium mb-3">Maître des Grillades</p>
+              <p class="text-gray-600 text-sm mb-4">
+                Roi du barbecue congolais. Ses brochettes de bœuf et côtes d'agneau sont une révélation gustative.
+              </p>
+              <div class="flex flex-wrap gap-1 mb-4">
+                <span class="text-xs bg-red-50 text-red-700 px-2 py-1 rounded">Brochettes</span>
+                <span class="text-xs bg-red-50 text-red-700 px-2 py-1 rounded">Côtes d'agneau</span>
+              </div>
+              <div class="text-xs text-gray-500">🔥 8 ans d'expérience</div>
+            </div>
+          </div>
+        </article>
+        
+        <!-- Chef 3: Grace Ngoma -->
+        <article class="team-card-small group reveal">
+          <div class="bg-white rounded-xl shadow-md hover:shadow-lg transition-all duration-300 overflow-hidden">
+            <div class="relative">
+              <img src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=300&q=80" 
+                   alt="Grace Ngoma - Experte Légumes Traditionnels" 
+                   class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
+                   loading="lazy">
+              <div class="absolute top-3 left-3">
+                <span class="text-xs bg-green-500 text-white px-2 py-1 rounded-full">LÉGUMES</span>
+              </div>
+            </div>
+            <div class="p-6">
+              <h4 class="font-bold text-lg mb-1">Grace Ngoma</h4>
+              <p class="text-green-600 text-sm font-medium mb-3">Experte Légumes Traditionnels</p>
+              <p class="text-gray-600 text-sm mb-4">
+                Gardienne des recettes ancestrales. Ses feuilles de manioc et dongo dongo sont authentiques.
+              </p>
+              <div class="flex flex-wrap gap-1 mb-4">
+                <span class="text-xs bg-green-50 text-green-700 px-2 py-1 rounded">Feuilles manioc</span>
+                <span class="text-xs bg-green-50 text-green-700 px-2 py-1 rounded">Dongo dongo</span>
+              </div>
+              <div class="text-xs text-gray-500">🌿 7 ans d'expérience</div>
+            </div>
+          </div>
+        </article>
+        
+        <!-- Chef 4: Emmanuel Tshitenge -->
+        <article class="team-card-small group reveal">
+          <div class="bg-white rounded-xl shadow-md hover:shadow-lg transition-all duration-300 overflow-hidden">
+            <div class="relative">
+              <img src="https://images.unsplash.com/photo-1566554273541-37a9ca77b91e?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=300&q=80" 
+                   alt="Emmanuel Tshitenge - Spécialiste Accompagnements" 
+                   class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
+                   loading="lazy">
+              <div class="absolute top-3 left-3">
+                <span class="text-xs bg-yellow-500 text-white px-2 py-1 rounded-full">FÉCULENTS</span>
+              </div>
+            </div>
+            <div class="p-6">
+              <h4 class="font-bold text-lg mb-1">Emmanuel Tshitenge</h4>
+              <p class="text-yellow-600 text-sm font-medium mb-3">Spécialiste Accompagnements</p>
+              <p class="text-gray-600 text-sm mb-4">
+                Maître du fufu parfait et des accompagnements traditionnels. Excellence dans les bases culinaires.
+              </p>
+              <div class="flex flex-wrap gap-1 mb-4">
+                <span class="text-xs bg-yellow-50 text-yellow-700 px-2 py-1 rounded">Fufu</span>
+                <span class="text-xs bg-yellow-50 text-yellow-700 px-2 py-1 rounded">Lituma</span>
+              </div>
+              <div class="text-xs text-gray-500">🌾 5 ans d'expérience</div>
+            </div>
+          </div>
+        </article>
+        
+        <!-- Chef 5: Beatrice Kasongo -->
+        <article class="team-card-small group reveal">
+          <div class="bg-white rounded-xl shadow-md hover:shadow-lg transition-all duration-300 overflow-hidden">
+            <div class="relative">
+              <img src="https://images.unsplash.com/photo-1546833999-b9f581a1996d?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=300&q=80" 
+                   alt="Beatrice Kasongo - Chef Entrées & Amuse-bouches" 
+                   class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
+                   loading="lazy">
+              <div class="absolute top-3 left-3">
+                <span class="text-xs bg-purple-500 text-white px-2 py-1 rounded-full">ENTRÉES</span>
+              </div>
+            </div>
+            <div class="p-6">
+              <h4 class="font-bold text-lg mb-1">Beatrice Kasongo</h4>
+              <p class="text-purple-600 text-sm font-medium mb-3">Chef Entrées & Amuse-bouches</p>
+              <p class="text-gray-600 text-sm mb-4">
+                Créatrice de premières impressions mémorables. Ses samoussas et mini-burgers font sensation.
+              </p>
+              <div class="flex flex-wrap gap-1 mb-4">
+                <span class="text-xs bg-purple-50 text-purple-700 px-2 py-1 rounded">Samoussas</span>
+                <span class="text-xs bg-purple-50 text-purple-700 px-2 py-1 rounded">Amuse-bouches</span>
+              </div>
+              <div class="text-xs text-gray-500">🥂 4 ans d'expérience</div>
+            </div>
+          </div>
+        </article>
+        
+        <!-- Chef 6: Patrick Mwanza -->
+        <article class="team-card-small group reveal">
+          <div class="bg-white rounded-xl shadow-md hover:shadow-lg transition-all duration-300 overflow-hidden">
+            <div class="relative">
+              <img src="https://images.unsplash.com/photo-1581299894007-aaa50297cf16?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=300&q=80" 
+                   alt="Patrick Mwanza - Spécialiste Viandes Rares" 
+                   class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
+                   loading="lazy">
+              <div class="absolute top-3 left-3">
+                <span class="text-xs bg-orange-500 text-white px-2 py-1 rounded-full">SPÉCIALITÉS</span>
+              </div>
+            </div>
+            <div class="p-6">
+              <h4 class="font-bold text-lg mb-1">Patrick Mwanza</h4>
+              <p class="text-orange-600 text-sm font-medium mb-3">Spécialiste Viandes Rares</p>
+              <p class="text-gray-600 text-sm mb-4">
+                Expert des spécialités exceptionnelles. Seul habilité à préparer crocodile et tortue traditionnellement.
+              </p>
+              <div class="flex flex-wrap gap-1 mb-4">
+                <span class="text-xs bg-orange-50 text-orange-700 px-2 py-1 rounded">Crocodile</span>
+                <span class="text-xs bg-orange-50 text-orange-700 px-2 py-1 rounded">Spécialités rares</span>
+              </div>
+              <div class="text-xs text-gray-500">🦎 12 ans d'expérience</div>
+            </div>
+          </div>
+        </article>
+        
+        <!-- Chef 7: Claire Mbala -->
+        <article class="team-card-small group reveal">
+          <div class="bg-white rounded-xl shadow-md hover:shadow-lg transition-all duration-300 overflow-hidden">
+            <div class="relative">
+              <img src="https://images.unsplash.com/photo-1595257841889-eca2678454e2?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=300&q=80" 
+                   alt="Claire Mbala - Responsable Salades & Fraîcheur" 
+                   class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
+                   loading="lazy">
+              <div class="absolute top-3 left-3">
+                <span class="text-xs bg-emerald-500 text-white px-2 py-1 rounded-full">SALADES</span>
+              </div>
+            </div>
+            <div class="p-6">
+              <h4 class="font-bold text-lg mb-1">Claire Mbala</h4>
+              <p class="text-emerald-600 text-sm font-medium mb-3">Responsable Salades & Fraîcheur</p>
+              <p class="text-gray-600 text-sm mb-4">
+                Artiste des salades colorées et nutritives. Ses compositions fraîcheur équilibrent parfaitement nos menus.
+              </p>
+              <div class="flex flex-wrap gap-1 mb-4">
+                <span class="text-xs bg-emerald-50 text-emerald-700 px-2 py-1 rounded">Salade grecque</span>
+                <span class="text-xs bg-emerald-50 text-emerald-700 px-2 py-1 rounded">Compositions</span>
+              </div>
+              <div class="text-xs text-gray-500">🥗 3 ans d'expérience</div>
+            </div>
+          </div>
+        </article>
+        
+        <!-- Chef 8: Michel Kalala -->
+        <article class="team-card-small group reveal">
+          <div class="bg-white rounded-xl shadow-md hover:shadow-lg transition-all duration-300 overflow-hidden">
+            <div class="relative">
+              <img src="https://images.unsplash.com/photo-1577219491135-ce391730fb2c?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=300&q=80" 
+                   alt="Michel Kalala - Chef de Partie Service" 
+                   class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
+                   loading="lazy">
+              <div class="absolute top-3 left-3">
+                <span class="text-xs bg-indigo-500 text-white px-2 py-1 rounded-full">SERVICE</span>
+              </div>
+            </div>
+            <div class="p-6">
+              <h4 class="font-bold text-lg mb-1">Michel Kalala</h4>
+              <p class="text-indigo-600 text-sm font-medium mb-3">Chef de Partie Service</p>
+              <p class="text-gray-600 text-sm mb-4">
+                Coordinateur service et dressage. Garant de la présentation impeccable de chaque assiette servie.
+              </p>
+              <div class="flex flex-wrap gap-1 mb-4">
+                <span class="text-xs bg-indigo-50 text-indigo-700 px-2 py-1 rounded">Coordination</span>
+                <span class="text-xs bg-indigo-50 text-indigo-700 px-2 py-1 rounded">Dressage</span>
+              </div>
+              <div class="text-xs text-gray-500">🍽️ 6 ans d'expérience</div>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Team Philosophy -->
+  <section id="philosophie-equipe" class="py-20 bg-black text-white relative overflow-hidden">
+    <div class="absolute inset-0 opacity-20">
+      <video autoplay muted loop playsinline data-auto-play>
+        <source src="assets/videos/equipe-travail.mp4" type="video/mp4">
+      </video>
+    </div>
+    
+    <div class="container mx-auto px-4 relative z-10">
+      <div class="text-center mb-16 reveal">
+        <span class="inline-block px-4 py-2 bg-gold/20 text-gold font-semibold text-sm rounded-full mb-4">
+          💫 Notre Philosophie
+        </span>
+        <h2 class="font-display text-4xl md:text-5xl font-bold mb-6">
+          Une famille unie par la passion
+        </h2>
+        <p class="text-xl text-gray-300 max-w-3xl mx-auto">
+          Plus qu'une équipe, nous sommes une famille culinaire partageant les mêmes valeurs 
+          et la même vision de l'excellence congolaise
+        </p>
+      </div>
+      
+      <div class="grid lg:grid-cols-3 gap-8 mb-16">
+        <div class="text-center reveal">
+          <div class="w-20 h-20 bg-gold/20 rounded-full flex items-center justify-center mx-auto mb-6">
+            <span class="text-3xl">🇨🇩</span>
+          </div>
+          <h3 class="font-display text-xl font-bold mb-4 text-gold">Authenticité</h3>
+          <p class="text-gray-300 leading-relaxed">
+            Chaque recette respecte la tradition culinaire congolaise, transmise avec respect 
+            et adaptée aux goûts contemporains sans perdre son âme.
+          </p>
+        </div>
+        
+        <div class="text-center reveal">
+          <div class="w-20 h-20 bg-gold/20 rounded-full flex items-center justify-center mx-auto mb-6">
+            <span class="text-3xl">✨</span>
+          </div>
+          <h3 class="font-display text-xl font-bold mb-4 text-gold">Excellence</h3>
+          <p class="text-gray-300 leading-relaxed">
+            Nous ne transigeons jamais sur la qualité. Chaque plat, chaque service, 
+            chaque détail fait l'objet d'une attention méticuleuse.
+          </p>
+        </div>
+        
+        <div class="text-center reveal">
+          <div class="w-20 h-20 bg-gold/20 rounded-full flex items-center justify-center mx-auto mb-6">
+            <span class="text-3xl">❤️</span>
+          </div>
+          <h3 class="font-display text-xl font-bold mb-4 text-gold">Passion</h3>
+          <p class="text-gray-300 leading-relaxed">
+            Notre motivation première, c'est l'amour de notre métier et la fierté de 
+            partager la richesse culinaire congolaise avec le monde.
+          </p>
+        </div>
+      </div>
+      
+      <!-- Team Quote -->
+      <div class="max-w-4xl mx-auto text-center reveal">
+        <div class="bg-white/10 backdrop-blur rounded-2xl p-8">
+          <blockquote class="text-2xl md:text-3xl font-light italic mb-6 leading-relaxed">
+            "Nous cuisinons avec nos mains, mais surtout avec nos cœurs. 
+            Chaque événement que nous servons devient une célébration de notre culture 
+            et un moment de bonheur partagé."
+          </blockquote>
+          <cite class="text-gold font-semibold">
+            — L'équipe Arabesque Traiteur
+          </cite>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Behind the Scenes -->
+  <section class="py-20 bg-gradient-to-br from-gold/5 to-gold/15">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-16 reveal">
+        <span class="inline-block px-4 py-2 bg-gold/20 text-gold font-semibold text-sm rounded-full mb-4">
+          🎬 Dans les coulisses
+        </span>
+        <h2 class="font-display text-4xl md:text-5xl font-bold mb-6">
+          L'équipe au travail
+        </h2>
+        <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+          Découvrez comment notre équipe unie transforme chaque commande en expérience d'exception
+        </p>
+      </div>
+      
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <!-- Behind the scenes images placeholders -->
+        <div class="reveal">
+          <div class="aspect-square bg-gradient-to-br from-gray-200 to-gray-300 rounded-xl flex items-center justify-center">
+            <div class="text-center text-gray-600">
+              <div class="text-4xl mb-2">👥</div>
+              <div class="text-sm font-medium">Réunion équipe</div>
+              <div class="text-xs">Planning quotidien</div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="reveal">
+          <div class="aspect-square bg-gradient-to-br from-gray-200 to-gray-300 rounded-xl flex items-center justify-center">
+            <div class="text-center text-gray-600">
+              <div class="text-4xl mb-2">🔪</div>
+              <div class="text-sm font-medium">Préparation</div>
+              <div class="text-xs">Mise en place</div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="reveal">
+          <div class="aspect-square bg-gradient-to-br from-gray-200 to-gray-300 rounded-xl flex items-center justify-center">
+            <div class="text-center text-gray-600">
+              <div class="text-4xl mb-2">🍽️</div>
+              <div class="text-sm font-medium">Dressage</div>
+              <div class="text-xs">Finition parfaite</div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="reveal">
+          <div class="aspect-square bg-gradient-to-br from-gray-200 to-gray-300 rounded-xl flex items-center justify-center">
+            <div class="text-center text-gray-600">
+              <div class="text-4xl mb-2">🎉</div>
+              <div class="text-sm font-medium">Service</div>
+              <div class="text-xs">Moment de vérité</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Team Stats -->
+      <div class="mt-16 grid grid-cols-2 md:grid-cols-4 gap-8 text-center reveal">
+        <div>
+          <div class="text-3xl font-bold text-gold mb-2" data-counter="500">0</div>
+          <div class="text-sm text-gray-600">Événements réalisés ensemble</div>
+        </div>
+        <div>
+          <div class="text-3xl font-bold text-gold mb-2" data-counter="45">0</div>
+          <div class="text-sm text-gray-600">Années d'expérience cumulées</div>
+        </div>
+        <div>
+          <div class="text-3xl font-bold text-gold mb-2" data-counter="98">0</div>
+          <div class="text-sm text-gray-600">% Satisfaction client</div>
+        </div>
+        <div>
+          <div class="text-3xl font-bold text-gold mb-2" data-counter="11">0</div>
+          <div class="text-sm text-gray-600">Passionnés à votre service</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Join Our Team CTA -->
+  <section class="py-20 bg-gradient-to-br from-white to-gray-50">
+    <div class="container mx-auto px-4 text-center">
+      <div class="max-w-4xl mx-auto reveal">
+        <span class="inline-block px-4 py-2 bg-gold/10 text-gold font-semibold text-sm rounded-full mb-6">
+          Rejoindre l'aventure
+        </span>
+        <h2 class="font-display text-4xl md:text-6xl font-bold mb-6 leading-tight">
+          Vous partagez notre <span class="text-gold">passion</span> ?
+        </h2>
+        <p class="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
+          Arabesque Traiteur grandit constamment. Si vous êtes un chef passionné par la cuisine congolaise 
+          ou un professionnel de l'événementiel, nous serions ravis de vous rencontrer.
+        </p>
+        
+        <div class="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
+          <a href="https://wa.me/243859993833?text=Bonjour,%20je%20souhaite%20rejoindre%20l'équipe%20d'Arabesque%20Traiteur" 
+             target="_blank" rel="noopener"
+             class="btn btn-gold text-lg px-8 py-4 flex items-center gap-2">
+            <span>👥</span> Candidature spontanée
+          </a>
+          <a href="contact.html" class="btn btn-outline border-gray-400 text-gray-600 hover:bg-gray-400 hover:text-white text-lg px-8 py-4 flex items-center gap-2">
+            <span>📧</span> Nous écrire
+          </a>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+          <div class="p-6 rounded-xl bg-white/70 backdrop-blur">
+            <div class="text-3xl mb-3">🎯</div>
+            <h3 class="font-bold mb-2">Formation continue</h3>
+            <p class="text-sm text-gray-600">Développez vos compétences avec les meilleurs</p>
+          </div>
+          <div class="p-6 rounded-xl bg-white/70 backdrop-blur">
+            <div class="text-3xl mb-3">🤝</div>
+            <h3 class="font-bold mb-2">Esprit familial</h3>
+            <p class="text-sm text-gray-600">Intégrez une équipe soudée et bienveillante</p>
+          </div>
+          <div class="p-6 rounded-xl bg-white/70 backdrop-blur">
+            <div class="text-3xl mb-3">🌟</div>
+            <h3 class="font-bold mb-2">Projets passionnants</h3>
+            <p class="text-sm text-gray-600">Participez à des événements d'exception</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Enhanced Footer -->
+  <footer class="bg-gray-900 text-white">
+    <div class="container mx-auto px-4">
+      <!-- Main Footer Content -->
+      <div class="grid md:grid-cols-4 gap-8 py-16">
+        <div class="md:col-span-2">
+          <div class="flex items-center gap-3 mb-6">
+            <div class="w-12 h-12 bg-gold rounded-full flex items-center justify-center">
+              <span class="text-black font-bold text-xl">A</span>
+            </div>
+            <div>
+              <div class="font-display text-xl font-bold">Arabesque Traiteur</div>
+              <div class="text-sm text-gray-400">Équipe Passionnée • Excellence Culinaire</div>
+            </div>
+          </div>
+          <p class="text-gray-300 mb-6 max-w-md">
+            Découvrez les visages passionnés qui donnent vie à notre vision culinaire. 
+            11 chefs unis par l'amour de la cuisine congolaise authentique et l'excellence du service.
+          </p>
+          <div class="flex items-center gap-4">
+            <a href="https://www.instagram.com/arabesque.traiteur/" target="_blank" rel="noopener"
+               class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-gold hover:text-black transition-colors">
+              📷
+            </a>
+            <a href="https://wa.me/243859993833" target="_blank" rel="noopener"
+               class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-green-500 transition-colors">
+              💬
+            </a>
+            <a href="mailto:etarabesque@gmail.com"
+               class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-gold hover:text-black transition-colors">
+              📧
+            </a>
+          </div>
+        </div>
+        
+        <div>
+          <h3 class="font-bold text-lg mb-4">Notre Équipe</h3>
+          <ul class="space-y-2 text-gray-300 text-sm">
+            <li><a href="#equipe-direction" class="hover:text-gold transition-colors">Direction culinaire</a></li>
+            <li><a href="#" class="hover:text-gold transition-colors">Sylvie Feruzi Kabala</a></li>
+            <li><a href="#" class="hover:text-gold transition-colors">Julie Feruzi</a></li>
+            <li><a href="#" class="hover:text-gold transition-colors">David Nsenga</a></li>
+            <li><a href="#philosophie-equipe" class="hover:text-gold transition-colors">Notre philosophie</a></li>
+          </ul>
+        </div>
+        
+        <div>
+          <h3 class="font-bold text-lg mb-4">Contact Équipe</h3>
+          <ul class="space-y-2 text-gray-300 text-sm">
+            <li class="flex items-center gap-2">
+              <span>📞</span> 
+              <a href="tel:+243859993833" class="hover:text-gold transition-colors">+243 859 993 833</a>
+            </li>
+            <li class="flex items-center gap-2">
+              <span>📧</span> 
+              <a href="mailto:etarabesque@gmail.com" class="hover:text-gold transition-colors">etarabesque@gmail.com</a>
+            </li>
+            <li class="flex items-center gap-2">
+              <span>📍</span> Kinshasa, RD Congo
+            </li>
+            <li class="flex items-center gap-2">
+              <span>👥</span> 11 chefs passionnés
+            </li>
+          </ul>
+        </div>
+      </div>
+      
+      <!-- Footer Bottom -->
+      <div class="border-t border-gray-800 py-6 flex flex-col md:flex-row justify-between items-center gap-4 text-sm">
+        <p class="text-gray-400">
+          © <span id="year">2025</span> Arabesque Traiteur • Une équipe, une passion
+        </p>
+        <div class="flex items-center gap-6 text-gray-400">
+          <a href="contact.html#politique" class="hover:text-gold transition-colors">Politique de confidentialité</a>
+          <a href="contact.html#cgv" class="hover:text-gold transition-colors">Conditions générales</a>
+          <span class="text-xs">👨‍🍳 Fièrement congolais</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="assets/js/main.js"></script>
+  
+  <!-- Team-specific JavaScript -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      initializeTeamPage();
+    });
+    
+    function initializeTeamPage() {
+      // Initialize counter animations
+      initializeCounters();
+      
+      // Initialize smooth scrolling
+      initializeSmoothScrolling();
+      
+      // Initialize team card interactions
+      initializeTeamCards();
+    }
+    
+    function initializeCounters() {
+      const counters = document.querySelectorAll('[data-counter]');
+      
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            const counter = entry.target;
+            const target = parseInt(counter.dataset.counter);
+            animateCounter(counter, target);
+            observer.unobserve(counter);
+          }
+        });
+      });
+      
+      counters.forEach(counter => observer.observe(counter));
+    }
+    
+    function animateCounter(element, target) {
+      let current = 0;
+      const increment = target / 60;
+      const timer = setInterval(() => {
+        current += increment;
+        if (current >= target) {
+          current = target;
+          clearInterval(timer);
+        }
+        element.textContent = Math.floor(current);
+      }, 25);
+    }
+    
+    function initializeSmoothScrolling() {
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+          e.preventDefault();
+          const target = document.querySelector(this.getAttribute('href'));
+          if (target) {
+            target.scrollIntoView({
+              behavior: 'smooth',
+              block: 'start'
+            });
+          }
+        });
+      });
+    }
+    
+    function initializeTeamCards() {
+      const teamCards = document.querySelectorAll('.team-card, .team-card-small');
+      
+      teamCards.forEach(card => {
+        card.addEventListener('mouseenter', function() {
+          this.style.transform = 'translateY(-5px)';
+        });
+        
+        card.addEventListener('mouseleave', function() {
+          this.style.transform = 'translateY(0)';
+        });
+      });
+    }
+  </script>
+  
+  <!-- Analytics (Optional) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'GA_MEASUREMENT_ID');
+  </script>
+</body>
+</html>
