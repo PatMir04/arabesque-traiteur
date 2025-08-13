@@ -3,94 +3,1516 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Services | Arabesque Traiteur</title>
-  <meta name="description" content="Services de traiteur: mariages, anniversaires, réceptions privées, entreprise à Kinshasa." />
-  <link rel="icon" href="/favicon.svg" />
+  <title>Services Traiteur d'Exception | Mariages, Galas, Anniversaires - Arabesque Traiteur Kinshasa</title>
+  <meta name="description" content="Services traiteur premium à Kinshasa : mariages authentiques, galas VIP, anniversaires personnalisés, service cocktail clé en main. Spécialités congolaises rares. Sylvie Feruzi et son équipe." />
+  
+  <!-- Enhanced SEO & Social Media -->
+  <link rel="icon" href="favicon.svg" />
+  <link rel="manifest" href="manifest.webmanifest" />
+  <meta name="theme-color" content="#C9AB6D" />
+  <meta name="keywords" content="traiteur mariage kinshasa, gala réception RDC, anniversaire kinshasa, service cocktail congo, sylvie feruzi traiteur, wedding cake kinshasa" />
+  <meta name="author" content="Arabesque Traiteur - Sylvie Feruzi" />
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Services Traiteur d'Exception | Arabesque Traiteur" />
+  <meta property="og:description" content="Mariages authentiques, galas VIP, anniversaires sur-mesure. Cuisine congolaise d'exception par Sylvie Feruzi à Kinshasa." />
+  <meta property="og:image" content="https://patmir04.github.io/arabesque-traiteur/assets/images/services-og.jpg" />
+  <meta property="og:url" content="https://patmir04.github.io/arabesque-traiteur/services.html" />
+  
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Services Traiteur Premium | Arabesque Traiteur" />
+  <meta name="twitter:description" content="De l'intimité à l'exception, nous créons vos moments précieux" />
+  <meta name="twitter:image" content="https://patmir04.github.io/arabesque-traiteur/assets/images/services-og.jpg" />
+  
+  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700;900&display=swap" rel="stylesheet">
+  
+  <!-- Styles -->
   <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="stylesheet" href="/assets/css/style.css" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+  
+  <!-- Structured Data for Services -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Services Traiteur Arabesque",
+    "description": "Services traiteur premium pour mariages, galas et événements d'exception à Kinshasa",
+    "provider": {
+      "@type": "FoodEstablishment",
+      "name": "Arabesque Traiteur",
+      "founder": {
+        "@type": "Person",
+        "name": "Sylvie Feruzi Kabala",
+        "jobTitle": "Chef Exécutive & Directrice"
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Kinshasa",
+        "addressCountry": "CD"
+      }
+    },
+    "serviceType": [
+      "Traiteur mariage",
+      "Gala et réception VIP", 
+      "Anniversaire personnalisé",
+      "Service cocktail professionnel",
+      "Cuisine congolaise authentique"
+    ],
+    "areaServed": "Kinshasa, République Démocratique du Congo"
+  }
+  </script>
+  
+  <!-- Performance Hints -->
+  <link rel="dns-prefetch" href="//fonts.googleapis.com">
+  <link rel="preload" href="assets/css/style.css" as="style">
+  <link rel="preload" href="assets/js/main.js" as="script">
 </head>
-<body class="bg-white text-black">
-  <!-- Header -->
-  <header class="sticky top-0 z-50 bg-white/90 backdrop-blur border-b border-black/10">
-    <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
-      <a href="/" class="flex items-center gap-2" aria-label="Accueil">
-        <span class="logo serif text-2xl tracking-wide">Arabesque <strong>Traiteur</strong></span>
-      </a>
-      <nav class="hidden md:flex items-center gap-6 text-sm" aria-label="Navigation principale">
-        <a href="/a-propos.html" class="nav-link">À propos</a>
-        <a href="/services.html" class="nav-link active">Services</a>
-        <a href="/menu.html" class="nav-link">Menu</a>
-        <a href="/galerie.html" class="nav-link">Galerie</a>
-        <a href="/contact.html" class="nav-link">Devis</a>
-        <a href="https://www.instagram.com/arabesque_traiteur/" target="_blank" rel="noopener" class="inline-flex items-center gap-2 border border-black rounded-full px-3 py-1.5 hover:bg-black hover:text-white">Instagram</a>
-      </nav>
-      <button id="openNav" class="md:hidden border border-black rounded-lg px-3 py-2" aria-haspopup="true" aria-controls="mobileNav" aria-expanded="false">Menu</button>
+
+<body class="bg-white text-black overflow-x-hidden">
+  <!-- Scroll Progress Bar -->
+  <div class="scroll-progress fixed top-0 left-0 h-1 bg-gradient-to-r from-gold to-gold-light z-50 transition-all duration-300" style="width: 0%;"></div>
+  
+  <!-- Enhanced Header -->
+  <header class="fixed top-0 left-0 right-0 z-40 bg-white/95 backdrop-blur-md border-b border-black/10 transition-all duration-300" id="mainHeader">
+    <div class="container mx-auto px-4">
+      <div class="flex items-center justify-between py-4">
+        <!-- Logo -->
+        <a href="index.html" class="group flex items-center gap-3" aria-label="Retour à l'accueil">
+          <div class="w-10 h-10 bg-black rounded-full flex items-center justify-center group-hover:bg-gold transition-colors duration-300">
+            <span class="text-white group-hover:text-black font-bold text-lg">A</span>
+          </div>
+          <div class="flex flex-col">
+            <span class="font-display text-xl font-bold tracking-tight">Arabesque</span>
+            <span class="text-xs tracking-widest text-gray-600 uppercase">Traiteur</span>
+          </div>
+        </a>
+        
+        <!-- Desktop Navigation -->
+        <nav class="hidden lg:flex items-center gap-8" aria-label="Navigation principale">
+          <a href="a-propos.html" class="nav-link text-sm font-medium hover:text-gold transition-colors">À propos</a>
+          <a href="equipe.html" class="nav-link text-sm font-medium hover:text-gold transition-colors">Équipe</a>
+          <a href="services.html" class="nav-link active text-sm font-medium text-gold relative">
+            Services
+            <span class="absolute -bottom-2 left-0 right-0 h-0.5 bg-gold rounded-full"></span>
+          </a>
+          <a href="menu.html" class="nav-link text-sm font-medium hover:text-gold transition-colors">Menu</a>
+          <a href="galerie.html" class="nav-link text-sm font-medium hover:text-gold transition-colors">Galerie</a>
+          <a href="contact.html" class="btn btn-gold text-sm">Devis Gratuit</a>
+        </nav>
+        
+        <!-- Mobile Menu Button -->
+        <button id="openNav" class="lg:hidden p-2 rounded-lg border border-black/20 hover:bg-gray-50 transition-colors"
+                aria-label="Ouvrir le menu" aria-haspopup="true" aria-expanded="false">
+          <div class="w-6 h-6 flex flex-col justify-center space-y-1">
+            <span class="block w-full h-0.5 bg-black transition-all duration-300"></span>
+            <span class="block w-full h-0.5 bg-black transition-all duration-300"></span>
+            <span class="block w-full h-0.5 bg-black transition-all duration-300"></span>
+          </div>
+        </button>
+      </div>
     </div>
-    <div id="mobileNav" class="md:hidden hidden border-t border-black/10">
-      <div class="max-w-6xl mx-auto px-4 py-3 grid gap-2 text-sm">
-        <a href="/a-propos.html" class="py-2">À propos</a>
-        <a href="/services.html" class="py-2">Services</a>
-        <a href="/menu.html" class="py-2">Menu</a>
-        <a href="/galerie.html" class="py-2">Galerie</a>
-        <a href="/contact.html" class="py-2">Devis</a>
-        <a href="https://www.instagram.com/arabesque_traiteur/" target="_blank" rel="noopener" class="py-2">Instagram</a>
+    
+    <!-- Enhanced Mobile Navigation -->
+    <div id="mobileNav" class="lg:hidden fixed inset-0 top-0 z-50 hidden">
+      <div class="absolute inset-0 bg-black/50 backdrop-blur-sm" id="mobileNavOverlay"></div>
+      <div class="absolute right-0 top-0 h-full w-80 bg-white shadow-2xl transform translate-x-full transition-transform duration-300 ease-out">
+        <div class="flex items-center justify-between p-6 border-b border-gray-200">
+          <span class="font-display text-xl font-bold">Menu</span>
+          <button id="closeNav" class="p-2 rounded-lg hover:bg-gray-100 transition-colors" aria-label="Fermer le menu">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+            </svg>
+          </button>
+        </div>
+        
+        <nav class="p-6 space-y-6">
+          <a href="a-propos.html" class="block text-lg font-medium hover:text-gold transition-colors">À propos</a>
+          <a href="equipe.html" class="block text-lg font-medium hover:text-gold transition-colors">Notre équipe</a>
+          <a href="services.html" class="block text-lg font-medium text-gold">Services Premium</a>
+          <a href="menu.html" class="block text-lg font-medium hover:text-gold transition-colors">Menu interactif</a>
+          <a href="galerie.html" class="block text-lg font-medium hover:text-gold transition-colors">Galerie photos</a>
+          <a href="contact.html" class="block text-lg font-medium hover:text-gold transition-colors">Contact</a>
+        </nav>
       </div>
     </div>
   </header>
 
-  <main>
-    <section class="max-w-6xl mx-auto px-4 py-16">
-      <h1 class="serif text-4xl">Nos services</h1>
-      <p class="mt-3 muted">Traiteur complet à Kinshasa : de la conception des menus au service en salle.</p>
-
-      <div class="mt-8 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-        <article class="card">
-          <h3 class="font-semibold">Mariages</h3>
-          <p class="muted mt-2">Buffet, service à table, wedding cake en option. Coordination avec décorateur & DJ.</p>
-          <a href="/contact.html" class="btn mt-3">Obtenir un devis</a>
-        </article>
-        <article class="card">
-          <h3 class="font-semibold">Anniversaires</h3>
-          <p class="muted mt-2">Cocktail dînatoire, mini‑délices, gâteaux personnalisés.</p>
-          <a href="/menu.html" class="btn mt-3">Composer mon menu</a>
-        </article>
-        <article class="card">
-          <h3 class="font-semibold">Réceptions privées</h3>
-          <p class="muted mt-2">Domicile ou salle, verrines, brochettes, charcuterie, boissons.</p>
-          <a href="/galerie.html" class="btn mt-3">Voir la galerie</a>
-        </article>
-        <article class="card">
-          <h3 class="font-semibold">Entreprise</h3>
-          <p class="muted mt-2">Conférences, lancements. Café, pause gourmande, cocktail de réseautage.</p>
-          <a href="/contact.html" class="btn mt-3">Discuter du besoin</a>
-        </article>
-        <article class="card">
-          <h3 class="font-semibold">Location & personnel</h3>
-          <p class="muted mt-2">Vaisselle, nappage, serveurs, maître d’hôtel (sur demande).</p>
-          <a href="/contact.html" class="btn mt-3">Vérifier la disponibilité</a>
-        </article>
-        <article class="card">
-          <h3 class="font-semibold">Options spéciales</h3>
-          <p class="muted mt-2">Végétarien, halal, sans gluten — à préciser lors de la demande.</p>
-          <a href="/contact.html" class="btn mt-3">En savoir plus</a>
-        </article>
+  <!-- Services Hero Section -->
+  <section class="video-hero relative min-h-[80vh] flex items-center justify-center overflow-hidden pt-20">
+    <video autoplay muted loop playsinline data-auto-play class="absolute inset-0 w-full h-full object-cover opacity-90">
+      <source src="assets/videos/services-premium.mp4" type="video/mp4">
+      <source src="assets/videos/services-premium.webm" type="video/webm">
+    </video>
+    
+    <div class="relative z-10 text-center text-white max-w-5xl mx-auto px-4">
+      <div class="reveal">
+        <span class="inline-block px-6 py-3 bg-gold/20 text-gold font-semibold text-sm rounded-full border border-gold/30 backdrop-blur mb-6">
+          🏆 Services d'Exception
+        </span>
+        <h1 class="font-display text-4xl md:text-7xl font-bold mb-6 leading-tight">
+          <span class="block" data-typewriter="Votre événement" data-speed="100"></span>
+          <span class="block text-gold mt-2" data-typewriter="Notre expertise" data-speed="100"></span>
+        </h1>
+        <p class="text-xl md:text-2xl mb-8 max-w-4xl mx-auto leading-relaxed">
+          De l'intimité d'un dîner familial aux fastes d'un gala, <strong>Sylvie Feruzi</strong> et son équipe 
+          transforment chaque occasion en moment d'exception avec la richesse de la cuisine congolaise
+        </p>
+        
+        <div class="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
+          <a href="#services-overview" class="btn btn-gold text-lg px-8 py-4 animate-pulse">
+            🎯 Découvrir nos services
+          </a>
+          <a href="#calculateur-prix" class="btn btn-outline border-white text-white hover:bg-white hover:text-black text-lg px-8 py-4">
+            💰 Calculateur de prix
+          </a>
+        </div>
+        
+        <!-- Service Statistics -->
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
+          <div class="text-center backdrop-blur bg-white/10 rounded-xl p-4">
+            <div class="text-2xl font-bold text-gold mb-1" data-counter="500">0</div>
+            <div class="text-sm text-gray-300">Événements réalisés</div>
+          </div>
+          <div class="text-center backdrop-blur bg-white/10 rounded-xl p-4">
+            <div class="text-2xl font-bold text-gold mb-1" data-counter="250">0</div>
+            <div class="text-sm text-gray-300">Mariages célébrés</div>
+          </div>
+          <div class="text-center backdrop-blur bg-white/10 rounded-xl p-4">
+            <div class="text-2xl font-bold text-gold mb-1" data-counter="50">0</div>
+            <div class="text-sm text-gray-300">Galas VIP</div>
+          </div>
+          <div class="text-center backdrop-blur bg-white/10 rounded-xl p-4">
+            <div class="text-2xl font-bold text-gold mb-1" data-counter="98">0</div>
+            <div class="text-sm text-gray-300">% de satisfaction</div>
+          </div>
+        </div>
       </div>
-    </section>
-  </main>
+    </div>
+    
+    <!-- Scroll Indicator -->
+    <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+      <div class="w-6 h-10 border-2 border-white rounded-full flex justify-center">
+        <div class="w-1 h-3 bg-white rounded-full mt-2 animate-pulse"></div>
+      </div>
+    </div>
+  </section>
 
-  <footer class="border-t border-black/10">
-    <div class="max-w-6xl mx-auto px-4 py-10 text-sm flex flex-col md:flex-row items-center justify-between gap-4">
-      <p>© <span id="year"></span> Arabesque Traiteur • Kinshasa</p>
-      <div class="flex items-center gap-4">
-        <a href="/contact.html#politique" class="hover:underline">Politique de confidentialité</a>
-        <a href="/contact.html#cgv" class="hover:underline">Conditions générales</a>
+  <!-- Services Overview -->
+  <section id="services-overview" class="py-20 bg-gradient-to-br from-white to-gray-50">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-16 reveal">
+        <span class="inline-block px-4 py-2 bg-gold/10 text-gold font-semibold text-sm rounded-full mb-4">
+          Nos Spécialités
+        </span>
+        <h2 class="font-display text-4xl md:text-5xl font-bold mb-6">
+          Chaque événement a sa signature
+        </h2>
+        <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+          De l'intimité à l'apparat, nous adaptons notre savoir-faire culinaire congolais à chaque occasion, 
+          avec la passion et l'expertise qui nous caractérisent
+        </p>
+      </div>
+      
+      <!-- Service Cards Grid -->
+      <div class="grid lg:grid-cols-2 gap-12">
+        <!-- Wedding Services -->
+        <article class="service-card group reveal">
+          <div class="relative overflow-hidden rounded-2xl shadow-xl">
+            <img src="assets/images/mariage-congolais-elegance.jpg" alt="Mariage congolais élégant par Arabesque Traiteur" 
+                 class="w-full h-80 object-cover group-hover:scale-110 transition-transform duration-500" loading="lazy">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
+            <div class="absolute bottom-0 left-0 right-0 p-8 text-white">
+              <div class="flex items-center gap-2 mb-3">
+                <span class="text-3xl">💕</span>
+                <span class="badge badge-premium">SERVICE COMPLET</span>
+              </div>
+              <h3 class="font-display text-3xl font-bold mb-3">Mariages d'Exception</h3>
+              <p class="text-gray-200 mb-4">
+                Célébrez le plus beau jour de votre vie avec nos créations authentiques. Wedding cake signature Julie Feruzi inclus.
+              </p>
+              <div class="flex items-center justify-between">
+                <span class="text-sm text-gray-300">À partir de 20$/personne</span>
+                <a href="#mariages" class="btn btn-gold btn-sm">Découvrir</a>
+              </div>
+            </div>
+          </div>
+        </article>
+        
+        <!-- Corporate Events -->
+        <article class="service-card group reveal">
+          <div class="relative overflow-hidden rounded-2xl shadow-xl">
+            <img src="assets/images/gala-vip-kinshasa.jpg" alt="Gala VIP et réception corporative Kinshasa" 
+                 class="w-full h-80 object-cover group-hover:scale-110 transition-transform duration-500" loading="lazy">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
+            <div class="absolute bottom-0 left-0 right-0 p-8 text-white">
+              <div class="flex items-center gap-2 mb-3">
+                <span class="text-3xl">🏆</span>
+                <span class="badge badge-vip">PRESTIGE</span>
+              </div>
+              <h3 class="font-display text-3xl font-bold mb-3">Galas & Réceptions VIP</h3>
+              <p class="text-gray-200 mb-4">
+                Événements corporatifs et réceptions officielles. Service haut de gamme avec chef sur site.
+              </p>
+              <div class="flex items-center justify-between">
+                <span class="text-sm text-gray-300">Service sur mesure</span>
+                <a href="#galas" class="btn btn-gold btn-sm">Découvrir</a>
+              </div>
+            </div>
+          </div>
+        </article>
+        
+        <!-- Birthday Celebrations -->
+        <article class="service-card group reveal">
+          <div class="relative overflow-hidden rounded-2xl shadow-xl">
+            <img src="assets/images/anniversaire-familial-congo.jpg" alt="Anniversaire familial avec spécialités congolaises" 
+                 class="w-full h-80 object-cover group-hover:scale-110 transition-transform duration-500" loading="lazy">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
+            <div class="absolute bottom-0 left-0 right-0 p-8 text-white">
+              <div class="flex items-center gap-2 mb-3">
+                <span class="text-3xl">🎂</span>
+                <span class="badge badge-popular">POPULAIRE</span>
+              </div>
+              <h3 class="font-display text-3xl font-bold mb-3">Anniversaires Mémorables</h3>
+              <p class="text-gray-200 mb-4">
+                Fêtes d'anniversaire personnalisées avec nos spécialités congolaises et gâteaux sur mesure.
+              </p>
+              <div class="flex items-center justify-between">
+                <span class="text-sm text-gray-300">Flexible selon invités</span>
+                <a href="#anniversaires" class="btn btn-gold btn-sm">Découvrir</a>
+              </div>
+            </div>
+          </div>
+        </article>
+        
+        <!-- Cocktail Service -->
+        <article class="service-card group reveal">
+          <div class="relative overflow-hidden rounded-2xl shadow-xl">
+            <img src="assets/images/service-cocktail-professionnel.jpg" alt="Service cocktail professionnel avec barmen" 
+                 class="w-full h-80 object-cover group-hover:scale-110 transition-transform duration-500" loading="lazy">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
+            <div class="absolute bottom-0 left-0 right-0 p-8 text-white">
+              <div class="flex items-center gap-2 mb-3">
+                <span class="text-3xl">🍹</span>
+                <span class="badge badge-new">CLÉ EN MAIN</span>
+              </div>
+              <h3 class="font-display text-3xl font-bold mb-3">Service Cocktail</h3>
+              <p class="text-gray-200 mb-4">
+                Prestation complète : barmen professionnels, 2 tournées par personne, matériel inclus.
+              </p>
+              <div class="flex items-center justify-between">
+                <span class="text-sm text-gray-300">500$ à 1200$ selon effectif</span>
+                <a href="#cocktail" class="btn btn-gold btn-sm">Découvrir</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Price Calculator Section -->
+  <section id="calculateur-prix" class="py-20 bg-black text-white relative overflow-hidden">
+    <div class="absolute inset-0 opacity-20">
+      <video autoplay muted loop playsinline data-auto-play>
+        <source src="assets/videos/pricing-calculator.mp4" type="video/mp4">
+      </video>
+    </div>
+    
+    <div class="container mx-auto px-4 relative z-10">
+      <div class="text-center mb-16 reveal">
+        <span class="inline-block px-4 py-2 bg-gold/20 text-gold font-semibold text-sm rounded-full mb-4">
+          💰 Calculateur Intelligent
+        </span>
+        <h2 class="font-display text-4xl md:text-5xl font-bold mb-6">
+          Estimez le coût de votre événement
+        </h2>
+        <p class="text-xl text-gray-300 max-w-3xl mx-auto">
+          Notre calculateur intelligent vous donne une estimation instantanée selon vos besoins
+        </p>
+      </div>
+      
+      <div class="max-w-4xl mx-auto">
+        <div class="bg-white/10 backdrop-blur rounded-2xl p-8 reveal">
+          <div class="grid md:grid-cols-2 gap-8">
+            <!-- Calculator Form -->
+            <div>
+              <h3 class="font-display text-2xl font-bold mb-6">Paramètres de votre événement</h3>
+              
+              <div class="space-y-6">
+                <div class="form-group">
+                  <label class="form-label text-white">Type d'événement</label>
+                  <select id="eventType" class="form-input bg-white/20 text-white border-white/30">
+                    <option value="anniversaire">🎂 Anniversaire</option>
+                    <option value="mariage">💕 Mariage</option>
+                    <option value="gala">🏆 Gala / Réception VIP</option>
+                    <option value="prive">🏠 Événement privé</option>
+                    <option value="corporate">🏢 Événement corporatif</option>
+                  </select>
+                </div>
+                
+                <div class="form-group">
+                  <label class="form-label text-white">Nombre d'invités</label>
+                  <input type="number" id="guestCount" min="1" max="1000" value="50" 
+                         class="form-input bg-white/20 text-white border-white/30" 
+                         placeholder="Ex: 50">
+                  <small class="text-gray-300 text-sm">Influence directement la formule tarifaire</small>
+                </div>
+                
+                <div class="form-group">
+                  <label class="form-label text-white">Formule menu (pour 100+ invités)</label>
+                  <select id="menuFormula" class="form-input bg-white/20 text-white border-white/30" disabled>
+                    <option value="essentielle">Essentielle - 14 repas (15$/pers)</option>
+                    <option value="premium" selected>Premium - 18 repas (20$/pers)</option>
+                    <option value="excellence">Excellence - 20 repas (25$/pers)</option>
+                    <option value="deluxe">Deluxe - 24 repas (30$/pers)</option>
+                    <option value="vip">VIP - 28 repas (35$/pers)</option>
+                  </select>
+                </div>
+                
+                <div class="form-group">
+                  <label class="checkbox-item text-white">
+                    <input type="checkbox" id="cocktailService" class="mr-3">
+                    <span class="checkmark"></span>
+                    Ajouter le service cocktail
+                  </label>
+                  <small class="text-gray-300 text-sm block mt-2">
+                    Barmen + matériel + 2 tournées par personne
+                  </small>
+                </div>
+                
+                <div class="form-group">
+                  <label class="checkbox-item text-white">
+                    <input type="checkbox" id="rareSpecialties" class="mr-3">
+                    <span class="checkmark"></span>
+                    Inclure spécialités rares (crocodile, tortue...)
+                  </label>
+                  <small class="text-gray-300 text-sm block mt-2">
+                    Supplément selon disponibilité
+                  </small>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Price Display -->
+            <div>
+              <h3 class="font-display text-2xl font-bold mb-6 text-gold">Estimation de prix</h3>
+              
+              <div id="priceBreakdown" class="space-y-4">
+                <!-- Price breakdown will be populated by JavaScript -->
+              </div>
+              
+              <div class="mt-8 p-6 bg-gold/20 rounded-xl border border-gold/30">
+                <div class="flex justify-between items-center mb-4">
+                  <span class="text-lg font-bold">Total estimé :</span>
+                  <span id="totalPrice" class="text-3xl font-bold text-gold">$0</span>
+                </div>
+                <p class="text-sm text-gray-300 mb-4">
+                  <strong>Cette estimation est indicative.</strong> Le devis final sera personnalisé selon vos besoins exacts.
+                </p>
+                <div class="flex gap-3">
+                  <a href="contact.html" class="btn btn-gold flex-1">
+                    Demander un devis précis
+                  </a>
+                  <a href="menu.html" class="btn btn-outline border-gold text-gold hover:bg-gold hover:text-black flex-1">
+                    Configurer le menu
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Detailed Service Sections -->
+  
+  <!-- Wedding Services Detail -->
+  <section id="mariages" class="py-20 bg-gradient-to-br from-rose-50 to-pink-50">
+    <div class="container mx-auto px-4">
+      <div class="max-w-6xl mx-auto">
+        <div class="text-center mb-16 reveal">
+          <span class="inline-block px-4 py-2 bg-rose-200 text-rose-800 font-semibold text-sm rounded-full mb-4">
+            💕 Mariages d'Exception
+          </span>
+          <h2 class="font-display text-4xl md:text-5xl font-bold mb-6">
+            Votre jour J, notre art culinaire
+          </h2>
+          <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+            Célébrez l'amour avec une cuisine authentique qui raconte votre histoire. 
+            De la cérémonie traditionnelle congolaise au banquet raffiné.
+          </p>
+        </div>
+        
+        <div class="grid lg:grid-cols-2 gap-16 items-center mb-16">
+          <div class="reveal">
+            <h3 class="font-display text-3xl font-bold mb-6">Votre mariage, notre signature</h3>
+            
+            <div class="space-y-6">
+              <div class="flex items-start gap-4">
+                <div class="w-12 h-12 bg-rose-200 rounded-full flex items-center justify-center flex-shrink-0">
+                  <span class="text-rose-600 text-xl">🍰</span>
+                </div>
+                <div>
+                  <h4 class="font-bold mb-2">Wedding Cake Signature Julie Feruzi</h4>
+                  <p class="text-gray-600">
+                    Chaque gâteau est une création unique, réalisée par notre chef pâtissière selon vos souhaits, 
+                    alliant tradition et modernité avec un savoir-faire artisanal exceptionnel.
+                  </p>
+                </div>
+              </div>
+              
+              <div class="flex items-start gap-4">
+                <div class="w-12 h-12 bg-rose-200 rounded-full flex items-center justify-center flex-shrink-0">
+                  <span class="text-rose-600 text-xl">🇨🇩</span>
+                </div>
+                <div>
+                  <h4 class="font-bold mb-2">Menu Congolais Authentique</h4>
+                  <p class="text-gray-600">
+                    Pondu, Maboke y'a Ngulu, Nga Nda, Fufu... Honorez vos racines avec nos spécialités 
+                    traditionnelles préparées selon les recettes familiales transmises par Sylvie Feruzi.
+                  </p>
+                </div>
+              </div>
+              
+              <div class="flex items-start gap-4">
+                <div class="w-12 h-12 bg-rose-200 rounded-full flex items-center justify-center flex-shrink-0">
+                  <span class="text-rose-600 text-xl">👥</span>
+                </div>
+                <div>
+                  <h4 class="font-bold mb-2">Service Complet</h4>
+                  <p class="text-gray-600">
+                    Coordination complète de A à Z : consultation préalable, dégustation, service le jour J, 
+                    et coordination avec vos autres prestataires pour un mariage parfait.
+                  </p>
+                </div>
+              </div>
+            </div>
+            
+            <div class="mt-8 p-6 bg-white rounded-xl shadow-lg">
+              <h4 class="font-bold mb-4 text-rose-600">💰 Tarification mariage</h4>
+              <div class="space-y-2 text-sm">
+                <div class="flex justify-between">
+                  <span>1-50 invités (intime)</span>
+                  <span class="font-bold">35$ / personne</span>
+                </div>
+                <div class="flex justify-between">
+                  <span>50-100 invités (familial)</span>
+                  <span class="font-bold">20$ / personne</span>
+                </div>
+                <div class="flex justify-between">
+                  <span>100+ invités (grand mariage)</span>
+                  <span class="font-bold">20-35$ / personne (selon menu)</span>
+                </div>
+                <hr class="border-rose-200">
+                <div class="flex justify-between font-bold text-rose-600">
+                  <span>Wedding cake inclus</span>
+                  <span>✅ Offert</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="reveal">
+            <div class="relative">
+              <img src="assets/images/mariage-traditionnel-moderne.jpg" alt="Mariage traditionnel congolais moderne" 
+                   class="rounded-2xl shadow-2xl w-full" loading="lazy">
+              <div class="absolute top-4 right-4 bg-white/90 backdrop-blur rounded-lg p-4">
+                <h5 class="font-bold text-sm mb-2">Services inclus</h5>
+                <div class="space-y-1 text-xs">
+                  <div>🍰 Wedding cake personnalisé</div>
+                  <div>🎭 Service à table</div>
+                  <div>🌟 Coordination événement</div>
+                  <div>📸 Dressage photo-ready</div>
+                  <div>🎵 Synchronisation traiteur</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Wedding Testimonials -->
+        <div class="grid md:grid-cols-2 gap-8 reveal">
+          <div class="bg-white rounded-xl p-6 shadow-lg">
+            <div class="flex items-center gap-1 mb-4">
+              <span class="text-rose-400">⭐⭐⭐⭐⭐</span>
+            </div>
+            <blockquote class="text-gray-600 italic mb-4">
+              "Arabesque Traiteur a rendu notre mariage absolument magique ! Le wedding cake de Julie était une œuvre d'art, 
+              et les plats congolais ont ému toute notre famille. Service impeccable."
+            </blockquote>
+            <cite class="flex items-center gap-3">
+              <div class="w-10 h-10 bg-rose-100 rounded-full flex items-center justify-center">
+                <span class="font-bold text-rose-600">MK</span>
+              </div>
+              <div>
+                <div class="font-semibold">Marie & Kaleb Mwamba</div>
+                <div class="text-sm text-gray-500">Mariage • Octobre 2024</div>
+              </div>
+            </cite>
+          </div>
+          
+          <div class="bg-white rounded-xl p-6 shadow-lg">
+            <div class="flex items-center gap-1 mb-4">
+              <span class="text-rose-400">⭐⭐⭐⭐⭐</span>
+            </div>
+            <blockquote class="text-gray-600 italic mb-4">
+              "Sylvie et son équipe ont compris notre vision d'un mariage alliant tradition et modernité. 
+              Le menu congolais était parfait, nos invités internationaux ont adoré découvrir nos saveurs."
+            </blockquote>
+            <cite class="flex items-center gap-3">
+              <div class="w-10 h-10 bg-rose-100 rounded-full flex items-center justify-center">
+                <span class="font-bold text-rose-600">LJ</span>
+              </div>
+              <div>
+                <div class="font-semibold">Laure & Jean Mukendi</div>
+                <div class="text-sm text-gray-500">Mariage • Septembre 2024</div>
+              </div>
+            </cite>
+          </div>
+        </div>
+        
+        <div class="text-center mt-12 reveal">
+          <a href="contact.html" class="btn bg-rose-500 hover:bg-rose-600 text-white text-lg px-8 py-4">
+            Planifier mon mariage de rêve
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Galas & VIP Events -->
+  <section id="galas" class="py-20 bg-gradient-to-br from-purple-50 to-indigo-50">
+    <div class="container mx-auto px-4">
+      <div class="max-w-6xl mx-auto">
+        <div class="text-center mb-16 reveal">
+          <span class="inline-block px-4 py-2 bg-purple-200 text-purple-800 font-semibold text-sm rounded-full mb-4">
+            🏆 Galas & Réceptions VIP
+          </span>
+          <h2 class="font-display text-4xl md:text-5xl font-bold mb-6">
+            L'excellence au service du prestige
+          </h2>
+          <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+            Événements corporatifs, réceptions officielles, galas de charité... 
+            Nous maîtrisons les codes du prestige tout en valorisant notre identité culinaire congolaise.
+          </p>
+        </div>
+        
+        <div class="grid lg:grid-cols-3 gap-8 mb-16">
+          <!-- Corporate Events -->
+          <div class="bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 reveal">
+            <div class="text-center mb-6">
+              <div class="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <span class="text-2xl">🏢</span>
+              </div>
+              <h3 class="font-display text-xl font-bold mb-3">Événements Corporatifs</h3>
+            </div>
+            <ul class="space-y-3 text-sm mb-6">
+              <li class="flex items-center gap-2">
+                <span class="text-purple-500">✓</span> Lancement de produit
+              </li>
+              <li class="flex items-center gap-2">
+                <span class="text-purple-500">✓</span> Séminaires d'entreprise
+              </li>
+              <li class="flex items-center gap-2">
+                <span class="text-purple-500">✓</span> Réceptions clients VIP
+              </li>
+              <li class="flex items-center gap-2">
+                <span class="text-purple-500">✓</span> Célébrations annuelles
+              </li>
+              <li class="flex items-center gap-2">
+                <span class="text-purple-500">✓</span> Networking événements
+              </li>
+            </ul>
+            <div class="text-center">
+              <span class="text-sm text-gray-500">À partir de 25$/personne</span>
+            </div>
+          </div>
+          
+          <!-- Official Receptions -->
+          <div class="bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 reveal">
+            <div class="text-center mb-6">
+              <div class="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <span class="text-2xl">🎭</span>
+              </div>
+              <h3 class="font-display text-xl font-bold mb-3">Réceptions Officielles</h3>
+            </div>
+            <ul class="space-y-3 text-sm mb-6">
+              <li class="flex items-center gap-2">
+                <span class="text-purple-500">✓</span> Protocole diplomatique
+              </li>
+              <li class="flex items-center gap-2">
+                <span class="text-purple-500">✓</span> Réceptions d'État
+              </li>
+              <li class="flex items-center gap-2">
+                <span class="text-purple-500">✓</span> Événements institutionnels
+              </li>
+              <li class="flex items-center gap-2">
+                <span class="text-purple-500">✓</span> Inaugurations officielles
+              </li>
+              <li class="flex items-center gap-2">
+                <span class="text-purple-500">✓</span> Chef sur site inclus
+              </li>
+            </ul>
+            <div class="text-center">
+              <span class="text-sm text-gray-500">Devis personnalisé</span>
+            </div>
+          </div>
+          
+          <!-- Charity Galas -->
+          <div class="bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 reveal">
+            <div class="text-center mb-6">
+              <div class="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <span class="text-2xl">❤️</span>
+              </div>
+              <h3 class="font-display text-xl font-bold mb-3">Galas de Charité</h3>
+            </div>
+            <ul class="space-y-3 text-sm mb-6">
+              <li class="flex items-center gap-2">
+                <span class="text-purple-500">✓</span> Dîners de bienfaisance
+              </li>
+              <li class="flex items-center gap-2">
+                <span class="text-purple-500">✓</span> Levées de fonds
+              </li>
+              <li class="flex items-center gap-2">
+                <span class="text-purple-500">✓</span> Événements caritatifs
+              </li>
+              <li class="flex items-center gap-2">
+                <span class="text-purple-500">✓</span> Réceptions humanitaires
+              </li>
+              <li class="flex items-center gap-2">
+                <span class="text-purple-500">✓</span> Tarifs préférentiels
+              </li>
+            </ul>
+            <div class="text-center">
+              <span class="text-sm text-gray-500">Conditions spéciales</span>
+            </div>
+          </div>
+        </div>
+        
+        <!-- VIP Service Features -->
+        <div class="bg-gradient-to-r from-purple-600 to-indigo-600 text-white rounded-2xl p-8 reveal">
+          <div class="grid lg:grid-cols-2 gap-8 items-center">
+            <div>
+              <h3 class="font-display text-3xl font-bold mb-6">Service VIP Arabesque</h3>
+              <div class="space-y-4">
+                <div class="flex items-center gap-3">
+                  <span class="w-8 h-8 bg-white/20 rounded-full flex items-center justify-center flex-shrink-0">👩‍🍳</span>
+                  <span><strong>Chef Sylvie Feruzi sur site</strong> pour supervision directe</span>
+                </div>
+                <div class="flex items-center gap-3">
+                  <span class="w-8 h-8 bg-white/20 rounded-full flex items-center justify-center flex-shrink-0">🎯</span>
+                  <span><strong>Menu adapté au protocole</strong> et aux contraintes diplomatiques</span>
+                </div>
+                <div class="flex items-center gap-3">
+                  <span class="w-8 h-8 bg-white/20 rounded-full flex items-center justify-center flex-shrink-0">🌟</span>
+                  <span><strong>Présentation gastronomique</strong> digne des plus grandes tables</span>
+                </div>
+                <div class="flex items-center gap-3">
+                  <span class="w-8 h-8 bg-white/20 rounded-full flex items-center justify-center flex-shrink-0">🤝</span>
+                  <span><strong>Coordination avec autres prestataires</strong> (sécurité, protocole)</span>
+                </div>
+                <div class="flex items-center gap-3">
+                  <span class="w-8 h-8 bg-white/20 rounded-full flex items-center justify-center flex-shrink-0">🇨🇩</span>
+                  <span><strong>Valorisation cuisine congolaise</strong> auprès d'invités internationaux</span>
+                </div>
+              </div>
+            </div>
+            <div class="text-center">
+              <img src="assets/images/sylvie-chef-vip-service.jpg" alt="Sylvie Feruzi en service VIP" 
+                   class="rounded-xl shadow-2xl max-w-sm mx-auto" loading="lazy">
+              <p class="text-sm text-purple-200 mt-4">
+                Sylvie Feruzi supervise personnellement chaque événement VIP
+              </p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="text-center mt-12 reveal">
+          <a href="contact.html" class="btn bg-purple-600 hover:bg-purple-700 text-white text-lg px-8 py-4">
+            Planifier mon événement VIP
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Birthday & Private Events -->
+  <section id="anniversaires" class="py-20 bg-gradient-to-br from-blue-50 to-cyan-50">
+    <div class="container mx-auto px-4">
+      <div class="max-w-6xl mx-auto">
+        <div class="text-center mb-16 reveal">
+          <span class="inline-block px-4 py-2 bg-blue-200 text-blue-800 font-semibold text-sm rounded-full mb-4">
+            🎂 Anniversaires & Événements Privés
+          </span>
+          <h2 class="font-display text-4xl md:text-5xl font-bold mb-6">
+            Célébrez vos moments précieux
+          </h2>
+          <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+            Des fêtes d'anniversaire aux réunions familiales, nous créons des moments chaleureux 
+            qui rassemblent autour de nos saveurs authentiques.
+          </p>
+        </div>
+        
+        <div class="grid lg:grid-cols-2 gap-16 items-center mb-16">
+          <div class="reveal">
+            <h3 class="font-display text-3xl font-bold mb-6">Personnalisation totale</h3>
+            
+            <div class="space-y-6">
+              <div class="bg-white rounded-lg p-6 shadow-md">
+                <h4 class="font-bold mb-3 flex items-center gap-2">
+                  <span class="text-blue-500">🎨</span> Thèmes personnalisés
+                </h4>
+                <p class="text-gray-600 text-sm">
+                  Que ce soit pour les 1 an de bébé ou les 80 ans de grand-maman, nous adaptons 
+                  notre menu et notre présentation au thème de votre choix.
+                </p>
+              </div>
+              
+              <div class="bg-white rounded-lg p-6 shadow-md">
+                <h4 class="font-bold mb-3 flex items-center gap-2">
+                  <span class="text-blue-500">🍰</span> Gâteaux sur mesure
+                </h4>
+                <p class="text-gray-600 text-sm">
+                  Julie Feruzi, notre chef pâtissière, crée des gâteaux uniques qui racontent 
+                  l'histoire de votre célébration avec créativité et gourmandise.
+                </p>
+              </div>
+              
+              <div class="bg-white rounded-lg p-6 shadow-md">
+                <h4 class="font-bold mb-3 flex items-center gap-2">
+                  <span class="text-blue-500">👨‍👩‍👧‍👦</span> Ambiance familiale
+                </h4>
+                <p class="text-gray-600 text-sm">
+                  Nous privilégions la convivialité avec des plats qui plaisent à tous les âges, 
+                  des options enfants aux spécialités que vos aînés apprécieront.
+                </p>
+              </div>
+            </div>
+          </div>
+          
+          <div class="reveal">
+            <div class="relative">
+              <img src="assets/images/anniversaire-multigenerationnel.jpg" alt="Anniversaire multigénérationnel congolais" 
+                   class="rounded-2xl shadow-2xl w-full" loading="lazy">
+              <div class="absolute -bottom-6 -left-6 bg-white p-6 rounded-xl shadow-xl">
+                <h5 class="font-bold mb-3 text-blue-600">Formules anniversaire</h5>
+                <div class="space-y-2 text-sm">
+                  <div class="flex justify-between gap-4">
+                    <span>Petit comité (1-20)</span>
+                    <span class="font-bold">35$/pers</span>
+                  </div>
+                  <div class="flex justify-between gap-4">
+                    <span>Familial (20-50)</span>
+                    <span class="font-bold">35$/pers</span>
+                  </div>
+                  <div class="flex justify-between gap-4">
+                    <span>Grande fête (50+)</span>
+                    <span class="font-bold">20-35$/pers</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Age-specific Services -->
+        <div class="grid md:grid-cols-3 gap-8 mb-16 reveal">
+          <div class="bg-white rounded-xl p-6 text-center shadow-lg">
+            <div class="text-4xl mb-4">👶</div>
+            <h4 class="font-bold mb-3">Anniversaires Enfants</h4>
+            <ul class="text-sm text-gray-600 space-y-2">
+              <li>• Menu adapté aux enfants</li>
+              <li>• Gâteaux colorés et ludiques</li>
+              <li>• Présentation amusante</li>
+              <li>• Options sans allergènes</li>
+              <li>• Service patient et bienveillant</li>
+            </ul>
+          </div>
+          
+          <div class="bg-white rounded-xl p-6 text-center shadow-lg">
+            <div class="text-4xl mb-4">🎯</div>
+            <h4 class="font-bold mb-3">Anniversaires Adultes</h4>
+            <ul class="text-sm text-gray-600 space-y-2">
+              <li>• Menu sophistiqué et raffiné</li>
+              <li>• Spécialités congolaises authentiques</li>
+              <li>• Service cocktail optionnel</li>
+              <li>• Dressage élégant</li>
+              <li>• Ambiance conviviale</li>
+            </ul>
+          </div>
+          
+          <div class="bg-white rounded-xl p-6 text-center shadow-lg">
+            <div class="text-4xl mb-4">👴</div>
+            <h4 class="font-bold mb-3">Célébrations Séniors</h4>
+            <ul class="text-sm text-gray-600 space-y-2">
+              <li>• Plats traditionnels authentiques</li>
+              <li>• Textures adaptées si nécessaire</li>
+              <li>• Service attentionné</li>
+              <li>• Hommage aux traditions</li>
+              <li>• Respect du rythme familial</li>
+            </ul>
+          </div>
+        </div>
+        
+        <div class="text-center reveal">
+          <a href="contact.html" class="btn bg-blue-500 hover:bg-blue-600 text-white text-lg px-8 py-4">
+            Organiser mon anniversaire parfait
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Cocktail Service Detail -->
+  <section id="cocktail" class="py-20 bg-black text-white relative overflow-hidden">
+    <div class="absolute inset-0 opacity-30">
+      <video autoplay muted loop playsinline data-auto-play>
+        <source src="assets/videos/cocktail-service-pro.mp4" type="video/mp4">
+      </video>
+    </div>
+    
+    <div class="container mx-auto px-4 relative z-10">
+      <div class="text-center mb-16 reveal">
+        <span class="inline-block px-4 py-2 bg-gold/20 text-gold font-semibold text-sm rounded-full mb-4">
+          🍹 Service Cocktail Professionnel
+        </span>
+        <h2 class="font-display text-4xl md:text-5xl font-bold mb-6">
+          L'art du cocktail à la congolaise
+        </h2>
+        <p class="text-xl text-gray-300 max-w-3xl mx-auto">
+          Prestation clé en main avec nos barmen professionnels formés par David Nsenga, 
+          spécialiste des cocktails signature Arabesque.
+        </p>
+      </div>
+      
+      <div class="grid lg:grid-cols-2 gap-16 items-center mb-16">
+        <div class="reveal">
+          <h3 class="font-display text-3xl font-bold mb-8 text-gold">Prestation complète incluse</h3>
+          
+          <div class="space-y-6">
+            <div class="flex items-start gap-4">
+              <div class="w-12 h-12 bg-gold/20 rounded-full flex items-center justify-center flex-shrink-0">
+                <span class="text-gold text-xl">👨‍🍳</span>
+              </div>
+              <div>
+                <h4 class="font-bold text-gold mb-2">Barmen Professionnels</h4>
+                <p class="text-gray-300">
+                  Équipe formée par David Nsenga, expert en mixologie. Maîtrise parfaite des cocktails 
+                  classiques et de nos créations signature aux saveurs congolaises.
+                </p>
+              </div>
+            </div>
+            
+            <div class="flex items-start gap-4">
+              <div class="w-12 h-12 bg-gold/20 rounded-full flex items-center justify-center flex-shrink-0">
+                <span class="text-gold text-xl">🥃</span>
+              </div>
+              <div>
+                <h4 class="font-bold text-gold mb-2">2 Tournées par Personne</h4>
+                <p class="text-gray-300">
+                  Service généreux avec deux tournées complètes par invité. Cocktails avec alcool, 
+                  mocktails, et boissons non-alcoolisées pour tous les goûts.
+                </p>
+              </div>
+            </div>
+            
+            <div class="flex items-start gap-4">
+              <div class="w-12 h-12 bg-gold/20 rounded-full flex items-center justify-center flex-shrink-0">
+                <span class="text-gold text-xl">🧊</span>
+              </div>
+              <div>
+                <h4 class="font-bold text-gold mb-2">Matériel Professionnel</h4>
+                <p class="text-gray-300">
+                  Comptoir bar, verrerie complète, glaçons, ustensiles de mixologie, 
+                  décoration du bar et tout le nécessaire pour un service parfait.
+                </p>
+              </div>
+            </div>
+            
+            <div class="flex items-start gap-4">
+              <div class="w-12 h-12 bg-gold/20 rounded-full flex items-center justify-center flex-shrink-0">
+                <span class="text-gold text-xl">🚚</span>
+              </div>
+              <div>
+                <h4 class="font-bold text-gold mb-2">Transport & Installation</h4>
+                <p class="text-gray-300">
+                  Livraison, montage et démontage inclus. Notre équipe arrive 2h avant l'événement 
+                  pour tout préparer et repart après le nettoyage complet.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="reveal">
+          <div class="bg-white/10 backdrop-blur rounded-2xl p-8">
+            <h4 class="font-display text-2xl font-bold mb-6 text-gold">Tarification transparente</h4>
+            
+            <div class="space-y-4 mb-8">
+              <div class="flex items-center justify-between p-4 bg-white/5 rounded-lg">
+                <div>
+                  <div class="font-bold">Moins de 55 personnes</div>
+                  <div class="text-sm text-gray-300">Service intimiste</div>
+                </div>
+                <div class="text-2xl font-bold text-gold">500$</div>
+              </div>
+              
+              <div class="flex items-center justify-between p-4 bg-white/5 rounded-lg">
+                <div>
+                  <div class="font-bold">Moins de 105 personnes</div>
+                  <div class="text-sm text-gray-300">Service standard</div>
+                </div>
+                <div class="text-2xl font-bold text-gold">750$</div>
+              </div>
+              
+              <div class="flex items-center justify-between p-4 bg-white/5 rounded-lg">
+                <div>
+                  <div class="font-bold">Moins de 155 personnes</div>
+                  <div class="text-sm text-gray-300">Service élargi</div>
+                </div>
+                <div class="text-2xl font-bold text-gold">900$</div>
+              </div>
+              
+              <div class="flex items-center justify-between p-4 bg-white/5 rounded-lg">
+                <div>
+                  <div class="font-bold">Moins de 205 personnes</div>
+                  <div class="text-sm text-gray-300">Service grand événement</div>
+                </div>
+                <div class="text-2xl font-bold text-gold">1200$</div>
+              </div>
+            </div>
+            
+            <div class="bg-gold/20 rounded-lg p-4 mb-6">
+              <h5 class="font-bold mb-2">🍸 Cocktails Signature Inclus</h5>
+              <div class="text-sm space-y-1">
+                <div>• Cocktail Arabesque (création David Nsenga)</div>
+                <div>• Mojito Congo (menthe locale)</div>
+                <div>• Sangoma Fizz (fruits tropicaux)</div>
+                <div>• Kinshasa Sunset (cocktail signature)</div>
+                <div>• + tous les classiques internationaux</div>
+              </div>
+            </div>
+            
+            <a href="contact.html" class="btn btn-gold w-full text-lg">
+              Réserver le service cocktail
+            </a>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Cocktail Signature Showcase -->
+      <div class="text-center mb-16 reveal">
+        <h3 class="font-display text-3xl font-bold mb-8">Nos créations signature</h3>
+        <div class="grid md:grid-cols-4 gap-6">
+          <div class="text-center">
+            <div class="w-24 h-24 bg-gold/20 rounded-full flex items-center justify-center mx-auto mb-4">
+              <span class="text-3xl">🍸</span>
+            </div>
+            <h4 class="font-bold text-gold mb-2">Cocktail Arabesque</h4>
+            <p class="text-sm text-gray-300">Rhum, passion, gingembre local</p>
+          </div>
+          <div class="text-center">
+            <div class="w-24 h-24 bg-gold/20 rounded-full flex items-center justify-center mx-auto mb-4">
+              <span class="text-3xl">🌿</span>
+            </div>
+            <h4 class="font-bold text-gold mb-2">Mojito Congo</h4>
+            <p class="text-sm text-gray-300">Menthe fraîche de Kinshasa</p>
+          </div>
+          <div class="text-center">
+            <div class="w-24 h-24 bg-gold/20 rounded-full flex items-center justify-center mx-auto mb-4">
+              <span class="text-3xl">🥭</span>
+            </div>
+            <h4 class="font-bold text-gold mb-2">Sangoma Fizz</h4>
+            <p class="text-sm text-gray-300">Mangue, ananas, pétillant</p>
+          </div>
+          <div class="text-center">
+            <div class="w-24 h-24 bg-gold/20 rounded-full flex items-center justify-center mx-auto mb-4">
+              <span class="text-3xl">🌅</span>
+            </div>
+            <h4 class="font-bold text-gold mb-2">Kinshasa Sunset</h4>
+            <p class="text-sm text-gray-300">Cocktail signature mystère</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Process & Coordination -->
+  <section class="py-20 bg-gradient-to-br from-white to-gray-50">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-16 reveal">
+        <span class="inline-block px-4 py-2 bg-gold/10 text-gold font-semibold text-sm rounded-full mb-4">
+          Comment nous procédons
+        </span>
+        <h2 class="font-display text-4xl md:text-5xl font-bold mb-6">
+          Votre événement en 6 étapes
+        </h2>
+        <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+          Notre processus éprouvé garantit la réussite de votre événement, de la conception à la réalisation
+        </p>
+      </div>
+      
+      <div class="max-w-5xl mx-auto">
+        <div class="grid md:grid-cols-3 gap-8">
+          <!-- Step 1-3 -->
+          <div class="space-y-8">
+            <div class="process-step reveal">
+              <div class="flex items-start gap-4">
+                <div class="w-12 h-12 bg-gold rounded-full flex items-center justify-center flex-shrink-0">
+                  <span class="text-black font-bold">1</span>
+                </div>
+                <div>
+                  <h3 class="font-bold mb-2">Consultation personnalisée</h3>
+                  <p class="text-gray-600 text-sm">
+                    Rencontre avec Sylvie Feruzi pour comprendre votre vision, vos goûts et vos contraintes.
+                  </p>
+                </div>
+              </div>
+            </div>
+            
+            <div class="process-step reveal">
+              <div class="flex items-start gap-4">
+                <div class="w-12 h-12 bg-gold rounded-full flex items-center justify-center flex-shrink-0">
+                  <span class="text-black font-bold">2</span>
+                </div>
+                <div>
+                  <h3 class="font-bold mb-2">Proposition de menu</h3>
+                  <p class="text-gray-600 text-sm">
+                    Création d'un menu sur-mesure alliant vos préférences et nos spécialités authentiques.
+                  </p>
+                </div>
+              </div>
+            </div>
+            
+            <div class="process-step reveal">
+              <div class="flex items-start gap-4">
+                <div class="w-12 h-12 bg-gold rounded-full flex items-center justify-center flex-shrink-0">
+                  <span class="text-black font-bold">3</span>
+                </div>
+                <div>
+                  <h3 class="font-bold mb-2">Dégustation (optionnelle)</h3>
+                  <p class="text-gray-600 text-sm">
+                    Séance de dégustation pour les événements importants (100+ personnes).
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Step 4-6 -->
+          <div class="space-y-8">
+            <div class="process-step reveal">
+              <div class="flex items-start gap-4">
+                <div class="w-12 h-12 bg-gold rounded-full flex items-center justify-center flex-shrink-0">
+                  <span class="text-black font-bold">4</span>
+                </div>
+                <div>
+                  <h3 class="font-bold mb-2">Finalisation & coordination</h3>
+                  <p class="text-gray-600 text-sm">
+                    Validation définitive du menu, planning détaillé et coordination avec vos autres prestataires.
+                  </p>
+                </div>
+              </div>
+            </div>
+            
+            <div class="process-step reveal">
+              <div class="flex items-start gap-4">
+                <div class="w-12 h-12 bg-gold rounded-full flex items-center justify-center flex-shrink-0">
+                  <span class="text-black font-bold">5</span>
+                </div>
+                <div>
+                  <h3 class="font-bold mb-2">Préparation & mise en place</h3>
+                  <p class="text-gray-600 text-sm">
+                    Préparation minutieuse en cuisine et installation sur site selon le planning convenu.
+                  </p>
+                </div>
+              </div>
+            </div>
+            
+            <div class="process-step reveal">
+              <div class="flex items-start gap-4">
+                <div class="w-12 h-12 bg-gold rounded-full flex items-center justify-center flex-shrink-0">
+                  <span class="text-black font-bold">6</span>
+                </div>
+                <div>
+                  <h3 class="font-bold mb-2">Service & supervision</h3>
+                  <p class="text-gray-600 text-sm">
+                    Service impeccable le jour J avec supervision directe pour une expérience parfaite.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Timeline Visual -->
+          <div class="hidden md:flex items-center justify-center">
+            <div class="relative">
+              <img src="assets/images/timeline-services.svg" alt="Timeline des services Arabesque" 
+                   class="w-full max-w-xs opacity-70" loading="lazy">
+              <div class="absolute inset-0 flex items-center justify-center">
+                <div class="text-center">
+                  <div class="text-4xl mb-2">⏱️</div>
+                  <div class="font-bold text-lg">2-4 semaines</div>
+                  <div class="text-sm text-gray-600">Délai moyen</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Final CTA -->
+  <section class="py-20 bg-gradient-to-br from-gold/10 to-gold/5">
+    <div class="container mx-auto px-4 text-center">
+      <div class="max-w-4xl mx-auto reveal">
+        <span class="inline-block px-4 py-2 bg-gold/20 text-gold font-semibold text-sm rounded-full mb-6">
+          Prêt à commencer ?
+        </span>
+        <h2 class="font-display text-4xl md:text-6xl font-bold mb-6 leading-tight">
+          Donnons vie à votre <span class="text-gold">vision culinaire</span>
+        </h2>
+        <p class="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
+          Chaque service Arabesque Traiteur est une promesse d'excellence, d'authenticité et de moments inoubliables. 
+          Faites confiance à notre expertise pour révéler la beauté de la cuisine congolaise lors de votre événement.
+        </p>
+        
+        <div class="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
+          <a href="contact.html" class="btn btn-gold text-lg px-8 py-4 flex items-center gap-2">
+            <span>📋</span> Demander un devis détaillé
+          </a>
+          <a href="https://wa.me/243859993833?text=Bonjour%20Arabesque%20Traiteur!%20Je%20souhaite%20découvrir%20vos%20services%20premium%20pour%20mon%20événement" 
+             target="_blank" rel="noopener"
+             class="btn btn-outline border-green-500 text-green-600 hover:bg-green-500 hover:text-white text-lg px-8 py-4 flex items-center gap-2">
+            <span>💬</span> Consultation WhatsApp
+          </a>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+          <div class="p-6 rounded-xl bg-white/70 backdrop-blur">
+            <div class="text-3xl mb-3">🏆</div>
+            <h3 class="font-bold mb-2">Excellence garantie</h3>
+            <p class="text-sm text-gray-600">15 ans d'expertise au service de vos événements</p>
+          </div>
+          <div class="p-6 rounded-xl bg-white/70 backdrop-blur">
+            <div class="text-3xl mb-3">🇨🇩</div>
+            <h3 class="font-bold mb-2">Authenticité congolaise</h3>
+            <p class="text-sm text-gray-600">Recettes traditionnelles et spécialités rares</p>
+          </div>
+          <div class="p-6 rounded-xl bg-white/70 backdrop-blur">
+            <div class="text-3xl mb-3">👩‍🍳</div>
+            <h3 class="font-bold mb-2">Équipe dédiée</h3>
+            <p class="text-sm text-gray-600">Sylvie Feruzi et ses chefs passionnés</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Enhanced Footer -->
+  <footer class="bg-gray-900 text-white">
+    <div class="container mx-auto px-4">
+      <!-- Main Footer Content -->
+      <div class="grid md:grid-cols-4 gap-8 py-16">
+        <div class="md:col-span-2">
+          <div class="flex items-center gap-3 mb-6">
+            <div class="w-12 h-12 bg-gold rounded-full flex items-center justify-center">
+              <span class="text-black font-bold text-xl">A</span>
+            </div>
+            <div>
+              <div class="font-display text-xl font-bold">Arabesque Traiteur</div>
+              <div class="text-sm text-gray-400">Services d'Exception • Cuisine Authentique</div>
+            </div>
+          </div>
+          <p class="text-gray-300 mb-6 max-w-md">
+            Mariages, galas, anniversaires et événements privés d'exception. 
+            Découvrez nos services premium et notre service cocktail professionnel à Kinshasa.
+          </p>
+          <div class="flex items-center gap-4">
+            <a href="https://www.instagram.com/arabesque.traiteur/" target="_blank" rel="noopener"
+               class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-gold hover:text-black transition-colors">
+              📷
+            </a>
+            <a href="https://wa.me/243859993833" target="_blank" rel="noopener"
+               class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-green-500 transition-colors">
+              💬
+            </a>
+            <a href="mailto:etarabesque@gmail.com"
+               class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-gold hover:text-black transition-colors">
+              📧
+            </a>
+          </div>
+        </div>
+        
+        <div>
+          <h3 class="font-bold text-lg mb-4">Services Premium</h3>
+          <ul class="space-y-2 text-gray-300 text-sm">
+            <li><a href="#mariages" class="hover:text-gold transition-colors">Mariages d'exception</a></li>
+            <li><a href="#galas" class="hover:text-gold transition-colors">Galas & Réceptions VIP</a></li>
+            <li><a href="#anniversaires" class="hover:text-gold transition-colors">Anniversaires</a></li>
+            <li><a href="#cocktail" class="hover:text-gold transition-colors">Service cocktail</a></li>
+          </ul>
+        </div>
+        
+        <div>
+          <h3 class="font-bold text-lg mb-4">Contact Services</h3>
+          <ul class="space-y-2 text-gray-300 text-sm">
+            <li class="flex items-center gap-2">
+              <span>📞</span> 
+              <a href="tel:+243859993833" class="hover:text-gold transition-colors">+243 859 993 833</a>
+            </li>
+            <li class="flex items-center gap-2">
+              <span>📧</span> 
+              <a href="mailto:etarabesque@gmail.com" class="hover:text-gold transition-colors">etarabesque@gmail.com</a>
+            </li>
+            <li class="flex items-center gap-2">
+              <span>📍</span> Kinshasa, RD Congo
+            </li>
+            <li class="flex items-center gap-2">
+              <span>⏰</span> Consultation 7j/7
+            </li>
+          </ul>
+        </div>
+      </div>
+      
+      <!-- Footer Bottom -->
+      <div class="border-t border-gray-800 py-6 flex flex-col md:flex-row justify-between items-center gap-4 text-sm">
+        <p class="text-gray-400">
+          © <span id="year">2025</span> Arabesque Traiteur • Services d'Exception
+        </p>
+        <div class="flex items-center gap-6 text-gray-400">
+          <a href="contact.html#politique" class="hover:text-gold transition-colors">Politique de confidentialité</a>
+          <a href="contact.html#cgv" class="hover:text-gold transition-colors">Conditions générales</a>
+          <span class="text-xs">🏆 Excellence depuis 2010</span>
+        </div>
       </div>
     </div>
   </footer>
 
-  <script src="/assets/js/main.js"></script>
+  <!-- Scripts -->
+  <script src="assets/js/main.js"></script>
+  
+  <!-- Services-specific JavaScript -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      initializeServicesPage();
+    });
+    
+    function initializeServicesPage() {
+      // Initialize price calculator
+      initializePriceCalculator();
+      
+      // Initialize counter animations
+      initializeCounters();
+      
+      // Initialize smooth scrolling for service links
+      initializeSmoothScrolling();
+    }
+    
+    function initializePriceCalculator() {
+      const eventType = document.getElementById('eventType');
+      const guestCount = document.getElementById('guestCount');
+      const menuFormula = document.getElementById('menuFormula');
+      const cocktailService = document.getElementById('cocktailService');
+      const rareSpecialties = document.getElementById('rareSpecialties');
+      
+      // Event listeners
+      [eventType, guestCount, menuFormula, cocktailService, rareSpecialties].forEach(element => {
+        if (element) {
+          element.addEventListener('change', calculatePrice);
+          element.addEventListener('input', calculatePrice);
+        }
+      });
+      
+      // Update menu formula availability based on guest count
+      guestCount.addEventListener('input', function() {
+        const guests = parseInt(this.value) || 0;
+        if (guests >= 100) {
+          menuFormula.disabled = false;
+        } else {
+          menuFormula.disabled = true;
+        }
+      });
+      
+      // Initial calculation
+      calculatePrice();
+    }
+    
+    function calculatePrice() {
+      const eventType = document.getElementById('eventType').value;
+      const guests = parseInt(document.getElementById('guestCount').value) || 0;
+      const menuFormula = document.getElementById('menuFormula').value;
+      const cocktailService = document.getElementById('cocktailService').checked;
+      const rareSpecialties = document.getElementById('rareSpecialties').checked;
+      
+      if (guests === 0) {
+        updatePriceDisplay(0, []);
+        return;
+      }
+      
+      let basePrice = 0;
+      let priceBreakdown = [];
+      
+      // Calculate base price
+      if (guests <= 50) {
+        basePrice = 35;
+        priceBreakdown.push({
+          item: `Formule Intime (${guests} personnes)`,
+          price: basePrice * guests,
+          detail: `${basePrice}$ × ${guests}`
+        });
+      } else if (guests <= 100) {
+        basePrice = 20;
+        priceBreakdown.push({
+          item: `Formule Optimale (${guests} personnes)`,
+          price: basePrice * guests,
+          detail: `${basePrice}$ × ${guests}`
+        });
+      } else {
+        // Large events with formula selection
+        const formulaPrices = {
+          'essentielle': 15,
+          'premium': 20,
+          'excellence': 25,
+          'deluxe': 30,
+          'vip': 35
+        };
+        basePrice = formulaPrices[menuFormula] || 20;
+        
+        const formulaNames = {
+          'essentielle': 'Essentielle (14 repas)',
+          'premium': 'Premium (18 repas)',
+          'excellence': 'Excellence (20 repas)',
+          'deluxe': 'Deluxe (24 repas)',
+          'vip': 'VIP (28 repas)'
+        };
+        
+        priceBreakdown.push({
+          item: `Formule ${formulaNames[menuFormula]} (${guests} personnes)`,
+          price: basePrice * guests,
+          detail: `${basePrice}$ × ${guests}`
+        });
+      }
+      
+      let total = basePrice * guests;
+      
+      // Add cocktail service
+      if (cocktailService) {
+        let cocktailPrice = 0;
+        if (guests < 55) cocktailPrice = 500;
+        else if (guests < 105) cocktailPrice = 750;
+        else if (guests < 155) cocktailPrice = 900;
+        else cocktailPrice = 1200;
+        
+        priceBreakdown.push({
+          item: 'Service cocktail professionnel',
+          price: cocktailPrice,
+          detail: 'Prestation clé en main'
+        });
+        
+        total += cocktailPrice;
+      }
+      
+      // Add rare specialties supplement
+      if (rareSpecialties) {
+        const rarePrice = Math.ceil(guests * 5); // 5$ supplement per person
+        priceBreakdown.push({
+          item: 'Spécialités rares (supplément)',
+          price: rarePrice,
+          detail: 'Selon disponibilité'
+        });
+        
+        total += rarePrice;
+      }
+      
+      updatePriceDisplay(total, priceBreakdown);
+    }
+    
+    function updatePriceDisplay(total, breakdown) {
+      const priceBreakdownDiv = document.getElementById('priceBreakdown');
+      const totalPriceSpan = document.getElementById('totalPrice');
+      
+      // Update breakdown
+      priceBreakdownDiv.innerHTML = breakdown.map(item => `
+        <div class="flex justify-between items-center p-3 bg-white/5 rounded-lg">
+          <div>
+            <div class="font-semibold text-sm">${item.item}</div>
+            <div class="text-xs text-gray-400">${item.detail}</div>
+          </div>
+          <div class="font-bold text-gold">$${item.price}</div>
+        </div>
+      `).join('');
+      
+      // Update total
+      totalPriceSpan.textContent = `$${total}`;
+      
+      // Animate total if changed
+      totalPriceSpan.style.transform = 'scale(1.1)';
+      setTimeout(() => {
+        totalPriceSpan.style.transform = 'scale(1)';
+      }, 200);
+    }
+    
+    function initializeCounters() {
+      const counters = document.querySelectorAll('[data-counter]');
+      
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            const counter = entry.target;
+            const target = parseInt(counter.dataset.counter);
+            animateCounter(counter, target);
+            observer.unobserve(counter);
+          }
+        });
+      });
+      
+      counters.forEach(counter => observer.observe(counter));
+    }
+    
+    function animateCounter(element, target) {
+      let current = 0;
+      const increment = target / 50;
+      const timer = setInterval(() => {
+        current += increment;
+        if (current >= target) {
+          current = target;
+          clearInterval(timer);
+        }
+        element.textContent = Math.floor(current);
+      }, 30);
+    }
+    
+    function initializeSmoothScrolling() {
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+          e.preventDefault();
+          const target = document.querySelector(this.getAttribute('href'));
+          if (target) {
+            target.scrollIntoView({
+              behavior: 'smooth',
+              block: 'start'
+            });
+          }
+        });
+      });
+    }
+  </script>
+  
+  <!-- Analytics (Optional) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'GA_MEASUREMENT_ID');
+  </script>
 </body>
 </html>
