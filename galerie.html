@@ -1,157 +1,111 @@
-        <!DOCTYPE html>
-        <html lang="fr">
-        <head>
-          <meta charset="UTF-8">
-          <meta name="viewport" content="width=device-width,initial-scale=1.0">
-          <title>Galerie | Arabesque Traiteur</title>
-          <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
-          <link rel="stylesheet" href="assets/css/style.css">
-        
-          <!-- Optionally keep only *gallery-specific* variables/styles here -->
-          <style>
-            .gallery-hero {
-                background: linear-gradient(135deg, #1a1a1a 0%, #8B4513 100%);
-                color: #fff;
-                padding: 70px 0 40px 0;
-                text-align: center;
-                position: relative;
-                overflow: hidden;
-            }
-            .gallery-hero h1 {
-                font-family: 'Playfair Display', serif;
-                font-size: 3rem;
-                margin-bottom: 0.5em;
-                margin-top: 0;
-            }
-            .gallery-hero p {
-                font-size: 1.1rem;
-                max-width: 650px;
-                margin: 0 auto 26px auto;
-            }
-            .gallery-hero .stats-container {
-                display: flex;
-                justify-content: center;
-                flex-wrap: wrap;
-                margin-top: 30px;
-                gap: 55px;
-            }
-            .gallery-hero .stat-item {
-                text-align: center;
-                opacity: .93;
-            }
-            .gallery-hero .stat-number {
-                font-size: 2.4rem;
-                color: #d4af37;
-                font-weight: 700;
-            }
-            .gallery-hero .stat-label {
-                display: block;
-                font-size: 1em;
-                color: #ffe;
-                opacity:.68;
-                margin-top: 4px;
-            }
-            .filter-section {
-                background: #fff;
-                box-shadow: 0 2px 12px rgba(0,0,0,0.05);
-                padding: 32px 0;
-                position: sticky;
-                top: 0;
-                z-index: 2;
-            }
-            .filter-buttons {
-                display: flex;
-                flex-wrap: wrap;
-                gap: 11px;
-                justify-content: center;
-            }
-            .gallery-section {
-                padding: 50px 0 70px 0;
-            }
-            .testimonials-section {
-              background: #f7f7f7;
-              padding: 70px 0;
-            }
-            .cta-section {
-              background: linear-gradient(135deg,#d4af37,#f4d03f);
-              color: #fff;
-              text-align: center;
-              padding: 65px 0 65px 0;
-            }
-            .cta-section h2 {
-              font-family: 'Playfair Display',serif;
-              margin-bottom: 0.5em;
-              font-size: 2.1rem;
-            }
-            @media (max-width:800px){
-              .gallery-hero .stats-container {gap:22px;}
-            }
-          </style>
-        </head>
-        <body>
-        
-        <!-- NAVIGATION (matches index/menu) -->
-        <nav class="main-nav">
-          <div class="container nav-container">
-            <a href="index.html" class="logo">Arabesque</a>
-            <ul class="nav-links">
-              <li><a href="index.html">Accueil</a></li>
-              <li><a href="a-propos.html">À propos</a></li>
-              <li><a href="equipe.html">Équipe</a></li>
-              <li><a href="services.html">Services</a></li>
-              <li><a href="menu.html">Menu</a></li>
-              <li><a href="galerie.html" class="active">Galerie</a></li>
-              <li><a href="contact.html">Contact</a></li>
-            </ul>
-          </div>
-        </nav>
-        
-        <!-- HERO / STATS -->
-        <section class="gallery-hero">
-          <div class="container">
-            <h1>Galerie Arabesque</h1>
-            <p>
-              Plongez dans notre univers visuel&nbsp;:<br>
-              <strong>500+ événements d'exception</strong> – des spécialités congolaises authentiques aux wedding cakes signature, chaque création raconte une histoire d'<strong>excellence culinaire</strong>.
-            </p>
-            <div class="stats-container">
-              <div class="stat-item"><span class="stat-number">500+</span><span class="stat-label">Événements réalisés</span></div>
-              <div class="stat-item"><span class="stat-number">15+</span><span class="stat-label">Années d'expérience</span></div>
-              <div class="stat-item"><span class="stat-number">100%</span><span class="stat-label">Satisfaction client</span></div>
-            </div>
-          </div>
-        </section>
-        
-        <!-- GALLERY FILTERS -->
-        <section class="filter-section">
-          <div class="container">
-            <div class="filter-buttons">
-              <button class="filter-btn active" data-filter="all">Toutes les créations</button>
-              <button class="filter-btn" data-filter="buffets">Buffets & Service</button>
-              <button class="filter-btn" data-filter="plats">Plats Signature</button>
-              <button class="filter-btn" data-filter="equipe">Notre Équipe</button>
-              <button class="filter-btn" data-filter="preparation">En Cuisine</button>
-              <button class="filter-btn" data-filter="events">Événements</button>
-            </div>
-          </div>
-        </section>
-        
-        <!-- GALLERY GRID -->
-        <section class="gallery-section">
-          <div class="container">
-            <div class="gallery-grid" id="galleryGrid">
-              <!-- Example Image Block -->
-              <div class="gallery-item" data-category="buffets">
-                <img src="assets/images/image-14.jpeg" alt="Buffet Élégant" class="gallery-image">
-                <div class="gallery-content">
-                  <h3 class="gallery-title">Buffet Signature Arabesque</h3>
-                  <p class="gallery-description">Présentation raffinée avec salades composées, fruits tropicaux et accompagnements traditionnels. Service haut de gamme pour événements d'exception.</p>
-                  <div class="gallery-tags">
-                    <span class="gallery-tag">Buffet</span>
-                    <span class="gallery-tag">Service Premium</span>
-                  </div>
-                </div>
-              </div>
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Galerie | Arabesque Traiteur</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <style>
+    .gallery-hero {
+      background: linear-gradient(135deg, #1a1a1a 0%, #8B4513 100%);
+      color: #fff;
+      padding: 80px 0 40px 0;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .gallery-hero h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 3rem;
+      margin-bottom: 0.5em;
+    }
+    .gallery-hero p {
+      font-size: 1.15rem;
+      max-width: 650px;
+      margin: 0 auto 26px auto;
+      opacity: 0.93;
+    }
+    .stats-container {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-top: 30px;
+      gap: 55px;
+    }
+    .stat-item { text-align: center; }
+    .stat-number { font-size: 2.4rem; color: #d4af37; font-weight: 700; }
+    .stat-label { display: block; font-size: 1em; color: #ffe; opacity:.68; margin-top: 4px;}
+    .filter-section { background: #fff; box-shadow: 0 2px 14px rgba(0,0,0,0.06); padding: 32px 0; position: sticky; top: 0; z-index: 2;}
+    .filter-buttons { display: flex; flex-wrap: wrap; gap: 11px; justify-content: center;}
+    .gallery-section {padding: 50px 0 70px 0;}
+    .testimonials-section {background: #f7f7f7; padding: 70px 0;}
+    .cta-section {background: linear-gradient(135deg,#d4af37,#f4d03f); color: #fff; text-align: center; padding: 65px 0;}
+    .cta-section h2 {font-family:'Playfair Display',serif;margin-bottom:0.5em;font-size:2.1rem;}
+    @media (max-width:800px){.stats-container {gap:22px;}}
+  </style>
+</head>
+<body>
+
+<!-- NAVIGATION (consistent sitewide) -->
+<nav class="main-nav">
+  <div class="container nav-container">
+    <a href="index.html" class="logo">Arabesque</a>
+    <ul class="nav-links">
+      <li><a href="index.html">Accueil</a></li>
+      <li><a href="a-propos.html">À propos</a></li>
+      <li><a href="equipe.html">Équipe</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="menu.html">Menu</a></li>
+      <li><a href="galerie.html" class="active">Galerie</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- HERO / STATS -->
+<section class="gallery-hero">
+  <div class="container">
+    <h1>Galerie Arabesque</h1>
+    <p>
+      Plongez dans notre univers visuel :<br>
+      <strong>500+ événements d'exception</strong> – des spécialités congolaises authentiques aux wedding cakes signature, chaque création raconte une histoire d'<strong>excellence culinaire</strong>.
+    </p>
+    <div class="stats-container">
+      <div class="stat-item"><span class="stat-number">500+</span><span class="stat-label">Événements réalisés</span></div>
+      <div class="stat-item"><span class="stat-number">15+</span><span class="stat-label">Années d'expérience</span></div>
+      <div class="stat-item"><span class="stat-number">100%</span><span class="stat-label">Satisfaction client</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- FILTER BUTTONS -->
+<section class="filter-section">
+  <div class="container">
+    <div class="filter-buttons">
+      <button class="filter-btn active" data-filter="all">Toutes les créations</button>
+      <button class="filter-btn" data-filter="buffets">Buffets & Service</button>
+      <button class="filter-btn" data-filter="plats">Plats Signature</button>
+      <button class="filter-btn" data-filter="equipe">Notre Équipe</button>
+      <button class="filter-btn" data-filter="preparation">En Cuisine</button>
+      <button class="filter-btn" data-filter="events">Événements</button>
+    </div>
+  </div>
+</section>
+
+<!-- GALLERY SECTION -->
+<section class="gallery-section">
+  <div class="container">
+    <div class="gallery-grid" id="galleryGrid">
+      <!-- Example images: REPLACE/EXTEND with real gallery items -->
+      <div class="gallery-item" data-category="buffets">
+        <img src="assets/images/image-14.jpeg" alt="Buffet Élégant" class="gallery-image">
+        <div class="gallery-content">
+          <h3 class="gallery-title">Buffet Signature Arabesque</h3>
+          <p class="gallery-description">Présentation raffinée avec salades composées, fruits tropicaux et accompagnements traditionnels. Service haut de gamme pour événements d'exception.</p>
+          <div class="gallery-tags"><span class="gallery-tag">Buffet</span><span class="gallery-tag">Service Premium</span></div>
+        </div>
+      </div>
 
                 <div class="gallery-item" data-category="buffets">
                     <img src="assets/images/image-15.jpeg" alt="Station Buffet" class="gallery-image">
