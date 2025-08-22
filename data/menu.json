@@ -203,7 +203,7 @@
           "description": "Pâte croustillante farcie de viande épicée, recette traditionnelle",
           "type": "entree",
           "origine": "Spécialité maison",
-          "image": "assets/images/samoussa-viande.jpg"
+          "image": "assets/images/samoussa-viande.jpeg"
         },
         {
           "id": "brochette-beignets", 
@@ -227,7 +227,7 @@
           "description": "Sélection de fromages internationaux et locaux",
           "type": "entree",
           "origine": "Sélection premium",
-          "image": "assets/images/plateau-fromages.jpg"
+          "image": "assets/images/plateau-fromages.jpeg"
         },
         {
           "id": "rouleau-printemps",
@@ -235,7 +235,7 @@
           "description": "Rouleaux frais aux légumes croquants et herbes fraîches",
           "type": "entree",
           "origine": "Fusion asiatique",
-          "image": "assets/images/rouleau-printemps.jpg"
+          "image": "assets/images/rouleau-printemps.jpeg"
         },
         {
           "id": "mini-burger",
@@ -243,7 +243,7 @@
           "description": "Petits burgers gourmands, viande locale, pain artisanal",
           "type": "entree",
           "origine": "Style américain revisité",
-          "image": "assets/images/mini-burger.jpg"
+          "image": "assets/images/mini-burger.jpeg"
         }
       ]
     },
@@ -260,7 +260,7 @@
           "description": "Tomates, concombres, olives, feta, oignon rouge, vinaigrette à l'huile d'olive",
           "type": "salade",
           "origine": "Méditerranéenne",
-          "image": "assets/images/salade-grecque.jpg",
+          "image": "assets/images/salade-grecque.jpeg",
           "dietary": ["vegetarien"]
         },
         {
@@ -269,7 +269,7 @@
           "description": "Thon, œufs durs, tomates, anchois, olives, haricots verts",
           "type": "salade",
           "origine": "Française classique",
-          "image": "assets/images/salade-nicoise.jpg"
+          "image": "assets/images/salade-nicoise.jpeg"
         },
         {
           "id": "macedoine-legumes",
@@ -277,7 +277,7 @@
           "description": "Mélange coloré de légumes frais en dés, mayonnaise légère",
           "type": "salade",
           "origine": "Classique international",
-          "image": "assets/images/macedoine-legumes.jpg",
+          "image": "assets/images/macedoine-legumes.jpeg",
           "dietary": ["vegetarien"]
         }
       ]
@@ -296,7 +296,7 @@
           "type": "viande",
           "origine": "Spécialité festive congolaise",
           "chef_special": true,
-          "image": "assets/images/cochon-lait-farci.jpg"
+          "image": "assets/images/cochon-lait-farci.jpeg"
         },
         {
           "id": "viande-chevre-nga-nda",
@@ -305,7 +305,7 @@
           "type": "viande",
           "origine": "Tradition ancestrale congolaise",
           "chef_special": true,
-          "image": "assets/images/chevre-nga-nda.jpg"
+          "image": "assets/images/chevre-nga-nda.jpeg"
         },
         {
           "id": "maboke-ngulu",
@@ -314,7 +314,7 @@
           "type": "viande",
           "origine": "Technique traditionnelle congolaise",
           "chef_special": true,
-          "image": "assets/images/maboke-ngulu.jpg"
+          "image": "assets/images/maboke-ngulu.jpeg"
         },
         {
           "id": "brochette-boeuf",
@@ -322,7 +322,7 @@
           "description": "Bœuf tendre grillé aux épices, marinade maison",
           "type": "viande", 
           "origine": "Grillades Arabesque",
-          "image": "assets/images/brochette-boeuf.jpg"
+          "image": "assets/images/brochette-boeuf.jpeg"
         },
         {
           "id": "emince-boeuf-legumes",
@@ -330,7 +330,7 @@
           "description": "Lamelles de bœuf sautées, légumes croquants de saison",
           "type": "viande",
           "origine": "Cuisine moderne",
-          "image": "assets/images/emince-boeuf.jpg"
+          "image": "assets/images/emince-boeuf.jpeg"
         },
         {
           "id": "cote-porc",
@@ -338,7 +338,7 @@
           "description": "Côtes de porc grillées, sauce barbecue maison",
           "type": "viande",
           "origine": "Grillade premium",
-          "image": "assets/images/cote-porc.jpg"
+          "image": "assets/images/cote-porc.jpeg"
         },
         {
           "id": "tripes-chevre",
@@ -346,7 +346,7 @@
           "description": "Tripes mijotées, pommes de terre ou bisamunyu",
           "type": "viande",
           "origine": "Plat traditionnel congolais",
-          "image": "assets/images/tripes-chevre.jpg"
+          "image": "assets/images/tripes-chevre.jpeg"
         },
         {
           "id": "cotes-agneau",
@@ -355,7 +355,7 @@
           "type": "viande",
           "origine": "Cuisine raffinée",
           "premium": true,
-          "image": "assets/images/cotes-agneau.jpg"
+          "image": "assets/images/cotes-agneau.jpeg"
         },
         {
           "id": "gigot-agneau",
@@ -364,7 +364,7 @@
           "type": "viande",
           "origine": "Grande cuisine",
           "premium": true,
-          "image": "assets/images/gigot-agneau.jpg"
+          "image": "assets/images/gigot-agneau.jpeg"
         },
         {
           "id": "dinde",
@@ -372,7 +372,7 @@
           "description": "Dinde fermière rôtie, farce traditionnelle",
           "type": "viande",
           "origine": "Classique des fêtes",
-          "image": "assets/images/dinde-rotie.jpg"
+          "image": "assets/images/dinde-rotie.jpeg"
         }
       ]
     },
@@ -390,7 +390,7 @@
           "type": "poisson",
           "origine": "Spécialité du fleuve Congo",
           "chef_special": true,
-          "image": "assets/images/capitaine-braise.jpg"
+          "image": "assets/images/capitaine-braise.jpeg"
         },
         {
           "id": "capitaine-sauce-maniere", 
@@ -399,7 +399,7 @@
           "type": "poisson",
           "origine": "Recette authentique congolaise",
           "chef_special": true,
-          "image": "assets/images/capitaine-sauce.jpg"
+          "image": "assets/images/capitaine-sauce.jpeg"
         },
         {
           "id": "mbinzo",
@@ -407,7 +407,7 @@
           "description": "Poisson séché traditionnel, préparé selon la coutume",
           "type": "poisson",
           "origine": "Tradition congolaise ancestrale",
-          "image": "assets/images/mbinzo.jpg"
+          "image": "assets/images/mbinzo.jpeg"
         },
         {
           "id": "ndakala",
@@ -415,7 +415,7 @@
           "description": "Petits poissons séchés, spécialité du Congo",
           "type": "poisson",
           "origine": "Tradition du fleuve Congo", 
-          "image": "assets/images/ndakala.jpg"
+          "image": "assets/images/ndakala.jpeg"
         },
         {
           "id": "poisson-fume",
@@ -423,7 +423,7 @@
           "description": "Poisson fumé artisanalement, saveur authentique",
           "type": "poisson",
           "origine": "Technique traditionnelle",
-          "image": "assets/images/poisson-fume.jpg"
+          "image": "assets/images/poisson-fume.jpeg"
         },
         {
           "id": "maboke-poisson-fleuve",
@@ -432,7 +432,7 @@
           "type": "poisson",
           "origine": "Technique traditionnelle congolaise",
           "chef_special": true,
-          "image": "assets/images/maboke-poisson.jpg"
+          "image": "assets/images/maboke-poisson.jpeg"
         },
         {
           "id": "poisson-sale",
@@ -440,7 +440,7 @@
           "description": "Poisson salé et séché, préparation traditionnelle",
           "type": "poisson",
           "origine": "Conservation traditionnelle",
-          "image": "assets/images/poisson-sale.jpg"
+          "image": "assets/images/poisson-sale.jpeg"
         },
         {
           "id": "tilapia-braise",
@@ -448,7 +448,7 @@
           "description": "Tilapia frais braisé aux tomates et épices",
           "type": "poisson",
           "origine": "Poisson d'élevage local",
-          "image": "assets/images/tilapia-braise.jpg"
+          "image": "assets/images/tilapia-braise.jpeg"
         },
         {
           "id": "crevettes",
@@ -457,7 +457,7 @@
           "type": "fruits_mer",
           "origine": "Fruits de mer premium",
           "premium": true,
-          "image": "assets/images/crevettes-sautees.jpg"
+          "image": "assets/images/crevettes-sautees.jpeg"
         }
       ]
     },
@@ -474,7 +474,7 @@
           "description": "Poulet fermier braisé, sauce tomate épicée",
           "type": "volaille",
           "origine": "Classique congolais",
-          "image": "assets/images/poulet-braise.jpg"
+          "image": "assets/images/poulet-braise.jpeg"
         },
         {
           "id": "cuisse-poulet-fume",
@@ -482,7 +482,7 @@
           "description": "Cuisses de poulet fumées artisanalement",
           "type": "volaille",
           "origine": "Technique de fumage local",
-          "image": "assets/images/cuisse-poulet-fume.jpg"
+          "image": "assets/images/cuisse-poulet-fume.jpeg"
         },
         {
           "id": "aile-rond-poulet",
@@ -490,7 +490,7 @@
           "description": "Ailes de poulet marinées et grillées",
           "type": "volaille",
           "origine": "Grillade populaire",
-          "image": "assets/images/aile-poulet.jpg"
+          "image": "assets/images/aile-poulet.jpeg"
         },
         {
           "id": "makayabu-goma",
@@ -499,7 +499,7 @@
           "type": "volaille",
           "origine": "Spécialité de Goma",
           "regional_specialty": true,
-          "image": "assets/images/makayabu.jpg"
+          "image": "assets/images/makayabu.jpeg"
         }
       ]
     },
@@ -518,7 +518,7 @@
           "origine": "Plat national congolais",
           "chef_special": true,
           "dietary": ["vegetarien"],
-          "image": "assets/images/pondu.jpg"
+          "image": "assets/images/pondu.jpeg"
         },
         {
           "id": "fum-bwa",
@@ -527,7 +527,7 @@
           "type": "legume",
           "origine": "Tradition villageoise",
           "dietary": ["vegetarien"],
-          "image": "assets/images/fum-bwa.jpg"
+          "image": "assets/images/fum-bwa.jpeg"
         },
         {
           "id": "haricots-verts",
@@ -536,7 +536,7 @@
           "type": "legume",
           "origine": "Légume classique",
           "dietary": ["vegetarien"],
-          "image": "assets/images/haricots-verts.jpg"
+          "image": "assets/images/haricots-verts.jpeg"
         },
         {
           "id": "aubergines-vertes",
@@ -545,7 +545,7 @@
           "type": "legume", 
           "origine": "Légume local congolais",
           "dietary": ["vegetarien"],
-          "image": "assets/images/aubergines-vertes.jpg"
+          "image": "assets/images/aubergines-vertes.jpeg"
         },
         {
           "id": "ratatouille",
@@ -554,7 +554,7 @@
           "type": "legume",
           "origine": "Cuisine française",
           "dietary": ["vegetarien"],
-          "image": "assets/images/ratatouille.jpg"
+          "image": "assets/images/ratatouille.jpeg"
         },
         {
           "id": "epinards",
@@ -563,7 +563,7 @@
           "type": "legume",
           "origine": "Légume santé",
           "dietary": ["vegetarien"],
-          "image": "assets/images/epinards.jpg"
+          "image": "assets/images/epinards.jpeg"
         },
         {
           "id": "champignons",
@@ -572,7 +572,7 @@
           "type": "legume",
           "origine": "Accompagnement raffiné",
           "dietary": ["vegetarien"],
-          "image": "assets/images/champignons.jpg"
+          "image": "assets/images/champignons.jpeg"
         },
         {
           "id": "petits-pois-carottes",
@@ -581,7 +581,7 @@
           "type": "legume",
           "origine": "Classique français",
           "dietary": ["vegetarien"],
-          "image": "assets/images/petits-pois-carottes.jpg"
+          "image": "assets/images/petits-pois-carottes.jpeg"
         },
         {
           "id": "misili",
@@ -590,7 +590,7 @@
           "type": "legume",
           "origine": "Tradition congolaise",
           "dietary": ["vegetarien"],
-          "image": "assets/images/misili.jpg"
+          "image": "assets/images/misili.jpeg"
         },
         {
           "id": "safu",
@@ -599,7 +599,7 @@
           "type": "legume",
           "origine": "Spécialité locale Congo",
           "dietary": ["vegetarien"],
-          "image": "assets/images/safu.jpg"
+          "image": "assets/images/safu.jpeg"
         },
         {
           "id": "feuille-courge-arachides",
@@ -608,7 +608,7 @@
           "type": "legume",
           "origine": "Tradition culinaire congolaise",
           "dietary": ["vegetarien"],
-          "image": "assets/images/feuille-courge.jpg"
+          "image": "assets/images/feuille-courge.jpeg"
         },
         {
           "id": "dongo-dongo",
@@ -617,7 +617,7 @@
           "type": "legume",
           "origine": "Plat traditionnel congolais",
           "dietary": ["vegetarien"],
-          "image": "assets/images/dongo-dongo.jpg"
+          "image": "assets/images/dongo-dongo.jpeg"
         },
         {
           "id": "matembele-poisson-fume",
@@ -625,7 +625,7 @@
           "description": "Feuilles de patate douce, poisson fumé",
           "type": "legume",
           "origine": "Plat complet traditionnel",
-          "image": "assets/images/matembele.jpg"
+          "image": "assets/images/matembele.jpeg"
         },
         {
           "id": "mbika",
@@ -634,7 +634,7 @@
           "type": "legume",
           "origine": "Tradition congolaise",
           "dietary": ["vegetarien"],
-          "image": "assets/images/mbika.jpg"
+          "image": "assets/images/mbika.jpeg"
         }
       ]
     },
@@ -652,7 +652,7 @@
           "type": "accompagnement",
           "origine": "Classique universel",
           "dietary": ["vegetarien", "sans_gluten"],
-          "image": "assets/images/riz-blanc.jpg"
+          "image": "assets/images/riz-blanc.jpeg"
         },
         {
           "id": "riz-cantonais",
@@ -661,7 +661,7 @@
           "type": "accompagnement",
           "origine": "Cuisine asiatique",
           "dietary": ["vegetarien"],
-          "image": "assets/images/riz-cantonais.jpg"
+          "image": "assets/images/riz-cantonais.jpeg"
         },
         {
           "id": "riz-persille",
@@ -670,7 +670,7 @@
           "type": "accompagnement",
           "origine": "Cuisine française",
           "dietary": ["vegetarien", "sans_gluten"],
-          "image": "assets/images/riz-persille.jpg"
+          "image": "assets/images/riz-persille.jpeg"
         },
         {
           "id": "fufu",
@@ -680,7 +680,7 @@
           "origine": "Tradition congolaise ancestrale",
           "chef_special": true,
           "dietary": ["vegetarien", "sans_gluten"],
-          "image": "assets/images/fufu.jpg"
+          "image": "assets/images/fufu.jpeg"
         },
         {
           "id": "lituma",
@@ -689,7 +689,7 @@
           "type": "accompagnement",
           "origine": "Tradition congolaise",
           "dietary": ["vegetarien", "sans_gluten"],
-          "image": "assets/images/lituma.jpg"
+          "image": "assets/images/lituma.jpeg"
         },
         {
           "id": "pommes-terre-beurre",
@@ -698,7 +698,7 @@
           "type": "accompagnement",
           "origine": "Classique français",
           "dietary": ["vegetarien"],
-          "image": "assets/images/pommes-terre-beurre.jpg"
+          "image": "assets/images/pommes-terre-beurre.jpeg"
         },
         {
           "id": "makemba",
@@ -707,7 +707,7 @@
           "type": "accompagnement",
           "origine": "Tradition congolaise",
           "dietary": ["vegetarien", "sans_gluten"],
-          "image": "assets/images/makemba.jpg"
+          "image": "assets/images/makemba.jpeg"
         },
         {
           "id": "frites",
@@ -716,7 +716,7 @@
           "type": "accompagnement",
           "origine": "Classique international",
           "dietary": ["vegetarien"],
-          "image": "assets/images/frites.jpg"
+          "image": "assets/images/frites.jpeg"
         },
         {
           "id": "bisamunyu",
@@ -725,7 +725,7 @@
           "type": "accompagnement",
           "origine": "Spécialité locale Congo",
           "dietary": ["vegetarien", "sans_gluten"],
-          "image": "assets/images/bisamunyu.jpg"
+          "image": "assets/images/bisamunyu.jpeg"
         },
         {
           "id": "patate-douce",
@@ -734,7 +734,7 @@
           "type": "accompagnement",
           "origine": "Légume traditionnel",
           "dietary": ["vegetarien", "sans_gluten"],
-          "image": "assets/images/patate-douce.jpg"
+          "image": "assets/images/patate-douce.jpeg"
         },
         {
           "id": "manioc-frais",
@@ -743,7 +743,7 @@
           "type": "accompagnement",
           "origine": "Aliment de base congolais",
           "dietary": ["vegetarien", "sans_gluten"],
-          "image": "assets/images/manioc-frais.jpg"
+          "image": "assets/images/manioc-frais.jpeg"
         }
       ]
     },
@@ -761,7 +761,7 @@
           "type": "fruit",
           "origine": "Fraîcheur garantie",
           "dietary": ["vegetarien", "vegan", "sans_gluten"],
-          "image": "assets/images/plateau-fruits.jpg"
+          "image": "assets/images/plateau-fruits.jpeg"
         },
         {
           "id": "fruits-tropicaux",
@@ -770,7 +770,7 @@
           "type": "fruit",
           "origine": "Tropiques africains",
           "dietary": ["vegetarien", "vegan", "sans_gluten"],
-          "image": "assets/images/fruits-tropicaux.jpg"
+          "image": "assets/images/fruits-tropicaux.jpeg"
         }
       ]
     },
@@ -788,7 +788,7 @@
           "type": "specialite",
           "origine": "Tradition rare congolaise",
           "rare_specialty": true,
-          "image": "assets/images/mashanza.jpg"
+          "image": "assets/images/mashanza.jpeg"
         },
         {
           "id": "crocodile",
@@ -798,7 +798,7 @@
           "origine": "Spécialité exceptionnelle",
           "rare_specialty": true,
           "premium": true,
-          "image": "assets/images/crocodile.jpg",
+          "image": "assets/images/crocodile.jpeg",
           "note": "Sur commande spéciale uniquement"
         },
         {
@@ -809,7 +809,7 @@
           "origine": "Mets d'exception congolais",
           "rare_specialty": true,
           "premium": true,
-          "image": "assets/images/tortue.jpg",
+          "image": "assets/images/tortue.jpeg",
           "note": "Sur commande spéciale uniquement - Soumis à réglementation"
         }
       ]
