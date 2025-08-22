@@ -1,516 +1,157 @@
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Galerie Arabesque - Excellence Culinaire à Kinshasa</title>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css">
-    <style>
-        :root {
-            --primary-color: #d4af37;
-            --secondary-color: #1a1a1a;
-            --accent-color: #8B4513;
-            --text-color: #333;
-            --light-bg: #fafafa;
-            --shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-            --transition: all 0.3s ease;
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Inter', sans-serif;
-            line-height: 1.6;
-            color: var(--text-color);
-            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
-            min-height: 100vh;
-        }
-
-        .container {
-            max-width: 1400px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-
-        /* Header Section */
-        .hero-section {
-            background: linear-gradient(135deg, var(--secondary-color) 0%, var(--accent-color) 100%);
-            color: white;
-            padding: 80px 0;
-            text-align: center;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .hero-section::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 100"><path d="M0,0 Q250,50 500,25 T1000,0 L1000,100 L0,100 Z" fill="rgba(255,255,255,0.1)"/></svg>') repeat-x;
-            background-size: 1000px 100px;
-            animation: wave 20s linear infinite;
-        }
-
-        @keyframes wave {
-            0% { transform: translateX(0); }
-            100% { transform: translateX(-1000px); }
-        }
-
-        .hero-content h1 {
-            font-family: 'Playfair Display', serif;
-            font-size: clamp(2.5rem, 5vw, 4rem);
-            margin-bottom: 20px;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
-            position: relative;
-            z-index: 2;
-        }
-
-        .hero-content p {
-            font-size: 1.2rem;
-            margin-bottom: 30px;
-            opacity: 0.9;
-            max-width: 800px;
-            margin-left: auto;
-            margin-right: auto;
-            position: relative;
-            z-index: 2;
-        }
-
-        .stats-container {
-            display: flex;
-            justify-content: center;
-            gap: 60px;
-            margin-top: 40px;
-            flex-wrap: wrap;
-            position: relative;
-            z-index: 2;
-        }
-
-        .stat-item {
-            text-align: center;
-        }
-
-        .stat-number {
-            font-size: 2.5rem;
-            font-weight: 700;
-            color: var(--primary-color);
-            display: block;
-        }
-
-        .stat-label {
-            font-size: 0.9rem;
-            opacity: 0.8;
-        }
-
-        /* Filter Section */
-        .filter-section {
-            background: white;
-            padding: 40px 0;
-            box-shadow: var(--shadow);
-            position: sticky;
-            top: 0;
-            z-index: 100;
-        }
-
-        .filter-buttons {
-            display: flex;
-            justify-content: center;
-            gap: 15px;
-            flex-wrap: wrap;
-        }
-
-        .filter-btn {
-            padding: 12px 24px;
-            border: 2px solid var(--primary-color);
-            background: white;
-            color: var(--primary-color);
-            border-radius: 50px;
-            cursor: pointer;
-            transition: var(--transition);
-            font-weight: 500;
-            font-size: 0.9rem;
-        }
-
-        .filter-btn:hover,
-        .filter-btn.active {
-            background: var(--primary-color);
-            color: white;
-            transform: translateY(-2px);
-            box-shadow: 0 5px 15px rgba(212, 175, 55, 0.3);
-        }
-
-        /* Gallery Grid */
-        .gallery-section {
-            padding: 80px 0;
-        }
-
-        .gallery-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 30px;
-            margin-top: 50px;
-        }
-
-        .gallery-item {
-            background: white;
-            border-radius: 20px;
-            overflow: hidden;
-            box-shadow: var(--shadow);
-            transition: var(--transition);
-            opacity: 1;
-            transform: scale(1);
-        }
-
-        .gallery-item:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
-        }
-
-        .gallery-item.hidden {
-            opacity: 0;
-            transform: scale(0.8);
-            pointer-events: none;
-        }
-
-        .gallery-image {
-            width: 100%;
-            height: 280px;
-            object-fit: cover;
-            cursor: pointer;
-            transition: var(--transition);
-        }
-
-        .gallery-image:hover {
-            transform: scale(1.05);
-        }
-
-        .gallery-content {
-            padding: 25px;
-        }
-
-        .gallery-title {
-            font-family: 'Playfair Display', serif;
-            font-size: 1.3rem;
-            margin-bottom: 10px;
-            color: var(--secondary-color);
-        }
-
-        .gallery-description {
-            color: #666;
-            font-size: 0.95rem;
-            line-height: 1.5;
-            margin-bottom: 15px;
-        }
-
-        .gallery-tags {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 8px;
-        }
-
-        .gallery-tag {
-            background: linear-gradient(135deg, var(--primary-color), #f4d03f);
-            color: white;
-            padding: 4px 12px;
-            border-radius: 15px;
-            font-size: 0.8rem;
-            font-weight: 500;
-        }
-
-        /* Lightbox */
-        .lightbox {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.9);
-            z-index: 1000;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .lightbox.active {
-            display: flex;
-        }
-
-        .lightbox-content {
-            max-width: 90vw;
-            max-height: 90vh;
-            position: relative;
-        }
-
-        .lightbox-image {
-            width: 100%;
-            height: 100%;
-            object-fit: contain;
-            border-radius: 10px;
-        }
-
-        .lightbox-close {
-            position: absolute;
-            top: -40px;
-            right: 0;
-            color: white;
-            font-size: 2rem;
-            cursor: pointer;
-            background: rgba(255, 255, 255, 0.2);
-            border-radius: 50%;
-            width: 40px;
-            height: 40px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        /* Testimonials */
-        .testimonials-section {
-            background: var(--light-bg);
-            padding: 80px 0;
-        }
-
-        .section-title {
-            font-family: 'Playfair Display', serif;
-            font-size: 2.5rem;
-            text-align: center;
-            margin-bottom: 20px;
-            color: var(--secondary-color);
-        }
-
-        .section-subtitle {
-            text-align: center;
-            font-size: 1.1rem;
-            color: #666;
-            margin-bottom: 60px;
-            max-width: 600px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        .testimonials-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 30px;
-        }
-
-        .testimonial-card {
-            background: white;
-            padding: 30px;
-            border-radius: 15px;
-            box-shadow: var(--shadow);
-            position: relative;
-        }
-
-        .testimonial-card::before {
-            content: '"';
-            font-size: 4rem;
-            color: var(--primary-color);
-            position: absolute;
-            top: -10px;
-            left: 20px;
-            font-family: 'Playfair Display', serif;
-        }
-
-        .testimonial-text {
-            font-style: italic;
-            margin-bottom: 20px;
-            color: #555;
-            line-height: 1.6;
-        }
-
-        .testimonial-author {
-            font-weight: 600;
-            color: var(--secondary-color);
-        }
-
-        /* CTA Section */
-        .cta-section {
-            background: linear-gradient(135deg, var(--primary-color), #f4d03f);
-            color: white;
-            padding: 80px 0;
-            text-align: center;
-        }
-
-        .cta-title {
-            font-family: 'Playfair Display', serif;
-            font-size: 2.5rem;
-            margin-bottom: 20px;
-        }
-
-        .cta-description {
-            font-size: 1.1rem;
-            margin-bottom: 40px;
-            opacity: 0.9;
-        }
-
-        .cta-features {
-            display: flex;
-            justify-content: center;
-            gap: 60px;
-            flex-wrap: wrap;
-        }
-
-        .cta-feature {
-            text-align: center;
-        }
-
-        .cta-feature-icon {
-            font-size: 2rem;
-            margin-bottom: 15px;
-            display: block;
-        }
-
-        .cta-feature-text {
-            font-weight: 500;
-        }
-
-        /* Responsive */
-        @media (max-width: 768px) {
-            .stats-container {
-                gap: 30px;
+        <!DOCTYPE html>
+        <html lang="fr">
+        <head>
+          <meta charset="UTF-8">
+          <meta name="viewport" content="width=device-width,initial-scale=1.0">
+          <title>Galerie | Arabesque Traiteur</title>
+          <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+          <link rel="stylesheet" href="assets/css/style.css">
+        
+          <!-- Optionally keep only *gallery-specific* variables/styles here -->
+          <style>
+            .gallery-hero {
+                background: linear-gradient(135deg, #1a1a1a 0%, #8B4513 100%);
+                color: #fff;
+                padding: 70px 0 40px 0;
+                text-align: center;
+                position: relative;
+                overflow: hidden;
             }
-            
-            .gallery-grid {
-                grid-template-columns: 1fr;
-                gap: 20px;
+            .gallery-hero h1 {
+                font-family: 'Playfair Display', serif;
+                font-size: 3rem;
+                margin-bottom: 0.5em;
+                margin-top: 0;
             }
-            
+            .gallery-hero p {
+                font-size: 1.1rem;
+                max-width: 650px;
+                margin: 0 auto 26px auto;
+            }
+            .gallery-hero .stats-container {
+                display: flex;
+                justify-content: center;
+                flex-wrap: wrap;
+                margin-top: 30px;
+                gap: 55px;
+            }
+            .gallery-hero .stat-item {
+                text-align: center;
+                opacity: .93;
+            }
+            .gallery-hero .stat-number {
+                font-size: 2.4rem;
+                color: #d4af37;
+                font-weight: 700;
+            }
+            .gallery-hero .stat-label {
+                display: block;
+                font-size: 1em;
+                color: #ffe;
+                opacity:.68;
+                margin-top: 4px;
+            }
+            .filter-section {
+                background: #fff;
+                box-shadow: 0 2px 12px rgba(0,0,0,0.05);
+                padding: 32px 0;
+                position: sticky;
+                top: 0;
+                z-index: 2;
+            }
             .filter-buttons {
-                gap: 10px;
+                display: flex;
+                flex-wrap: wrap;
+                gap: 11px;
+                justify-content: center;
             }
-            
-            .filter-btn {
-                padding: 10px 16px;
-                font-size: 0.8rem;
+            .gallery-section {
+                padding: 50px 0 70px 0;
             }
-            
-            .cta-features {
-                gap: 40px;
+            .testimonials-section {
+              background: #f7f7f7;
+              padding: 70px 0;
             }
-        }
-
-        /* Loading animation */
-        .gallery-item.loading {
-            opacity: 0.5;
-            animation: pulse 1.5s infinite;
-        }
-
-        @keyframes pulse {
-            0%, 100% { opacity: 0.5; }
-            50% { opacity: 0.8; }
-        }
-
-        /* Add image upload indicator */
-        .upload-indicator {
-            position: fixed;
-            top: 20px;
-            right: 20px;
-            background: var(--primary-color);
-            color: white;
-            padding: 10px 20px;
-            border-radius: 25px;
-            font-size: 0.9rem;
-            box-shadow: var(--shadow);
-            z-index: 1001;
-            display: none;
-        }
-
-        .upload-indicator.show {
-            display: block;
-            animation: slideIn 0.3s ease;
-        }
-
-        @keyframes slideIn {
-            from { transform: translateX(100%); }
-            to { transform: translateX(0); }
-        }
-    </style>
-</head>
-<body>
-<nav class="main-nav">
-      <div class="container nav-container">
-        <a href="index.html" class="logo">Arabesque</a>
-        <ul class="nav-links">
-          <li><a href="index.html">Accueil</a></li>
-          <li><a href="a-propos.html">À propos</a></li>
-          <li><a href="equipe.html">Équipe</a></li>
-          <li><a href="services.html">Services</a></li>
-          <li><a href="menu.html">Menu</a></li>
-          <li><a href="galerie.html" class="active">Galerie</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-      </div>
-    </nav>
-
-    <!-- Upload Indicator -->
-    <div class="upload-indicator" id="uploadIndicator">
-        ✨ Nouvelle image ajoutée à la galerie
-    </div>
-
-    <!-- Hero Section -->
-    <section class="hero-section">
-        <div class="container">
-            <div class="hero-content">
-                <h1>Galerie Arabesque</h1>
-                <p>Plongez dans notre univers visuel : <strong>500+ événements d'exception</strong>, des spécialités congolaises authentiques aux wedding cakes signature, chaque création raconte une histoire d'<strong>excellence culinaire</strong></p>
-                
-                <div class="stats-container">
-                    <div class="stat-item">
-                        <span class="stat-number">500+</span>
-                        <span class="stat-label">Événements réalisés</span>
-                    </div>
-                    <div class="stat-item">
-                        <span class="stat-number">15+</span>
-                        <span class="stat-label">Années d'expérience</span>
-                    </div>
-                    <div class="stat-item">
-                        <span class="stat-number">100%</span>
-                        <span class="stat-label">Satisfaction client</span>
-                    </div>
-                </div>
+            .cta-section {
+              background: linear-gradient(135deg,#d4af37,#f4d03f);
+              color: #fff;
+              text-align: center;
+              padding: 65px 0 65px 0;
+            }
+            .cta-section h2 {
+              font-family: 'Playfair Display',serif;
+              margin-bottom: 0.5em;
+              font-size: 2.1rem;
+            }
+            @media (max-width:800px){
+              .gallery-hero .stats-container {gap:22px;}
+            }
+          </style>
+        </head>
+        <body>
+        
+        <!-- NAVIGATION (matches index/menu) -->
+        <nav class="main-nav">
+          <div class="container nav-container">
+            <a href="index.html" class="logo">Arabesque</a>
+            <ul class="nav-links">
+              <li><a href="index.html">Accueil</a></li>
+              <li><a href="a-propos.html">À propos</a></li>
+              <li><a href="equipe.html">Équipe</a></li>
+              <li><a href="services.html">Services</a></li>
+              <li><a href="menu.html">Menu</a></li>
+              <li><a href="galerie.html" class="active">Galerie</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </div>
+        </nav>
+        
+        <!-- HERO / STATS -->
+        <section class="gallery-hero">
+          <div class="container">
+            <h1>Galerie Arabesque</h1>
+            <p>
+              Plongez dans notre univers visuel&nbsp;:<br>
+              <strong>500+ événements d'exception</strong> – des spécialités congolaises authentiques aux wedding cakes signature, chaque création raconte une histoire d'<strong>excellence culinaire</strong>.
+            </p>
+            <div class="stats-container">
+              <div class="stat-item"><span class="stat-number">500+</span><span class="stat-label">Événements réalisés</span></div>
+              <div class="stat-item"><span class="stat-number">15+</span><span class="stat-label">Années d'expérience</span></div>
+              <div class="stat-item"><span class="stat-number">100%</span><span class="stat-label">Satisfaction client</span></div>
             </div>
-        </div>
-    </section>
-
-    <!-- Filter Section -->
-    <section class="filter-section">
-        <div class="container">
+          </div>
+        </section>
+        
+        <!-- GALLERY FILTERS -->
+        <section class="filter-section">
+          <div class="container">
             <div class="filter-buttons">
-                <button class="filter-btn active" data-filter="all">Toutes les créations</button>
-                <button class="filter-btn" data-filter="buffets">Buffets & Service</button>
-                <button class="filter-btn" data-filter="plats">Plats Signature</button>
-                <button class="filter-btn" data-filter="equipe">Notre Équipe</button>
-                <button class="filter-btn" data-filter="preparation">En Cuisine</button>
-                <button class="filter-btn" data-filter="events">Événements</button>
+              <button class="filter-btn active" data-filter="all">Toutes les créations</button>
+              <button class="filter-btn" data-filter="buffets">Buffets & Service</button>
+              <button class="filter-btn" data-filter="plats">Plats Signature</button>
+              <button class="filter-btn" data-filter="equipe">Notre Équipe</button>
+              <button class="filter-btn" data-filter="preparation">En Cuisine</button>
+              <button class="filter-btn" data-filter="events">Événements</button>
             </div>
-        </div>
-    </section>
-
-    <!-- Gallery Section -->
-    <section class="gallery-section">
-        <div class="container">
+          </div>
+        </section>
+        
+        <!-- GALLERY GRID -->
+        <section class="gallery-section">
+          <div class="container">
             <div class="gallery-grid" id="galleryGrid">
-                <!-- Buffet and Service Images -->
-                <div class="gallery-item" data-category="buffets">
-                    <img src="assets/images/image-45.jpeg" alt="Buffet Élégant" class="gallery-image">
-                    <div class="gallery-content">
-                        <h3 class="gallery-title">Buffet Signature Arabesque</h3>
-                        <p class="gallery-description">Présentation raffinée avec salades composées, fruits tropicaux et accompagnements traditionnels. Service haut de gamme pour événements d'exception.</p>
-                        <div class="gallery-tags">
-                            <span class="gallery-tag">Buffet</span>
-                            <span class="gallery-tag">Service Premium</span>
-                        </div>
-                    </div>
+              <!-- Example Image Block -->
+              <div class="gallery-item" data-category="buffets">
+                <img src="assets/images/image-14.jpeg" alt="Buffet Élégant" class="gallery-image">
+                <div class="gallery-content">
+                  <h3 class="gallery-title">Buffet Signature Arabesque</h3>
+                  <p class="gallery-description">Présentation raffinée avec salades composées, fruits tropicaux et accompagnements traditionnels. Service haut de gamme pour événements d'exception.</p>
+                  <div class="gallery-tags">
+                    <span class="gallery-tag">Buffet</span>
+                    <span class="gallery-tag">Service Premium</span>
+                  </div>
                 </div>
+              </div>
 
                 <div class="gallery-item" data-category="buffets">
                     <img src="assets/images/image-15.jpeg" alt="Station Buffet" class="gallery-image">
