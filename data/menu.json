@@ -211,7 +211,7 @@
           "description": "Beignets moelleux en brochette, accompagnement sauce piquante",
           "type": "entree",
           "origine": "Création Arabesque",
-          "image": "assets/images/brochette-beignets.jpg"
+          "image": "assets/images/image-34.jpeg"
         },
         {
           "id": "saucisse-pili",
@@ -219,7 +219,7 @@
           "description": "Saucisses locales grillées aux épices congolaises",
           "type": "entree",
           "origine": "Tradition locale",
-          "image": "assets/images/saucisse-pili.jpg"
+          "image": "assets/images/saucisse-pili.jpeg"
         },
         {
           "id": "plateau-fromage",
