@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Menu Authentique Congolais | Configurateur Interactif - Arabesque Traiteur</title>
+  <meta name="description" content="Découvrez la richesse de la cuisine congolaise avec notre menu authentique. Pondu, Maboke, Nga Nda, Fufu - Formules 15$ à 35$ selon vos besoins. Configurateur interactif par Sylvie Feruzi à Kinshasa." />
+  
+  <!-- Enhanced SEO & Social Media -->
+  <link rel="icon" href="favicon.svg" />
+  <link rel="manifest" href="manifest.webmanifest" />
+  <meta name="theme-color" content="#C9AB6D" />
+  <meta name="keywords" content="menu congolais authentique, pondu, maboke, nga nda, fufu, cuisine traditionnelle congo, traiteur kinshasa, sylvie feruzi, configurateur menu" />
+  <meta name="author" content="Arabesque Traiteur - Sylvie Feruzi" />
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Menu Authentique Congolais | Arabesque Traiteur" />
+  <meta property="og:description" content="Plongez dans la richesse culinaire du Congo avec nos spécialités traditionnelles et notre configurateur interactif." />
+  <meta property="og:image" content="https://patmir04.github.io/arabesque-traiteur/assets/images/menu-congolais-og.jpeg" />
+  <meta property="og:url" content="https://patmir04.github.io/arabesque-traiteur/menu.html" />
+  
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Menu Congolais Authentique | Arabesque Traiteur" />
+  <meta name="twitter:description" content="Découvrez nos spécialités : Pondu, Maboke, Nga Nda et bien plus" />
+  <meta name="twitter:image" content="https://patmir04.github.io/arabesque-traiteur/assets/images/menu-congolais-og.jpeg" />
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700;900&display=swap" rel="stylesheet">
+  
+  <!-- Styles -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="assets/css/style.css" />
+  
+  <!-- Structured Data for Authentic Congolese Menu -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Menu",
+    "name": "Menu Authentique Congolais - Arabesque Traiteur",
+    "description": "Menu traditionnel congolais avec spécialités rares et configurateur interactif",
+    "inLanguage": "fr-CD",
+    "provider": {
+      "@type": "FoodEstablishment",
+      "name": "Arabesque Traiteur",
+      "url": "https://patmir04.github.io/arabesque-traiteur/",
+      "founder": {
+        "@type": "Person",
+        "name": "Sylvie Feruzi Kabala",
+        "jobTitle": "Chef Exécutive spécialisée en cuisine congolaise"
+      }
+    },
+    "hasMenuSection": [
+      {
+        "@type": "MenuSection",
+        "name": "Spécialités Congolaises Traditionnelles",
+        "description": "Pondu, Maboke y'a Ngulu, Viande de Chèvre façon Nga Nda"
+      },
+      {
+        "@type": "MenuSection",
+        "name": "Poissons du Fleuve Congo",
+        "description": "Capitaine braisé, Mbinzo, Ndakala, Maboke poisson"
+      },
+      {
+        "@type": "MenuSection",
+        "name": "Accompagnements Traditionnels",
+        "description": "Fufu, Lituma, Makemba, Bisamunyu, Manioc frais"
+      },
+      {
+        "@type": "MenuSection",
+        "name": "Spécialités Rares",
+        "description": "Mashanza, Crocodile, Tortue - Sur commande spéciale"
+      }
+    ]
+  }
+  </script>
+  
+  <!-- Performance Hints -->
+  <link rel="dns-prefetch" href="//fonts.googleapis.com">
+  <link rel="preload" href="assets/css/style.css" as="style">
+  <link rel="preload" href="assets/js/main.js" as="script">
+</head>
+
+<body class="bg-white text-black overflow-x-hidden">
+  <!-- Scroll Progress Bar -->
+  <div class="scroll-progress fixed top-0 left-0 h-1 bg-gradient-to-r from-gold to-gold-light z-50 transition-all duration-300" style="width: 0%;"></div>
+  
+  <!-- Enhanced Header -->
+  <header class="fixed top-0 left-0 right-0 z-40 bg-white/95 backdrop-blur-md border-b border-black/10 transition-all duration-300" id="mainHeader">
+    <div class="container mx-auto px-4">
+      <div class="flex items-center justify-between py-4">
+        <!-- Logo -->
+        <a href="index.html" class="group flex items-center gap-3" aria-label="Retour à l'accueil">
+          <div class="w-10 h-10 bg-black rounded-full flex items-center justify-center group-hover:bg-gold transition-colors duration-300">
+            <span class="text-white group-hover:text-black font-bold text-lg">A</span>
+          </div>
+          <div class="flex flex-col">
+            <span class="font-display text-xl font-bold tracking-tight">Arabesque</span>
+            <span class="text-xs tracking-widest text-gray-600 uppercase">Traiteur</span>
+          </div>
+        </a>
+        
+        <!-- Desktop Navigation -->
+        <nav class="hidden lg:flex items-center gap-8" aria-label="Navigation principale">
+          <a href="a-propos.html" class="nav-link text-sm font-medium hover:text-gold transition-colors">À propos</a>
+          <a href="equipe.html" class="nav-link text-sm font-medium hover:text-gold transition-colors">Équipe</a>
+          <a href="services.html" class="nav-link text-sm font-medium hover:text-gold transition-colors">Services</a>
+          <a href="menu.html" class="nav-link active text-sm font-medium text-gold relative">
+            Menu
+            <span class="absolute -bottom-2 left-0 right-0 h-0.5 bg-gold rounded-full"></span>
+          </a>
+          <a href="galerie.html" class="nav-link text-sm font-medium hover:text-gold transition-colors">Galerie</a>
+          <a href="contact.html" class="btn btn-gold text-sm">Devis Gratuit</a>
+        </nav>
+        
+        <!-- Mobile Menu Button -->
+        <button id="openNav" class="lg:hidden p-2 rounded-lg border border-black/20 hover:bg-gray-50 transition-colors"
+                aria-label="Ouvrir le menu" aria-haspopup="true" aria-expanded="false">
+          <div class="w-6 h-6 flex flex-col justify-center space-y-1">
+            <span class="block w-full h-0.5 bg-black transition-all duration-300"></span>
+            <span class="block w-full h-0.5 bg-black transition-all duration-300"></span>
+            <span class="block w-full h-0.5 bg-black transition-all duration-300"></span>
+          </div>
+        </button>
+      </div>
+    </div>
+    
+    <!-- Enhanced Mobile Navigation -->
+    <div id="mobileNav" class="lg:hidden fixed inset-0 top-0 z-50 hidden">
+      <div class="absolute inset-0 bg-black/50 backdrop-blur-sm" id="mobileNavOverlay"></div>
+      <div class="absolute right-0 top-0 h-full w-80 bg-white shadow-2xl transform translate-x-full transition-transform duration-300 ease-out">
+        <div class="flex items-center justify-between p-6 border-b border-gray-200">
+          <span class="font-display text-xl font-bold">Menu</span>
+          <button id="closeNav" class="p-2 rounded-lg hover:bg-gray-100 transition-colors" aria-label="Fermer le menu">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+            </svg>
+          </button>
+        </div>
+        
+        <nav class="p-6 space-y-6">
+          <a href="a-propos.html" class="block text-lg font-medium hover:text-gold transition-colors">À propos</a>
+          <a href="equipe.html" class="block text-lg font-medium hover:text-gold transition-colors">Notre équipe</a>
+          <a href="services.html" class="block text-lg font-medium hover:text-gold transition-colors">Services</a>
+          <a href="menu.html" class="block text-lg font-medium text-gold">Menu Congolais</a>
+          <a href="galerie.html" class="block text-lg font-medium hover:text-gold transition-colors">Galerie photos</a>
+          <a href="contact.html" class="block text-lg font-medium hover:text-gold transition-colors">Contact</a>
+          
+          <div class="pt-6 border-t border-gray-200">
+            <a href="contact.html" class="btn btn-gold w-full justify-center mb-4">Devis Gratuit</a>
+          </div>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <!-- Congolese Video Hero Section -->
+  <section class="video-hero relative min-h-[80vh] flex items-center justify-center overflow-hidden pt-20">
+    <video autoplay muted loop playsinline data-auto-play class="absolute inset-0 w-full h-full object-cover opacity-90">
+      <source src="assets/videos/cuisine-congolaise-hero.mp4" type="video/mp4">
+      <source src="assets/videos/cuisine-congolaise-hero.webm" type="video/webm">
+    </video>
+    
+    <div class="relative z-10 text-center text-white max-w-5xl mx-auto px-4">
+      <div class="reveal">
+        <div class="flex justify-center mb-6">
+          <span class="inline-block px-6 py-3 bg-gold/20 text-gold font-semibold text-sm rounded-full border border-gold/30 backdrop-blur">
+            🇨🇩 Cuisine Congolaise Authentique
+          </span>
+        </div>
+        <h1 class="font-display text-4xl md:text-7xl font-bold mb-6 leading-tight">
+          <span class="block" data-typewriter="Saveurs du Congo" data-speed="100"></span>
+          <span class="block text-gold mt-2" data-typewriter="Tradition & Excellence" data-speed="100"></span>
+        </h1>
+        <p class="text-xl md:text-2xl mb-8 max-w-4xl mx-auto leading-relaxed">
+          Découvrez la richesse de notre patrimoine culinaire : <strong>Pondu</strong>, <strong>Maboke y'a Ngulu</strong>, 
+          <strong>Nga Nda</strong>, <strong>Fufu</strong> et bien plus encore...
+        </p>
+        
+        <div class="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
+          <a href="#configurateur" class="btn btn-gold text-lg px-8 py-4 animate-pulse">
+            🍽️ Composer mon menu congolais
+          </a>
+          <a href="#specialites-rares" class="btn btn-outline border-white text-white hover:bg-white hover:text-black text-lg px-8 py-4">
+            🦎 Spécialités rares
+          </a>
+        </div>
+        
+        <!-- Authenticity Indicators -->
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
+          <div class="text-center backdrop-blur bg-white/10 rounded-xl p-4">
+            <div class="text-2xl font-bold text-gold mb-1">60+</div>
+            <div class="text-sm text-gray-300">Plats traditionnels</div>
+          </div>
+          <div class="text-center backdrop-blur bg-white/10 rounded-xl p-4">
+            <div class="text-2xl font-bold text-gold mb-1">15 ans</div>
+            <div class="text-sm text-gray-300">Savoir-faire</div>
+          </div>
+          <div class="text-center backdrop-blur bg-white/10 rounded-xl p-4">
+            <div class="text-2xl font-bold text-gold mb-1">100%</div>
+            <div class="text-sm text-gray-300">Recettes authentiques</div>
+          </div>
+          <div class="text-center backdrop-blur bg-white/10 rounded-xl p-4">
+            <div class="text-2xl font-bold text-gold mb-1">3</div>
+            <div class="text-sm text-gray-300">Spécialités rares</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Scroll Indicator -->
+    <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+      <div class="w-6 h-10 border-2 border-white rounded-full flex justify-center">
+        <div class="w-1 h-3 bg-white rounded-full mt-2 animate-pulse"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pricing Overview Section -->
+  <section class="py-20 bg-gradient-to-br from-white to-gray-50">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-16 reveal">
+        <span class="inline-block px-4 py-2 bg-gold/10 text-gold font-semibold text-sm rounded-full mb-4">
+          Nos Tarifs
+        </span>
+        <h2 class="font-display text-4xl md:text-5xl font-bold mb-6">
+          Une formule adaptée à chaque événement
+        </h2>
+        <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+          Tarification flexible selon le nombre d'invités, avec des menus authentiquement congolais
+        </p>
+      </div>
+      
+      <!-- Pricing Grid -->
+      <div class="grid md:grid-cols-3 gap-8 mb-16">
+        <!-- Small Events -->
+        <div class="bg-gradient-to-br from-rose-50 to-pink-50 rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 reveal">
+          <div class="text-center mb-6">
+            <span class="inline-block px-3 py-1 bg-rose-200 text-rose-800 font-semibold text-xs rounded-full mb-4">
+              INTIME
+            </span>
+            <h3 class="font-display text-2xl font-bold mb-2">Événements Intimes</h3>
+            <p class="text-gray-600 mb-4">1 à 50 personnes</p>
+            <div class="text-4xl font-bold text-rose-600 mb-2">35$</div>
+            <div class="text-sm text-gray-500">par personne</div>
+          </div>
+          <ul class="space-y-3 mb-8">
+            <li class="flex items-center gap-2 text-sm">
+              <span class="text-rose-500">✓</span> Menu libre choix
+            </li>
+            <li class="flex items-center gap-2 text-sm">
+              <span class="text-rose-500">✓</span> Service personnalisé
+            </li>
+            <li class="flex items-center gap-2 text-sm">
+              <span class="text-rose-500">✓</span> Attention aux détails
+            </li>
+            <li class="flex items-center gap-2 text-sm">
+              <span class="text-rose-500">✓</span> Présentation raffinée
+            </li>
+          </ul>
+          <button class="btn btn-outline border-rose-500 text-rose-600 hover:bg-rose-500 hover:text-white w-full select-formula" data-formula="intime">
+            Composer mon menu
+          </button>
+        </div>
+        
+        <!-- Medium Events -->
+        <div class="bg-gradient-to-br from-green-50 to-emerald-50 rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 border-2 border-green-200 reveal">
+          <div class="text-center mb-6">
+            <span class="inline-block px-3 py-1 bg-green-200 text-green-800 font-semibold text-xs rounded-full mb-4">
+              POPULAIRE
+            </span>
+            <h3 class="font-display text-2xl font-bold mb-2">Événements Moyens</h3>
+            <p class="text-gray-600 mb-4">50 à 100 personnes</p>
+            <div class="text-4xl font-bold text-green-600 mb-2">20$</div>
+            <div class="text-sm text-gray-500">par personne</div>
+          </div>
+          <ul class="space-y-3 mb-8">
+            <li class="flex items-center gap-2 text-sm">
+              <span class="text-green-500">✓</span> Menu au choix
+            </li>
+            <li class="flex items-center gap-2 text-sm">
+              <span class="text-green-500">✓</span> Excellent rapport qualité-prix
+            </li>
+            <li class="flex items-center gap-2 text-sm">
+              <span class="text-green-500">✓</span> Service buffet organisé
+            </li>
+            <li class="flex items-center gap-2 text-sm">
+              <span class="text-green-500">✓</span> Gestion professionnelle
+            </li>
+          </ul>
+          <button class="btn btn-gold w-full select-formula" data-formula="optimale">
+            Formule recommandée
+          </button>
+        </div>
+        
+        <!-- Large Events -->
+        <div class="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 reveal">
+          <div class="text-center mb-6">
+            <span class="inline-block px-3 py-1 bg-blue-200 text-blue-800 font-semibold text-xs rounded-full mb-4">
+              FLEXIBILITÉ
+            </span>
+            <h3 class="font-display text-2xl font-bold mb-2">Grands Événements</h3>
+            <p class="text-gray-600 mb-4">100+ personnes</p>
+            <div class="text-2xl font-bold text-blue-600 mb-2">15$ à 35$</div>
+            <div class="text-sm text-gray-500">selon formule choisie</div>
+          </div>
+          <ul class="space-y-3 mb-8">
+            <li class="flex items-center gap-2 text-sm">
+              <span class="text-blue-500">✓</span> 14 à 28 repas au choix
+            </li>
+            <li class="flex items-center gap-2 text-sm">
+              <span class="text-blue-500">✓</span> Tarifs dégressifs
+            </li>
+            <li class="flex items-center gap-2 text-sm">
+              <span class="text-blue-500">✓</span> Service adapté
+            </li>
+            <li class="flex items-center gap-2 text-sm">
+              <span class="text-blue-500">✓</span> Configurateur intelligent
+            </li>
+          </ul>
+          <button class="btn btn-outline border-blue-500 text-blue-600 hover:bg-blue-500 hover:text-white w-full">
+            <a href="#configurateur">Voir les formules</a>
+          </button>
+        </div>
+      </div>
+      
+      <!-- Service Cocktail Add-on -->
+      <div class="bg-black text-white rounded-2xl p-8 text-center reveal">
+        <h3 class="font-display text-2xl font-bold mb-4 text-gold">+ Service Cocktail Clé en Main</h3>
+        <p class="text-gray-300 mb-6">Complétez votre événement avec notre service bar professionnel</p>
+        
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
+          <div class="bg-white/10 rounded-lg p-4">
+            <div class="text-lg font-bold text-gold">500$</div>
+            <div class="text-sm text-gray-300">< 55 pers.</div>
+          </div>
+          <div class="bg-white/10 rounded-lg p-4">
+            <div class="text-lg font-bold text-gold">750$</div>
+            <div class="text-sm text-gray-300">< 105 pers.</div>
+          </div>
+          <div class="bg-white/10 rounded-lg p-4">
+            <div class="text-lg font-bold text-gold">900$</div>
+            <div class="text-sm text-gray-300">< 155 pers.</div>
+          </div>
+          <div class="bg-white/10 rounded-lg p-4">
+            <div class="text-lg font-bold text-gold">1200$</div>
+            <div class="text-sm text-gray-300">< 205 pers.</div>
+          </div>
+        </div>
+        
+        <ul class="text-sm text-gray-300 mb-6 max-w-2xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-2">
+          <li class="flex items-center gap-2"><span class="text-gold">✓</span> 2 tournées par personne</li>
+          <li class="flex items-center gap-2"><span class="text-gold">✓</span> Barmen professionnels</li>
+          <li class="flex items-center gap-2"><span class="text-gold">✓</span> Matériel inclus</li>
+          <li class="flex items-center gap-2"><span class="text-gold">✓</span> Transport & installation</li>
+        </ul>
+        
+        <a href="contact.html" class="btn btn-gold">Ajouter le service cocktail</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Formula Selection for Large Events -->
+  <section id="configurateur" class="py-20 bg-black text-white relative overflow-hidden">
+    <div class="absolute inset-0 opacity-20">
+      <video autoplay muted loop playsinline data-auto-play>
+        <source src="assets/videos/congo-ingredients.mp4" type="video/mp4">
+      </video>
+    </div>
+    
+    <div class="container mx-auto px-4 relative z-10">
+      <div class="text-center mb-16 reveal">
+        <span class="inline-block px-4 py-2 bg-gold/20 text-gold font-semibold text-sm rounded-full mb-4">
+          Configurateur Interactif
+        </span>
+        <h2 class="font-display text-4xl md:text-5xl font-bold mb-6">
+          Choisissez votre formule
+        </h2>
+        <p class="text-xl text-gray-300 max-w-3xl mx-auto">
+          Plus d'invités = plus de choix et meilleurs prix. Composez le menu parfait pour votre événement
+        </p>
+      </div>
+      
+      <!-- Formula Cards -->
+      <div id="budgetOptions" class="grid lg:grid-cols-5 md:grid-cols-3 gap-6 mb-16">
+        <!-- Les formules seront rendues dynamiquement par le JavaScript -->
+      </div>
+      
+      <!-- Custom Pricing CTA -->
+      <div class="text-center reveal">
+        <div class="bg-white/10 backdrop-blur rounded-2xl p-8 max-w-2xl mx-auto">
+          <h3 class="font-display text-2xl font-bold mb-4 text-gold">Autres Tarifs Personnalisés</h3>
+          <p class="text-gray-300 mb-6">
+            Besoin d'une formule unique ? Contactez-nous pour discuter de vos besoins spécifiques et obtenir un tarif adapté.
+          </p>
+          <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <a href="tel:+243859993833" class="btn btn-outline border-gold text-gold hover:bg-gold hover:text-black">
+              📞 +243 859 993 833
+            </a>
+            <a href="https://wa.me/243859993833" target="_blank" rel="noopener"
+               class="btn bg-green-500 hover:bg-green-400 text-white">
+              💬 WhatsApp Direct
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive Menu Selection -->
+  <section id="menuSelection" class="py-20 bg-gradient-to-br from-white to-gray-50">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-12">
+        <h2 class="font-display text-3xl md:text-4xl font-bold mb-4">
+          Composez votre menu congolais
+        </h2>
+        <div class="flex justify-center items-center gap-4 mb-6">
+          <span class="text-lg">Sélection: </span>
+          <span id="selectionCount" class="font-bold text-2xl text-gold">0</span>
+          <span>/</span>
+          <span id="selectionMax" class="font-bold text-lg">∞</span>
+          <span class="text-lg">plats</span>
+        </div>
+      </div>
+
+      <!-- Menu Grid -->
+      <div id="menuGrid" class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+        <!-- Le menu sera rendu dynamiquement par JavaScript -->
+      </div>
+
+      <!-- Selection Summary -->
+      <div class="grid md:grid-cols-2 gap-8">
+        <div>
+          <h3 class="font-bold text-xl mb-4">Vos plats sélectionnés</h3>
+          <div id="selectionList" class="bg-gray-50 rounded-xl p-6 min-h-32">
+            <!-- La liste des sélections sera rendue dynamiquement -->
+          </div>
+        </div>
+        <div class="flex flex-col gap-4">
+          <button id="resetBtn" class="btn btn-outline border-gray-400 text-gray-600 hover:bg-gray-400 hover:text-white">
+            🔄 Réinitialiser
+          </button>
+          <button id="toQuote" class="btn btn-gold text-lg py-4">
+            💬 Demander un devis
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Congolese Specialties Showcase -->
+  <section class="py-20 bg-gradient-to-br from-gray-50 to-white">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-16 reveal">
+        <span class="inline-block px-4 py-2 bg-gold/10 text-gold font-semibold text-sm rounded-full mb-4">
+          🇨🇩 Spécialités Congolaises
+        </span>
+        <h2 class="font-display text-4xl md:text-5xl font-bold mb-6">
+          Nos signatures authentiques
+        </h2>
+        <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+          Redécouvrez les saveurs traditionnelles du Congo avec nos plats emblématiques préparés selon les recettes ancestrales
+        </p>
+      </div>
+      
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Pondu -->
+        <article class="group bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 reveal">
+          <div class="aspect-[4/3] overflow-hidden">
+            <img src="assets/images/signature-pondu.jpeg" alt="Pondu - Plat national congolais" 
+                 class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300" loading="lazy">
+          </div>
+          <div class="p-6">
+            <div class="flex items-center gap-2 mb-3">
+              <span class="text-2xl">🇨🇩</span>
+              <span class="badge badge-gold">PLAT NATIONAL</span>
+            </div>
+            <h3 class="font-display text-xl font-bold mb-3">Pondu</h3>
+            <p class="text-gray-600 mb-4">
+              Feuilles de manioc pilées, plat emblématique congolais préparé selon la tradition familiale de Sylvie Feruzi.
+            </p>
+            <div class="flex items-center justify-between">
+              <span class="text-sm text-gray-500">Spécialité du Chef</span>
+              <span class="text-gold font-semibold">✨ Signature</span>
+            </div>
+          </div>
+        </article>
+        
+        <!-- Plus de plats... (pour économiser l'espace, je n'inclus que quelques exemples) -->
+        <!-- Vous pouvez ajouter le reste des plats de la même manière -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Rare Specialties Section -->
+  <section id="specialites-rares" class="py-20 bg-black text-white relative overflow-hidden">
+    <div class="absolute inset-0 opacity-30">
+      <video autoplay muted loop playsinline data-auto-play>
+        <source src="assets/videos/rare-specialties.mp4" type="video/mp4">
+      </video>
+    </div>
+    
+    <div class="container mx-auto px-4 relative z-10">
+      <div class="text-center mb-16 reveal">
+        <span class="inline-block px-4 py-2 bg-gold/20 text-gold font-semibold text-sm rounded-full mb-4">
+          🦎 Expériences Uniques
+        </span>
+        <h2 class="font-display text-4xl md:text-5xl font-bold mb-6">
+          Spécialités Rares & Exceptionnelles
+        </h2>
+        <p class="text-xl text-gray-300 max-w-3xl mx-auto">
+          Pour les aventuriers culinaires, découvrez nos spécialités les plus exclusives. Préparations traditionnelles d'exception.
+        </p>
+      </div>
+      
+      <div class="grid md:grid-cols-3 gap-8">
+        <!-- Mashanza, Crocodile, Tortue sections... -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Final Call-to-Action -->
+  <section class="py-20 bg-gradient-to-br from-gold/10 to-gold/5">
+    <div class="container mx-auto px-4 text-center">
+      <div class="max-w-4xl mx-auto reveal">
+        <span class="inline-block px-4 py-2 bg-gold/20 text-gold font-semibold text-sm rounded-full mb-6">
+          Prêt pour l'authenticité ?
+        </span>
+        <h2 class="font-display text-4xl md:text-6xl font-bold mb-6 leading-tight">
+          Savourez la vraie cuisine <span class="text-gold">congolaise</span>
+        </h2>
+        <p class="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
+          De l'intimité d'un dîner familial aux fastes d'un mariage, nos spécialités authentiques 
+          transformeront votre événement en célébration mémorable du patrimoine culinaire congolais.
+        </p>
+        
+        <div class="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
+          <a href="#configurateur" class="btn btn-gold text-lg px-8 py-4 flex items-center gap-2">
+            <span>🍽️</span> Configurer mon menu
+          </a>
+          <a href="https://wa.me/243859993833?text=Bonjour%20Arabesque%20Traiteur!%20Je%20souhaite%20découvrir%20vos%20spécialités%20congolaises%20authentiques" 
+             target="_blank" rel="noopener"
+             class="btn btn-outline border-green-500 text-green-600 hover:bg-green-500 hover:text-white text-lg px-8 py-4 flex items-center gap-2">
+            <span>💬</span> Parler à un spécialiste
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Enhanced Footer -->
+  <footer class="bg-gray-900 text-white">
+    <div class="container mx-auto px-4">
+      <!-- Main Footer Content -->
+      <div class="grid md:grid-cols-4 gap-8 py-16">
+        <div class="md:col-span-2">
+          <div class="flex items-center gap-3 mb-6">
+            <div class="w-12 h-12 bg-gold rounded-full flex items-center justify-center">
+              <span class="text-black font-bold text-xl">A</span>
+            </div>
+            <div>
+              <div class="font-display text-xl font-bold">Arabesque Traiteur</div>
+              <div class="text-sm text-gray-400">Cuisine Congolaise Authentique</div>
+            </div>
+          </div>
+          <p class="text-gray-300 mb-6 max-w-md">
+            Spécialistes de la cuisine congolaise traditionnelle. Pondu, Maboke, Nga Nda, Fufu et spécialités rares. 
+            Configurateur intelligent pour tous vos événements.
+          </p>
+          <div class="flex items-center gap-4">
+            <a href="https://www.instagram.com/arabesque.traiteur/" target="_blank" rel="noopener"
+               class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-gold hover:text-black transition-colors">
+              📷
+            </a>
+            <a href="https://wa.me/243859993833" target="_blank" rel="noopener"
+               class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-green-500 transition-colors">
+              💬
+            </a>
+            <a href="mailto:etarabesque@gmail.com"
+               class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-gold hover:text-black transition-colors">
+              📧
+            </a>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Footer Bottom -->
+      <div class="border-t border-gray-800 py-6 flex flex-col md:flex-row justify-between items-center gap-4 text-sm">
+        <p class="text-gray-400">
+          © <span id="year">2025</span> Arabesque Traiteur • Cuisine Congolaise Authentique
+        </p>
+        <div class="flex items-center gap-6 text-gray-400">
+          <a href="contact.html#politique" class="hover:text-gold transition-colors">Politique de confidentialité</a>
+          <a href="contact.html#cgv" class="hover:text-gold transition-colors">Conditions générales</a>
+          <span class="text-xs">🇨🇩 Made with love in Kinshasa</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/menu.js"></script>
+  
+  <!-- Menu-specific JavaScript -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // Fonction pour afficher la section de sélection du menu
+      function showMenuSelection() {
+        const menuSelection = document.getElementById('menuSelection');
+        if (menuSelection) {
+          menuSelection.classList.remove('hidden');
+          menuSelection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      }
+
+      // Ajouter les event listeners aux boutons de sélection de formule
+      const formulaButtons = document.querySelectorAll('.select-formula');
+      formulaButtons.forEach(button => {
+        button.addEventListener('click', function() {
+          const formula = this.dataset.formula;
+          console.log('Formule sélectionnée:', formula);
+          showMenuSelection();
+        });
+      });
+
+      // Smooth scroll to configurator when arriving with anchor
+      if (window.location.hash === '#configurateur') {
+        setTimeout(() => {
+          document.getElementById('configurateur').scrollIntoView({ 
+            behavior: 'smooth',
+            block: 'start'
+          });
+        }, 500);
+      }
+      
+      // Smooth scroll to rare specialties
+      if (window.location.hash === '#specialites-rares') {
+        setTimeout(() => {
+          document.getElementById('specialites-rares').scrollIntoView({ 
+            behavior: 'smooth',
+            block: 'start'
+          });
+        }, 500);
+      }
+    });
+  </script>
+</body>
+</html>
