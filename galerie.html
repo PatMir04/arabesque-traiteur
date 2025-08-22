@@ -37,20 +37,6 @@
   
   <!-- Gallery-specific styles -->
   <style>
-    .gallery-item {
-      transition: all 0.3s ease;
-      cursor: pointer;
-    }
-    .gallery-item:hover {
-      transform: translateY(-8px);
-      box-shadow: 0 20px 40px rgba(0,0,0,0.15);
-    }
-    .gallery-item img {
-      transition: all 0.3s ease;
-    }
-    .gallery-item:hover img {
-      transform: scale(1.05);
-    }
     .filter-btn.active {
       background: #C9AB6D;
       color: #000;
@@ -75,22 +61,88 @@
       max-height: 90%;
       object-fit: contain;
     }
-    .masonry-grid {
-      column-count: 1;
-      column-gap: 1.5rem;
+    
+    /* CSS Grid Layout (not masonry) */
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
     }
-    @media (min-width: 640px) {
-      .masonry-grid { column-count: 2; }
+    .gallery-item {
+      display: flex;
+      flex-direction: column;
+      background: #fff;
+      border-radius: 1rem;
+      overflow: hidden;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.07);
+      transition: all 0.3s ease;
+      cursor: pointer;
     }
-    @media (min-width: 1024px) {
-      .masonry-grid { column-count: 3; }
+    .gallery-item:hover {
+      box-shadow: 0 10px 24px rgba(0,0,0,0.15);
+      transform: translateY(-4px) scale(1.02);
     }
-    @media (min-width: 1280px) {
-      .masonry-grid { column-count: 4; }
+    .gallery-image {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+      display: block;
+      transition: all 0.3s ease;
     }
-    .masonry-item {
-      break-inside: avoid;
-      margin-bottom: 1.5rem;
+    .gallery-item:hover .gallery-image {
+      transform: scale(1.05);
+    }
+    .gallery-content {
+      padding: 1.25rem;
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+    }
+    .gallery-title {
+      font-size: 1.1rem;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+      color: #1a1a1a;
+    }
+    .gallery-description {
+      font-size: 0.9rem;
+      color: #666;
+      line-height: 1.5;
+      margin-bottom: 1rem;
+      flex-grow: 1;
+    }
+    .gallery-tags {
+      display: flex;
+      gap: 0.5rem;
+      flex-wrap: wrap;
+    }
+    .gallery-tag {
+      background: #f3f4f6;
+      color: #374151;
+      padding: 0.25rem 0.75rem;
+      border-radius: 999px;
+      font-size: 0.75rem;
+      font-weight: 500;
+    }
+    
+    /* Responsive adjustments */
+    @media (max-width: 900px) {
+      .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+      }
+      .gallery-image {
+        height: 180px;
+      }
+    }
+    @media (max-width: 600px) {
+      .gallery-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+      }
+      .gallery-image {
+        height: 200px;
+      }
     }
   </style>
   
@@ -120,7 +172,6 @@
   
   <!-- Performance Hints -->
   <link rel="dns-prefetch" href="//fonts.googleapis.com">
-  <link rel="dns-prefetch" href="//images.unsplash.com">
   <link rel="preload" href="assets/css/style.css" as="style">
   <link rel="preload" href="assets/js/main.js" as="script">
 </head>
@@ -285,16 +336,16 @@
           💒 Buffets
         </button>
         <button class="filter-btn px-6 py-3 rounded-full border-2 border-gray-300 text-gray-600 hover:border-gold hover:text-gold transition-all duration-300" 
-                data-filter="galas">
-          🏆 Galas VIP
+                data-filter="equipe">
+          👥 Notre Équipe
         </button>
         <button class="filter-btn px-6 py-3 rounded-full border-2 border-gray-300 text-gray-600 hover:border-gold hover:text-gold transition-all duration-300" 
-                data-filter="cocktails">
-          🍹 Service Cocktail
-        </button>
-        <button class="filter-btn px-6 py-3 rounded-full border-2 border-gray-300 text-gray-600 hover:border-gold hover:text-gold transition-all duration-300" 
-                data-filter="behind">
+                data-filter="preparation">
           🎬 Coulisses
+        </button>
+        <button class="filter-btn px-6 py-3 rounded-full border-2 border-gray-300 text-gray-600 hover:border-gold hover:text-gold transition-all duration-300" 
+                data-filter="events">
+          🏆 Événements
         </button>
       </div>
     </div>
@@ -304,351 +355,278 @@
   <section id="galerie-portfolio" class="py-20 bg-white">
     <div class="container mx-auto px-4">
       <!-- Gallery Grid -->
-      <div class="masonry-grid" id="galleryGrid">
+      <div class="gallery-grid" id="galleryGrid">
         
-        <!-- Spécialités Congolaises -->
-        <div class="masonry-item masonry-item gallery-item" data-category="specialites">
-          <div class="bg-white rounded-2xl overflow-hidden shadow-lg">
-                  <img src="assets/images/image-14.jpg" alt="Buffet Élégant" class="gallery-image">
-                  <div class="gallery-content">
-                      <h3 class="gallery-title">Buffet Signature Arabesque</h3>
-                      <p class="gallery-description">Présentation raffinée avec salades composées, fruits tropicaux et accompagnements traditionnels. Service haut de gamme pour événements d'exception.</p>
-                      <div class="gallery-tags">
-                          <span class="gallery-tag">Buffet</span>
-                          <span class="gallery-tag">Service Premium</span>
-                      </div>
-                  </div>
-              </div>
+        <!-- Buffet Items -->
+        <div class="gallery-item" data-category="buffets">
+          <img src="assets/images/image-14.jpg" alt="Buffet Élégant" class="gallery-image">
+          <div class="gallery-content">
+            <h3 class="gallery-title">Buffet Signature Arabesque</h3>
+            <p class="gallery-description">Présentation raffinée avec salades composées, fruits tropicaux et accompagnements traditionnels. Service haut de gamme pour événements d'exception.</p>
+            <div class="gallery-tags">
+              <span class="gallery-tag">Buffet</span>
+              <span class="gallery-tag">Service Premium</span>
+            </div>
+          </div>
+        </div>
 
-              <div class="masonry-item gallery-item" data-category="buffets">
-                  <img src="assets/images/image-15.jpg" alt="Station Buffet" class="gallery-image">
-                  <div class="gallery-content">
-                      <h3 class="gallery-title">Station Buffet Complète</h3>
-                      <p class="gallery-description">Plateau de fruits artistiques, salades colorées et préparations traditionnelles. Décoration soignée avec plantes vertes pour une ambiance naturelle.</p>
-                      <div class="gallery-tags">
-                          <span class="gallery-tag">Fruits Tropicaux</span>
-                          <span class="gallery-tag">Décoration</span>
-                      </div>
-                  </div>
-              </div>
+        <div class="gallery-item" data-category="buffets">
+          <img src="assets/images/image-15.jpg" alt="Station Buffet" class="gallery-image">
+          <div class="gallery-content">
+            <h3 class="gallery-title">Station Buffet Complète</h3>
+            <p class="gallery-description">Plateau de fruits artistiques, salades colorées et préparations traditionnelles. Décoration soignée avec plantes vertes pour une ambiance naturelle.</p>
+            <div class="gallery-tags">
+              <span class="gallery-tag">Fruits Tropicaux</span>
+              <span class="gallery-tag">Décoration</span>
+            </div>
+          </div>
+        </div>
 
-              <div class="masonry-item gallery-item" data-category="buffets">
-                  <img src="assets/images/image-16.jpg" alt="Service Chaud" class="gallery-image">
-                  <div class="gallery-content">
-                      <h3 class="gallery-title">Service Plats Chauds</h3>
-                      <p class="gallery-description">Chafing dishes professionnels avec riz parfumé, salades fraîches et plateaux de fruits. Présentation soignée avec personnel en tenue.</p>
-                      <div class="gallery-tags">
-                          <span class="gallery-tag">Plats Chauds</span>
-                          <span class="gallery-tag">Service Pro</span>
-                      </div>
-                  </div>
-              </div>
+        <div class="gallery-item" data-category="buffets">
+          <img src="assets/images/image-17.jpg" alt="Setup Événement" class="gallery-image">
+          <div class="gallery-content">
+            <h3 class="gallery-title">Setup Événement Complet</h3>
+            <p class="gallery-description">Installation professionnelle avec service chaud, saladier géant et présentation artistique des fruits. Service de qualité restaurant.</p>
+            <div class="gallery-tags">
+              <span class="gallery-tag">Événement</span>
+              <span class="gallery-tag">Installation</span>
+            </div>
+          </div>
+        </div>
 
-              <div class="masonry-item gallery-item" data-category="buffets">
-                  <img src="assets/images/image-17.jpg" alt="Setup Événement" class="gallery-image">
-                  <div class="gallery-content">
-                      <h3 class="gallery-title">Setup Événement Complet</h3>
-                      <p class="gallery-description">Installation professionnelle avec service chaud, saladier géant et présentation artistique des fruits. Service de qualité restaurant.</p>
-                      <div class="gallery-tags">
-                          <span class="gallery-tag">Événement</span>
-                          <span class="gallery-tag">Installation</span>
-                      </div>
-                  </div>
-              </div>
+        <div class="gallery-item" data-category="buffets">
+          <img src="assets/images/image-18.jpg" alt="Service Complet" class="gallery-image">
+          <div class="gallery-content">
+            <h3 class="gallery-title">Service Buffet Intégral</h3>
+            <p class="gallery-description">Stations multiples avec plats chauds traditionnels, accompagnements variés et service professionnel. Setup pour grand événement.</p>
+            <div class="gallery-tags">
+              <span class="gallery-tag">Grand Événement</span>
+              <span class="gallery-tag">Service Multiple</span>
+            </div>
+          </div>
+        </div>
 
-              <div class="masonry-item gallery-item" data-category="buffets">
-                  <img src="assets/images/image-18.jpg" alt="Service Complet" class="gallery-image">
-                  <div class="gallery-content">
-                      <h3 class="gallery-title">Service Buffet Intégral</h3>
-                      <p class="gallery-description">Stations multiples avec plats chauds traditionnels, accompagnements variés et service professionnel. Setup pour grand événement.</p>
-                      <div class="gallery-tags">
-                          <span class="gallery-tag">Grand Événement</span>
-                          <span class="gallery-tag">Service Multiple</span>
-                      </div>
-                  </div>
-              </div>
+        <div class="gallery-item" data-category="buffets">
+          <img src="assets/images/image-20.jpg" alt="Buffet Tropical" class="gallery-image">
+          <div class="gallery-content">
+            <h3 class="gallery-title">Buffet Tropical Premium</h3>
+            <p class="gallery-description">Corbeille à fruits exotiques, plateaux artistiques et salades composées. Décoration naturelle avec ananas centerpiece et finitions professionnelles.</p>
+            <div class="gallery-tags">
+              <span class="gallery-tag">Tropical</span>
+              <span class="gallery-tag">Premium</span>
+            </div>
+          </div>
+        </div>
 
-              <div class="masonry-item gallery-item" data-category="buffets">
-                  <img src="assets/images/image-19.jpg" alt="Station Fruits" class="gallery-image">
-                  <div class="gallery-content">
-                      <h3 class="gallery-title">Station Fruits & Salades</h3>
-                      <p class="gallery-description">Présentation artistique avec plateau d'oranges et raisins, saladiers colorés et service sauces maison. Fraîcheur et couleurs garanties.</p>
-                      <div class="gallery-tags">
-                          <span class="gallery-tag">Fruits Frais</span>
-                          <span class="gallery-tag">Couleurs</span>
-                      </div>
-                  </div>
-              </div>
+        <div class="gallery-item" data-category="buffets">
+          <img src="assets/images/image-21.jpg" alt="Station Complète" class="gallery-image">
+          <div class="gallery-content">
+            <h3 class="gallery-title">Station Service Complète</h3>
+            <p class="gallery-description">Service bain-marie professionnel avec plats traditionnels, accompagnements variés et station salade. Organisation parfaite pour réceptions.</p>
+            <div class="gallery-tags">
+              <span class="gallery-tag">Bain-Marie</span>
+              <span class="gallery-tag">Réception</span>
+            </div>
+          </div>
+        </div>
 
-              <div class="masonry-item gallery-item" data-category="buffets">
-                  <img src="assets/images/image-20.jpg" alt="Buffet Tropical" class="gallery-image">
-                  <div class="gallery-content">
-                      <h3 class="gallery-title">Buffet Tropical Premium</h3>
-                      <p class="gallery-description">Corbeille à fruits exotiques, plateaux artistiques et salades composées. Décoration naturelle avec ananas centerpiece et finitions professionnelles.</p>
-                      <div class="gallery-tags">
-                          <span class="gallery-tag">Tropical</span>
-                          <span class="gallery-tag">Premium</span>
-                      </div>
-                  </div>
-              </div>
+        <div class="gallery-item" data-category="buffets">
+          <img src="assets/images/image-22.jpg" alt="Chafing Dishes" class="gallery-image">
+          <div class="gallery-content">
+            <h3 class="gallery-title">Service Chafing Dishes</h3>
+            <p class="gallery-description">Installation de chafing dishes argentés avec plats chauds signature. Nappe délicate et service assiettes empilées pour événement élégant.</p>
+            <div class="gallery-tags">
+              <span class="gallery-tag">Chafing Dishes</span>
+              <span class="gallery-tag">Élégance</span>
+            </div>
+          </div>
+        </div>
 
-              <div class="masonry-item gallery-item" data-category="buffets">
-                  <img src="assets/images/image-21.jpg" alt="Station Complète" class="gallery-image">
-                  <div class="gallery-content">
-                      <h3 class="gallery-title">Station Service Complète</h3>
-                      <p class="gallery-description">Service bain-marie professionnel avec plats traditionnels, accompagnements variés et station salade. Organisation parfaite pour réceptions.</p>
-                      <div class="gallery-tags">
-                          <span class="gallery-tag">Bain-Marie</span>
-                          <span class="gallery-tag">Réception</span>
-                      </div>
-                  </div>
-              </div>
+        <div class="gallery-item" data-category="buffets">
+          <img src="assets/images/image-25.jpg" alt="Table de Service" class="gallery-image">
+          <div class="gallery-content">
+            <h3 class="gallery-title">Table de Service Artistique</h3>
+            <p class="gallery-description">Service organisé avec plats chauds, salades fraîches et plateau de fruits. Couverts empilés et présentation soignée pour événement réussi.</p>
+            <div class="gallery-tags">
+              <span class="gallery-tag">Artistique</span>
+              <span class="gallery-tag">Organisation</span>
+            </div>
+          </div>
+        </div>
 
-              <div class="masonry-item gallery-item" data-category="buffets">
-                  <img src="assets/images/image-22.jpg" alt="Chafing Dishes" class="gallery-image">
-                  <div class="gallery-content">
-                      <h3 class="gallery-title">Service Chafing Dishes</h3>
-                      <p class="gallery-description">Installation de chafing dishes argentés avec plats chauds signature. Nappe délicate et service assiettes empilées pour événement élégant.</p>
-                      <div class="gallery-tags">
-                          <span class="gallery-tag">Chafing Dishes</span>
-                          <span class="gallery-tag">Élégance</span>
-                      </div>
-                  </div>
-              </div>
+        <!-- Team Images -->
+        <div class="gallery-item" data-category="equipe">
+          <img src="assets/images/image-7.jpg" alt="Équipe Service" class="gallery-image">
+          <div class="gallery-content">
+            <h3 class="gallery-title">Équipe de Service</h3>
+            <p class="gallery-description">Nos professionnels en action lors d'un événement. Uniformes impeccables et présentation soignée de nos spécialités culinaires.</p>
+            <div class="gallery-tags">
+              <span class="gallery-tag">Service</span>
+              <span class="gallery-tag">Professionnels</span>
+            </div>
+          </div>
+        </div>
 
-              <div class="masonry-item gallery-item" data-category="buffets">
-                  <img src="assets/images/image-23.jpg" alt="Setup Premium" class="gallery-image">
-                  <div class="gallery-content">
-                      <h3 class="gallery-title">Setup Premium Multiple</h3>
-                      <p class="gallery-description">Trois stations chafing dishes avec variété de plats chauds, nappe florale et décoration soignée. Service haut de gamme pour grandes réceptions.</p>
-                      <div class="gallery-tags">
-                          <span class="gallery-tag">Stations Multiples</span>
-                          <span class="gallery-tag">Haut de Gamme</span>
-                      </div>
-                  </div>
-              </div>
+        <div class="gallery-item" data-category="equipe">
+          <img src="assets/images/image-32.jpg" alt="Duo de Chefs" class="gallery-image">
+          <div class="gallery-content">
+            <h3 class="gallery-title">Nos Chefs Passionnés</h3>
+            <p class="gallery-description">Portrait de nos chefs talentueux devant leurs créations. Savoir-faire, créativité et passion au service de vos papilles.</p>
+            <div class="gallery-tags">
+              <span class="gallery-tag">Chefs</span>
+              <span class="gallery-tag">Créativité</span>
+            </div>
+          </div>
+        </div>
 
-              <div class="masonry-item gallery-item" data-category="buffets">
-                  <img src="assets/images/image-24.jpg" alt="Service Assiettes" class="gallery-image">
-                  <div class="gallery-content">
-                      <h3 class="gallery-title">Service avec Assiettage</h3>
-                      <p class="gallery-description">Setup complet avec stack d'assiettes, chafing dishes et stations salades. Organisation professionnelle pour service fluide et efficace.</p>
-                      <div class="gallery-tags">
-                          <span class="gallery-tag">Assiettage</span>
-                          <span class="gallery-tag">Service Fluide</span>
-                      </div>
-                  </div>
-              </div>
+        <div class="gallery-item" data-category="equipe">
+          <img src="assets/images/image-6.jpg" alt="Chef et Assistante" class="gallery-image">
+          <div class="gallery-content">
+            <h3 class="gallery-title">Binôme Culinaire</h3>
+            <p class="gallery-description">Collaboration parfaite entre nos chefs pour des créations d'exception. Travail d'équipe et expertise technique réunis.</p>
+            <div class="gallery-tags">
+              <span class="gallery-tag">Collaboration</span>
+              <span class="gallery-tag">Expertise</span>
+            </div>
+          </div>
+        </div>
 
-              <div class="masonry-item gallery-item" data-category="buffets">
-                  <img src="assets/images/image-25.jpg" alt="Table de Service" class="gallery-image">
-                  <div class="gallery-content">
-                      <h3 class="gallery-title">Table de Service Artistique</h3>
-                      <p class="gallery-description">Service organisé avec plats chauds, salades fraîches et plateau de fruits. Couverts empilés et présentation soignée pour événement réussi.</p>
-                      <div class="gallery-tags">
-                          <span class="gallery-tag">Artistique</span>
-                          <span class="gallery-tag">Organisation</span>
-                      </div>
-                  </div>
-              </div>
+        <!-- Behind the Scenes / Preparation -->
+        <div class="gallery-item" data-category="preparation">
+          <img src="assets/images/image-31.jpg" alt="Équipe Joyeuse" class="gallery-image">
+          <div class="gallery-content">
+            <h3 class="gallery-title">Moments de Convivialité</h3>
+            <p class="gallery-description">Notre équipe dans un moment de détente lors de la préparation. Bonne humeur et esprit d'équipe, ingrédients secrets de notre réussite.</p>
+            <div class="gallery-tags">
+              <span class="gallery-tag">Convivialité</span>
+              <span class="gallery-tag">Esprit d'Équipe</span>
+            </div>
+          </div>
+        </div>
 
-              <!-- Team Images -->
-              <div class="masonry-item gallery-item" data-category="equipe">
-                  <img src="assets/images/image-8.jpg" alt="Équipe Arabesque" class="gallery-image">
-                  <div class="gallery-content">
-                      <h3 class="gallery-title">L'Équipe Arabesque au Complet</h3>
-                      <p class="gallery-description">Notre équipe professionnelle en tenue de service, fière de présenter nos créations. Expertise, sourires et passion réunis pour votre événement.</p>
-                      <div class="gallery-tags">
-                          <span class="gallery-tag">Équipe</span>
-                          <span class="gallery-tag">Professionnalisme</span>
-                      </div>
-                  </div>
-              </div>
+        <div class="gallery-item" data-category="preparation">
+          <img src="assets/images/image-34.jpg" alt="Brochettes Artisanales" class="gallery-image">
+          <div class="gallery-content">
+            <h3 class="gallery-title">Brochettes Signature</h3>
+            <p class="gallery-description">Préparation artisanale de nos brochettes aux billes dorées. Présentation soignée et technique traditionnelle pour un résultat exceptionnel.</p>
+            <div class="gallery-tags">
+              <span class="gallery-tag">Artisanal</span>
+              <span class="gallery-tag">Brochettes</span>
+            </div>
+          </div>
+        </div>
 
-              <div class="masonry-item gallery-item" data-category="equipe">
-                  <img src="assets/images/image-7.jpg" alt="Équipe Service" class="gallery-image">
-                  <div class="gallery-content">
-                      <h3 class="gallery-title">Équipe de Service</h3>
-                      <p class="gallery-description">Nos professionnels en action lors d'un événement. Uniformes impeccables et présentation soignée de nos spécialités culinaires.</p>
-                      <div class="gallery-tags">
-                          <span class="gallery-tag">Service</span>
-                          <span class="gallery-tag">Professionnels</span>
-                      </div>
-                  </div>
-              </div>
+        <div class="gallery-item" data-category="preparation">
+          <img src="assets/images/image-36.jpg" alt="Préparation Fromage" class="gallery-image">
+          <div class="gallery-content">
+            <h3 class="gallery-title">Art de la Préparation</h3>
+            <p class="gallery-description">Notre chef préparant avec minutie un plateau de fromages et accompagnements. Gestes précis et présentation raffinée.</p>
+            <div class="gallery-tags">
+              <span class="gallery-tag">Minutie</span>
+              <span class="gallery-tag">Fromages</span>
+            </div>
+          </div>
+        </div>
 
-              <div class="masonry-item gallery-item" data-category="equipe">
-                  <img src="assets/images/image-11.jpg" alt="Duo de Chefs" class="gallery-image">
-                  <div class="gallery-content">
-                      <h3 class="gallery-title">Nos Chefs Passionnés</h3>
-                      <p class="gallery-description">Portrait de nos chefs talentueux devant leurs créations. Savoir-faire, créativité et passion au service de vos papilles.</p>
-                      <div class="gallery-tags">
-                          <span class="gallery-tag">Chefs</span>
-                          <span class="gallery-tag">Créativité</span>
-                      </div>
-                  </div>
-              </div>
+        <div class="gallery-item" data-category="preparation">
+          <img src="assets/images/image-37.jpg" alt="Brochettes Charcuterie" class="gallery-image">
+          <div class="gallery-content">
+            <h3 class="gallery-title">Brochettes Gourmandes</h3>
+            <p class="gallery-description">Création de brochettes de charcuterie fine avec rose de salami. Technique de pliage artistique et présentation premium.</p>
+            <div class="gallery-tags">
+              <span class="gallery-tag">Charcuterie</span>
+              <span class="gallery-tag">Art Culinaire</span>
+            </div>
+          </div>
+        </div>
 
-              <div class="masonry-item gallery-item" data-category="equipe">
-                  <img src="assets/images/image-6.jpg" alt="Chef et Assistante" class="gallery-image">
-                  <div class="gallery-content">
-                      <h3 class="gallery-title">Binôme Culinaire</h3>
-                      <p class="gallery-description">Collaboration parfaite entre nos chefs pour des créations d'exception. Travail d'équipe et expertise technique réunis.</p>
-                      <div class="gallery-tags">
-                          <span class="gallery-tag">Collaboration</span>
-                          <span class="gallery-tag">Expertise</span>
-                      </div>
-                  </div>
-              </div>
+        <!-- Signature Dishes -->
+        <div class="gallery-item" data-category="specialites">
+          <img src="assets/images/image-35.jpg" alt="Fufu & Pommes Dorées" class="gallery-image">
+          <div class="gallery-content">
+            <h3 class="gallery-title">Fufu & Pommes de Terre Dorées</h3>
+            <p class="gallery-description">Chafing dish avec fufu traditionnel et pommes de terre parfaitement assaisonnées. Garniture fraîche et présentation authentique congolaise.</p>
+            <div class="gallery-tags">
+              <span class="gallery-tag">Fufu</span>
+              <span class="gallery-tag">Traditionnel</span>
+            </div>
+          </div>
+        </div>
 
-              <!-- Behind the Scenes / Preparation -->
-              <div class="masonry-item gallery-item" data-category="preparation">
-                  <img src="assets/images/image-31.jpg" alt="Équipe Joyeuse" class="gallery-image">
-                  <div class="gallery-content">
-                      <h3 class="gallery-title">Moments de Convivialité</h3>
-                      <p class="gallery-description">Notre équipe dans un moment de détente lors de la préparation. Bonne humeur et esprit d'équipe, ingrédients secrets de notre réussite.</p>
-                      <div class="gallery-tags">
-                          <span class="gallery-tag">Convivialité</span>
-                          <span class="gallery-tag">Esprit d'Équipe</span>
-                      </div>
-                  </div>
-              </div>
+        <div class="gallery-item" data-category="specialites">
+          <img src="assets/images/image-33.jpg" alt="Plat Signature" class="gallery-image">
+          <div class="gallery-content">
+            <h3 class="gallery-title">Mijoté Signature aux Oignons</h3>
+            <p class="gallery-description">Plat mijoté avec sauce riche, oignons caramélisés et légumes colorés. Cuisson traditionnelle et présentation moderne dans chafing dish doré.</p>
+            <div class="gallery-tags">
+              <span class="gallery-tag">Mijoté</span>
+              <span class="gallery-tag">Signature</span>
+            </div>
+          </div>
+        </div>
 
-              <div class="masonry-item gallery-item" data-category="preparation">
-                  <img src="assets/images/image-32.jpg" alt="Chef en Action" class="gallery-image">
-                  <div class="gallery-content">
-                      <h3 class="gallery-title">Chef Stéphane au Travail</h3>
-                      <p class="gallery-description">Notre chef Stéphane Kambale préparant ses spécialités avec passion. Techniques traditionnelles et savoir-faire ancestral préservés.</p>
-                      <div class="gallery-tags">
-                          <span class="gallery-tag">Chef Signature</span>
-                          <span class="gallery-tag">Tradition</span>
-                      </div>
-                  </div>
-              </div>
+        <div class="gallery-item" data-category="specialites">
+          <img src="assets/images/image-38.jpg" alt="Buffet Traditionnel" class="gallery-image">
+          <div class="gallery-content">
+            <h3 class="gallery-title">Buffet Spécialités Congolaises</h3>
+            <p class="gallery-description">Sélection de plats traditionnels avec viandes grillées, accompagnements locaux et pain maison. Authenticité et saveurs du Congo réunies.</p>
+            <div class="gallery-tags">
+              <span class="gallery-tag">Spécialités</span>
+              <span class="gallery-tag">Congo</span>
+            </div>
+          </div>
+        </div>
 
-              <div class="masonry-item gallery-item" data-category="preparation">
-                  <img src="assets/images/image-34.jpg" alt="Brochettes Artisanales" class="gallery-image">
-                  <div class="gallery-content">
-                      <h3 class="gallery-title">Brochettes Signature</h3>
-                      <p class="gallery-description">Préparation artisanale de nos brochettes aux billes dorées. Présentation soignée et technique traditionnelle pour un résultat exceptionnel.</p>
-                      <div class="gallery-tags">
-                          <span class="gallery-tag">Artisanal</span>
-                          <span class="gallery-tag">Brochettes</span>
-                      </div>
-                  </div>
-              </div>
+        <div class="gallery-item" data-category="specialites">
+          <img src="assets/images/image-39.jpg" alt="Poulet Rôti" class="gallery-image">
+          <div class="gallery-content">
+            <h3 class="gallery-title">Poulet Rôti aux Épices</h3>
+            <p class="gallery-description">Poulet entier rôti à la perfection avec marinade aux épices locales. Présentation traditionnelle sur lit de salade fraîche et légumes.</p>
+            <div class="gallery-tags">
+              <span class="gallery-tag">Poulet Rôti</span>
+              <span class="gallery-tag">Épices</span>
+            </div>
+          </div>
+        </div>
 
-              <div class="masonry-item gallery-item" data-category="preparation">
-                  <img src="assets/images/image-36.jpg" alt="Préparation Fromage" class="gallery-image">
-                  <div class="gallery-content">
-                      <h3 class="gallery-title">Art de la Préparation</h3>
-                      <p class="gallery-description">Notre chef préparant avec minutie un plateau de fromages et accompagnements. Gestes précis et présentation raffinée.</p>
-                      <div class="gallery-tags">
-                          <span class="gallery-tag">Minutie</span>
-                          <span class="gallery-tag">Fromages</span>
-                      </div>
-                  </div>
-              </div>
+        <!-- Events & Venues -->
+        <div class="gallery-item" data-category="events">
+          <img src="assets/images/image-40.jpg" alt="Chef en Événement" class="gallery-image">
+          <div class="gallery-content">
+            <h3 class="gallery-title">Service Événement Premium</h3>
+            <p class="gallery-description">Notre chef présentant fièrement ses créations lors d'un événement dans un cadre élégant. Plateau artistique et service personnalisé.</p>
+            <div class="gallery-tags">
+              <span class="gallery-tag">Événement</span>
+              <span class="gallery-tag">Service Premium</span>
+            </div>
+          </div>
+        </div>
 
-              <div class="masonry-item gallery-item" data-category="preparation">
-                  <img src="assets/images/image-37.jpg" alt="Brochettes Charcuterie" class="gallery-image">
-                  <div class="gallery-content">
-                      <h3 class="gallery-title">Brochettes Gourmandes</h3>
-                      <p class="gallery-description">Création de brochettes de charcuterie fine avec rose de salami. Technique de pliage artistique et présentation premium.</p>
-                      <div class="gallery-tags">
-                          <span class="gallery-tag">Charcuterie</span>
-                          <span class="gallery-tag">Art Culinaire</span>
-                      </div>
-                  </div>
-              </div>
+        <div class="gallery-item" data-category="events">
+          <img src="assets/images/image-41.jpg" alt="Plateau Artistique" class="gallery-image">
+          <div class="gallery-content">
+            <h3 class="gallery-title">Plateau Artistique 3 Niveaux</h3>
+            <p class="gallery-description">Création spectaculaire avec plateau à étages, légumes sculpés et présentation florale. Duo de chefs fier de cette œuvre d'art culinaire.</p>
+            <div class="gallery-tags">
+              <span class="gallery-tag">Art Culinaire</span>
+              <span class="gallery-tag">Spectaculaire</span>
+            </div>
+          </div>
+        </div>
 
-              <!-- Signature Dishes -->
-              <div class="masonry-item gallery-item" data-category="plats">
-                  <img src="assets/images/image-35.jpg" alt="Fufu & Pommes Dorées" class="gallery-image">
-                  <div class="gallery-content">
-                      <h3 class="gallery-title">Fufu & Pommes de Terre Dorées</h3>
-                      <p class="gallery-description">Chafing dish avec fufu traditionnel et pommes de terre parfaitement assaisonnées. Garniture fraîche et présentation authentique congolaise.</p>
-                      <div class="gallery-tags">
-                          <span class="gallery-tag">Fufu</span>
-                          <span class="gallery-tag">Traditionnel</span>
-                      </div>
-                  </div>
-              </div>
+        <div class="gallery-item" data-category="events">
+          <img src="assets/images/image-42.jpg" alt="Buffet Complet" class="gallery-image">
+          <div class="gallery-content">
+            <h3 class="gallery-title">Installation Buffet Maison</h3>
+            <p class="gallery-description">Notre chef supervisant un buffet complet à domicile avec plats traditionnels, fufu doré et service personnalisé dans un cadre intime.</p>
+            <div class="gallery-tags">
+              <span class="gallery-tag">Service Domicile</span>
+              <span class="gallery-tag">Buffet Complet</span>
+            </div>
+          </div>
+        </div>
 
-              <div class="masonry-item gallery-item" data-category="plats">
-                  <img src="assets/images/image-33.jpg" alt="Plat Signature" class="gallery-image">
-                  <div class="gallery-content">
-                      <h3 class="gallery-title">Mijoté Signature aux Oignons</h3>
-                      <p class="gallery-description">Plat mijoté avec sauce riche, oignons caramélisés et légumes colorés. Cuisson traditionnelle et présentation moderne dans chafing dish doré.</p>
-                      <div class="gallery-tags">
-                          <span class="gallery-tag">Mijoté</span>
-                          <span class="gallery-tag">Signature</span>
-                      </div>
-                  </div>
-              </div>
-
-              <div class="masonry-item gallery-item" data-category="plats">
-                  <img src="assets/images/image-38.jpg" alt="Buffet Traditionnel" class="gallery-image">
-                  <div class="gallery-content">
-                      <h3 class="gallery-title">Buffet Spécialités Congolaises</h3>
-                      <p class="gallery-description">Sélection de plats traditionnels avec viandes grillées, accompagnements locaux et pain maison. Authenticité et saveurs du Congo réunies.</p>
-                      <div class="gallery-tags">
-                          <span class="gallery-tag">Spécialités</span>
-                          <span class="gallery-tag">Congo</span>
-                      </div>
-                  </div>
-              </div>
-
-              <div class="masonry-item gallery-item" data-category="plats">
-                  <img src="assets/images/image-39.jpg" alt="Poulet Rôti" class="gallery-image">
-                  <div class="gallery-content">
-                      <h3 class="gallery-title">Poulet Rôti aux Épices</h3>
-                      <p class="gallery-description">Poulet entier rôti à la perfection avec marinade aux épices locales. Présentation traditionnelle sur lit de salade fraîche et légumes.</p>
-                      <div class="gallery-tags">
-                          <span class="gallery-tag">Poulet Rôti</span>
-                          <span class="gallery-tag">Épices</span>
-                      </div>
-                  </div>
-              </div>
-
-              <!-- Events & Venues -->
-              <div class="masonry-item gallery-item" data-category="events">
-                  <img src="assets/images/image-40.jpg" alt="Chef en Événement" class="gallery-image">
-                  <div class="gallery-content">
-                      <h3 class="gallery-title">Service Événement Premium</h3>
-                      <p class="gallery-description">Notre chef présentant fièrement ses créations lors d'un événement dans un cadre élégant. Plateau artistique et service personnalisé.</p>
-                      <div class="gallery-tags">
-                          <span class="gallery-tag">Événement</span>
-                          <span class="gallery-tag">Service Premium</span>
-                      </div>
-                  </div>
-              </div>
-
-              <div class="masonry-item gallery-item" data-category="events">
-                  <img src="assets/images/image-41.jpg" alt="Plateau Artistique" class="gallery-image">
-                  <div class="gallery-content">
-                      <h3 class="gallery-title">Plateau Artistique 3 Niveaux</h3>
-                      <p class="gallery-description">Création spectaculaire avec plateau à étages, légumes sculpés et présentation florale. Duo de chefs fier de cette œuvre d'art culinaire.</p>
-                      <div class="gallery-tags">
-                          <span class="gallery-tag">Art Culinaire</span>
-                          <span class="gallery-tag">Spectaculaire</span>
-                      </div>
-                  </div>
-              </div>
-
-              <div class="masonry-item gallery-item" data-category="events">
-                  <img src="assets/images/image-42.jpg" alt="Buffet Complet" class="gallery-image">
-                  <div class="gallery-content">
-                      <h3 class="gallery-title">Installation Buffet Maison</h3>
-                      <p class="gallery-description">Notre chef supervisant un buffet complet à domicile avec plats traditionnels, fufu doré et service personnalisé dans un cadre intime.</p>
-                      <div class="gallery-tags">
-                          <span class="gallery-tag">Service Domicile</span>
-                          <span class="gallery-tag">Buffet Complet</span>
-                      </div>
-                  </div>
-              </div>
-
-              </div>
+      </div>
 
       <!-- Load More Button -->
       <div class="text-center mt-16 reveal">
@@ -658,6 +636,79 @@
         <p class="text-gray-500 text-sm mt-4">
           Plus de 500 événements documentés dans notre portfolio complet
         </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials Section -->
+  <section class="py-20 bg-gradient-to-br from-gold/5 to-gold/15">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-16 reveal">
+        <span class="inline-block px-4 py-2 bg-gold/20 text-gold font-semibold text-sm rounded-full mb-4">
+          🌟 Témoignages Clients
+        </span>
+        <h2 class="font-display text-4xl md:text-5xl font-bold mb-6">
+          Ils ont vécu l'expérience Arabesque
+        </h2>
+        <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+          Découvrez les retours de nos clients sur leurs événements d'exception
+        </p>
+      </div>
+      
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="bg-white rounded-xl p-8 shadow-lg reveal">
+          <div class="flex items-center gap-1 mb-4">
+            <span class="text-gold">⭐⭐⭐⭐⭐</span>
+          </div>
+          <blockquote class="text-gray-600 italic mb-6">
+            "Les photos ne rendent pas justice à la beauté de nos plats ! Le service d'exception de l'équipe Arabesque et les créations de nos chefs ont ému toute notre famille. Chaque détail était parfait."
+          </blockquote>
+          <cite class="flex items-center gap-3">
+            <div class="w-10 h-10 bg-gold/20 rounded-full flex items-center justify-center">
+              <span class="font-bold text-gold">MK</span>
+            </div>
+            <div>
+              <div class="font-semibold">Famille Mukendi</div>
+              <div class="text-sm text-gray-500">Mariage • 2024</div>
+            </div>
+          </cite>
+        </div>
+        
+        <div class="bg-white rounded-xl p-8 shadow-lg reveal">
+          <div class="flex items-center gap-1 mb-4">
+            <span class="text-gold">⭐⭐⭐⭐⭐</span>
+          </div>
+          <blockquote class="text-gray-600 italic mb-6">
+            "Notre gala d'entreprise a été un succès retentissant ! Les photos témoignent de la qualité exceptionnelle du service et de la présentation. Nos invités internationaux ont été conquis par l'authenticité."
+          </blockquote>
+          <cite class="flex items-center gap-3">
+            <div class="w-10 h-10 bg-gold/20 rounded-full flex items-center justify-center">
+              <span class="font-bold text-gold">DC</span>
+            </div>
+            <div>
+              <div class="font-semibold">Directeur Commercial</div>
+              <div class="text-sm text-gray-500">Gala Corporate • 2024</div>
+            </div>
+          </cite>
+        </div>
+        
+        <div class="bg-white rounded-xl p-8 shadow-lg reveal">
+          <div class="flex items-center gap-1 mb-4">
+            <span class="text-gold">⭐⭐⭐⭐⭐</span>
+          </div>
+          <blockquote class="text-gray-600 italic mb-6">
+            "Ces images capturent parfaitement l'ambiance de notre anniversaire. Le service cocktail de David et la créativité de toute l'équipe ont rendu cette soirée inoubliable !"
+          </blockquote>
+          <cite class="flex items-center gap-3">
+            <div class="w-10 h-10 bg-gold/20 rounded-full flex items-center justify-center">
+              <span class="font-bold text-gold">CF</span>
+            </div>
+            <div>
+              <div class="font-semibold">Célébration Familiale</div>
+              <div class="text-sm text-gray-500">Anniversaire • 2024</div>
+            </div>
+          </cite>
+        </div>
       </div>
     </div>
   </section>
@@ -754,9 +805,9 @@
           <h3 class="font-bold text-lg mb-4">Galerie Portfolio</h3>
           <ul class="space-y-2 text-gray-300 text-sm">
             <li><a href="#" class="hover:text-gold transition-colors filter-link" data-filter="specialites">Spécialités congolaises</a></li>
-            <li><a href="#" class="hover:text-gold transition-colors filter-link" data-filter="wedding">Wedding cakes</a></li>
-            <li><a href="#" class="hover:text-gold transition-colors filter-link" data-filter="mariages">Mariages d'exception</a></li>
-            <li><a href="#" class="hover:text-gold transition-colors filter-link" data-filter="galas">Galas VIP</a></li>
+            <li><a href="#" class="hover:text-gold transition-colors filter-link" data-filter="buffets">Buffets & Service</a></li>
+            <li><a href="#" class="hover:text-gold transition-colors filter-link" data-filter="events">Événements VIP</a></li>
+            <li><a href="#" class="hover:text-gold transition-colors filter-link" data-filter="equipe">Notre Équipe</a></li>
           </ul>
         </div>
         
@@ -824,6 +875,9 @@
       
       // Initialize load more functionality
       initializeLoadMore();
+      
+      // Initialize mobile navigation
+      initializeMobileNav();
     }
     
     function initializeCounters() {
@@ -996,15 +1050,33 @@
         }, 1000);
       });
     }
-  </script>
-  
-  <!-- Analytics (Optional) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'GA_MEASUREMENT_ID');
+    
+    function initializeMobileNav() {
+      const openNav = document.getElementById('openNav');
+      const closeNav = document.getElementById('closeNav');
+      const mobileNav = document.getElementById('mobileNav');
+      const mobileNavOverlay = document.getElementById('mobileNavOverlay');
+      
+      openNav.addEventListener('click', function() {
+        mobileNav.classList.remove('hidden');
+        setTimeout(() => {
+          mobileNav.querySelector('.absolute.right-0').classList.remove('translate-x-full');
+        }, 10);
+      });
+      
+      function closeMobileNav() {
+        mobileNav.querySelector('.absolute.right-0').classList.add('translate-x-full');
+        setTimeout(() => {
+          mobileNav.classList.add('hidden');
+        }, 300);
+      }
+      
+      closeNav.addEventListener('click', closeMobileNav);
+      mobileNavOverlay.addEventListener('click', closeMobileNav);
+    }
+    
+    // Set current year
+    document.getElementById('year').textContent = new Date().getFullYear();
   </script>
 </body>
 </html>
