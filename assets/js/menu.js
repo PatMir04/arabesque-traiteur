@@ -12,7 +12,7 @@
 
   try {
     // Fetch menu data - adjust path as needed
-    const res = await fetch('./data/menu.json');
+    const res = await fetch('/data/menu.json');
     const data = await res.json();
 
     let currentFormule = data.formules[0];
