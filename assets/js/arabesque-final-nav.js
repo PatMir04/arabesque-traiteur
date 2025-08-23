@@ -1,9 +1,3 @@
-// ENHANCED Theme-Preserving Navigation - Arabesque Traiteur
-// ✅ Preserves your existing beautiful design
-// ✅ Adds responsive mobile enhancements
-// ✅ ENHANCED: Logo always links to homepage with better detection
-// ✅ Adds smooth scroll effects and professional touches
-
 class ArabesqueFinalNav {
   constructor() {
     this.init();
@@ -16,159 +10,225 @@ class ArabesqueFinalNav {
     this.addScrollEffects();
     this.injectEnhancementStyles();
     console.log('✅ Navigation enhanced while preserving your beautiful theme');
-    console.log('🏠 Logo homepage functionality activated');
+    console.log('🖼️ Logo image functionality activated');
   }
 
   enhanceLogoHomepage() {
-    // Multiple ways to find your logo element
+    // Enhanced selectors to find your PNG logo
     const logoSelectors = [
+      'img[src*="logo.png"]',                     // Direct logo.png image
+      'img[src*="assets/images/logo.png"]',       // Full path to your logo
+      'img[src*="logo"]',                         // Any image with "logo" in src
+      'header img',                               // Any image in header
+      '.logo img',                                // Image inside logo class
+      'a img[src*="logo"]',                       // Logo image inside link
+      '[alt*="logo" i]',                          // Alt text containing logo
+      '[alt*="arabesque" i]',                     // Alt text containing arabesque
+      'header a:has(img)',                        // Link containing image (modern browsers)
+      'header a img',                             // Image inside header link
+    ];
+
+    // Also check for text-based logos as fallback
+    const textLogoSelectors = [
       '.logo',                                    // Your current logo class
       'header .logo',                            // Logo inside header
       'header a[href*="index"]',                 // Any header link to index
       'header a:first-of-type',                  // First link in header
-      'header span.logo',                        // Span with logo class
-      'a:has(.logo)',                           // Link containing logo
       'header .serif',                          // Your serif text style
       '[aria-label*="Accueil"]',                // Accessibility label
-      'header a[href="/"]',                      // Root link
-      'header a[href="./"]',                     // Relative root
     ];
 
     let logoElement = null;
+    let logoType = null;
     
-    // Try each selector until we find the logo
+    // First, try to find image-based logo
     for (const selector of logoSelectors) {
       try {
         logoElement = document.querySelector(selector);
         if (logoElement) {
-          console.log(`🎯 Logo found with selector: ${selector}`);
+          logoType = 'image';
+          console.log(`🖼️ Logo image found with selector: ${selector}`);
           break;
         }
       } catch (e) {
-        // Skip invalid selectors (like :has() in older browsers)
         continue;
       }
     }
 
-    // If still not found, look for elements containing "Arabesque"
+    // If no image found, try text-based logo
     if (!logoElement) {
-      const headerLinks = document.querySelectorAll('header a');
-      headerLinks.forEach(link => {
-        if (link.textContent.includes('Arabesque') || 
-            link.textContent.includes('Traiteur')) {
-          logoElement = link;
-          console.log('🎯 Logo found by text content: Arabesque/Traiteur');
+      for (const selector of textLogoSelectors) {
+        try {
+          logoElement = document.querySelector(selector);
+          if (logoElement) {
+            logoType = 'text';
+            console.log(`📝 Logo text found with selector: ${selector}`);
+            break;
         }
-      });
+        } catch (e) {
+          continue;
+        }
+      }
     }
 
-    // Final fallback: create logo link functionality on any header link
+    // Final fallback: look for elements containing "Arabesque"
     if (!logoElement) {
-      logoElement = document.querySelector('header a');
-      if (logoElement) {
-        console.log('🎯 Using first header link as logo');
-      }
+      const headerElements = document.querySelectorAll('header *');
+      headerElements.forEach(element => {
+        const text = element.textContent.trim().toLowerCase();
+        const alt = element.getAttribute('alt') || '';
+        const src = element.getAttribute('src') || '';
+        
+        if (text.includes('arabesque') || 
+            alt.toLowerCase().includes('arabesque') ||
+            alt.toLowerCase().includes('logo') ||
+            src.includes('logo')) {
+          logoElement = element;
+          logoType = element.tagName.toLowerCase() === 'img' ? 'image' : 'text';
+          console.log(`🔍 Logo found by content search: ${logoType}`);
+        }
+      });
     }
 
     if (logoElement) {
-      // ENHANCED: Ensure it always links to homepage
-      const currentPage = window.location.pathname.split('/').pop();
-      
-      // Set homepage link based on current page location
-      if (currentPage && currentPage !== 'index.html') {
-        logoElement.setAttribute('href', 'index.html');
-      } else {
-        logoElement.setAttribute('href', './index.html');
-      }
-      
-      logoElement.setAttribute('aria-label', 'Arabesque Traiteur - Retour à l\'accueil');
-      logoElement.setAttribute('title', 'Retour à l\'accueil');
-      
-      // Add visual feedback for logo clicks
-      logoElement.style.transition = 'all 0.3s ease';
-      logoElement.style.cursor = 'pointer';
-      
-      // Enhanced hover effects
-      logoElement.addEventListener('mouseenter', () => {
-        logoElement.style.transform = 'translateY(-2px)';
-        logoElement.style.opacity = '0.8';
-      });
-      
-      logoElement.addEventListener('mouseleave', () => {
-        logoElement.style.transform = 'translateY(0)';
-        logoElement.style.opacity = '1';
-      });
-      
-      // Click feedback
-      logoElement.addEventListener('mousedown', () => {
-        logoElement.style.transform = 'translateY(1px)';
-      });
-      
-      logoElement.addEventListener('mouseup', () => {
-        logoElement.style.transform = 'translateY(-2px)';
-      });
-
-      // Enhanced click handler with feedback
-      logoElement.addEventListener('click', (e) => {
-        console.log('🏠 Logo clicked - navigating to homepage');
-        
-        // Add visual feedback
-        logoElement.style.transform = 'scale(0.95)';
-        setTimeout(() => {
-          logoElement.style.transform = 'scale(1)';
-        }, 150);
-        
-        // If we're already on homepage, scroll to top
-        const currentPath = window.location.pathname;
-        if (currentPath.endsWith('index.html') || currentPath === '/' || currentPath.endsWith('/')) {
-          e.preventDefault();
-          window.scrollTo({ top: 0, behavior: 'smooth' });
-          console.log('📜 Already on homepage - scrolled to top');
-        }
-      });
-
-      console.log('✅ Logo homepage functionality successfully activated');
+      this.setupLogoHomepageLink(logoElement, logoType);
     } else {
-      console.log('⚠️ Logo element not found - trying alternative approach');
+      console.log('⚠️ Logo not found - creating fallback');
       this.createLogoHomepageFunctionality();
     }
   }
 
+  setupLogoHomepageLink(logoElement, logoType) {
+    // Find or create the parent link
+    let logoLink = null;
+    
+    if (logoElement.tagName === 'A') {
+      // Logo element is already a link
+      logoLink = logoElement;
+    } else if (logoElement.parentElement && logoElement.parentElement.tagName === 'A') {
+      // Logo is inside a link
+      logoLink = logoElement.parentElement;
+    } else {
+      // Need to wrap logo in a link
+      logoLink = document.createElement('a');
+      logoElement.parentNode.insertBefore(logoLink, logoElement);
+      logoLink.appendChild(logoElement);
+      console.log('🔗 Created new link wrapper for logo');
+    }
+
+    // Configure the homepage link
+    const currentPage = window.location.pathname.split('/').pop();
+    
+    if (currentPage && currentPage !== 'index.html') {
+      logoLink.setAttribute('href', 'index.html');
+    } else {
+      logoLink.setAttribute('href', './index.html');
+    }
+    
+    logoLink.setAttribute('aria-label', 'Arabesque Traiteur - Retour à l\'accueil');
+    logoLink.setAttribute('title', 'Retour à l\'accueil');
+    
+    // Enhanced styling for logo link
+    logoLink.style.display = 'inline-block';
+    logoLink.style.transition = 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)';
+    logoLink.style.cursor = 'pointer';
+
+    // Special styling for image logos
+    if (logoType === 'image') {
+      const logoImg = logoLink.querySelector('img') || logoElement;
+      if (logoImg) {
+        logoImg.style.transition = 'all 0.3s ease';
+        logoImg.style.maxHeight = logoImg.style.maxHeight || '40px'; // Reasonable default
+        logoImg.style.width = 'auto';
+      }
+    }
+    
+    // Enhanced hover effects
+    logoLink.addEventListener('mouseenter', () => {
+      logoLink.style.transform = 'translateY(-2px)';
+      if (logoType === 'image') {
+        logoLink.style.filter = 'brightness(1.1)';
+      } else {
+        logoLink.style.opacity = '0.8';
+      }
+    });
+    
+    logoLink.addEventListener('mouseleave', () => {
+      logoLink.style.transform = 'translateY(0)';
+      if (logoType === 'image') {
+        logoLink.style.filter = 'brightness(1)';
+      } else {
+        logoLink.style.opacity = '1';
+      }
+    });
+    
+    // Click feedback
+    logoLink.addEventListener('mousedown', () => {
+      logoLink.style.transform = 'translateY(1px) scale(0.98)';
+    });
+    
+    logoLink.addEventListener('mouseup', () => {
+      logoLink.style.transform = 'translateY(-2px) scale(1)';
+    });
+
+    // Enhanced click handler with feedback
+    logoLink.addEventListener('click', (e) => {
+      console.log('🏠 Logo clicked - navigating to homepage');
+      
+      // Add visual feedback
+      logoLink.style.transform = 'scale(0.95)';
+      setTimeout(() => {
+        logoLink.style.transform = 'scale(1)';
+      }, 150);
+      
+      // If we're already on homepage, scroll to top
+      const currentPath = window.location.pathname;
+      if (currentPath.endsWith('index.html') || currentPath === '/' || currentPath.endsWith('/')) {
+        e.preventDefault();
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+        console.log('📜 Already on homepage - scrolled to top');
+      }
+    });
+
+    console.log(`✅ Logo ${logoType} homepage functionality successfully activated`);
+  }
+
   createLogoHomepageFunctionality() {
-    // Alternative approach: add click handler to any element with logo-like text
+    // Create a logo if none exists
     const header = document.querySelector('header');
     if (!header) return;
 
-    const logoTexts = header.querySelectorAll('*');
-    logoTexts.forEach(element => {
-      const text = element.textContent.trim().toLowerCase();
-      if ((text.includes('arabesque') && text.includes('traiteur')) ||
-          text === 'arabesque traiteur') {
+    // Try to add logo image if it doesn't exist
+    const logoContainer = header.querySelector('.logo') || header.querySelector('a:first-of-type') || header;
+    
+    if (logoContainer && !logoContainer.querySelector('img[src*="logo"]')) {
+      // Check if logo.png exists
+      const testImg = new Image();
+      testImg.onload = () => {
+        console.log('✅ Logo image found, adding to header');
+        const logoLink = document.createElement('a');
+        logoLink.href = 'index.html';
+        logoLink.setAttribute('aria-label', 'Arabesque Traiteur - Retour à l\'accueil');
         
-        // Make it clickable if it's not already a link
-        if (element.tagName !== 'A') {
-          element.style.cursor = 'pointer';
-          element.setAttribute('role', 'button');
-          element.setAttribute('tabindex', '0');
-          element.setAttribute('aria-label', 'Retour à l\'accueil');
-          
-          const handleHomepageClick = () => {
-            console.log('🏠 Alternative logo clicked - navigating to homepage');
-            window.location.href = 'index.html';
-          };
-          
-          element.addEventListener('click', handleHomepageClick);
-          element.addEventListener('keydown', (e) => {
-            if (e.key === 'Enter' || e.key === ' ') {
-              e.preventDefault();
-              handleHomepageClick();
-            }
-          });
-          
-          console.log('✅ Alternative logo functionality created');
-        }
-      }
-    });
+        const logoImg = document.createElement('img');
+        logoImg.src = 'assets/images/logo.png';
+        logoImg.alt = 'Arabesque Traiteur';
+        logoImg.style.height = '40px';
+        logoImg.style.width = 'auto';
+        
+        logoLink.appendChild(logoImg);
+        
+        // Insert at beginning of header
+        header.insertBefore(logoLink, header.firstChild);
+        
+        // Apply our styling
+        this.setupLogoHomepageLink(logoLink, 'image');
+      };
+      testImg.onerror = () => {
+        console.log('⚠️ Logo image not found at assets/images/logo.png');
+      };
+      testImg.src = 'assets/images/logo.png';
+    }
   }
 
   enhanceExistingMobileNav() {
@@ -336,45 +396,69 @@ class ArabesqueFinalNav {
 
   injectEnhancementStyles() {
     // Only inject if not already present
-    if (document.querySelector('#arabesque-final-nav-styles')) {
+    if (document.querySelector('#arabesque-logo-nav-styles')) {
       return;
     }
 
     const style = document.createElement('style');
-    style.id = 'arabesque-final-nav-styles';
+    style.id = 'arabesque-logo-nav-styles';
     style.textContent = `
-      /* Arabesque Final Navigation Enhancements */
-      /* ✅ Preserves your existing beautiful design */
+      /* Arabesque Logo Navigation Enhancements */
+      /* ✅ Optimized for PNG logo images */
       
-      /* ENHANCED Logo Styling */
-      header .logo,
+      /* ENHANCED Logo Image Styling */
+      header img[src*="logo"],
+      header a img[src*="logo"],
+      header .logo img {
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+        cursor: pointer !important;
+        max-height: 50px !important;
+        width: auto !important;
+        height: auto !important;
+      }
+      
+      /* Logo Link Container */
       header a[aria-label*="accueil"],
-      header [role="button"][aria-label*="accueil"] {
+      header a:has(img[src*="logo"]) {
+        display: inline-block !important;
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+        cursor: pointer !important;
+        text-decoration: none !important;
+      }
+      
+      /* Logo Hover Effects */
+      header a[aria-label*="accueil"]:hover,
+      header a:has(img[src*="logo"]):hover {
+        transform: translateY(-2px);
+        filter: brightness(1.1);
+      }
+      
+      /* Logo Click Effects */
+      header a[aria-label*="accueil"]:active,
+      header a:has(img[src*="logo"]):active {
+        transform: translateY(1px) scale(0.98);
+      }
+      
+      /* Focus styles for logo */
+      header a[aria-label*="accueil"]:focus-visible,
+      header a:has(img[src*="logo"]):focus-visible {
+        outline: 2px solid #C9AB6D;
+        outline-offset: 3px;
+        border-radius: 4px;
+      }
+      
+      /* Text-based Logo Fallback */
+      header .logo,
+      header .serif {
         transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
         cursor: pointer !important;
         display: inline-block;
       }
       
       header .logo:hover,
-      header a[aria-label*="accueil"]:hover,
-      header [role="button"][aria-label*="accueil"]:hover {
+      header .serif:hover {
         transform: translateY(-2px);
         opacity: 0.8;
-      }
-      
-      header .logo:active,
-      header a[aria-label*="accueil"]:active,
-      header [role="button"][aria-label*="accueil"]:active {
-        transform: scale(0.95);
-      }
-      
-      /* Focus styles for logo */
-      header .logo:focus-visible,
-      header a[aria-label*="accueil"]:focus-visible,
-      header [role="button"][aria-label*="accueil"]:focus-visible {
-        outline: 2px solid #C9AB6D;
-        outline-offset: 3px;
-        border-radius: 4px;
       }
       
       /* Hamburger Icon Styling */
@@ -397,7 +481,7 @@ class ArabesqueFinalNav {
         transform-origin: center;
       }
       
-      /* Hamburger Animation - Keeps your button styling */
+      /* Hamburger Animation */
       .enhanced-toggle.active .hamburger-icon span:nth-child(1) {
         transform: translateY(5px) rotate(45deg);
       }
@@ -411,7 +495,7 @@ class ArabesqueFinalNav {
         transform: translateY(-5px) rotate(-45deg);
       }
       
-      /* Enhanced Mobile Navigation - Builds on your existing styles */
+      /* Enhanced Mobile Navigation */
       #mobileNav.mobile-nav-enhanced {
         position: fixed !important;
         top: 0;
@@ -493,12 +577,11 @@ class ArabesqueFinalNav {
         height: 100vh;
       }
       
-      /* Enhanced header on scroll - Builds on your existing styles */
+      /* Enhanced header on scroll */
       header.scrolled {
         background: rgba(255, 255, 255, 0.95) !important;
         backdrop-filter: blur(12px);
         box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
-        transform: translateY(0);
         transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
       }
       
@@ -531,9 +614,16 @@ class ArabesqueFinalNav {
           align-items: center !important;
           justify-content: center !important;
         }
+        
+        /* Ensure logo is touch-friendly on mobile */
+        header img[src*="logo"],
+        header a[aria-label*="accueil"] {
+          min-width: 44px !important;
+          min-height: 44px !important;
+        }
       }
       
-      /* Desktop hover enhancements - Subtle additions to your theme */
+      /* Desktop hover enhancements */
       @media (min-width: 769px) {
         nav a.nav-link {
           position: relative;
@@ -577,10 +667,6 @@ class ArabesqueFinalNav {
         #mobileNav.mobile-nav-enhanced {
           border: 3px solid black;
         }
-        
-        .mobile-overlay-enhanced {
-          background: rgba(0, 0, 0, 0.8);
-        }
       }
       
       /* Reduced motion support */
@@ -589,27 +675,6 @@ class ArabesqueFinalNav {
           animation: none !important;
           transition: none !important;
         }
-        
-        .hamburger-icon span {
-          transition: none !important;
-        }
-        
-        header .logo,
-        header a[aria-label*="accueil"],
-        header [role="button"][aria-label*="accueil"] {
-          transition: none !important;
-        }
-      }
-      
-      /* Focus management for accessibility */
-      .enhanced-toggle:focus-visible {
-        outline: 2px solid #C9AB6D;
-        outline-offset: 2px;
-      }
-      
-      #mobileNav.mobile-nav-enhanced a:focus-visible {
-        outline: 2px solid #C9AB6D;
-        outline-offset: 2px;
       }
     `;
     
