@@ -1,0 +1,179 @@
+<!-- Enhanced Responsive Navigation Header for Arabesque Traiteur -->
+<!-- This header works on all devices and is fully accessible -->
+
+<header class="main-header" id="mainHeader" role="banner">
+  <div class="header-container">
+    <!-- Logo / Brand -->
+    <a href="index.html" class="header-logo" aria-label="Arabesque Traiteur - Retour à l'accueil">
+      <div class="logo-icon" aria-hidden="true">
+        <span>A</span>
+      </div>
+      <div class="logo-text">
+        <div class="logo-title">Arabesque</div>
+        <div class="logo-subtitle">Traiteur</div>
+      </div>
+    </a>
+    
+    <!-- Desktop Navigation -->
+    <nav class="main-nav" role="navigation" aria-label="Navigation principale">
+      <ul class="nav-menu">
+        <li class="nav-item">
+          <a href="a-propos.html" class="nav-link">À propos</a>
+        </li>
+        <li class="nav-item">
+          <a href="equipe.html" class="nav-link">Équipe</a>
+        </li>
+        <li class="nav-item">
+          <a href="services.html" class="nav-link">Services</a>
+        </li>
+        <li class="nav-item">
+          <a href="menu.html" class="nav-link">Menu</a>
+        </li>
+        <li class="nav-item">
+          <a href="galerie.html" class="nav-link">Galerie</a>
+        </li>
+        <li class="nav-item">
+          <a href="contact.html" class="nav-cta">Devis Gratuit</a>
+        </li>
+      </ul>
+    </nav>
+    
+    <!-- Mobile Menu Toggle Button -->
+    <button 
+      class="mobile-menu-toggle" 
+      type="button"
+      aria-expanded="false"
+      aria-controls="mobileNav"
+      aria-label="Ouvrir le menu"
+    >
+      <div class="hamburger" aria-hidden="true">
+        <span></span>
+      </div>
+      <span class="sr-only">Menu</span>
+    </button>
+  </div>
+</header>
+
+<!-- Mobile Navigation Overlay -->
+<div class="mobile-nav-overlay" aria-hidden="true"></div>
+
+<!-- Mobile Navigation Menu -->
+<nav 
+  class="mobile-nav" 
+  id="mobileNav"
+  role="navigation" 
+  aria-label="Menu mobile"
+  aria-hidden="true"
+>
+  <!-- Mobile Nav Header -->
+  <div class="mobile-nav-header">
+    <h2 class="mobile-nav-title">Navigation</h2>
+    <button 
+      class="mobile-nav-close" 
+      type="button"
+      aria-label="Fermer le menu"
+    >
+      <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M15 5L5 15M5 5L15 15" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </button>
+  </div>
+  
+  <!-- Mobile Nav Menu -->
+  <ul class="mobile-nav-menu" role="menu">
+    <li class="mobile-nav-item" role="none">
+      <a href="index.html" class="mobile-nav-link" role="menuitem">
+        <span>🏠</span>
+        Accueil
+      </a>
+    </li>
+    <li class="mobile-nav-item" role="none">
+      <a href="a-propos.html" class="mobile-nav-link" role="menuitem">
+        <span>👋</span>
+        À propos
+      </a>
+    </li>
+    <li class="mobile-nav-item" role="none">
+      <a href="equipe.html" class="mobile-nav-link" role="menuitem">
+        <span>👥</span>
+        Notre équipe
+      </a>
+    </li>
+    <li class="mobile-nav-item" role="none">
+      <a href="services.html" class="mobile-nav-link" role="menuitem">
+        <span>🎯</span>
+        Nos services
+      </a>
+    </li>
+    <li class="mobile-nav-item" role="none">
+      <a href="menu.html" class="mobile-nav-link" role="menuitem">
+        <span>🍽️</span>
+        Menu congolais
+      </a>
+    </li>
+    <li class="mobile-nav-item" role="none">
+      <a href="galerie.html" class="mobile-nav-link" role="menuitem">
+        <span>📸</span>
+        Galerie photos
+      </a>
+    </li>
+    <li class="mobile-nav-item" role="none">
+      <a href="contact.html" class="mobile-nav-link" role="menuitem">
+        <span>📞</span>
+        Contact
+      </a>
+    </li>
+  </ul>
+  
+  <!-- Mobile CTA Button -->
+  <a href="contact.html" class="mobile-nav-cta">
+    <span>📋</span>
+    Demander un devis gratuit
+  </a>
+  
+  <!-- Mobile Nav Footer (Optional) -->
+  <div class="mobile-nav-footer" style="padding: 1rem 1.5rem; text-align: center; border-top: 1px solid rgba(0,0,0,0.1); margin-top: auto;">
+    <p style="margin: 0; font-size: 0.8rem; color: #666;">
+      <strong>Arabesque Traiteur</strong><br>
+      Cuisine congolaise authentique
+    </p>
+    <div style="margin-top: 0.5rem; display: flex; justify-content: center; gap: 1rem;">
+      <a href="tel:+243859993833" style="color: #C9AB6D; text-decoration: none; font-size: 0.8rem;">
+        📞 +243 859 993 833
+      </a>
+      <a href="https://wa.me/243859993833" target="_blank" rel="noopener" style="color: #25D366; text-decoration: none; font-size: 0.8rem;">
+        💬 WhatsApp
+      </a>
+    </div>
+  </div>
+</nav>
+
+<!-- 
+USAGE INSTRUCTIONS:
+
+1. Include the CSS file: <link rel="stylesheet" href="assets/css/navigation-system.css">
+2. Include the JS file: <script src="assets/js/navigation-system.js"></script>
+3. Replace your existing header with this HTML structure
+4. Ensure you have a main content element with id="main-content" for skip link
+5. Test on all devices and screen sizes
+
+ACCESSIBILITY FEATURES:
+- ARIA labels and roles for screen readers
+- Keyboard navigation support (Tab, Arrow keys, Escape)
+- Focus management and trapping
+- Skip link for screen readers
+- Proper semantic HTML structure
+- High contrast mode support
+- Reduced motion support
+
+RESPONSIVE BREAKPOINTS:
+- Desktop: Full horizontal menu (1024px+)
+- Tablet: Compressed horizontal menu (768px - 1024px)
+- Mobile: Hamburger menu with slide-in panel (< 768px)
+
+PERFORMANCE FEATURES:
+- Smooth animations with CSS transforms
+- Debounced scroll listeners
+- Efficient DOM queries
+- Minimal JavaScript footprint
+-->
