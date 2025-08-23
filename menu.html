@@ -89,70 +89,29 @@
   <div class="scroll-progress fixed top-0 left-0 h-1 bg-gradient-to-r from-gold to-gold-light z-50 transition-all duration-300" style="width: 0%;"></div>
   
   <!-- Enhanced Header -->
-  <header class="fixed top-0 left-0 right-0 z-40 bg-white/95 backdrop-blur-md border-b border-black/10 transition-all duration-300" id="mainHeader">
-    <div class="container mx-auto px-4">
-      <div class="flex items-center justify-between py-4">
-        <!-- Logo -->
-        <a href="index.html" class="group flex items-center gap-3" aria-label="Retour à l'accueil">
-          <div class="w-10 h-10 bg-black rounded-full flex items-center justify-center group-hover:bg-gold transition-colors duration-300">
-            <span class="text-white group-hover:text-black font-bold text-lg">A</span>
-          </div>
-          <div class="flex flex-col">
-            <span class="font-display text-xl font-bold tracking-tight">Arabesque</span>
-            <span class="text-xs tracking-widest text-gray-600 uppercase">Traiteur</span>
-          </div>
-        </a>
-        
-        <!-- Desktop Navigation -->
-        <nav class="hidden lg:flex items-center gap-8" aria-label="Navigation principale">
-          <a href="a-propos.html" class="nav-link text-sm font-medium hover:text-gold transition-colors">À propos</a>
-          <a href="equipe.html" class="nav-link text-sm font-medium hover:text-gold transition-colors">Équipe</a>
-          <a href="services.html" class="nav-link text-sm font-medium hover:text-gold transition-colors">Services</a>
-          <a href="menu.html" class="nav-link active text-sm font-medium text-gold relative">
-            Menu
-            <span class="absolute -bottom-2 left-0 right-0 h-0.5 bg-gold rounded-full"></span>
-          </a>
-          <a href="galerie.html" class="nav-link text-sm font-medium hover:text-gold transition-colors">Galerie</a>
-          <a href="contact.html" class="btn btn-gold text-sm">Devis Gratuit</a>
-        </nav>
-        
-        <!-- Mobile Menu Button -->
-        <button id="openNav" class="lg:hidden p-2 rounded-lg border border-black/20 hover:bg-gray-50 transition-colors"
-                aria-label="Ouvrir le menu" aria-haspopup="true" aria-expanded="false">
-          <div class="w-6 h-6 flex flex-col justify-center space-y-1">
-            <span class="block w-full h-0.5 bg-black transition-all duration-300"></span>
-            <span class="block w-full h-0.5 bg-black transition-all duration-300"></span>
-            <span class="block w-full h-0.5 bg-black transition-all duration-300"></span>
-          </div>
-        </button>
-      </div>
+  <header class="fixed top-0 left-0 right-0 z-40 bg-white/90 backdrop-blur border-b border-black/10">
+    <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
+      <a href="index.html" class="flex items-center gap-2" aria-label="Accueil">
+        <span class="logo serif text-2xl tracking-wide">Arabesque <strong>Traiteur</strong></span>
+      </a>
+      <nav class="hidden md:flex items-center gap-6 text-sm" aria-label="Navigation principale">
+        <a href="a-propos.html" class="nav-link">À propos</a>
+        <a href="services.html" class="nav-link">Services</a>
+        <a href="menu.html" class="nav-link active">Menu</a>
+        <a href="galerie.html" class="nav-link">Galerie</a>
+        <a href="equipe.html" class="nav-link">Équipe</a>
+        <a href="contact.html" class="nav-link border border-black rounded-full px-3 py-1.5 hover:bg-black hover:text-white">Devis</a>
+      </nav>
+      <button id="openNav" class="md:hidden border border-black rounded-lg px-3 py-2" aria-haspopup="true" aria-controls="mobileNav" aria-expanded="false">Menu</button>
     </div>
-    
-    <!-- Enhanced Mobile Navigation -->
-    <div id="mobileNav" class="lg:hidden fixed inset-0 top-0 z-50 hidden">
-      <div class="absolute inset-0 bg-black/50 backdrop-blur-sm" id="mobileNavOverlay"></div>
-      <div class="absolute right-0 top-0 h-full w-80 bg-white shadow-2xl transform translate-x-full transition-transform duration-300 ease-out">
-        <div class="flex items-center justify-between p-6 border-b border-gray-200">
-          <span class="font-display text-xl font-bold">Menu</span>
-          <button id="closeNav" class="p-2 rounded-lg hover:bg-gray-100 transition-colors" aria-label="Fermer le menu">
-            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
-            </svg>
-          </button>
-        </div>
-        
-        <nav class="p-6 space-y-6">
-          <a href="a-propos.html" class="block text-lg font-medium hover:text-gold transition-colors">À propos</a>
-          <a href="equipe.html" class="block text-lg font-medium hover:text-gold transition-colors">Notre équipe</a>
-          <a href="services.html" class="block text-lg font-medium hover:text-gold transition-colors">Services</a>
-          <a href="menu.html" class="block text-lg font-medium text-gold">Menu Congolais</a>
-          <a href="galerie.html" class="block text-lg font-medium hover:text-gold transition-colors">Galerie photos</a>
-          <a href="contact.html" class="block text-lg font-medium hover:text-gold transition-colors">Contact</a>
-          
-          <div class="pt-6 border-t border-gray-200">
-            <a href="contact.html" class="btn btn-gold w-full justify-center mb-4">Devis Gratuit</a>
-          </div>
-        </nav>
+    <div id="mobileNav" class="md:hidden hidden border-t border-black/10">
+      <div class="max-w-6xl mx-auto px-4 py-3 grid gap-2 text-sm">
+        <a href="a-propos.html" class="py-2">À propos</a>
+        <a href="services.html" class="py-2">Services</a>
+        <a href="menu.html" class="py-2">Menu</a>
+        <a href="galerie.html" class="py-2">Galerie</a>
+        <a href="equipe.html" class="py-2">Équipe</a>
+        <a href="contact.html" class="py-2">Devis</a>
       </div>
     </div>
   </header>
