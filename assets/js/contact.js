@@ -1,4 +1,4 @@
-// Contact Form JavaScript - Version Enhanced avec Sélection de Formule
+// Contact Form JavaScript - Version Enhanced avec Sélection de Formule - COMPLET
 document.addEventListener('DOMContentLoaded', function() {
   initializeContactForm();
 });
