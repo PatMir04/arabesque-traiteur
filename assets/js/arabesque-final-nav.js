@@ -1,8 +1,7 @@
-// ULTIMATE Arabesque Navigation - Uses Your Real Logo.png
-// ✅ Replaces text logo with actual assets/images/logo.png
-// ✅ Updates existing arabesque-final-nav.js - no HTML changes needed
-// ✅ Beautiful Avenir font styling
-// ✅ Professional logo implementation
+// FINAL PERFECT - Arabesque Navigation
+// ✅ Logo PNG + Text together (not replacing)
+// ✅ Mobile navigation working properly
+// ✅ No conflicts with your existing code
 
 class ArabesqueFinalNav {
   constructor() {
@@ -10,318 +9,150 @@ class ArabesqueFinalNav {
   }
 
   init() {
-    // Replace text logo with actual PNG logo first
-    this.replaceTextLogoWithImage();
+    console.log('🚀 Arabesque Navigation - Final Perfect Version');
     
-    // Then enhance navigation
+    // 1. Add logo PNG alongside text (don't replace)
+    this.addLogoImageAlongsideText();
+    
+    // 2. Enhance logo for homepage navigation
     this.enhanceLogoHomepage();
-    this.enhanceExistingMobileNav();
-    this.addScrollEffects();
-    this.injectEnhancementStyles();
     
-    console.log('✅ Navigation enhanced with real PNG logo');
-    console.log('🖼️ Logo image functionality activated');
+    // 3. Fix mobile navigation properly
+    this.fixMobileNavigation();
+    
+    // 4. Add scroll effects
+    this.addScrollEffects();
+    
+    // 5. Add styling
+    this.injectStyles();
+    
+    console.log('✅ Navigation enhanced successfully');
   }
 
-  replaceTextLogoWithImage() {
-    // Find your current text logo
-    const textLogoLink = document.querySelector('header a[aria-label="Accueil"]') ||
-                        document.querySelector('header a:first-of-type');
+  addLogoImageAlongsideText() {
+    console.log('🖼️ Adding logo PNG alongside text...');
     
-    if (!textLogoLink) {
-      console.log('⚠️ Text logo link not found');
+    // Find your logo link
+    const logoLink = document.querySelector('header a[aria-label="Accueil"]');
+    const logoSpan = logoLink ? logoLink.querySelector('.logo.serif') : null;
+    
+    if (!logoLink || !logoSpan) {
+      console.log('⚠️ Logo elements not found');
       return;
     }
-
-    const textLogoSpan = textLogoLink.querySelector('.logo.serif');
     
-    if (textLogoSpan) {
-      console.log('🔄 Replacing text logo with PNG image...');
-      
-      // Create the image element
-      const logoImg = document.createElement('img');
-      logoImg.src = 'assets/images/logo.png';
-      logoImg.alt = 'Arabesque Traiteur';
-      logoImg.className = 'logo-image';
-      logoImg.style.cssText = `
-        height: 40px;
-        width: auto;
-        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-      `;
-
-      // Test if logo exists, if not keep text as fallback
-      logoImg.onload = () => {
-        console.log('✅ Logo PNG loaded successfully');
-        textLogoSpan.style.display = 'none'; // Hide text
-        textLogoLink.insertBefore(logoImg, textLogoSpan); // Add image before text
-      };
-
-      logoImg.onerror = () => {
-        console.log('⚠️ Logo PNG not found, keeping text logo');
-        // Keep the text logo but style it better
-        textLogoSpan.style.fontFamily = '"Avenir Next", Avenir, system-ui, sans-serif';
-        textLogoSpan.style.fontWeight = '600';
-        textLogoSpan.style.letterSpacing = '-0.02em';
-      };
+    // Check if logo image already exists
+    if (logoLink.querySelector('.logo-image')) {
+      console.log('ℹ️ Logo image already exists');
+      return;
     }
+    
+    // Create PNG logo to go BEFORE the text
+    const logoImg = document.createElement('img');
+    logoImg.src = 'assets/images/logo.png';
+    logoImg.alt = 'Arabesque Traiteur';
+    logoImg.className = 'logo-image';
+    logoImg.style.cssText = `
+      height: 32px;
+      width: auto;
+      transition: all 0.3s ease;
+      margin-right: 0.5rem;
+      display: inline-block;
+    `;
+
+    // Test if logo PNG exists
+    logoImg.onload = () => {
+      console.log('✅ Logo PNG loaded - adding alongside text');
+      // Insert BEFORE the text span (not replace)
+      logoLink.insertBefore(logoImg, logoSpan);
+      
+      // Style the text to work nicely with logo
+      logoSpan.style.fontFamily = '"Avenir Next", Avenir, system-ui, sans-serif';
+      logoSpan.style.fontWeight = '600';
+    };
+
+    logoImg.onerror = () => {
+      console.log('⚠️ Logo PNG not found - keeping text only');
+      logoSpan.style.fontFamily = '"Avenir Next", Avenir, system-ui, sans-serif';
+      logoSpan.style.fontWeight = '600';
+    };
   }
 
   enhanceLogoHomepage() {
-    // Find logo (image or text)
-    const logoSelectors = [
-      'header .logo-image',                     // Our new image logo
-      'header a .logo',                         // Original text logo
-      'header img[src*="logo"]',               // Any logo image
-      'header a[aria-label*="Accueil"]',       // Your existing link
-      'header a:first-of-type',                // First header link
-    ];
-
-    let logoElement = null;
-    let logoType = 'text';
+    console.log('🏠 Enhancing logo for homepage navigation...');
     
-    for (const selector of logoSelectors) {
-      try {
-        logoElement = document.querySelector(selector);
-        if (logoElement) {
-          logoType = logoElement.tagName === 'IMG' ? 'image' : 'text';
-          console.log(`🎯 Logo found: ${logoType} (${selector})`);
-          break;
-        }
-      } catch (e) {
-        continue;
-      }
-    }
-
-    if (logoElement) {
-      this.setupLogoHomepageLink(logoElement, logoType);
-    } else {
-      console.log('⚠️ No logo found, creating fallback');
-      this.createLogoHomepageFunctionality();
-    }
-  }
-
-  setupLogoHomepageLink(logoElement, logoType) {
-    // Find or ensure we have the parent link
-    let logoLink = logoElement;
+    const logoLink = document.querySelector('header a[aria-label="Accueil"]');
     
-    if (logoElement.tagName !== 'A') {
-      logoLink = logoElement.closest('a') || logoElement.parentElement;
-      if (logoLink.tagName !== 'A') {
-        // Create wrapper link if needed
-        const wrapperLink = document.createElement('a');
-        logoElement.parentNode.insertBefore(wrapperLink, logoElement);
-        wrapperLink.appendChild(logoElement);
-        logoLink = wrapperLink;
-      }
-    }
-
-    // Configure homepage linking
-    logoLink.setAttribute('href', 'index.html');
-    logoLink.setAttribute('aria-label', 'Arabesque Traiteur - Retour à l\'accueil');
-    logoLink.setAttribute('title', 'Retour à l\'accueil');
-    
-    // Enhanced styling
-    logoLink.style.cssText = `
-      display: inline-block !important;
-      text-decoration: none !important;
-      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
-      cursor: pointer !important;
-    `;
-
-    // Type-specific styling
-    if (logoType === 'image') {
-      const logoImg = logoLink.querySelector('img') || logoElement;
-      if (logoImg) {
-        logoImg.style.cssText = `
-          height: 40px;
-          width: auto;
-          transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-          display: block;
-        `;
-      }
-    } else {
-      // Text logo styling with Avenir
-      const textLogo = logoLink.querySelector('.logo') || logoElement;
-      if (textLogo) {
-        textLogo.style.fontFamily = '"Avenir Next", Avenir, "SF Pro Display", system-ui, sans-serif';
-        textLogo.style.fontWeight = '600';
-        textLogo.style.letterSpacing = '-0.02em';
-      }
-    }
-    
-    // Enhanced hover effects
-    logoLink.addEventListener('mouseenter', () => {
-      logoLink.style.transform = 'translateY(-2px)';
-      if (logoType === 'image') {
-        logoLink.style.filter = 'brightness(1.05) contrast(1.05)';
-      } else {
-        logoLink.style.opacity = '0.8';
-      }
-    });
-    
-    logoLink.addEventListener('mouseleave', () => {
-      logoLink.style.transform = 'translateY(0)';
-      if (logoType === 'image') {
-        logoLink.style.filter = 'brightness(1) contrast(1)';
-      } else {
-        logoLink.style.opacity = '1';
-      }
-    });
-    
-    // Click feedback
-    logoLink.addEventListener('mousedown', () => {
-      logoLink.style.transform = 'scale(0.96) translateY(1px)';
-    });
-    
-    logoLink.addEventListener('mouseup', () => {
-      logoLink.style.transform = 'scale(1) translateY(-2px)';
-    });
-
-    // Click handler with smooth scroll if on homepage
-    logoLink.addEventListener('click', (e) => {
-      console.log(`🏠 ${logoType} logo clicked - navigating to homepage`);
-      
-      // Visual feedback
-      logoLink.style.transform = 'scale(0.94)';
-      setTimeout(() => {
-        logoLink.style.transform = 'scale(1)';
-      }, 150);
-      
-      // If already on homepage, scroll to top smoothly
-      const currentPath = window.location.pathname;
-      if (currentPath.endsWith('index.html') || currentPath === '/' || currentPath.endsWith('/')) {
-        e.preventDefault();
-        window.scrollTo({ 
-          top: 0, 
-          behavior: 'smooth' 
-        });
-        console.log('📜 Already on homepage - smooth scrolled to top');
-      }
-    });
-
-    console.log(`✅ ${logoType} logo homepage functionality activated`);
-  }
-
-  createLogoHomepageFunctionality() {
-    // Create logo functionality if none found
-    const header = document.querySelector('header');
-    if (!header) return;
-
-    // Try to add actual logo image
-    const firstLink = header.querySelector('a');
-    if (firstLink) {
-      // Test if logo image exists
-      const testImg = new Image();
-      testImg.onload = () => {
-        console.log('🆕 Creating new logo image element');
-        
-        const logoImg = document.createElement('img');
-        logoImg.src = 'assets/images/logo.png';
-        logoImg.alt = 'Arabesque Traiteur';
-        logoImg.className = 'logo-image-new';
-        logoImg.style.cssText = `
-          height: 40px;
-          width: auto;
-          margin-right: 0.5rem;
-        `;
-        
-        firstLink.insertBefore(logoImg, firstLink.firstChild);
-        this.setupLogoHomepageLink(firstLink, 'image');
-      };
-      
-      testImg.onerror = () => {
-        console.log('⚠️ Logo image not found, enhancing existing text');
-        firstLink.style.fontFamily = '"Avenir Next", Avenir, system-ui, sans-serif';
-        this.setupLogoHomepageLink(firstLink, 'text');
-      };
-      
-      testImg.src = 'assets/images/logo.png';
-    }
-  }
-
-  enhanceExistingMobileNav() {
-    const mobileNav = document.getElementById('mobileNav');
-    const toggle = document.getElementById('openNav');
-    
-    if (!mobileNav || !toggle) {
-      console.log('⚠️ Mobile nav elements not found');
+    if (!logoLink) {
+      console.log('⚠️ Logo link not found');
       return;
     }
 
-    console.log('📱 Enhancing mobile navigation...');
+    // Ensure it always goes to homepage
+    logoLink.setAttribute('href', 'index.html');
+    logoLink.style.textDecoration = 'none';
+    logoLink.style.transition = 'all 0.3s ease';
 
-    // Add hamburger icon
-    this.addHamburgerIcon(toggle);
-    
-    // Enhanced toggle functionality
-    const enhancedToggle = () => {
-      const isHidden = mobileNav.classList.contains('hidden');
+    // Add hover effects
+    logoLink.addEventListener('mouseenter', () => {
+      logoLink.style.transform = 'translateY(-2px)';
+      logoLink.style.opacity = '0.85';
+    });
+
+    logoLink.addEventListener('mouseleave', () => {
+      logoLink.style.transform = 'translateY(0)';
+      logoLink.style.opacity = '1';
+    });
+
+    // Enhanced click handler
+    logoLink.addEventListener('click', (e) => {
+      console.log('🏠 Logo clicked');
       
-      if (isHidden) {
-        // Opening menu
-        mobileNav.classList.remove('hidden');
-        mobileNav.classList.add('mobile-nav-enhanced');
-        document.body.classList.add('mobile-nav-open');
-        toggle.setAttribute('aria-expanded', 'true');
-        toggle.classList.add('active');
-        this.addOverlay();
-        console.log('📂 Mobile menu opened');
-      } else {
-        // Closing menu
-        mobileNav.classList.add('hidden');
-        mobileNav.classList.remove('mobile-nav-enhanced');
-        document.body.classList.remove('mobile-nav-open');
-        toggle.setAttribute('aria-expanded', 'false');
-        toggle.classList.remove('active');
-        this.removeOverlay();
-        console.log('📁 Mobile menu closed');
-      }
-    };
-
-    // Replace existing event listener
-    const newToggle = toggle.cloneNode(true);
-    toggle.parentNode.replaceChild(newToggle, toggle);
-    newToggle.addEventListener('click', (e) => {
-      e.preventDefault();
-      enhancedToggle();
-    });
-
-    // Close on mobile link click
-    const mobileLinks = mobileNav.querySelectorAll('a');
-    mobileLinks.forEach(link => {
-      link.addEventListener('click', () => {
-        setTimeout(() => enhancedToggle(), 100); // Small delay for better UX
-      });
-    });
-
-    // Close on escape key
-    document.addEventListener('keydown', (e) => {
-      if (e.key === 'Escape' && !mobileNav.classList.contains('hidden')) {
-        enhancedToggle();
+      // Visual feedback
+      logoLink.style.transform = 'scale(0.95)';
+      setTimeout(() => logoLink.style.transform = 'scale(1)', 150);
+      
+      // If on homepage, scroll to top
+      const currentPath = window.location.pathname;
+      if (currentPath.endsWith('index.html') || currentPath === '/' || currentPath.endsWith('/')) {
+        e.preventDefault();
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+        console.log('📜 Scrolled to top');
       }
     });
 
-    // Close on window resize to desktop
-    window.addEventListener('resize', () => {
-      if (window.innerWidth > 768 && !mobileNav.classList.contains('hidden')) {
-        enhancedToggle();
-      }
-    });
-
-    console.log('✅ Mobile navigation enhanced successfully');
+    console.log('✅ Logo homepage navigation enabled');
   }
 
-  addHamburgerIcon(toggle) {
-    // Store original content
+  fixMobileNavigation() {
+    console.log('📱 Fixing mobile navigation...');
+    
+    const toggle = document.getElementById('openNav');
+    const mobileNav = document.getElementById('mobileNav');
+    
+    if (!toggle || !mobileNav) {
+      console.log('❌ Mobile nav elements not found');
+      return;
+    }
+
+    console.log('📱 Elements found - setting up mobile nav');
+    
+    // 1. Replace "Menu" text with hamburger icon
+    this.replaceMenuWithHamburger(toggle);
+    
+    // 2. Set up proper mobile navigation
+    this.setupMobileNavigation(toggle, mobileNav);
+    
+    console.log('✅ Mobile navigation setup complete');
+  }
+
+  replaceMenuWithHamburger(toggle) {
+    console.log('🍔 Replacing Menu text with hamburger...');
+    
+    // Store original classes to preserve your styling
     const originalClasses = toggle.className;
-    const originalAttributes = {};
     
-    // Store attributes
-    Array.from(toggle.attributes).forEach(attr => {
-      originalAttributes[attr.name] = attr.value;
-    });
-    
-    // Create hamburger icon with Avenir styling
+    // Create hamburger icon
     const hamburger = document.createElement('div');
     hamburger.className = 'hamburger-icon';
     hamburger.innerHTML = `
@@ -330,7 +161,7 @@ class ArabesqueFinalNav {
       <span></span>
     `;
     
-    // Replace content
+    // Clear content and add hamburger
     toggle.innerHTML = '';
     toggle.appendChild(hamburger);
     
@@ -340,47 +171,106 @@ class ArabesqueFinalNav {
     srText.textContent = 'Menu de navigation';
     toggle.appendChild(srText);
     
-    // Restore original classes and attributes
-    toggle.className = originalClasses + ' enhanced-toggle';
-    Object.keys(originalAttributes).forEach(attr => {
-      if (attr !== 'class') {
-        toggle.setAttribute(attr, originalAttributes[attr]);
-      }
-    });
+    // Preserve your original classes
+    toggle.className = originalClasses + ' has-hamburger';
     
-    console.log('🍔 Hamburger icon added');
+    console.log('✅ Hamburger icon added');
   }
 
-  addOverlay() {
-    if (document.querySelector('.mobile-overlay-enhanced')) return;
+  setupMobileNavigation(toggle, mobileNav) {
+    console.log('🔧 Setting up mobile navigation functionality...');
     
-    const overlay = document.createElement('div');
-    overlay.className = 'mobile-overlay-enhanced';
-    overlay.addEventListener('click', () => {
-      const mobileNav = document.getElementById('mobileNav');
-      const toggle = document.getElementById('openNav');
+    // Remove any existing event listeners by cloning
+    const newToggle = toggle.cloneNode(true);
+    toggle.parentNode.replaceChild(newToggle, toggle);
+    
+    // Mobile navigation toggle function
+    let isOpen = false;
+    
+    const toggleMobileNav = () => {
+      console.log('🔘 Mobile nav toggle clicked, current state:', isOpen ? 'open' : 'closed');
       
-      if (mobileNav && !mobileNav.classList.contains('hidden')) {
+      if (!isOpen) {
+        // Opening
+        console.log('📂 Opening mobile navigation...');
+        mobileNav.classList.remove('hidden');
+        mobileNav.classList.add('mobile-nav-open');
+        newToggle.setAttribute('aria-expanded', 'true');
+        newToggle.classList.add('active');
+        document.body.style.overflow = 'hidden';
+        isOpen = true;
+      } else {
+        // Closing
+        console.log('📁 Closing mobile navigation...');
         mobileNav.classList.add('hidden');
-        mobileNav.classList.remove('mobile-nav-enhanced');
-        document.body.classList.remove('mobile-nav-open');
-        toggle.setAttribute('aria-expanded', 'false');
-        toggle.classList.remove('active');
-        this.removeOverlay();
+        mobileNav.classList.remove('mobile-nav-open');
+        newToggle.setAttribute('aria-expanded', 'false');
+        newToggle.classList.remove('active');
+        document.body.style.overflow = '';
+        isOpen = false;
+      }
+    };
+
+    // Add click event listener
+    newToggle.addEventListener('click', (e) => {
+      e.preventDefault();
+      e.stopPropagation();
+      console.log('👆 Toggle button clicked');
+      toggleMobileNav();
+    });
+
+    // Close when mobile links are clicked
+    const mobileLinks = mobileNav.querySelectorAll('a');
+    console.log(`🔗 Found ${mobileLinks.length} mobile navigation links`);
+    
+    mobileLinks.forEach((link, index) => {
+      link.addEventListener('click', (e) => {
+        console.log(`📱 Mobile link ${index + 1} clicked:`, link.textContent);
+        // Small delay to allow navigation to start
+        setTimeout(() => {
+          if (isOpen) {
+            console.log('📁 Closing mobile nav after link click');
+            mobileNav.classList.add('hidden');
+            mobileNav.classList.remove('mobile-nav-open');
+            newToggle.setAttribute('aria-expanded', 'false');
+            newToggle.classList.remove('active');
+            document.body.style.overflow = '';
+            isOpen = false;
+          }
+        }, 100);
+      });
+    });
+
+    // Close on Escape key
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && isOpen) {
+        console.log('⌨️ Escape pressed - closing mobile nav');
+        toggleMobileNav();
       }
     });
-    
-    document.body.appendChild(overlay);
-  }
 
-  removeOverlay() {
-    const overlay = document.querySelector('.mobile-overlay-enhanced');
-    if (overlay) {
-      overlay.remove();
-    }
+    // Close when clicking outside (on body)
+    document.addEventListener('click', (e) => {
+      if (isOpen && !mobileNav.contains(e.target) && !newToggle.contains(e.target)) {
+        console.log('🖱️ Clicked outside - closing mobile nav');
+        toggleMobileNav();
+      }
+    });
+
+    // Close on window resize to desktop
+    window.addEventListener('resize', () => {
+      if (window.innerWidth > 768 && isOpen) {
+        console.log('📺 Resized to desktop - closing mobile nav');
+        toggleMobileNav();
+      }
+    });
+
+    console.log('✅ Mobile navigation event listeners added');
   }
 
   addScrollEffects() {
+    console.log('📜 Adding scroll effects...');
+    
     const header = document.querySelector('header');
     if (!header) return;
     
@@ -389,7 +279,7 @@ class ArabesqueFinalNav {
     const updateHeader = () => {
       const scrollY = window.scrollY;
       
-      if (scrollY > 30) {
+      if (scrollY > 20) {
         header.classList.add('scrolled');
       } else {
         header.classList.remove('scrolled');
@@ -406,87 +296,58 @@ class ArabesqueFinalNav {
     };
     
     window.addEventListener('scroll', requestTick, { passive: true });
-    
-    console.log('📜 Scroll effects initialized');
+    console.log('✅ Scroll effects added');
   }
 
-  injectEnhancementStyles() {
-    if (document.querySelector('#arabesque-ultimate-nav-styles')) return;
+  injectStyles() {
+    console.log('🎨 Injecting styles...');
+    
+    if (document.querySelector('#arabesque-final-perfect-styles')) return;
 
     const style = document.createElement('style');
-    style.id = 'arabesque-ultimate-nav-styles';
+    style.id = 'arabesque-final-perfect-styles';
     style.textContent = `
-      /* Arabesque Ultimate Navigation - With Real Logo & Avenir Font */
+      /* Arabesque Final Perfect Navigation Styles */
       
-      /* Import Avenir Font */
-      @import url('https://fonts.cdnfonts.com/css/avenir');
-      
-      /* Global Avenir Font Application */
+      /* Global Avenir font */
       body {
-        font-family: "Avenir Next", Avenir, "SF Pro Display", -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif !important;
+        font-family: "Avenir Next", Avenir, "SF Pro Display", system-ui, sans-serif !important;
       }
       
-      /* Logo Image Styling */
-      header .logo-image,
-      header .logo-image-new,
-      header img[src*="logo"] {
-        height: 40px !important;
-        width: auto !important;
-        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
-        display: block !important;
-      }
-      
-      /* Logo Link Container */
-      header a[aria-label*="accueil"],
-      header a:has(.logo-image),
-      header a:has(img[src*="logo"]) {
-        display: inline-flex !important;
+      /* Logo image + text together */
+      header a[aria-label="Accueil"] {
+        display: flex !important;
         align-items: center !important;
         gap: 0.5rem !important;
-        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+        transition: all 0.3s ease !important;
         text-decoration: none !important;
-        cursor: pointer !important;
       }
       
-      /* Logo Hover Effects */
-      header a[aria-label*="accueil"]:hover .logo-image,
-      header a[aria-label*="accueil"]:hover img[src*="logo"],
-      header a:hover .logo-image,
-      header a:hover img[src*="logo"] {
-        transform: translateY(-2px);
-        filter: brightness(1.05) contrast(1.05);
+      header .logo-image {
+        height: 32px !important;
+        width: auto !important;
+        flex-shrink: 0 !important;
       }
       
-      /* Text Logo Avenir Styling */
-      header .logo,
-      header .serif {
-        font-family: "Avenir Next", Avenir, "SF Pro Display", system-ui, sans-serif !important;
+      header .logo.serif {
+        font-family: "Avenir Next", Avenir, system-ui, sans-serif !important;
         font-weight: 600 !important;
-        letter-spacing: -0.02em !important;
-        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+        flex-shrink: 0 !important;
       }
       
-      header a:hover .logo,
-      header a:hover .serif {
-        opacity: 0.8;
-        transform: translateY(-1px);
+      /* Logo hover effects */
+      header a[aria-label="Accueil"]:hover {
+        transform: translateY(-2px) !important;
+        opacity: 0.85 !important;
       }
       
-      /* Focus styles */
-      header a[aria-label*="accueil"]:focus-visible {
-        outline: 2px solid #C9AB6D;
-        outline-offset: 3px;
-        border-radius: 6px;
-      }
-      
-      /* Hamburger Icon with Avenir styling */
+      /* Hamburger icon */
       .hamburger-icon {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        width: 20px;
-        height: 14px;
-        margin: auto;
+        width: 18px;
+        height: 12px;
       }
       
       .hamburger-icon span {
@@ -499,120 +360,91 @@ class ArabesqueFinalNav {
         transform-origin: center;
       }
       
-      /* Hamburger Animation */
-      .enhanced-toggle.active .hamburger-icon span:nth-child(1) {
-        transform: translateY(6px) rotate(45deg);
+      /* Hamburger animation */
+      .has-hamburger.active .hamburger-icon span:nth-child(1) {
+        transform: translateY(5px) rotate(45deg);
       }
       
-      .enhanced-toggle.active .hamburger-icon span:nth-child(2) {
+      .has-hamburger.active .hamburger-icon span:nth-child(2) {
         opacity: 0;
         transform: scale(0.8);
       }
       
-      .enhanced-toggle.active .hamburger-icon span:nth-child(3) {
-        transform: translateY(-6px) rotate(-45deg);
+      .has-hamburger.active .hamburger-icon span:nth-child(3) {
+        transform: translateY(-5px) rotate(-45deg);
       }
       
-      /* Enhanced Mobile Navigation */
-      #mobileNav.mobile-nav-enhanced {
-        position: fixed !important;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background: white;
-        z-index: 9999;
-        display: flex !important;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        animation: slideInMobile 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-        box-shadow: 0 0 60px rgba(0, 0, 0, 0.4);
+      /* Mobile navigation enhancements */
+      #mobileNav.mobile-nav-open {
+        animation: slideDown 0.3s cubic-bezier(0.4, 0, 0.2, 1);
       }
       
-      @keyframes slideInMobile {
+      @keyframes slideDown {
         from {
           opacity: 0;
-          transform: translateY(-40px) scale(0.95);
+          transform: translateY(-10px);
         }
         to {
           opacity: 1;
-          transform: translateY(0) scale(1);
+          transform: translateY(0);
         }
       }
       
-      /* Mobile Navigation Content with Avenir */
-      #mobileNav.mobile-nav-enhanced .max-w-6xl {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 2.5rem;
-        text-align: center;
-        padding: 3rem 2rem;
-        font-family: "Avenir Next", Avenir, system-ui, sans-serif;
-      }
-      
-      #mobileNav.mobile-nav-enhanced a {
+      /* Mobile navigation links */
+      #mobileNav.mobile-nav-open a {
+        transition: all 0.3s ease !important;
+        border-radius: 0.375rem !important;
         font-family: "Avenir Next", Avenir, system-ui, sans-serif !important;
-        font-size: 1.4rem !important;
         font-weight: 500 !important;
-        padding: 1.25rem 2.5rem !important;
-        border-radius: 1rem !important;
-        transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1) !important;
-        min-width: 220px;
-        display: flex !important;
-        align-items: center;
-        justify-content: center;
-        border: 2px solid transparent !important;
-        background: rgba(0, 0, 0, 0.02) !important;
       }
       
-      #mobileNav.mobile-nav-enhanced a:hover {
-        background: rgba(201, 171, 109, 0.12) !important;
+      #mobileNav.mobile-nav-open a:hover {
+        background: rgba(201, 171, 109, 0.1) !important;
         color: #C9AB6D !important;
-        transform: translateY(-3px) scale(1.02) !important;
-        border-color: rgba(201, 171, 109, 0.3) !important;
-        box-shadow: 0 8px 25px rgba(201, 171, 109, 0.15) !important;
+        transform: translateX(4px) !important;
+        padding-left: 1.25rem !important;
       }
       
-      /* Mobile Overlay */
-      .mobile-overlay-enhanced {
-        position: fixed;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background: rgba(0, 0, 0, 0.5);
-        z-index: 9998;
-        backdrop-filter: blur(8px);
-        opacity: 0;
-        animation: fadeInOverlay 0.3s ease-out forwards;
-      }
-      
-      @keyframes fadeInOverlay {
-        to { opacity: 1; }
-      }
-      
-      /* Prevent body scroll */
-      body.mobile-nav-open {
-        overflow: hidden !important;
-        height: 100vh;
-      }
-      
-      /* Enhanced header on scroll */
+      /* Scroll effect */
       header.scrolled {
-        background: rgba(255, 255, 255, 0.97) !important;
-        backdrop-filter: blur(20px) saturate(180%);
-        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.08);
-        border-bottom: 1px solid rgba(0, 0, 0, 0.08);
-        transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        background: rgba(255, 255, 255, 0.95) !important;
+        backdrop-filter: blur(16px) saturate(180%) !important;
+        box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08) !important;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.08) !important;
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
       }
       
-      /* Desktop Navigation Avenir Font */
-      nav a.nav-link {
-        font-family: "Avenir Next", Avenir, system-ui, sans-serif !important;
-        font-weight: 500 !important;
-        letter-spacing: -0.01em !important;
+      /* Desktop navigation enhancements */
+      @media (min-width: 769px) {
+        nav a.nav-link {
+          position: relative;
+          transition: all 0.3s ease;
+          font-family: "Avenir Next", Avenir, system-ui, sans-serif !important;
+          font-weight: 500 !important;
+        }
+        
+        nav a.nav-link::after {
+          content: '';
+          position: absolute;
+          bottom: -4px;
+          left: 50%;
+          width: 0;
+          height: 2px;
+          background: #C9AB6D;
+          transition: all 0.3s ease;
+          transform: translateX(-50%);
+          border-radius: 1px;
+        }
+        
+        nav a.nav-link:hover::after,
+        nav a.nav-link.active::after {
+          width: 100%;
+        }
+        
+        nav a.nav-link:hover {
+          color: #C9AB6D !important;
+          transform: translateY(-1px);
+        }
       }
       
       /* Screen reader text */
@@ -628,51 +460,29 @@ class ArabesqueFinalNav {
         border: 0 !important;
       }
       
-      /* Desktop hover enhancements with Avenir */
-      @media (min-width: 769px) {
-        nav a.nav-link {
-          position: relative;
-          transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-        }
-        
-        nav a.nav-link::after {
-          content: '';
-          position: absolute;
-          bottom: -5px;
-          left: 50%;
-          width: 0;
-          height: 2px;
-          background: linear-gradient(90deg, #C9AB6D 0%, #D4B97A 100%);
-          transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-          transform: translateX(-50%);
-          border-radius: 1px;
-        }
-        
-        nav a.nav-link:hover::after,
-        nav a.nav-link.active::after {
-          width: 100%;
-        }
-        
-        nav a.nav-link:hover {
-          color: #C9AB6D;
-          transform: translateY(-1px);
-        }
-      }
-      
       /* Touch targets */
       @media (max-width: 768px) {
-        .enhanced-toggle {
-          min-width: 48px !important;
-          min-height: 48px !important;
+        .has-hamburger {
+          min-width: 44px !important;
+          min-height: 44px !important;
           display: flex !important;
           align-items: center !important;
           justify-content: center !important;
         }
         
-        header a[aria-label*="accueil"] {
-          min-width: 48px !important;
-          min-height: 48px !important;
+        #mobileNav a {
+          min-height: 44px !important;
+          display: flex !important;
+          align-items: center !important;
         }
+      }
+      
+      /* Focus styles */
+      header a[aria-label="Accueil"]:focus-visible,
+      .has-hamburger:focus-visible {
+        outline: 2px solid #C9AB6D !important;
+        outline-offset: 2px !important;
+        border-radius: 4px !important;
       }
       
       /* High contrast support */
@@ -680,17 +490,11 @@ class ArabesqueFinalNav {
         .hamburger-icon span {
           background-color: black !important;
         }
-        
-        header img[src*="logo"] {
-          filter: contrast(1.2) !important;
-        }
       }
       
-      /* Reduced motion support */
+      /* Reduced motion */
       @media (prefers-reduced-motion: reduce) {
-        *,
-        *::before,
-        *::after {
+        *, *::before, *::after {
           animation-duration: 0.01ms !important;
           animation-iteration-count: 1 !important;
           transition-duration: 0.01ms !important;
@@ -699,18 +503,37 @@ class ArabesqueFinalNav {
     `;
     
     document.head.appendChild(style);
-    console.log('🎨 Ultimate navigation styles injected with Avenir font');
+    console.log('✅ Styles injected');
   }
 }
 
 // Initialize immediately
+console.log('🌟 Arabesque Final Perfect Navigation Loading...');
+
+const initializeNavigation = () => {
+  try {
+    new ArabesqueFinalNav();
+    window.ArabesqueFinalNavInitialized = true;
+  } catch (error) {
+    console.error('❌ Navigation initialization error:', error);
+  }
+};
+
 if (document.readyState === 'loading') {
-  document.addEventListener('DOMContentLoaded', () => new ArabesqueFinalNav());
+  document.addEventListener('DOMContentLoaded', initializeNavigation);
 } else {
-  new ArabesqueFinalNav();
+  initializeNavigation();
 }
 
-// Export for global access
+// Backup initialization
+setTimeout(() => {
+  if (!window.ArabesqueFinalNavInitialized) {
+    console.log('🔄 Backup initialization...');
+    initializeNavigation();
+  }
+}, 500);
+
+// Export
 if (typeof window !== 'undefined') {
   window.ArabesqueFinalNav = ArabesqueFinalNav;
 }
