@@ -3,46 +3,39 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Devis Gratuit & Contact | Arabesque Traiteur - Cuisine Congolaise Authentique</title>
-  <meta name="description" content="Demandez votre devis gratuit pour vos événements à Kinshasa. Formules 15$-35$ selon vos besoins. Menu congolais authentique, spécialités rares. Réponse sous 24h garantie." />
-  
-  <!-- Enhanced SEO & Social Media -->
+  <title>Contact & Devis | Arabesque Traiteur – Cuisine Congolaise Authentique</title>
+  <meta name="description" content="Demandez votre devis gratuit pour vos événements à Kinshasa. Menu congolais authentique, réponse sous 24h garantie." />
   <link rel="icon" href="favicon.svg" />
   <link rel="manifest" href="manifest.webmanifest" />
   <meta name="theme-color" content="#C9AB6D" />
-  <meta name="keywords" content="devis traiteur kinshasa, contact arabesque traiteur, sylvie feruzi contact, menu congolais prix, événement kinshasa" />
-  <meta name="author" content="Arabesque Traiteur - Sylvie Feruzi" />
-  
-  <!-- Open Graph / Facebook -->
+  <meta name="keywords" content="devis traiteur kinshasa, contact arabesque traiteur, menu congolais prix, événement kinshasa" />
+  <meta name="author" content="Arabesque Traiteur" />
+
+  <!-- Open Graph -->
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="Devis Gratuit | Arabesque Traiteur Kinshasa" />
+  <meta property="og:title" content="Contact & Devis | Arabesque Traiteur" />
   <meta property="og:description" content="Obtenez votre devis gratuit pour un événement d'exception avec notre cuisine congolaise authentique" />
-  <meta property="og:image" content="https://patmir04.github.io/arabesque-traiteur/assets/images/contact-og.jpg" />
+  <meta property="og:image" content="assets/images/contact-og.jpeg" />
   <meta property="og:url" content="https://patmir04.github.io/arabesque-traiteur/contact.html" />
-  
+
   <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Devis Gratuit | Arabesque Traiteur" />
+  <meta name="twitter:title" content="Contact & Devis | Arabesque Traiteur" />
   <meta name="twitter:description" content="Planifiez votre événement d'exception avec nous" />
-  <meta name="twitter:image" content="https://patmir04.github.io/arabesque-traiteur/assets/images/contact-og.jpg" />
-  
-  <!-- Fonts -->
+  <meta name="twitter:image" content="assets/images/contact-og.jpeg" />
+
+  <!-- Fonts & Styles -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700;900&display=swap" rel="stylesheet">
-  
-  <!-- Styles -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="assets/css/style.css" />
-  
-  <!-- Custom styles for form -->
+
+  <!-- Streamlined Form Styles -->
   <style>
-    .form-step {
-      display: none;
-    }
-    .form-step.active {
-      display: block;
-    }
+    .form-step { display: none; }
+    .form-step.active { display: block; }
+    
     .step-indicator {
       display: flex;
       flex-direction: column;
@@ -50,14 +43,9 @@
       opacity: 0.5;
       transition: all 0.3s ease;
     }
-    .step-indicator.active {
-      opacity: 1;
-      color: #C9AB6D;
-    }
-    .step-indicator.completed {
-      opacity: 1;
-      color: #10B981;
-    }
+    .step-indicator.active { opacity: 1; color: #C9AB6D; }
+    .step-indicator.completed { opacity: 1; color: #10B981; }
+    
     .step-number {
       width: 2rem;
       height: 2rem;
@@ -69,20 +57,16 @@
       font-weight: bold;
       margin-bottom: 0.5rem;
     }
-    .step-indicator.active .step-number {
-      background: #C9AB6D;
-      color: white;
-    }
-    .step-indicator.completed .step-number {
-      background: #10B981;
-      color: white;
-    }
+    .step-indicator.active .step-number { background: #C9AB6D; color: white; }
+    .step-indicator.completed .step-number { background: #10B981; color: white; }
+    
     .step-line {
       flex: 1;
       height: 2px;
       background: #e5e7eb;
       margin: 0 1rem;
     }
+    
     .progress-bar {
       width: 100%;
       height: 4px;
@@ -96,6 +80,7 @@
       border-radius: 2px;
       transition: width 0.3s ease;
     }
+    
     .form-input {
       width: 100%;
       padding: 0.75rem;
@@ -109,6 +94,7 @@
       border-color: #C9AB6D;
       box-shadow: 0 0 0 3px rgba(201, 171, 109, 0.1);
     }
+    
     .form-label {
       display: block;
       font-weight: 600;
@@ -125,14 +111,8 @@
       font-size: 0.75rem;
       margin-top: 0.25rem;
     }
-    .form-group {
-      margin-bottom: 1.5rem;
-    }
-    .checkbox-group {
-      display: flex;
-      flex-direction: column;
-      gap: 0.75rem;
-    }
+    .form-group { margin-bottom: 1.5rem; }
+    
     .checkbox-item {
       display: flex;
       align-items: flex-start;
@@ -142,9 +122,8 @@
       border-radius: 0.5rem;
       transition: background-color 0.3s ease;
     }
-    .checkbox-item:hover {
-      background: #f9fafb;
-    }
+    .checkbox-item:hover { background: #f9fafb; }
+    
     .checkmark {
       width: 1rem;
       height: 1rem;
@@ -165,76 +144,47 @@
       color: white;
       font-size: 0.75rem;
     }
-    .limit-warning {
-      background: #fef3c7;
-      border: 1px solid #f59e0b;
-      border-radius: 0.5rem;
-      padding: 1rem;
-      margin: 1rem 0;
-      animation: shake 0.5s ease-in-out;
-    }
-    @keyframes shake {
-      0%, 100% { transform: translateX(0); }
-      25% { transform: translateX(-5px); }
-      75% { transform: translateX(5px); }
-    }
+    
     .menu-item-card {
       border: 2px solid transparent;
       transition: all 0.3s ease;
     }
     .menu-item-card.selected {
       border-color: #C9AB6D;
-      background: #C9AB6D10;
+      background: rgba(201, 171, 109, 0.1);
     }
     .menu-item-card.disabled {
       opacity: 0.5;
       cursor: not-allowed;
     }
   </style>
-  
-  <!-- Performance Hints -->
-  <link rel="dns-prefetch" href="//fonts.googleapis.com">
-  <link rel="preload" href="assets/css/style.css" as="style">
-  <link rel="preload" href="assets/js/main.js" as="script">
 </head>
 
 <body class="bg-white text-black overflow-x-hidden">
-  <!-- Enhanced Header -->
-  <header class="fixed top-0 left-0 right-0 z-40 bg-white/95 backdrop-blur-md border-b border-black/10 transition-all duration-300" id="mainHeader">
-    <div class="container mx-auto px-4">
-      <div class="flex items-center justify-between py-4">
-        <!-- Logo -->
-        <a href="index.html" class="group flex items-center gap-3" aria-label="Retour à l'accueil">
-          <div class="w-10 h-10 bg-black rounded-full flex items-center justify-center group-hover:bg-gold transition-colors duration-300">
-            <span class="text-white group-hover:text-black font-bold text-lg">A</span>
-          </div>
-          <div class="flex flex-col">
-            <span class="font-display text-xl font-bold tracking-tight">Arabesque</span>
-            <span class="text-xs tracking-widest text-gray-600 uppercase">Traiteur</span>
-          </div>
-        </a>
-        
-        <!-- Desktop Navigation -->
-        <nav class="hidden lg:flex items-center gap-8" aria-label="Navigation principale">
-          <a href="a-propos.html" class="nav-link text-sm font-medium hover:text-gold transition-colors">À propos</a>
-          <a href="equipe.html" class="nav-link text-sm font-medium hover:text-gold transition-colors">Équipe</a>
-          <a href="services.html" class="nav-link text-sm font-medium hover:text-gold transition-colors">Services</a>
-          <a href="menu.html" class="nav-link text-sm font-medium hover:text-gold transition-colors">Menu</a>
-          <a href="galerie.html" class="nav-link text-sm font-medium hover:text-gold transition-colors">Galerie</a>
-          <a href="contact.html" class="nav-link active text-sm font-medium text-gold relative">
-            Contact
-            <span class="absolute -bottom-2 left-0 right-0 h-0.5 bg-gold rounded-full"></span>
-          </a>
-        </nav>
-        
-        <!-- Mobile Menu Button -->
-        <button id="openNav" class="lg:hidden p-2 rounded-lg border border-black/20 hover:bg-gray-50 transition-colors">
-          <div class="w-6 h-6 flex flex-col justify-center space-y-1">
-            <span class="block w-full h-0.5 bg-black transition-all duration-300"></span>
-            <span class="block w-full h-0.5 bg-black transition-all duration-300"></span>
-            <span class="block w-full h-0.5 bg-black transition-all duration-300"></span>
-          </div>
-        </button>
+  <!-- SIMPLIFIED Header - Same as a-propos.html -->
+  <header class="fixed top-0 left-0 right-0 z-40 bg-white/90 backdrop-blur border-b border-black/10">
+    <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
+      <a href="index.html" class="flex items-center gap-2" aria-label="Accueil">
+        <span class="logo serif text-2xl tracking-wide">Arabesque <strong>Traiteur</strong></span>
+      </a>
+      <nav class="hidden md:flex items-center gap-6 text-sm" aria-label="Navigation principale">
+        <a href="a-propos.html" class="nav-link">À propos</a>
+        <a href="services.html" class="nav-link">Services</a>
+        <a href="menu.html" class="nav-link">Menu</a>
+        <a href="galerie.html" class="nav-link">Galerie</a>
+        <a href="equipe.html" class="nav-link">Équipe</a>
+        <a href="contact.html" class="nav-link active border border-black rounded-full px-3 py-1.5 bg-black text-white">Contact</a>
+      </nav>
+      <button id="openNav" class="md:hidden border border-black rounded-lg px-3 py-2" aria-haspopup="true" aria-controls="mobileNav" aria-expanded="false">Menu</button>
+    </div>
+    <div id="mobileNav" class="md:hidden hidden border-t border-black/10">
+      <div class="max-w-6xl mx-auto px-4 py-3 grid gap-2 text-sm">
+        <a href="a-propos.html" class="py-2">À propos</a>
+        <a href="services.html" class="py-2">Services</a>
+        <a href="menu.html" class="py-2">Menu</a>
+        <a href="galerie.html" class="py-2">Galerie</a>
+        <a href="equipe.html" class="py-2">Équipe</a>
+        <a href="contact.html" class="py-2">Contact</a>
       </div>
     </div>
   </header>
@@ -1234,6 +1184,6 @@ Merci pour votre service d'exception! 🙏`;
     }
   </script>
   
-  <script src="assets/js/arabesque-debug-nav.js"></script>
+  <script src="assets/js/arabesque-final-nav.js"></script>
 </body>
 </html>
