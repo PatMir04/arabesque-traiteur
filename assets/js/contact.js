@@ -1,4 +1,4 @@
-// Contact Form JavaScript - Version Simplifiée et Logique
+// Contact Form JavaScript - Version Simplifiée et Logique avec Emojis WhatsApp Compatible
 document.addEventListener('DOMContentLoaded', function() {
   initializeContactForm();
 });
@@ -692,36 +692,36 @@ function sendViaWhatsApp(formData) {
 function formatWhatsAppMessage(formData) {
   const selectedItemsArray = Array.from(selectedMenuItems);
   
-  return `🌟 DEMANDE DE DEVIS - ARABESQUE TRAITEUR 🌟
+  return `⭐ DEMANDE DE DEVIS - ARABESQUE TRAITEUR ⭐
 
-📅 ÉVÉNEMENT
+📅 EVENEMENT
 • Type: ${formData.get('event_type')}
 • Date: ${formData.get('event_date')}
 • Lieu: ${formData.get('event_location')}
-• Invités: ${formData.get('guests_count')} personnes
-• Heure: ${formData.get('event_time') || 'Non précisée'}
+• Invites: ${formData.get('guests_count')} personnes
+• Heure: ${formData.get('event_time') || 'Non precisee'}
 
-👤 MES COORDONNÉES
+👤 MES COORDONNEES
 • Nom: ${formData.get('client_name')}
-• Téléphone: ${formData.get('client_phone')}
+• Telephone: ${formData.get('client_phone')}
 • Email: ${formData.get('client_email')}
 
-🍽️ MENU SÉLECTIONNÉ (${selectedItemsArray.length} plats)
+🍽 MENU SELECTIONNE (${selectedItemsArray.length} plats)
 ${selectedItemsArray.length > 0 ? selectedItemsArray.map(key => {
   const [category, item] = key.split('::');
   return `• ${item} (${category})`;
-}).join('\n') : '• Sélection selon recommandations du chef'}
+}).join('\n') : '• Selection selon recommandations du chef'}
 
 ${currentFormule ? `📋 FORMULE: ${currentFormule.nom} (${currentFormule.prix}$ par personne)\n` : ''}
 
-${formData.get('cocktail_service') ? '🍹 SERVICE COCKTAIL SOUHAITÉ ✅\n' : ''}
+${formData.get('cocktail_service') ? '🍹 SERVICE COCKTAIL SOUHAITE ✅\n' : ''}
 
 ${formData.get('dietary_requirements') ? `🥗 CONTRAINTES ALIMENTAIRES: ${formData.get('dietary_requirements')}\n` : ''}
 
-💰 Budget: ${formData.get('budget_range') || 'Non précisé'}
+💰 Budget: ${formData.get('budget_range') || 'Non precise'}
 💰 Estimation: ${formData.get('estimated_total')}$ (estimation automatique)
 
-📝 MESSAGE: ${formData.get('personal_message') || 'Aucun message supplémentaire'}
+📝 MESSAGE: ${formData.get('personal_message') || 'Aucun message supplementaire'}
 
 Merci pour votre service d'exception! 🙏`;
 }
