@@ -1,0 +1,1236 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Devis Gratuit & Contact | Arabesque Traiteur - Cuisine Congolaise Authentique</title>
+  <meta name="description" content="Demandez votre devis gratuit pour vos événements à Kinshasa. Formules 15$-35$ selon vos besoins. Menu congolais authentique, spécialités rares. Réponse sous 24h garantie." />
+  
+  <!-- Enhanced SEO & Social Media -->
+  <link rel="icon" href="favicon.svg" />
+  <link rel="manifest" href="manifest.webmanifest" />
+  <meta name="theme-color" content="#C9AB6D" />
+  <meta name="keywords" content="devis traiteur kinshasa, contact arabesque traiteur, sylvie feruzi contact, menu congolais prix, événement kinshasa" />
+  <meta name="author" content="Arabesque Traiteur - Sylvie Feruzi" />
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Devis Gratuit | Arabesque Traiteur Kinshasa" />
+  <meta property="og:description" content="Obtenez votre devis gratuit pour un événement d'exception avec notre cuisine congolaise authentique" />
+  <meta property="og:image" content="https://patmir04.github.io/arabesque-traiteur/assets/images/contact-og.jpg" />
+  <meta property="og:url" content="https://patmir04.github.io/arabesque-traiteur/contact.html" />
+  
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Devis Gratuit | Arabesque Traiteur" />
+  <meta name="twitter:description" content="Planifiez votre événement d'exception avec nous" />
+  <meta name="twitter:image" content="https://patmir04.github.io/arabesque-traiteur/assets/images/contact-og.jpg" />
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700;900&display=swap" rel="stylesheet">
+  
+  <!-- Styles -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="assets/css/style.css" />
+  
+  <!-- Custom styles for form -->
+  <style>
+    .form-step {
+      display: none;
+    }
+    .form-step.active {
+      display: block;
+    }
+    .step-indicator {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      opacity: 0.5;
+      transition: all 0.3s ease;
+    }
+    .step-indicator.active {
+      opacity: 1;
+      color: #C9AB6D;
+    }
+    .step-indicator.completed {
+      opacity: 1;
+      color: #10B981;
+    }
+    .step-number {
+      width: 2rem;
+      height: 2rem;
+      border-radius: 50%;
+      background: #e5e7eb;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      margin-bottom: 0.5rem;
+    }
+    .step-indicator.active .step-number {
+      background: #C9AB6D;
+      color: white;
+    }
+    .step-indicator.completed .step-number {
+      background: #10B981;
+      color: white;
+    }
+    .step-line {
+      flex: 1;
+      height: 2px;
+      background: #e5e7eb;
+      margin: 0 1rem;
+    }
+    .progress-bar {
+      width: 100%;
+      height: 4px;
+      background: #e5e7eb;
+      border-radius: 2px;
+      overflow: hidden;
+    }
+    .progress-fill {
+      height: 100%;
+      background: #C9AB6D;
+      border-radius: 2px;
+      transition: width 0.3s ease;
+    }
+    .form-input {
+      width: 100%;
+      padding: 0.75rem;
+      border: 1px solid #d1d5db;
+      border-radius: 0.5rem;
+      font-size: 0.875rem;
+      transition: all 0.3s ease;
+    }
+    .form-input:focus {
+      outline: none;
+      border-color: #C9AB6D;
+      box-shadow: 0 0 0 3px rgba(201, 171, 109, 0.1);
+    }
+    .form-label {
+      display: block;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+      color: #374151;
+    }
+    .form-help {
+      color: #6b7280;
+      font-size: 0.75rem;
+      margin-top: 0.25rem;
+    }
+    .form-error {
+      color: #dc2626;
+      font-size: 0.75rem;
+      margin-top: 0.25rem;
+    }
+    .form-group {
+      margin-bottom: 1.5rem;
+    }
+    .checkbox-group {
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+    .checkbox-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.75rem;
+      cursor: pointer;
+      padding: 0.5rem;
+      border-radius: 0.5rem;
+      transition: background-color 0.3s ease;
+    }
+    .checkbox-item:hover {
+      background: #f9fafb;
+    }
+    .checkmark {
+      width: 1rem;
+      height: 1rem;
+      border: 2px solid #d1d5db;
+      border-radius: 0.25rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      margin-top: 0.125rem;
+    }
+    .checkbox-item input[type="checkbox"]:checked + .checkmark {
+      background: #C9AB6D;
+      border-color: #C9AB6D;
+    }
+    .checkbox-item input[type="checkbox"]:checked + .checkmark::after {
+      content: '✓';
+      color: white;
+      font-size: 0.75rem;
+    }
+    .limit-warning {
+      background: #fef3c7;
+      border: 1px solid #f59e0b;
+      border-radius: 0.5rem;
+      padding: 1rem;
+      margin: 1rem 0;
+      animation: shake 0.5s ease-in-out;
+    }
+    @keyframes shake {
+      0%, 100% { transform: translateX(0); }
+      25% { transform: translateX(-5px); }
+      75% { transform: translateX(5px); }
+    }
+    .menu-item-card {
+      border: 2px solid transparent;
+      transition: all 0.3s ease;
+    }
+    .menu-item-card.selected {
+      border-color: #C9AB6D;
+      background: #C9AB6D10;
+    }
+    .menu-item-card.disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
+    }
+  </style>
+  
+  <!-- Performance Hints -->
+  <link rel="dns-prefetch" href="//fonts.googleapis.com">
+  <link rel="preload" href="assets/css/style.css" as="style">
+  <link rel="preload" href="assets/js/main.js" as="script">
+</head>
+
+<body class="bg-white text-black overflow-x-hidden">
+  <!-- Enhanced Header -->
+  <header class="fixed top-0 left-0 right-0 z-40 bg-white/95 backdrop-blur-md border-b border-black/10 transition-all duration-300" id="mainHeader">
+    <div class="container mx-auto px-4">
+      <div class="flex items-center justify-between py-4">
+        <!-- Logo -->
+        <a href="index.html" class="group flex items-center gap-3" aria-label="Retour à l'accueil">
+          <div class="w-10 h-10 bg-black rounded-full flex items-center justify-center group-hover:bg-gold transition-colors duration-300">
+            <span class="text-white group-hover:text-black font-bold text-lg">A</span>
+          </div>
+          <div class="flex flex-col">
+            <span class="font-display text-xl font-bold tracking-tight">Arabesque</span>
+            <span class="text-xs tracking-widest text-gray-600 uppercase">Traiteur</span>
+          </div>
+        </a>
+        
+        <!-- Desktop Navigation -->
+        <nav class="hidden lg:flex items-center gap-8" aria-label="Navigation principale">
+          <a href="a-propos.html" class="nav-link text-sm font-medium hover:text-gold transition-colors">À propos</a>
+          <a href="equipe.html" class="nav-link text-sm font-medium hover:text-gold transition-colors">Équipe</a>
+          <a href="services.html" class="nav-link text-sm font-medium hover:text-gold transition-colors">Services</a>
+          <a href="menu.html" class="nav-link text-sm font-medium hover:text-gold transition-colors">Menu</a>
+          <a href="galerie.html" class="nav-link text-sm font-medium hover:text-gold transition-colors">Galerie</a>
+          <a href="contact.html" class="nav-link active text-sm font-medium text-gold relative">
+            Contact
+            <span class="absolute -bottom-2 left-0 right-0 h-0.5 bg-gold rounded-full"></span>
+          </a>
+        </nav>
+        
+        <!-- Mobile Menu Button -->
+        <button id="openNav" class="lg:hidden p-2 rounded-lg border border-black/20 hover:bg-gray-50 transition-colors">
+          <div class="w-6 h-6 flex flex-col justify-center space-y-1">
+            <span class="block w-full h-0.5 bg-black transition-all duration-300"></span>
+            <span class="block w-full h-0.5 bg-black transition-all duration-300"></span>
+            <span class="block w-full h-0.5 bg-black transition-all duration-300"></span>
+          </div>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Contact Hero Section -->
+  <section class="video-hero relative min-h-[60vh] flex items-center justify-center overflow-hidden pt-20">
+    <video autoplay muted loop playsinline data-auto-play class="absolute inset-0 w-full h-full object-cover opacity-80">
+      <source src="assets/videos/contact-consultation.mp4" type="video/mp4">
+      <source src="assets/videos/contact-consultation.webm" type="video/webm">
+    </video>
+    
+    <div class="relative z-10 text-center text-white max-w-4xl mx-auto px-4">
+      <div class="reveal">
+        <span class="inline-block px-4 py-2 bg-gold/20 text-gold font-semibold text-sm rounded-full mb-4">
+          📞 Contact & Devis
+        </span>
+        <h1 class="font-display text-4xl md:text-6xl font-bold mb-6 leading-tight">
+          Planifions votre événement <span class="text-gold">d'exception</span>
+        </h1>
+        <p class="text-xl md:text-2xl mb-8 max-w-3xl mx-auto leading-relaxed">
+          Devis gratuit sous 24h • Consultation personnalisée • Sylvie Feruzi à votre écoute
+        </p>
+        
+        <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+          <a href="#formulaire-devis" class="btn btn-gold text-lg px-8 py-4 animate-pulse">
+            📋 Formulaire intelligent
+          </a>
+          <a href="https://wa.me/243859993833?text=Bonjour%20Arabesque%20Traiteur!%20Je%20souhaite%20obtenir%20un%20devis%20pour%20mon%20événement" 
+             target="_blank" rel="noopener"
+             class="btn btn-outline border-white text-white hover:bg-white hover:text-black text-lg px-8 py-4">
+            💬 WhatsApp Direct
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Smart Quote Form -->
+  <section id="formulaire-devis" class="py-20 bg-white">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-16 reveal">
+        <span class="inline-block px-4 py-2 bg-gold/10 text-gold font-semibold text-sm rounded-full mb-4">
+          📋 Devis Intelligent
+        </span>
+        <h2 class="font-display text-4xl md:text-5xl font-bold mb-6">
+          Formulaire de devis personnalisé
+        </h2>
+        <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+          Notre formulaire intelligent vous guide étape par étape pour créer votre devis personnalisé
+        </p>
+      </div>
+      
+      <div class="max-w-4xl mx-auto">
+        <!-- Form Progress - Updated Order -->
+        <div class="mb-8 reveal">
+          <div class="flex items-center justify-center gap-4 mb-4">
+            <div class="step-indicator active" data-step="1">
+              <span class="step-number">1</span>
+              <span class="step-label">Événement</span>
+            </div>
+            <div class="step-line"></div>
+            <div class="step-indicator" data-step="2">
+              <span class="step-number">2</span>
+              <span class="step-label">Contact</span>
+            </div>
+            <div class="step-line"></div>
+            <div class="step-indicator" data-step="3">
+              <span class="step-number">3</span>
+              <span class="step-label">Menu</span>
+            </div>
+            <div class="step-line"></div>
+            <div class="step-indicator" data-step="4">
+              <span class="step-number">4</span>
+              <span class="step-label">Confirmation</span>
+            </div>
+          </div>
+          <div class="progress-bar">
+            <div class="progress-fill" style="width: 25%"></div>
+          </div>
+        </div>
+        
+        <form id="quoteForm" class="space-y-8" novalidate>
+          <!-- Step 1: Event Details -->
+          <div class="form-step active" data-step="1">
+            <div class="bg-gradient-to-br from-gray-50 to-white rounded-2xl p-8 reveal">
+              <h3 class="font-display text-2xl font-bold mb-6 text-center">📅 Détails de votre événement</h3>
+              
+              <div class="grid md:grid-cols-2 gap-6">
+                <div class="form-group">
+                  <label class="form-label">Type d'événement *</label>
+                  <select name="event_type" class="form-input" required>
+                    <option value="">Choisissez votre événement</option>
+                    <option value="mariage">💕 Mariage</option>
+                    <option value="anniversaire">🎂 Anniversaire</option>
+                    <option value="reception_privee">🏠 Réception privée</option>
+                    <option value="entreprise">🏢 Événement d'entreprise</option>
+                    <option value="gala">🎭 Gala & Réception officielle</option>
+                    <option value="bapteme">👶 Baptême / Cérémonie religieuse</option>
+                    <option value="autre">🎉 Autre (préciser)</option>
+                  </select>
+                  <div class="form-error"></div>
+                </div>
+                
+                <div class="form-group">
+                  <label class="form-label">Date de l'événement *</label>
+                  <input type="date" name="event_date" class="form-input" required>
+                  <div class="form-error"></div>
+                </div>
+                
+                <div class="form-group">
+                  <label class="form-label">Nombre d'invités *</label>
+                  <input type="number" name="guests_count" min="1" max="1000" class="form-input" required 
+                         placeholder="Ex: 50">
+                  <small class="form-help">Influence directement votre formule tarifaire</small>
+                  <div class="form-error"></div>
+                </div>
+                
+                <div class="form-group">
+                  <label class="form-label">Heure de début</label>
+                  <input type="time" name="event_time" class="form-input">
+                  <div class="form-error"></div>
+                </div>
+                
+                <div class="form-group md:col-span-2">
+                  <label class="form-label">Lieu (Kinshasa) *</label>
+                  <input type="text" name="event_location" class="form-input" required
+                         placeholder="Ex: Salle de réception, Commune de Gombe">
+                  <small class="form-help">Précisez la commune, salle ou adresse</small>
+                  <div class="form-error"></div>
+                </div>
+              </div>
+              
+              <!-- Pricing Preview -->
+              <div id="pricingPreview" class="mt-8 p-6 bg-gold/10 rounded-xl hidden">
+                <h4 class="font-bold mb-3 text-gold">💰 Estimation automatique</h4>
+                <div id="pricingDetails"></div>
+              </div>
+              
+              <div class="text-center mt-8">
+                <button type="button" class="btn btn-gold next-step" data-next="2">
+                  Continuer vers contact →
+                </button>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Step 2: Contact Information (moved before menu) -->
+          <div class="form-step" data-step="2">
+            <div class="bg-gradient-to-br from-gray-50 to-white rounded-2xl p-8 reveal">
+              <h3 class="font-display text-2xl font-bold mb-6 text-center">📞 Vos coordonnées</h3>
+              
+              <div class="grid md:grid-cols-2 gap-6">
+                <div class="form-group">
+                  <label class="form-label">Nom complet *</label>
+                  <input type="text" name="client_name" class="form-input" required 
+                         placeholder="Prénom Nom">
+                  <div class="form-error"></div>
+                </div>
+                
+                <div class="form-group">
+                  <label class="form-label">Téléphone (WhatsApp) *</label>
+                  <input type="tel" name="client_phone" class="form-input" required 
+                         placeholder="+243 xxx xxx xxx">
+                  <small class="form-help">De préférence WhatsApp pour un suivi rapide</small>
+                  <div class="form-error"></div>
+                </div>
+                
+                <div class="form-group">
+                  <label class="form-label">Email *</label>
+                  <input type="email" name="client_email" class="form-input" required 
+                         placeholder="votre.email@exemple.com">
+                  <small class="form-help">Pour recevoir le devis détaillé</small>
+                  <div class="form-error"></div>
+                </div>
+                
+                <div class="form-group">
+                  <label class="form-label">Méthode de contact préférée</label>
+                  <select name="contact_preference" class="form-input">
+                    <option value="whatsapp">💬 WhatsApp</option>
+                    <option value="phone">📞 Téléphone</option>
+                    <option value="email">📧 Email</option>
+                  </select>
+                </div>
+                
+                <div class="form-group md:col-span-2">
+                  <label class="form-label">Budget approximatif (optionnel)</label>
+                  <select name="budget_range" class="form-input">
+                    <option value="">Pas de budget défini</option>
+                    <option value="500-1000">500$ - 1,000$</option>
+                    <option value="1000-2000">1,000$ - 2,000$</option>
+                    <option value="2000-5000">2,000$ - 5,000$</option>
+                    <option value="5000+">Plus de 5,000$</option>
+                  </select>
+                  <small class="form-help">Nous aide à personnaliser notre proposition</small>
+                </div>
+              </div>
+              
+              <div class="flex justify-between mt-8">
+                <button type="button" class="btn btn-outline prev-step" data-prev="1">
+                  ← Retour
+                </button>
+                <button type="button" class="btn btn-gold next-step" data-next="3">
+                  Continuer vers menu →
+                </button>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Step 3: Menu Selection -->
+          <div class="form-step" data-step="3">
+            <div class="bg-gradient-to-br from-gray-50 to-white rounded-2xl p-8 reveal">
+              <h3 class="font-display text-2xl font-bold mb-6 text-center">🍽️ Sélection de menu</h3>
+              
+              <!-- Selection Counter -->
+              <div id="selectionCounter" class="text-center mb-6">
+                <div class="bg-white rounded-lg p-4 border border-gray-200">
+                  <span class="text-lg">Sélection actuelle: </span>
+                  <span id="currentSelection" class="font-bold text-2xl text-gold">0</span>
+                  <span>/</span>
+                  <span id="maxSelection" class="font-bold text-lg">∞</span>
+                  <span class="text-lg"> plats</span>
+                </div>
+              </div>
+
+              <!-- Limit Warning (Hidden by default) -->
+              <div id="limitWarning" class="limit-warning hidden">
+                <div class="flex items-center gap-3">
+                  <span class="text-2xl">⚠️</span>
+                  <div>
+                    <p class="font-bold text-amber-800">Limite atteinte !</p>
+                    <p class="text-amber-700 text-sm">Vous avez atteint le nombre maximum de plats pour votre formule. Désélectionnez un plat pour en choisir un autre.</p>
+                  </div>
+                </div>
+              </div>
+              
+              <!-- Detected Menu Selection -->
+              <div id="detectedMenu" class="mb-8 hidden">
+                <div class="bg-green-50 border border-green-200 rounded-lg p-4">
+                  <h4 class="font-bold text-green-800 mb-2">✅ Menu détecté automatiquement</h4>
+                  <p class="text-green-600 text-sm">Nous avons récupéré votre sélection du configurateur de menu</p>
+                  <div id="detectedMenuItems" class="mt-3"></div>
+                  <button type="button" class="text-green-600 text-sm underline mt-2" onclick="clearDetectedMenu()">
+                    Effacer et choisir manuellement
+                  </button>
+                </div>
+              </div>
+              
+              <!-- Manual Menu Selection -->
+              <div id="manualMenuSelection">
+                <!-- Menu categories will be loaded here by JavaScript -->
+                <div id="menuCategories">
+                  <!-- Sample categories - these will be replaced by JavaScript -->
+                  <div class="mb-8">
+                    <h4 class="font-bold text-lg mb-4 text-gold">🇨🇩 Spécialités Congolaises</h4>
+                    <div class="grid md:grid-cols-2 gap-4" data-category="specialites">
+                      <!-- Menu items will be populated by JavaScript -->
+                    </div>
+                  </div>
+                </div>
+                
+                <!-- Service Cocktail Add-on -->
+                <div class="mb-6">
+                  <h4 class="font-bold mb-4">🍹 Service Cocktail (optionnel)</h4>
+                  <div class="bg-black text-white rounded-lg p-6">
+                    <label class="checkbox-item text-white">
+                      <input type="checkbox" name="cocktail_service" value="yes" id="cocktailService">
+                      <span class="checkmark"></span>
+                      Ajouter le service cocktail clé en main
+                    </label>
+                    <div id="cocktailDetails" class="hidden mt-4">
+                      <p class="text-gray-300 text-sm mb-3">Inclus: 2 tournées par personne, barmen professionnels, matériel complet</p>
+                      <div class="grid grid-cols-2 md:grid-cols-4 gap-2 text-center text-sm">
+                        <div class="bg-white/10 rounded p-2">
+                          <div class="text-gold font-bold">500$</div>
+                          <div class="text-xs">< 55 pers.</div>
+                        </div>
+                        <div class="bg-white/10 rounded p-2">
+                          <div class="text-gold font-bold">750$</div>
+                          <div class="text-xs">< 105 pers.</div>
+                        </div>
+                        <div class="bg-white/10 rounded p-2">
+                          <div class="text-gold font-bold">900$</div>
+                          <div class="text-xs">< 155 pers.</div>
+                        </div>
+                        <div class="bg-white/10 rounded p-2">
+                          <div class="text-gold font-bold">1200$</div>
+                          <div class="text-xs">< 205 pers.</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                
+                <div class="form-group">
+                  <label class="form-label">Demandes ou contraintes alimentaires spéciales</label>
+                  <textarea name="dietary_requirements" rows="3" class="form-input" 
+                            placeholder="Ex: allergies, régime végétarien, halal, sans gluten..."></textarea>
+                </div>
+                
+                <div class="form-group">
+                  <label class="form-label">Message personnalisé</label>
+                  <textarea name="personal_message" rows="4" class="form-input" 
+                            placeholder="Parlez-nous de votre vision, de l'ambiance souhaitée, de détails importants..."></textarea>
+                </div>
+              </div>
+              
+              <div class="flex justify-between mt-8">
+                <button type="button" class="btn btn-outline prev-step" data-prev="2">
+                  ← Retour
+                </button>
+                <button type="button" class="btn btn-gold next-step" data-next="4">
+                  Voir le récapitulatif →
+                </button>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Step 4: Summary & Confirmation -->
+          <div class="form-step" data-step="4">
+            <div class="bg-gradient-to-br from-gray-50 to-white rounded-2xl p-8 reveal">
+              <h3 class="font-display text-2xl font-bold mb-6 text-center">📋 Récapitulatif de votre demande</h3>
+              
+              <div id="quoteSummary" class="space-y-6 mb-8">
+                <!-- Summary content will be populated by JavaScript -->
+              </div>
+              
+              <!-- Total Estimation -->
+              <div id="totalEstimation" class="bg-gold/10 border border-gold/30 rounded-xl p-6 text-center mb-8">
+                <h4 class="font-bold text-lg mb-2">💰 Estimation totale</h4>
+                <div id="estimationDetails" class="text-gray-600">
+                  <!-- Estimation details will be populated by JavaScript -->
+                </div>
+                <p class="text-sm text-gray-500 mt-3">
+                  <strong>Cette estimation est indicative.</strong> Le devis final sera personnalisé selon vos besoins exacts.
+                </p>
+              </div>
+              
+              <!-- Consent & Legal -->
+              <div class="space-y-4 mb-8">
+                <label class="checkbox-item">
+                  <input type="checkbox" name="consent_contact" required>
+                  <span class="checkmark"></span>
+                  J'accepte d'être contacté par Arabesque Traiteur pour cette demande de devis
+                </label>
+                
+                <label class="checkbox-item">
+                  <input type="checkbox" name="consent_privacy" required>
+                  <span class="checkmark"></span>
+                  J'ai lu et j'accepte la <a href="#politique" class="text-gold underline">politique de confidentialité</a>
+                </label>
+                
+                <label class="checkbox-item">
+                  <input type="checkbox" name="newsletter_optin">
+                  <span class="checkmark"></span>
+                  Je souhaite recevoir les actualités et offres spéciales d'Arabesque Traiteur
+                </label>
+              </div>
+              
+              <!-- Submit Options -->
+              <div class="space-y-4">
+                <button type="submit" name="submit_type" value="whatsapp" class="btn bg-green-500 hover:bg-green-600 text-white w-full text-lg">
+                  💬 Envoyer via WhatsApp
+                </button>
+                
+                <button type="button" class="btn btn-outline prev-step w-full" data-prev="3">
+                  ← Modifier ma sélection
+                </button>
+              </div>
+              
+              <!-- Success Message -->
+              <div id="formSuccess" class="hidden bg-green-50 border border-green-200 rounded-lg p-6 text-center">
+                <div class="text-green-600 text-4xl mb-4">✅</div>
+                <h4 class="font-bold text-green-800 mb-2">Demande envoyée avec succès !</h4>
+                <p class="text-green-600 mb-4">
+                  Nous vous contacterons sous 24h pour finaliser votre devis personnalisé.
+                </p>
+                <div class="flex justify-center gap-4">
+                  <a href="menu.html" class="btn btn-outline">Modifier mon menu</a>
+                  <a href="index.html" class="btn btn-gold">Retour à l'accueil</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Hidden fields -->
+          <input type="hidden" name="menu_selection" id="menuSelectionField">
+          <input type="hidden" name="estimated_total" id="estimatedTotalField">
+          <input type="hidden" name="form_timestamp" id="formTimestampField">
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Enhanced Footer -->
+  <footer class="bg-gray-900 text-white">
+    <div class="container mx-auto px-4">
+      <div class="grid md:grid-cols-4 gap-8 py-16">
+        <div class="md:col-span-2">
+          <div class="flex items-center gap-3 mb-6">
+            <div class="w-12 h-12 bg-gold rounded-full flex items-center justify-center">
+              <span class="text-black font-bold text-xl">A</span>
+            </div>
+            <div>
+              <div class="font-display text-xl font-bold">Arabesque Traiteur</div>
+              <div class="text-sm text-gray-400">Contact & Devis Professionnel</div>
+            </div>
+          </div>
+          <p class="text-gray-300 mb-6 max-w-md">
+            Votre partenaire de confiance pour tous vos événements d'exception à Kinshasa. 
+            Devis gratuit sous 24h, consultation personnalisée avec Sylvie Feruzi.
+          </p>
+        </div>
+      </div>
+      
+      <div class="border-t border-gray-800 py-6 text-center">
+        <p class="text-gray-400">
+          © <span id="year">2025</span> Arabesque Traiteur • Devis & Contact Professionnel
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="assets/js/main.js"></script>
+  
+  <!-- Contact Form JavaScript -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      initializeContactForm();
+    });
+    
+    // Global variables for form management
+    let currentStep = 1;
+    let selectedMenuItems = new Set();
+    let maxSelectionLimit = Infinity;
+    let currentFormule = null;
+    
+    function initializeContactForm() {
+      // Load menu selection from localStorage
+      loadMenuSelection();
+      
+      // Initialize form steps
+      initializeFormSteps();
+      
+      // Initialize pricing calculator
+      initializePricingCalculator();
+      
+      // Initialize menu selection
+      initializeMenuSelection();
+      
+      // Initialize form validation
+      initializeFormValidation();
+      
+      // Load menu data
+      loadMenuData();
+    }
+    
+    function loadMenuSelection() {
+      try {
+        const menuSelection = localStorage.getItem('arabesqueQuoteData');
+        if (menuSelection) {
+          const selection = JSON.parse(menuSelection);
+          if (selection.selections && selection.selections.length > 0) {
+            document.getElementById('menuSelectionField').value = menuSelection;
+            displayDetectedMenu(selection);
+          }
+        }
+      } catch (e) {
+        console.log('No menu selection found');
+      }
+    }
+    
+    function displayDetectedMenu(selection) {
+      const detectedMenuDiv = document.getElementById('detectedMenu');
+      const detectedItemsDiv = document.getElementById('detectedMenuItems');
+      
+      if (selection.selections && selection.selections.length > 0) {
+        detectedMenuDiv.classList.remove('hidden');
+        
+        // Set the formule and limits
+        currentFormule = selection.formule;
+        if (currentFormule && currentFormule.nombre_repas) {
+          maxSelectionLimit = currentFormule.nombre_repas;
+          document.getElementById('maxSelection').textContent = maxSelectionLimit;
+        }
+        
+        // Add selections to our set
+        selection.selections.forEach(item => {
+          selectedMenuItems.add(item.key);
+        });
+        
+        // Display items
+        detectedItemsDiv.innerHTML = selection.selections.map(item => 
+          `<span class="inline-block px-2 py-1 bg-green-100 text-green-800 rounded text-xs mr-2 mb-1">
+            ${item.itemName}
+          </span>`
+        ).join('');
+        
+        updateSelectionCounter();
+      }
+    }
+    
+    function clearDetectedMenu() {
+      localStorage.removeItem('arabesqueQuoteData');
+      document.getElementById('detectedMenu').classList.add('hidden');
+      document.getElementById('menuSelectionField').value = '';
+      selectedMenuItems.clear();
+      currentFormule = null;
+      maxSelectionLimit = Infinity;
+      document.getElementById('maxSelection').textContent = '∞';
+      updateSelectionCounter();
+      updateMenuItemsDisplay();
+    }
+    
+    function initializeFormSteps() {
+      const nextButtons = document.querySelectorAll('.next-step');
+      const prevButtons = document.querySelectorAll('.prev-step');
+      
+      nextButtons.forEach(btn => {
+        btn.addEventListener('click', function() {
+          const nextStep = parseInt(this.dataset.next);
+          if (validateCurrentStep()) {
+            showStep(nextStep);
+            updateProgressBar(nextStep);
+          }
+        });
+      });
+      
+      prevButtons.forEach(btn => {
+        btn.addEventListener('click', function() {
+          const prevStep = parseInt(this.dataset.prev);
+          showStep(prevStep);
+          updateProgressBar(prevStep);
+        });
+      });
+    }
+    
+    function showStep(stepNumber) {
+      currentStep = stepNumber;
+      
+      document.querySelectorAll('.form-step').forEach(step => {
+        step.classList.remove('active');
+      });
+      document.querySelector(`.form-step[data-step="${stepNumber}"]`).classList.add('active');
+      
+      document.querySelectorAll('.step-indicator').forEach((indicator, index) => {
+        indicator.classList.remove('active', 'completed');
+        if (index + 1 === stepNumber) {
+          indicator.classList.add('active');
+        } else if (index + 1 < stepNumber) {
+          indicator.classList.add('completed');
+        }
+      });
+      
+      if (stepNumber === 4) {
+        generateQuoteSummary();
+      }
+      
+      // Scroll to top of form
+      document.getElementById('formulaire-devis').scrollIntoView({ 
+        behavior: 'smooth', 
+        block: 'start' 
+      });
+    }
+    
+    function updateProgressBar(step) {
+      const progress = (step / 4) * 100;
+      document.querySelector('.progress-fill').style.width = `${progress}%`;
+    }
+    
+    function validateCurrentStep() {
+      const currentStepElement = document.querySelector(`.form-step[data-step="${currentStep}"]`);
+      const requiredFields = currentStepElement.querySelectorAll('[required]');
+      let isValid = true;
+      
+      requiredFields.forEach(field => {
+        const errorDiv = field.parentElement.querySelector('.form-error');
+        if (!field.value.trim()) {
+          field.style.borderColor = '#dc2626';
+          if (errorDiv) {
+            errorDiv.textContent = 'Ce champ est requis';
+          }
+          isValid = false;
+        } else {
+          field.style.borderColor = '#d1d5db';
+          if (errorDiv) {
+            errorDiv.textContent = '';
+          }
+        }
+      });
+      
+      return isValid;
+    }
+    
+    function initializePricingCalculator() {
+      const guestsInput = document.querySelector('input[name="guests_count"]');
+      if (guestsInput) {
+        guestsInput.addEventListener('input', function() {
+          const guestCount = parseInt(this.value) || 0;
+          calculatePricing(guestCount);
+          updateFormuleLimit(guestCount);
+        });
+      }
+      
+      const cocktailCheckbox = document.getElementById('cocktailService');
+      if (cocktailCheckbox) {
+        cocktailCheckbox.addEventListener('change', function() {
+          const cocktailDetails = document.getElementById('cocktailDetails');
+          if (this.checked) {
+            cocktailDetails.classList.remove('hidden');
+          } else {
+            cocktailDetails.classList.add('hidden');
+          }
+          
+          const guests = parseInt(document.querySelector('input[name="guests_count"]').value) || 0;
+          if (guests > 0) calculatePricing(guests);
+        });
+      }
+    }
+    
+    function updateFormuleLimit(guestCount) {
+      // Determine formule based on guest count
+      if (guestCount <= 50) {
+        maxSelectionLimit = Infinity; // Formule Intime - unlimited
+        document.getElementById('maxSelection').textContent = '∞';
+      } else if (guestCount <= 100) {
+        maxSelectionLimit = Infinity; // Formule Optimale - unlimited
+        document.getElementById('maxSelection').textContent = '∞';
+      } else {
+        // For 100+ guests, default to Premium formule (18 plats)
+        maxSelectionLimit = 18;
+        document.getElementById('maxSelection').textContent = maxSelectionLimit;
+      }
+      
+      // If current selection exceeds new limit, show warning
+      if (selectedMenuItems.size > maxSelectionLimit) {
+        showLimitWarning();
+      } else {
+        hideLimitWarning();
+      }
+      
+      updateSelectionCounter();
+      updateMenuItemsDisplay();
+    }
+    
+    function calculatePricing(guestCount) {
+      if (guestCount === 0) {
+        document.getElementById('pricingPreview').classList.add('hidden');
+        return;
+      }
+      
+      let basePrice = 0;
+      let formula = '';
+      
+      if (guestCount <= 50) {
+        basePrice = 35;
+        formula = 'Formule Intime (1-50 personnes)';
+      } else if (guestCount <= 100) {
+        basePrice = 20;
+        formula = 'Formule Optimale (50-100 personnes)';
+      } else {
+        basePrice = 20; // Default to Premium formula
+        formula = 'Formule Premium (100+ personnes)';
+      }
+      
+      const menuTotal = basePrice * guestCount;
+      
+      // Calculate cocktail service if selected
+      let cocktailPrice = 0;
+      const cocktailService = document.getElementById('cocktailService');
+      if (cocktailService && cocktailService.checked) {
+        if (guestCount < 55) cocktailPrice = 500;
+        else if (guestCount < 105) cocktailPrice = 750;
+        else if (guestCount < 155) cocktailPrice = 900;
+        else cocktailPrice = 1200;
+      }
+      
+      const total = menuTotal + cocktailPrice;
+      
+      const pricingDiv = document.getElementById('pricingPreview');
+      const detailsDiv = document.getElementById('pricingDetails');
+      
+      detailsDiv.innerHTML = `
+        <div class="text-sm space-y-2">
+          <div class="flex justify-between">
+            <span>${formula}</span>
+            <span class="font-bold">${menuTotal}$ (${basePrice}$ × ${guestCount})</span>
+          </div>
+          ${cocktailPrice > 0 ? `
+            <div class="flex justify-between">
+              <span>Service cocktail</span>
+              <span class="font-bold">${cocktailPrice}$</span>
+            </div>
+          ` : ''}
+          <hr class="border-gold/30">
+          <div class="flex justify-between text-lg font-bold text-gold">
+            <span>Total estimé</span>
+            <span>${total}$</span>
+          </div>
+        </div>
+      `;
+      
+      pricingDiv.classList.remove('hidden');
+      document.getElementById('estimatedTotalField').value = total;
+    }
+    
+    function initializeMenuSelection() {
+      // This will be called after menu data is loaded
+    }
+    
+    function loadMenuData() {
+      // Sample menu data - in real implementation, this would be loaded from your menu.json
+      const sampleMenuData = {
+        categories: [
+          {
+            id: 'specialites',
+            nom: '🇨🇩 Spécialités Congolaises',
+            elements: [
+              { id: 'pondu', nom: 'Pondu', description: 'Feuilles de manioc pilées, plat emblématique congolais' },
+              { id: 'maboke-ngulu', nom: 'Maboke y\'a Ngulu', description: 'Porc fumé traditionnel dans les feuilles' },
+              { id: 'nga-nda', nom: 'Viande de Chèvre façon Nga Nda', description: 'Chèvre mijotée selon la tradition ancestrale' },
+              { id: 'capitaine-braise', nom: 'Gros Capitaine Braisé', description: 'Poisson capitaine du Congo, braisé aux épices locales' }
+            ]
+          },
+          {
+            id: 'viandes',
+            nom: '🥩 Viandes & Grillades',
+            elements: [
+              { id: 'cochon-lait', nom: 'Cochon de Lait Farci', description: 'Cochon de lait tendre, farci aux herbes et épices locales' },
+              { id: 'brochette-boeuf', nom: 'Brochette de Bœuf', description: 'Bœuf tendre grillé aux épices, marinade maison' },
+              { id: 'poulet-braise', nom: 'Poulet Braisé', description: 'Poulet fermier braisé, sauce tomate épicée' },
+              { id: 'cotes-agneau', nom: 'Côtes d\'Agneau', description: 'Côtes d\'agneau grillées, herbes de Provence' }
+            ]
+          },
+          {
+            id: 'accompagnements',
+            nom: '🍚 Accompagnements',
+            elements: [
+              { id: 'fufu', nom: 'Fufu', description: 'Pâte de manioc traditionnelle, accompagnement emblématique' },
+              { id: 'riz-blanc', nom: 'Riz Blanc', description: 'Riz parfumé cuit à la vapeur' },
+              { id: 'makemba', nom: 'Makemba', description: 'Bananes plantain, préparation traditionnelle congolaise' },
+              { id: 'pommes-terre', nom: 'Pommes de Terre au Beurre', description: 'Pommes de terre fondantes au beurre frais' }
+            ]
+          }
+        ]
+      };
+      
+      renderMenuCategories(sampleMenuData);
+    }
+    
+    function renderMenuCategories(menuData) {
+      const categoriesContainer = document.getElementById('menuCategories');
+      categoriesContainer.innerHTML = '';
+      
+      menuData.categories.forEach(category => {
+        const categoryDiv = document.createElement('div');
+        categoryDiv.className = 'mb-8';
+        categoryDiv.innerHTML = `
+          <h4 class="font-bold text-lg mb-4 text-gold">${category.nom}</h4>
+          <div class="grid md:grid-cols-2 gap-4" data-category="${category.id}">
+            ${category.elements.map(element => `
+              <div class="menu-item-card p-4 border border-gray-200 rounded-lg cursor-pointer hover:border-gold transition-all" 
+                   data-item-id="${element.id}" data-item-name="${element.nom}" data-category="${category.nom}">
+                <h5 class="font-semibold mb-2">${element.nom}</h5>
+                <p class="text-sm text-gray-600 mb-3">${element.description}</p>
+                <div class="flex justify-between items-center">
+                  <span class="text-xs text-gray-500">Cliquez pour sélectionner</span>
+                  <span class="selection-indicator hidden text-gold">✓ Sélectionné</span>
+                </div>
+              </div>
+            `).join('')}
+          </div>
+        `;
+        categoriesContainer.appendChild(categoryDiv);
+      });
+      
+      // Add click handlers to menu items
+      document.querySelectorAll('.menu-item-card').forEach(card => {
+        card.addEventListener('click', function() {
+          toggleMenuItemSelection(this);
+        });
+      });
+      
+      updateMenuItemsDisplay();
+    }
+    
+    function toggleMenuItemSelection(card) {
+      const itemId = card.dataset.itemId;
+      const itemName = card.dataset.itemName;
+      const categoryName = card.dataset.category;
+      const key = `${categoryName}::${itemName}`;
+      
+      if (selectedMenuItems.has(key)) {
+        // Remove selection
+        selectedMenuItems.delete(key);
+        card.classList.remove('selected');
+        card.querySelector('.selection-indicator').classList.add('hidden');
+        hideLimitWarning();
+      } else {
+        // Check if we can add more items
+        if (selectedMenuItems.size >= maxSelectionLimit) {
+          showLimitWarning();
+          return;
+        }
+        
+        // Add selection
+        selectedMenuItems.add(key);
+        card.classList.add('selected');
+        card.querySelector('.selection-indicator').classList.remove('hidden');
+      }
+      
+      updateSelectionCounter();
+      updateMenuItemsDisplay();
+    }
+    
+    function updateSelectionCounter() {
+      document.getElementById('currentSelection').textContent = selectedMenuItems.size;
+    }
+    
+    function updateMenuItemsDisplay() {
+      document.querySelectorAll('.menu-item-card').forEach(card => {
+        const itemName = card.dataset.itemName;
+        const categoryName = card.dataset.category;
+        const key = `${categoryName}::${itemName}`;
+        
+        if (selectedMenuItems.has(key)) {
+          card.classList.add('selected');
+          card.querySelector('.selection-indicator').classList.remove('hidden');
+        } else {
+          card.classList.remove('selected');
+          card.querySelector('.selection-indicator').classList.add('hidden');
+        }
+        
+        // Disable cards if limit reached and not selected
+        if (selectedMenuItems.size >= maxSelectionLimit && !selectedMenuItems.has(key)) {
+          card.classList.add('disabled');
+        } else {
+          card.classList.remove('disabled');
+        }
+      });
+    }
+    
+    function showLimitWarning() {
+      const warningDiv = document.getElementById('limitWarning');
+      warningDiv.classList.remove('hidden');
+      warningDiv.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
+    
+    function hideLimitWarning() {
+      document.getElementById('limitWarning').classList.add('hidden');
+    }
+    
+    function generateQuoteSummary() {
+      const form = document.getElementById('quoteForm');
+      const formData = new FormData(form);
+      
+      // Generate summary HTML
+      const summary = document.getElementById('quoteSummary');
+      const selectedItemsArray = Array.from(selectedMenuItems);
+      
+      summary.innerHTML = `
+        <div class="grid md:grid-cols-2 gap-6">
+          <div class="space-y-4">
+            <div>
+              <h5 class="font-semibold mb-2">📅 Événement</h5>
+              <p><strong>Type:</strong> ${formData.get('event_type')}</p>
+              <p><strong>Date:</strong> ${formData.get('event_date')}</p>
+              <p><strong>Invités:</strong> ${formData.get('guests_count')}</p>
+              <p><strong>Lieu:</strong> ${formData.get('event_location')}</p>
+            </div>
+            
+            <div>
+              <h5 class="font-semibold mb-2">👤 Contact</h5>
+              <p><strong>Nom:</strong> ${formData.get('client_name')}</p>
+              <p><strong>Téléphone:</strong> ${formData.get('client_phone')}</p>
+              <p><strong>Email:</strong> ${formData.get('client_email')}</p>
+            </div>
+          </div>
+          
+          <div>
+            <h5 class="font-semibold mb-2">🍽️ Menu sélectionné (${selectedItemsArray.length} plats)</h5>
+            <div class="max-h-40 overflow-y-auto space-y-1">
+              ${selectedItemsArray.map(key => {
+                const [category, item] = key.split('::');
+                return `<div class="text-sm p-2 bg-gray-50 rounded">
+                  <strong>${item}</strong>
+                  <span class="text-gray-500"> (${category})</span>
+                </div>`;
+              }).join('')}
+            </div>
+            
+            ${formData.get('cocktail_service') ? '<p class="mt-2 text-green-600"><strong>✅ Service cocktail inclus</strong></p>' : ''}
+            ${formData.get('dietary_requirements') ? `<p class="mt-2"><strong>Contraintes:</strong> ${formData.get('dietary_requirements')}</p>` : ''}
+            ${formData.get('personal_message') ? `<p class="mt-2"><strong>Message:</strong> ${formData.get('personal_message')}</p>` : ''}
+          </div>
+        </div>
+      `;
+      
+      // Update estimation details
+      const estimationDiv = document.getElementById('estimationDetails');
+      const estimatedTotal = document.getElementById('estimatedTotalField').value;
+      if (estimatedTotal) {
+        estimationDiv.innerHTML = `
+          <div class="text-2xl font-bold text-gold mb-2">${estimatedTotal}$</div>
+          <p class="text-sm text-gray-600">Prix estimé pour ${formData.get('guests_count')} personnes</p>
+        `;
+      }
+    }
+    
+    function initializeFormValidation() {
+      const form = document.getElementById('quoteForm');
+      
+      form.addEventListener('submit', function(e) {
+        e.preventDefault();
+        
+        if (!validateCurrentStep()) {
+          return;
+        }
+        
+        // Check consent checkboxes
+        const consentContact = form.querySelector('input[name="consent_contact"]');
+        const consentPrivacy = form.querySelector('input[name="consent_privacy"]');
+        
+        if (!consentContact.checked || !consentPrivacy.checked) {
+          alert('Veuillez accepter les conditions de contact et la politique de confidentialité.');
+          return;
+        }
+        
+        const formData = new FormData(form);
+        
+        // Add selected menu items to form data
+        const menuSelection = {
+          items: Array.from(selectedMenuItems),
+          count: selectedMenuItems.size,
+          maxAllowed: maxSelectionLimit
+        };
+        formData.set('menu_selection', JSON.stringify(menuSelection));
+        
+        sendViaWhatsApp(formData);
+      });
+    }
+    
+    function sendViaWhatsApp(formData) {
+      const message = formatWhatsAppMessage(formData);
+      const encodedMessage = encodeURIComponent(message);
+      const whatsappUrl = `https://wa.me/243859993833?text=${encodedMessage}`;
+      
+      window.open(whatsappUrl, '_blank');
+      showSuccessMessage();
+    }
+    
+    function formatWhatsAppMessage(formData) {
+      const selectedItemsArray = Array.from(selectedMenuItems);
+      
+      return `🌟 DEMANDE DE DEVIS - ARABESQUE TRAITEUR 🌟
+
+📅 ÉVÉNEMENT
+• Type: ${formData.get('event_type')}
+• Date: ${formData.get('event_date')}
+• Lieu: ${formData.get('event_location')}
+• Invités: ${formData.get('guests_count')} personnes
+• Heure: ${formData.get('event_time') || 'Non précisée'}
+
+👤 MES COORDONNÉES
+• Nom: ${formData.get('client_name')}
+• Téléphone: ${formData.get('client_phone')}
+• Email: ${formData.get('client_email')}
+
+🍽️ MENU SÉLECTIONNÉ (${selectedItemsArray.length} plats)
+${selectedItemsArray.map(key => {
+  const [category, item] = key.split('::');
+  return `• ${item} (${category})`;
+}).join('\n')}
+
+${formData.get('cocktail_service') ? '🍹 SERVICE COCKTAIL SOUHAITÉ ✅\n' : ''}
+
+${formData.get('dietary_requirements') ? `🥗 CONTRAINTES ALIMENTAIRES: ${formData.get('dietary_requirements')}\n` : ''}
+
+💰 Budget: ${formData.get('budget_range') || 'Non précisé'}
+💰 Estimation: ${formData.get('estimated_total')}$ (estimation automatique)
+
+📝 MESSAGE: ${formData.get('personal_message') || 'Aucun message supplémentaire'}
+
+Merci pour votre service d'exception! 🙏`;
+    }
+    
+    function showSuccessMessage() {
+      document.getElementById('formSuccess').classList.remove('hidden');
+      document.getElementById('quoteForm').style.display = 'none';
+      
+      // Scroll to success message
+      document.getElementById('formSuccess').scrollIntoView({ 
+        behavior: 'smooth',
+        block: 'center'
+      });
+    }
+  </script>
+</body>
+</html>
