@@ -1,4 +1,4 @@
-// Contact Form JavaScript - Version Simplifiée et Logique avec Emojis WhatsApp Compatible
+// Contact Form JavaScript - Version Enhanced avec Sélection de Formule
 document.addEventListener('DOMContentLoaded', function() {
   initializeContactForm();
 });
@@ -9,28 +9,96 @@ let selectedMenuItems = new Set();
 let maxSelectionLimit = Infinity;
 let currentFormule = null;
 let detectedQuoteData = null;
+let availableFormules = [];
 
 function initializeContactForm() {
   console.log('🚀 Initialisation du formulaire de contact...');
   
-  // 1. Vérifier et charger les données du menu depuis localStorage
+  // 1. Initialiser les formules disponibles
+  initializeFormules();
+  
+  // 2. Vérifier et charger les données du menu depuis localStorage
   loadMenuSelectionFromStorage();
   
-  // 2. Initialiser les étapes du formulaire
+  // 3. Initialiser les étapes du formulaire
   initializeFormSteps();
   
-  // 3. Initialiser le calculateur de prix
+  // 4. Initialiser le calculateur de prix
   initializePricingCalculator();
   
-  // 4. Initialiser la validation du formulaire
+  // 5. Initialiser la validation du formulaire
   initializeFormValidation();
   
-  // 5. Charger le menu seulement si pas de sélection détectée
+  // 6. Charger le menu seulement si pas de sélection détectée
   if (!detectedQuoteData) {
     loadMenuForManualSelection();
   }
   
   console.log('✅ Formulaire de contact initialisé');
+}
+
+// NOUVEAU: Initialiser les formules disponibles
+function initializeFormules() {
+  availableFormules = [
+    {
+      id: 'intime',
+      nom: 'Formule Intime',
+      prix: 35,
+      nombre_repas: null,
+      description: '1-50 personnes - Service personnalisé avec menu libre choix',
+      badge: 'INTIME',
+      color: 'rose'
+    },
+    {
+      id: 'optimale',
+      nom: 'Formule Optimale', 
+      prix: 20,
+      nombre_repas: null,
+      description: '50-100 personnes - Excellent rapport qualité-prix',
+      badge: 'POPULAIRE',
+      color: 'green'
+    },
+    {
+      id: 'essentielle',
+      nom: 'Formule Essentielle',
+      prix: 15,
+      nombre_repas: 14,
+      description: '100+ personnes - 14 repas au choix + salades + fruits',
+      badge: 'ÉCONOMIQUE',
+      color: 'blue'
+    },
+    {
+      id: 'premium',
+      nom: 'Formule Premium',
+      prix: 20,
+      nombre_repas: 18,
+      description: '100+ personnes - 18 repas au choix + salades + fruits',
+      badge: 'ÉQUILIBRÉE',
+      color: 'purple'
+    },
+    {
+      id: 'excellence',
+      nom: 'Formule Excellence',
+      prix: 25,
+      nombre_repas: 20,
+      description: '100+ personnes - 20 repas au choix + salades + fruits',
+      badge: 'PRESTIGE',
+      color: 'amber'
+    },
+    {
+      id: 'vip',
+      nom: 'Formule VIP',
+      prix: 35,
+      nombre_repas: 28,
+      description: '100+ personnes - 28 repas au choix + accès complet',
+      badge: 'VIP TOTAL',
+      color: 'gold'
+    }
+  ];
+
+  // Définir la formule par défaut
+  currentFormule = availableFormules[1]; // Formule Optimale par défaut
+  maxSelectionLimit = currentFormule.nombre_repas || Infinity;
 }
 
 // FONCTION PRINCIPALE : Charger la sélection depuis le localStorage
@@ -76,9 +144,8 @@ function loadMenuSelectionFromStorage() {
 // Afficher le menu détecté avec style amélioré
 function displayDetectedMenu(quoteData) {
   const detectedMenuDiv = document.getElementById('detectedMenu');
-  const detectedItemsDiv = document.getElementById('detectedMenuItems');
   
-  if (!detectedMenuDiv || !detectedItemsDiv) {
+  if (!detectedMenuDiv) {
     console.log('⚠️ Éléments UI pour menu détecté non trouvés');
     return;
   }
@@ -110,7 +177,7 @@ function displayDetectedMenu(quoteData) {
           
           <div class="mb-4">
             <h5 class="font-semibold text-green-800 mb-2">Plats sélectionnés :</h5>
-            <div class="grid md:grid-cols-2 gap-2">
+            <div class="grid md:grid-cols-2 gap-2 max-h-32 overflow-y-auto">
               ${quoteData.selections.map(item => `
                 <div class="flex items-center gap-2 text-sm">
                   <span class="w-5 h-5 bg-green-500 text-white rounded-full flex items-center justify-center text-xs font-bold">
@@ -154,7 +221,6 @@ function displayDetectedMenu(quoteData) {
 // Fonctions pour gérer la sélection détectée
 window.keepDetectedMenu = function() {
   console.log('✅ L\'utilisateur garde la sélection détectée');
-  // La sélection est déjà chargée, on continue simplement
   updateSelectionCounters();
 };
 
@@ -165,8 +231,8 @@ window.clearDetectedMenuAndChooseManually = function() {
   localStorage.removeItem('arabesqueQuoteData');
   detectedQuoteData = null;
   selectedMenuItems.clear();
-  currentFormule = null;
-  maxSelectionLimit = Infinity;
+  currentFormule = availableFormules[1]; // Retour à la formule par défaut
+  maxSelectionLimit = currentFormule.nombre_repas || Infinity;
   
   // Masquer la section détectée
   const detectedMenuDiv = document.getElementById('detectedMenu');
@@ -180,10 +246,128 @@ window.clearDetectedMenuAndChooseManually = function() {
     manualSelection.style.display = 'block';
   }
   
-  // Charger le menu pour sélection manuelle
+  // Afficher le sélecteur de formule
+  renderFormuleSelector();
   loadMenuForManualSelection();
   updateSelectionCounters();
 };
+
+// NOUVEAU: Rendre le sélecteur de formule
+function renderFormuleSelector() {
+  const menuCategories = document.getElementById('menuCategories');
+  if (!menuCategories) return;
+  
+  // Injecter le sélecteur de formule au début
+  const formuleSelector = document.createElement('div');
+  formuleSelector.className = 'mb-8 p-6 bg-gradient-to-br from-gold/10 to-gold/5 rounded-2xl border border-gold/20';
+  formuleSelector.id = 'formuleSelector';
+  
+  formuleSelector.innerHTML = `
+    <h4 class="font-bold text-xl mb-4 text-center">💎 Choisissez votre formule</h4>
+    <p class="text-gray-600 text-center mb-6">Sélectionnez la formule qui correspond à votre événement</p>
+    
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+      ${availableFormules.map((formule, index) => `
+        <label class="formule-option cursor-pointer">
+          <input type="radio" name="selected_formule" value="${formule.id}" 
+                 ${index === 1 ? 'checked' : ''} class="sr-only">
+          <div class="formule-card p-4 border-2 border-gray-200 rounded-xl transition-all hover:shadow-lg
+                      ${index === 1 ? 'border-gold bg-gold/10' : ''}">
+            <div class="text-center mb-3">
+              <span class="inline-block px-2 py-1 text-xs font-bold rounded-full mb-2
+                          ${index === 1 ? 'bg-gold text-black' : 'bg-gray-200 text-gray-700'}">
+                ${formule.badge}
+              </span>
+              <h5 class="font-bold text-lg">${formule.nom}</h5>
+              <div class="text-2xl font-bold text-gold mt-2">${formule.prix}$</div>
+              <div class="text-sm text-gray-500">par personne</div>
+            </div>
+            
+            <div class="text-center mb-3">
+              <div class="font-semibold">
+                ${formule.nombre_repas ? `${formule.nombre_repas} repas max` : 'Choix illimité'}
+              </div>
+            </div>
+            
+            <p class="text-xs text-gray-600 text-center leading-relaxed">
+              ${formule.description}
+            </p>
+          </div>
+        </label>
+      `).join('')}
+    </div>
+  `;
+  
+  // Insérer au début du container des catégories
+  menuCategories.insertBefore(formuleSelector, menuCategories.firstChild);
+  
+  // Ajouter les event listeners pour la sélection de formule
+  document.querySelectorAll('input[name="selected_formule"]').forEach(radio => {
+    radio.addEventListener('change', function() {
+      if (this.checked) {
+        const selectedFormule = availableFormules.find(f => f.id === this.value);
+        selectFormule(selectedFormule);
+        updateFormuleDisplay();
+      }
+    });
+  });
+}
+
+// NOUVEAU: Sélectionner une formule
+function selectFormule(formule) {
+  currentFormule = formule;
+  maxSelectionLimit = formule.nombre_repas || Infinity;
+  
+  console.log(`📋 Formule sélectionnée: ${formule.nom} (${formule.prix}$ - ${formule.nombre_repas || '∞'} plats)`);
+  
+  // Appliquer les limites si nécessaire
+  enforceSelectionLimit();
+  updateSelectionCounters();
+  
+  // Recalculer les prix si un nombre d'invités est déjà renseigné
+  const guestsInput = document.querySelector('input[name="guests_count"]');
+  if (guestsInput && guestsInput.value) {
+    calculatePricing(parseInt(guestsInput.value));
+  }
+}
+
+// NOUVEAU: Mettre à jour l'affichage de la formule
+function updateFormuleDisplay() {
+  document.querySelectorAll('.formule-card').forEach((card, index) => {
+    const radio = card.parentElement.querySelector('input[type="radio"]');
+    const badge = card.querySelector('span');
+    
+    if (radio.checked) {
+      card.classList.add('border-gold', 'bg-gold/10');
+      card.classList.remove('border-gray-200');
+      badge.classList.add('bg-gold', 'text-black');
+      badge.classList.remove('bg-gray-200', 'text-gray-700');
+    } else {
+      card.classList.remove('border-gold', 'bg-gold/10');
+      card.classList.add('border-gray-200');
+      badge.classList.remove('bg-gold', 'text-black');
+      badge.classList.add('bg-gray-200', 'text-gray-700');
+    }
+  });
+}
+
+// NOUVEAU: Appliquer les limites de sélection
+function enforceSelectionLimit() {
+  if (maxSelectionLimit === Infinity) return;
+  
+  if (selectedMenuItems.size > maxSelectionLimit) {
+    const itemsArray = Array.from(selectedMenuItems);
+    selectedMenuItems.clear();
+    
+    // Garder seulement les N premiers éléments
+    itemsArray.slice(0, maxSelectionLimit).forEach(item => {
+      selectedMenuItems.add(item);
+    });
+    
+    console.log(`⚠️ Limite de sélection appliquée: ${maxSelectionLimit} plats maximum`);
+    updateManualMenuDisplay();
+  }
+}
 
 // Charger le menu pour sélection manuelle (version simplifiée)
 async function loadMenuForManualSelection() {
@@ -220,6 +404,11 @@ async function loadMenuForManualSelection() {
     menuData = createSimplifiedMenuData();
   }
   
+  // Si pas de menu détecté, afficher le sélecteur de formule
+  if (!detectedQuoteData) {
+    renderFormuleSelector();
+  }
+  
   renderSimplifiedMenuCategories(menuData);
 }
 
@@ -247,6 +436,14 @@ function createSimplifiedMenuData() {
         ]
       },
       {
+        id: 'poissons',
+        nom: '🐟 Poissons & Fruits de Mer',
+        elements: [
+          { id: 'tilapia-braise', nom: 'Tilapia Braisé', description: 'Poisson frais braisé aux épices' },
+          { id: 'crevettes', nom: 'Crevettes Sautées', description: 'Crevettes à l\'ail et herbes' }
+        ]
+      },
+      {
         id: 'accompagnements',
         nom: '🍚 Accompagnements',
         elements: [
@@ -268,29 +465,29 @@ function renderSimplifiedMenuCategories(menuData) {
     return;
   }
   
-  categoriesContainer.innerHTML = '';
-  
-  // Message d'information
-  const infoDiv = document.createElement('div');
-  infoDiv.className = 'mb-6 p-4 bg-blue-50 border border-blue-200 rounded-lg';
-  infoDiv.innerHTML = `
-    <div class="flex items-center gap-3">
-      <span class="text-blue-600 text-xl">ℹ️</span>
-      <div>
-        <p class="font-bold text-blue-800">Sélection manuelle</p>
-        <p class="text-blue-600 text-sm">Choisissez vos plats parmi notre sélection. Pour plus de choix, utilisez le <a href="menu.html" class="underline font-semibold">configurateur complet</a>.</p>
+  // Message d'information (seulement si pas de sélecteur de formule)
+  if (!document.getElementById('formuleSelector')) {
+    const infoDiv = document.createElement('div');
+    infoDiv.className = 'mb-6 p-4 bg-blue-50 border border-blue-200 rounded-lg';
+    infoDiv.innerHTML = `
+      <div class="flex items-center gap-3">
+        <span class="text-blue-600 text-xl">ℹ️</span>
+        <div>
+          <p class="font-bold text-blue-800">Sélection manuelle</p>
+          <p class="text-blue-600 text-sm">Choisissez vos plats parmi notre sélection. Pour plus de choix, utilisez le <a href="menu.html" class="underline font-semibold">configurateur complet</a>.</p>
+        </div>
       </div>
-    </div>
-  `;
-  categoriesContainer.appendChild(infoDiv);
+    `;
+    categoriesContainer.appendChild(infoDiv);
+  }
   
   menuData.categories.forEach(category => {
     const categoryDiv = document.createElement('div');
     categoryDiv.className = 'mb-8';
     
     const header = document.createElement('h4');
-    header.className = 'font-bold text-lg mb-4 text-gold';
-    header.textContent = category.nom;
+    header.className = 'font-bold text-lg mb-4 text-gold flex items-center gap-2';
+    header.innerHTML = `${category.nom} <span class="text-sm font-normal text-gray-500">(${category.elements.length} plats)</span>`;
     
     const grid = document.createElement('div');
     grid.className = 'grid md:grid-cols-2 gap-4';
@@ -307,7 +504,7 @@ function renderSimplifiedMenuCategories(menuData) {
         <p class="text-sm text-gray-600 mb-3">${element.description}</p>
         <div class="flex justify-between items-center">
           <span class="text-xs text-gray-500">Cliquez pour sélectionner</span>
-          <span class="selection-indicator hidden text-gold">✓ Sélectionné</span>
+          <span class="selection-indicator hidden text-gold font-bold">✓ Sélectionné</span>
         </div>
       `;
       
@@ -335,7 +532,7 @@ function toggleManualMenuItemSelection(card, key) {
   } else {
     // Vérifier les limites si applicables
     if (maxSelectionLimit !== Infinity && selectedMenuItems.size >= maxSelectionLimit) {
-      alert(`Limite atteinte ! Vous ne pouvez sélectionner que ${maxSelectionLimit} plats maximum.`);
+      alert(`Limite atteinte ! Vous ne pouvez sélectionner que ${maxSelectionLimit} plats maximum avec la ${currentFormule.nom}.`);
       return;
     }
     
@@ -358,6 +555,13 @@ function updateManualMenuDisplay() {
     } else {
       card.classList.remove('selected');
       card.querySelector('.selection-indicator').classList.add('hidden');
+    }
+    
+    // Désactiver les cartes si limite atteinte
+    if (maxSelectionLimit !== Infinity && selectedMenuItems.size >= maxSelectionLimit && !selectedMenuItems.has(key)) {
+      card.classList.add('disabled', 'opacity-50', 'cursor-not-allowed');
+    } else {
+      card.classList.remove('disabled', 'opacity-50', 'cursor-not-allowed');
     }
   });
 }
@@ -468,14 +672,13 @@ function validateCurrentStep() {
   return isValid;
 }
 
-// Initialiser le calculateur de prix
+// Initialiser le calculateur de prix AMÉLIORÉ
 function initializePricingCalculator() {
   const guestsInput = document.querySelector('input[name="guests_count"]');
   if (guestsInput) {
     guestsInput.addEventListener('input', function() {
       const guestCount = parseInt(this.value) || 0;
       calculatePricing(guestCount);
-      updateFormuleLimit(guestCount);
     });
   }
   
@@ -495,53 +698,23 @@ function initializePricingCalculator() {
   }
 }
 
-function updateFormuleLimit(guestCount) {
-  // Déterminer la formule selon le nombre d'invités (si pas déjà définie)
-  if (!currentFormule) {
-    if (guestCount <= 50) {
-      maxSelectionLimit = Infinity;
-      document.getElementById('maxSelection').textContent = '∞';
-    } else if (guestCount <= 100) {
-      maxSelectionLimit = Infinity;
-      document.getElementById('maxSelection').textContent = '∞';
-    } else {
-      maxSelectionLimit = 18; // Formule Premium par défaut
-      document.getElementById('maxSelection').textContent = maxSelectionLimit;
-    }
-    
-    updateSelectionCounters();
-  }
-}
-
+// NOUVEAU: Calculateur de prix amélioré avec formule sélectionnée
 function calculatePricing(guestCount) {
   if (guestCount === 0) {
-    document.getElementById('pricingPreview').classList.add('hidden');
+    const pricingPreview = document.getElementById('pricingPreview');
+    if (pricingPreview) {
+      pricingPreview.classList.add('hidden');
+    }
     return;
   }
   
-  let basePrice = 0;
-  let formula = '';
-  
-  // Utiliser le prix de la formule détectée ou calculer selon le nombre d'invités
-  if (currentFormule) {
-    basePrice = currentFormule.prix;
-    formula = currentFormule.nom;
-  } else {
-    if (guestCount <= 50) {
-      basePrice = 35;
-      formula = 'Formule Intime (1-50 personnes)';
-    } else if (guestCount <= 100) {
-      basePrice = 20;
-      formula = 'Formule Optimale (50-100 personnes)';
-    } else {
-      basePrice = 20;
-      formula = 'Formule Premium (100+ personnes)';
-    }
-  }
+  // Utiliser la formule actuellement sélectionnée
+  const basePrice = currentFormule.prix;
+  const formula = currentFormule.nom;
   
   const menuTotal = basePrice * guestCount;
   
-  // Calculer le service cocktail si sélectionné
+  // NOUVEAU: Calculer le service cocktail avec les prix corrects
   let cocktailPrice = 0;
   const cocktailService = document.getElementById('cocktailService');
   if (cocktailService && cocktailService.checked) {
@@ -581,7 +754,10 @@ function calculatePricing(guestCount) {
       pricingDiv.classList.remove('hidden');
     }
     
-    document.getElementById('estimatedTotalField').value = total;
+    const estimatedTotalField = document.getElementById('estimatedTotalField');
+    if (estimatedTotalField) {
+      estimatedTotalField.value = total;
+    }
   }
 }
 
@@ -613,7 +789,14 @@ function generateQuoteSummary() {
         </div>
         
         <div>
-          <h5 class="font-semibold mb-2">🍽️ Menu sélectionné (${selectedItemsArray.length} plats)</h5>
+          <h5 class="font-semibold mb-2">💎 Formule sélectionnée</h5>
+          <div class="p-3 bg-gold/10 rounded-lg mb-4">
+            <p class="font-bold text-gold">${currentFormule.nom}</p>
+            <p class="text-sm">${currentFormule.prix}$ par personne</p>
+            <p class="text-xs text-gray-600">${currentFormule.description}</p>
+          </div>
+          
+          <h5 class="font-semibold mb-2">🍽 Menu sélectionné (${selectedItemsArray.length} plats)</h5>
           <div class="max-h-40 overflow-y-auto space-y-1">
             ${selectedItemsArray.length > 0 ? selectedItemsArray.map(key => {
               const [category, item] = key.split('::');
@@ -665,7 +848,7 @@ function initializeFormValidation() {
       
       const formData = new FormData(form);
       
-      // Ajouter les données de menu sélectionné
+      // Ajouter les données de menu et formule sélectionnés
       const menuSelection = {
         items: Array.from(selectedMenuItems),
         count: selectedMenuItems.size,
@@ -706,13 +889,15 @@ function formatWhatsAppMessage(formData) {
 • Telephone: ${formData.get('client_phone')}
 • Email: ${formData.get('client_email')}
 
+💎 FORMULE SELECTIONNEE
+• ${currentFormule.nom} (${currentFormule.prix}$ par personne)
+• ${currentFormule.nombre_repas ? `${currentFormule.nombre_repas} plats maximum` : 'Choix illimité'}
+
 🍽 MENU SELECTIONNE (${selectedItemsArray.length} plats)
 ${selectedItemsArray.length > 0 ? selectedItemsArray.map(key => {
   const [category, item] = key.split('::');
   return `• ${item} (${category})`;
 }).join('\n') : '• Selection selon recommandations du chef'}
-
-${currentFormule ? `📋 FORMULE: ${currentFormule.nom} (${currentFormule.prix}$ par personne)\n` : ''}
 
 ${formData.get('cocktail_service') ? '🍹 SERVICE COCKTAIL SOUHAITE ✅\n' : ''}
 
