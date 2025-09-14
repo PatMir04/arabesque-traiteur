@@ -68,7 +68,7 @@
           id: 'intime',
           nom: 'Formule Intime',
           prix: 35,
-          nombre_repas: null,
+          nombre_repas: 14,
           description: '1-50 personnes - Service personnalisé avec menu libre choix',
           badge: 'INTIME',
           color: 'rose'
@@ -77,7 +77,7 @@
           id: 'optimale',
           nom: 'Formule Optimale', 
           prix: 20,
-          nombre_repas: null,
+          nombre_repas: 18,
           description: '50-100 personnes - Excellent rapport qualité-prix',
           badge: 'POPULAIRE',
           color: 'green'
@@ -96,7 +96,7 @@
           nom: 'Formule Premium',
           prix: 20,
           nombre_repas: 18,
-          description: '100+ personnes - 18 repas au choix + salades + fruits',
+          description: '50+ personnes - 18 repas au choix + salades + fruits',
           badge: 'ÉQUILIBRÉE',
           color: 'purple'
         },
@@ -105,7 +105,7 @@
           nom: 'Formule Excellence',
           prix: 25,
           nombre_repas: 20,
-          description: '100+ personnes - 20 repas au choix + salades + fruits',
+          description: '50+ personnes - 20 repas au choix + salades + fruits',
           badge: 'PRESTIGE',
           color: 'amber'
         },
