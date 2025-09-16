@@ -224,6 +224,9 @@
   </style>
   <!-- Performance Hints -->
   
+<link rel="dns-prefetch" href="//fonts.googleapis.com">
+  <link rel="preload" href="assets/css/style.css" as="style">
+  <link rel="preload" href="assets/js/main.js" as="script">
 </head>
 
 <body class="bg-white text-black overflow-x-hidden">
@@ -231,23 +234,18 @@
   <div class="scroll-progress fixed top-0 left-0 h-1 bg-gradient-to-r from-gold to-gold-light z-50 transition-all duration-300" style="width: 0%;"></div>
   
   <!-- Enhanced Header -->
-    <header class="fixed top-0 left-0 right-0 z-40 bg-white/90 backdrop-blur border-b border-black/10">
+  <header class="fixed top-0 left-0 right-0 z-40 bg-white/90 backdrop-blur border-b border-black/10">
     <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
-      <a href="index.html" class="flex items-center gap-3" aria-label="Accueil Arabesque Traiteur">
-        <img src="assets/images/logo.png" alt="Arabesque Traiteur Logo" class="logo-img" />
-        <div class="hidden sm:block">
-          <span class="logo serif text-xl tracking-wide font-semibold">Arabesque</span>
-          <span class="logo serif text-xl tracking-wide font-bold ml-1">Traiteur</span>
-        </div>
+      <a href="index.html" class="flex items-center gap-2" aria-label="Accueil">
+        <span class="logo serif text-2xl tracking-wide">Arabesque <strong>Traiteur</strong></span>
       </a>
-      
       <nav class="hidden md:flex items-center gap-6 text-sm" aria-label="Navigation principale">
         <a href="a-propos.html" class="nav-link">À propos</a>
         <a href="services.html" class="nav-link">Services</a>
         <a href="menu.html" class="nav-link">Menu</a>
         <a href="galerie.html" class="nav-link">Galerie</a>
-        <a href="equipe.html" class="nav-link active">Équipe</a>
-        <a href="contact.html" class="nav-link border border-black rounded-full px-3 py-1.5 hover:bg-black hover:text-white">Devis</a>
+        <a href="equipe.html" class="nav-link">Équipe</a>
+        <a href="contact.html" class="nav-link border border-black rounded-full px-3 py-1.5 hover:bg-black hover:text-white active">Devis</a>
       </nav>
       <button id="openNav" class="md:hidden border border-black rounded-lg px-3 py-2" aria-haspopup="true" aria-controls="mobileNav" aria-expanded="false">Menu</button>
     </div>
