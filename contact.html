@@ -165,6 +165,49 @@
       padding: 1rem;
       margin-bottom: 1rem;
     }
+
+    .faq-item {
+      border: 1px solid #e5e7eb;
+      border-radius: 0.5rem;
+      margin-bottom: 1rem;
+      overflow: hidden;
+      transition: all 0.3s ease;
+    }
+    .faq-item:hover { border-color: #C9AB6D; }
+    
+    .faq-question {
+      padding: 1rem;
+      cursor: pointer;
+      background: #f9fafb;
+      font-weight: 600;
+      display: flex;
+      justify-content: between;
+      align-items: center;
+      transition: all 0.3s ease;
+    }
+    .faq-question:hover { background: #f3f4f6; }
+    .faq-question.active { background: #C9AB6D; color: white; }
+    
+    .faq-answer {
+      padding: 0 1rem;
+      max-height: 0;
+      overflow: hidden;
+      transition: all 0.3s ease;
+    }
+    .faq-answer.open { 
+      padding: 1rem; 
+      max-height: 500px; 
+    }
+    
+    .contact-card {
+      background: linear-gradient(135deg, #C9AB6D 0%, #B8995A 100%);
+      border-radius: 1rem;
+      padding: 2rem;
+      color: white;
+      text-align: center;
+      transition: transform 0.3s ease;
+    }
+    .contact-card:hover { transform: translateY(-5px); }
     
     @media (max-width: 768px) {
       .max-w-4xl, .max-w-6xl { margin-left: 1rem !important; margin-right: 1rem !important; }
@@ -229,6 +272,81 @@
              class="btn btn-outline border-white text-white hover:bg-white hover:text-black text-lg px-8 py-4">
             💬 WhatsApp Direct
           </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Besoin d'une réponse immédiate -->
+  <section class="py-16 bg-gradient-to-br from-gold/5 to-white">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="text-center mb-12 reveal">
+        <span class="inline-block px-4 py-2 bg-gold/10 text-gold font-semibold text-sm rounded-full mb-4">
+          🚀 Réponse Immédiate
+        </span>
+        <h2 class="font-display text-3xl md:text-4xl font-bold mb-6">
+          Besoin d'une réponse immédiate ?
+        </h2>
+        <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+          Sylvie Feruzi et son équipe sont disponibles pour vous conseiller directement
+        </p>
+      </div>
+      
+      <div class="grid md:grid-cols-3 gap-8">
+        <!-- WhatsApp -->
+        <div class="contact-card reveal">
+          <div class="text-4xl mb-4">💬</div>
+          <h3 class="text-xl font-bold mb-2">WhatsApp</h3>
+          <p class="mb-4 opacity-90">Réponse immédiate • Photos en direct • Consultation rapide</p>
+          <a href="https://wa.me/243859993833" class="block bg-white text-gold font-bold py-3 px-6 rounded-lg hover:bg-gray-100 transition-colors">
+            +243 859 993 833
+          </a>
+          <p class="text-sm mt-3 opacity-75">Réponse garantie sous 2h</p>
+        </div>
+        
+        <!-- Téléphone -->
+        <div class="contact-card reveal">
+          <div class="text-4xl mb-4">📞</div>
+          <h3 class="text-xl font-bold mb-2">Téléphone</h3>
+          <p class="mb-4 opacity-90">Discussion personnelle • Conseil expert • Disponible 8h-20h</p>
+          <a href="tel:+243859993833" class="block bg-white text-gold font-bold py-3 px-6 rounded-lg hover:bg-gray-100 transition-colors">
+            +243 859 993 833
+          </a>
+          <p class="text-sm mt-3 opacity-75">Lun-Dim : 8h00-20h00</p>
+        </div>
+        
+        <!-- Email -->
+        <div class="contact-card reveal">
+          <div class="text-4xl mb-4">📧</div>
+          <h3 class="text-xl font-bold mb-2">Email</h3>
+          <p class="mb-4 opacity-90">Devis détaillé • Documents joints • Réponse sous 24h</p>
+          <a href="mailto:etarabesque@gmail.com" class="block bg-white text-gold font-bold py-3 px-6 rounded-lg hover:bg-gray-100 transition-colors text-sm">
+            etarabesque@gmail.com
+          </a>
+          <p class="text-sm mt-3 opacity-75">Réponse sous 24h</p>
+        </div>
+      </div>
+      
+      <div class="text-center mt-12 reveal">
+        <div class="bg-white rounded-2xl p-8 shadow-lg max-w-4xl mx-auto">
+          <h3 class="text-2xl font-bold mb-4 text-gold">🎯 Pourquoi nous choisir ?</h3>
+          <div class="grid md:grid-cols-3 gap-6 text-center">
+            <div>
+              <div class="text-3xl mb-2">⚡</div>
+              <h4 class="font-bold mb-2">Devis personnalisé sous 24h maximum</h4>
+              <p class="text-sm text-gray-600">Adapté à votre budget et vos goûts</p>
+            </div>
+            <div>
+              <div class="text-3xl mb-2">🏆</div>
+              <h4 class="font-bold mb-2">15 ans d'expertise à votre service</h4>
+              <p class="text-sm text-gray-600">Événements d'exception à Kinshasa</p>
+            </div>
+            <div>
+              <div class="text-3xl mb-2">✨</div>
+              <h4 class="font-bold mb-2">Cuisine congolaise authentique</h4>
+              <p class="text-sm text-gray-600">Recettes traditionnelles et créations modernes</p>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -578,6 +696,290 @@
     </div>
   </section>
 
+  <!-- Questions Fréquentes -->
+  <section class="py-20 bg-gradient-to-br from-gray-50 to-white">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="text-center mb-16 reveal">
+        <span class="inline-block px-4 py-2 bg-gold/10 text-gold font-semibold text-sm rounded-full mb-4">
+          ❓ Questions Fréquentes
+        </span>
+        <h2 class="font-display text-4xl md:text-5xl font-bold mb-6">
+          Questions Fréquentes
+        </h2>
+        <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+          Réponses aux questions les plus courantes sur nos services et nos tarifs
+        </p>
+      </div>
+      
+      <div class="max-w-4xl mx-auto">
+        <div class="faq-item reveal">
+          <div class="faq-question" onclick="toggleFAQ(this)">
+            💰 Quels sont vos tarifs ?
+            <span class="ml-auto">+</span>
+          </div>
+          <div class="faq-answer">
+            <p class="mb-4">Nos tarifs dépendent du nombre d'invités :</p>
+            <ul class="list-disc list-inside space-y-2 mb-4">
+              <li><strong>1-50 invités :</strong> 35$ par personne (Formule Intime)</li>
+              <li><strong>50-100 invités :</strong> 20-35$ par personne (4 formules disponibles)</li>
+              <li><strong>100+ invités :</strong> 15-35$ par personne (5 formules disponibles)</li>
+            </ul>
+            <p>Le service cocktail est optionnel (500$ à 1200$ selon l'effectif).</p>
+          </div>
+        </div>
+        
+        <div class="faq-item reveal">
+          <div class="faq-question" onclick="toggleFAQ(this)">
+            🥗 Proposez-vous des menus végétariens ou halal ?
+            <span class="ml-auto">+</span>
+          </div>
+          <div class="faq-answer">
+            <p class="mb-4">Absolument ! Nous proposons :</p>
+            <ul class="list-disc list-inside space-y-2">
+              <li>Options végétariennes avec légumes locaux</li>
+              <li>Menus halal certifiés</li>
+              <li>Adaptations pour allergies alimentaires</li>
+              <li>Régimes sans gluten sur demande</li>
+            </ul>
+            <p class="mt-4">Précisez vos besoins dans le formulaire de devis.</p>
+          </div>
+        </div>
+        
+        <div class="faq-item reveal">
+          <div class="faq-question" onclick="toggleFAQ(this)">
+            📍 Dans quelles zones livrez-vous ?
+            <span class="ml-auto">+</span>
+          </div>
+          <div class="faq-answer">
+            <p class="mb-4">Oui, nous livrons dans toutes les communes de Kinshasa :</p>
+            <ul class="list-disc list-inside space-y-2">
+              <li>Gombe, Kalamu, Lemba, Limete</li>
+              <li>Périphérie (Mont-Ngafula, N'sele...)</li>
+              <li>Sites événementiels spécialisés</li>
+            </ul>
+            <p class="mt-4">Les frais de transport sont inclus dans nos tarifs pour Kinshasa.</p>
+          </div>
+        </div>
+        
+        <div class="faq-item reveal">
+          <div class="faq-question" onclick="toggleFAQ(this)">
+            🦎 Avez-vous des spécialités rares ?
+            <span class="ml-auto">+</span>
+          </div>
+          <div class="faq-answer">
+            <p class="mb-4">Nos spécialités rares (crocodile, tortue, mashanza) sont authentiques mais nécessitent :</p>
+            <ul class="list-disc list-inside space-y-2">
+              <li>Commande minimum 2 semaines à l'avance</li>
+              <li>Confirmation de disponibilité</li>
+              <li>Supplément selon la spécialité</li>
+            </ul>
+            <p class="mt-4">Contactez-nous pour vérifier la disponibilité.</p>
+          </div>
+        </div>
+        
+        <div class="faq-item reveal">
+          <div class="faq-question" onclick="toggleFAQ(this)">
+            📅 Quel délai pour commander ?
+            <span class="ml-auto">+</span>
+          </div>
+          <div class="faq-answer">
+            <p class="mb-4">Pour garantir la qualité optimale :</p>
+            <ul class="list-disc list-inside space-y-2">
+              <li><strong>Événements simples :</strong> 48h minimum</li>
+              <li><strong>Mariages/Galas :</strong> 2 semaines minimum</li>
+              <li><strong>Spécialités rares :</strong> 3 semaines</li>
+            </ul>
+            <p class="mt-4">Plus vous réservez tôt, plus nous pouvons personnaliser votre menu.</p>
+          </div>
+        </div>
+        
+        <div class="faq-item reveal">
+          <div class="faq-question" onclick="toggleFAQ(this)">
+            💳 Comment se déroule le paiement ?
+            <span class="ml-auto">+</span>
+          </div>
+          <div class="faq-answer">
+            <p class="mb-4">Notre processus de paiement sécurisé :</p>
+            <ul class="list-disc list-inside space-y-2">
+              <li>50% d'acompte à la commande</li>
+              <li>50% le jour de l'événement</li>
+              <li>Paiement mobile money ou virement</li>
+            </ul>
+            <p class="mt-4">Modifications possibles jusqu'à 7 jours avant (selon disponibilité).</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 📍 Zone de Service -->
+  <section class="py-16 bg-gradient-to-br from-gray-50 to-white">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="grid lg:grid-cols-2 gap-16 items-center">
+        <!-- Texte descriptif à gauche -->
+        <div class="reveal">
+          <span class="inline-block px-4 py-2 bg-gold/10 text-gold font-semibold text-sm rounded-full mb-4">
+            📍 Zone de Service
+          </span>
+          <h2 class="font-display text-3xl md:text-4xl font-bold mb-6">
+            Kinshasa et environs
+          </h2>
+          <p class="text-lg text-gray-600 mb-6">
+            Basés au cœur de Kinshasa, nous intervenons dans toute la ville et ses environs 
+            pour apporter l'excellence culinaire congolaise à votre événement.
+          </p>
+          
+          <div class="space-y-4 mb-8">
+            <div class="flex items-center gap-3">
+              <div class="w-8 h-8 bg-gold/20 rounded-full flex items-center justify-center">
+                <span class="text-gold">✓</span>
+              </div>
+              <span>Toutes les communes de Kinshasa</span>
+            </div>
+            <div class="flex items-center gap-3">
+              <div class="w-8 h-8 bg-gold/20 rounded-full flex items-center justify-center">
+                <span class="text-gold">✓</span>
+              </div>
+              <span>Périphérie de Kinshasa (Mont-Ngafula, N'sele...)</span>
+            </div>
+            <div class="flex items-center gap-3">
+              <div class="w-8 h-8 bg-gold/20 rounded-full flex items-center justify-center">
+                <span class="text-gold">✓</span>
+              </div>
+              <span>Sites événementiels spécialisés</span>
+            </div>
+            <div class="flex items-center gap-3">
+              <div class="w-8 h-8 bg-gold/20 rounded-full flex items-center justify-center">
+                <span class="text-gold">✓</span>
+              </div>
+              <span>Livraison incluse dans nos tarifs</span>
+            </div>
+          </div>
+          
+          <div class="bg-white rounded-2xl p-6 shadow-lg">
+            <h3 class="font-bold mb-4">Notre Bureau Principal</h3>
+            <div class="space-y-3 text-sm">
+              <div class="flex items-center gap-3">
+                <span class="text-gold">📍</span>
+                <span>Avenue de la Paix, Commune de Gombe<br>
+                      Kinshasa, République Démocratique du Congo</span>
+              </div>
+              <div class="flex items-center gap-3">
+                <span class="text-gold">📞</span>
+                <a href="tel:+243859993833" class="hover:text-gold transition-colors">+243 859 993 833</a>
+              </div>
+              <div class="flex items-center gap-3">
+                <span class="text-gold">📧</span>
+                <a href="mailto:etarabesque@gmail.com" class="hover:text-gold transition-colors">etarabesque@gmail.com</a>
+              </div>
+              <div class="flex items-center gap-3">
+                <span class="text-gold">📷</span>
+                <a href="https://www.instagram.com/arabesque.traiteur/" target="_blank" rel="noopener" class="hover:text-gold transition-colors">@arabesque.traiteur</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Carte interactive à droite -->
+        <div class="reveal">
+          <div class="relative">
+            <!-- Recherche adresse -->
+            <div class="mb-4 relative">
+              <input 
+                type="text" 
+                id="addressSearch" 
+                placeholder="📍 Rechercher votre adresse à Kinshasa..."
+                class="w-full p-3 pl-4 pr-12 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-gold focus:border-transparent shadow-sm"
+              />
+              <button 
+                id="clearSearch"
+                class="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-gray-600 hidden"
+              >
+                ✕
+              </button>
+            </div>
+            
+            <!-- Carte Leaflet -->
+            <div id="kinshasa-map" class="aspect-square rounded-2xl shadow-lg overflow-hidden relative z-10"></div>
+            
+            <!-- Overlay zones de service -->
+            <div class="absolute top-20 right-4 bg-white/95 backdrop-blur rounded-lg p-4 shadow-lg z-20 max-w-48">
+              <h4 class="font-bold text-sm mb-2">Zones principales</h4>
+              <div class="space-y-1 text-xs">
+                <div class="flex items-center gap-2">
+                  <div class="w-3 h-3 bg-blue-400 rounded-full"></div>
+                  <span>Gombe (Centre-ville)</span>
+                </div>
+                <div class="flex items-center gap-2">
+                  <div class="w-3 h-3 bg-green-400 rounded-full"></div>
+                  <span>Kinshasa (Résidentiel)</span>
+                </div>
+                <div class="flex items-center gap-2">
+                  <div class="w-3 h-3 bg-purple-400 rounded-full"></div>
+                  <span>Kalamu (Commercial)</span>
+                </div>
+                <div class="flex items-center gap-2">
+                  <div class="w-3 h-3 bg-orange-400 rounded-full"></div>
+                  <span>Lemba (Universitaire)</span>
+                </div>
+                <div class="flex items-center gap-2">
+                  <div class="w-3 h-3 bg-red-400 rounded-full"></div>
+                  <span>Limete (Industriel)</span>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Suggestions de recherche -->
+            <div id="searchSuggestions" class="absolute top-16 left-0 right-0 bg-white rounded-lg shadow-lg max-h-60 overflow-y-auto hidden z-30"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Politique de confidentialité et Conditions générales -->
+  <section id="politique" class="py-16 bg-white">
+    <div class="max-w-4xl mx-auto px-4">
+      <div class="space-y-12">
+        <!-- Politique de confidentialité -->
+        <div class="reveal">
+          <h2 class="font-display text-2xl md:text-3xl font-bold mb-6 text-gold">
+            🔒 Politique de confidentialité
+          </h2>
+          <div class="space-y-4 text-gray-700">
+            <p>
+              <strong>Collecte des données :</strong> Nous collectons uniquement les informations nécessaires pour traiter votre demande de devis et assurer le suivi de votre événement.
+            </p>
+            <p>
+              <strong>Protection des données :</strong> Vos données sont protégées et ne sont jamais cédées à des tiers. Elles sont conservées uniquement le temps nécessaire à la prestation de service.
+            </p>
+            <p>
+              <strong>Vos droits :</strong> Vous pouvez à tout moment demander l'accès, la modification ou la suppression de vos données personnelles en nous contactant.
+            </p>
+          </div>
+        </div>
+        
+        <!-- Conditions générales -->
+        <div class="reveal">
+          <h2 class="font-display text-2xl md:text-3xl font-bold mb-6 text-gold">
+            📋 Conditions générales
+          </h2>
+          <div class="space-y-4 text-gray-700">
+            <p>
+              <strong>Qualité et sécurité :</strong> Arabesque Traiteur s'engage à fournir des prestations de qualité conformes aux normes d'hygiène et de sécurité alimentaire en vigueur.
+            </p>
+            <p>
+              <strong>Commandes et annulations :</strong> Les commandes sont fermes après versement de l'acompte. Modifications possibles jusqu'à 7 jours avant l'événement (selon disponibilité).
+            </p>
+            <p>
+              <strong>Responsabilité :</strong> Notre responsabilité est limitée au montant de la prestation. Nous recommandons une assurance événementielle pour votre tranquillité.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- Footer -->
   <footer class="bg-gray-900 text-white">
     <div class="container mx-auto px-4">
@@ -606,6 +1008,231 @@
       </div>
     </div>
   </footer>
+
+  <!-- Leaflet CSS & JS -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+  <!-- Map Script -->
+  <script>
+  document.addEventListener('DOMContentLoaded', function() {
+    // Coordonnées du bureau Arabesque Traiteur
+    const arabesqueBureau = [-4.313, 15.314]; // Gombe, Kinshasa
+    const kinshasa = [-4.322447, 15.307045];
+    
+    // Initialiser la carte
+    const map = L.map('kinshasa-map', {
+      center: kinshasa,
+      zoom: 11,
+      zoomControl: true,
+      scrollWheelZoom: false
+    });
+    
+    // Ajouter les tuiles OpenStreetMap
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution: '© OpenStreetMap contributors',
+      maxZoom: 18
+    }).addTo(map);
+    
+    // Marqueur Arabesque Traiteur
+    const bureauIcon = L.divIcon({
+      html: `<div style="background: #C9AB6D; color: white; width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; box-shadow: 0 2px 10px rgba(0,0,0,0.3);">🏢</div>`,
+      iconSize: [40, 40],
+      className: 'custom-marker'
+    });
+    
+    const arabesqueMarker = L.marker(arabesqueBureau, { icon: bureauIcon }).addTo(map);
+    
+    arabesqueMarker.bindPopup(`
+      <div class="text-center p-2 min-w-48">
+        <h3 class="font-bold text-lg mb-2" style="color: #C9AB6D;">🏢 Arabesque Traiteur</h3>
+        <p class="text-sm text-gray-600 mb-2">Bureau Principal</p>
+        <p class="text-xs mb-2">Avenue de la Paix<br>Commune de Gombe</p>
+        <div class="flex justify-center gap-2 text-xs">
+          <a href="tel:+243859993833" style="background: #C9AB6D; color: white; padding: 4px 8px; border-radius: 4px; text-decoration: none;">📞 Appeler</a>
+          <a href="mailto:etarabesque@gmail.com" style="background: #6b7280; color: white; padding: 4px 8px; border-radius: 4px; text-decoration: none;">📧 Email</a>
+        </div>
+      </div>
+    `);
+    
+    // Zones de service
+    const serviceAreas = [
+      { name: 'Gombe', coords: [-4.313, 15.314], radius: 3000, color: '#60A5FA' },
+      { name: 'Kalamu', coords: [-4.340, 15.295], radius: 4000, color: '#34D399' },
+      { name: 'Lemba', coords: [-4.380, 15.280], radius: 3500, color: '#A78BFA' },
+      { name: 'Limete', coords: [-4.365, 15.325], radius: 3000, color: '#FB923C' },
+      { name: 'Mont-Ngafula', coords: [-4.425, 15.285], radius: 5000, color: '#F87171' }
+    ];
+    
+    serviceAreas.forEach(area => {
+      L.circle(area.coords, {
+        color: area.color,
+        fillColor: area.color,
+        fillOpacity: 0.15,
+        radius: area.radius,
+        weight: 2
+      }).addTo(map).bindTooltip(`Zone ${area.name}<br><small>Service disponible</small>`);
+    });
+    
+    // Zone globale
+    L.circle(kinshasa, {
+      color: '#C9AB6D',
+      fillColor: '#C9AB6D',
+      fillOpacity: 0.05,
+      radius: 25000,
+      weight: 2,
+      dashArray: '5, 5'
+    }).addTo(map).bindTooltip('Zone de service Arabesque Traiteur');
+    
+    // Variables recherche
+    const searchInput = document.getElementById('addressSearch');
+    const clearButton = document.getElementById('clearSearch');
+    const suggestionsDiv = document.getElementById('searchSuggestions');
+    let searchTimeout;
+    let clientMarker = null;
+    
+    // Recherche d'adresse
+    async function searchAddress(query) {
+      if (query.length < 3) return [];
+      
+      try {
+        const response = await fetch(
+          `https://nominatim.openstreetmap.org/search?format=json&limit=5&q=${encodeURIComponent(query + ' Kinshasa Congo')}&countrycodes=cd&bounded=1&viewbox=15.1,-4.5,15.5,-4.1`
+        );
+        return await response.json();
+      } catch (error) {
+        console.error('Erreur de géocodage:', error);
+        return [];
+      }
+    }
+    
+    // Gestion saisie
+    searchInput.addEventListener('input', function() {
+      const query = this.value.trim();
+      
+      if (query.length > 0) {
+        clearButton.classList.remove('hidden');
+      } else {
+        clearButton.classList.add('hidden');
+        suggestionsDiv.classList.add('hidden');
+        return;
+      }
+      
+      clearTimeout(searchTimeout);
+      searchTimeout = setTimeout(async () => {
+        if (query.length >= 3) {
+          const results = await searchAddress(query);
+          displaySuggestions(results);
+        }
+      }, 300);
+    });
+    
+    // Afficher suggestions
+    function displaySuggestions(results) {
+      if (results.length === 0) {
+        suggestionsDiv.innerHTML = '<div class="p-3 text-gray-500 text-sm">Aucune adresse trouvée à Kinshasa</div>';
+        suggestionsDiv.classList.remove('hidden');
+        return;
+      }
+      
+      const suggestionsHTML = results.map(result => `
+        <div class="suggestion-item p-3 hover:bg-gray-50 cursor-pointer border-b border-gray-100 text-sm" 
+             data-lat="${result.lat}" data-lon="${result.lon}">
+          <div class="font-medium">${result.display_name.split(',')[0]}</div>
+          <div class="text-gray-500 text-xs">${result.display_name}</div>
+        </div>
+      `).join('');
+      
+      suggestionsDiv.innerHTML = suggestionsHTML;
+      suggestionsDiv.classList.remove('hidden');
+      
+      // Événements clic
+      document.querySelectorAll('.suggestion-item').forEach(item => {
+        item.addEventListener('click', function() {
+          const lat = parseFloat(this.dataset.lat);
+          const lon = parseFloat(this.dataset.lon);
+          const address = this.querySelector('.font-medium').textContent;
+          
+          selectAddress(lat, lon, address);
+          suggestionsDiv.classList.add('hidden');
+          searchInput.value = address;
+        });
+      });
+    }
+    
+    // Sélectionner adresse
+    function selectAddress(lat, lon, address) {
+      if (clientMarker) {
+        map.removeLayer(clientMarker);
+      }
+      
+      const clientIcon = L.divIcon({
+        html: `<div style="background: #10B981; color: white; width: 30px; height: 30px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold; box-shadow: 0 2px 8px rgba(0,0,0,0.3);">📍</div>`,
+        iconSize: [30, 30],
+        className: 'custom-client-marker'
+      });
+      
+      clientMarker = L.marker([lat, lon], { icon: clientIcon }).addTo(map);
+      
+      clientMarker.bindPopup(`
+        <div class="text-center p-2">
+          <h3 class="font-bold text-lg mb-2">📍 Votre adresse</h3>
+          <p class="text-sm text-gray-600 mb-2">${address}</p>
+          <p class="text-xs text-green-600">✅ Zone de service couverte</p>
+        </div>
+      `).openPopup();
+      
+      map.setView([lat, lon], 15);
+    }
+    
+    // Effacer recherche
+    clearButton.addEventListener('click', function() {
+      searchInput.value = '';
+      clearButton.classList.add('hidden');
+      suggestionsDiv.classList.add('hidden');
+      
+      if (clientMarker) {
+        map.removeLayer(clientMarker);
+        clientMarker = null;
+      }
+      
+      map.setView(kinshasa, 11);
+    });
+    
+    // Cacher suggestions
+    document.addEventListener('click', function(e) {
+      if (!e.target.closest('#addressSearch') && !e.target.closest('#searchSuggestions')) {
+        suggestionsDiv.classList.add('hidden');
+      }
+    });
+  });
+  </script>
+
+  <!-- FAQ Toggle Script -->
+  <script>
+  function toggleFAQ(element) {
+    const answer = element.nextElementSibling;
+    const icon = element.querySelector('span:last-child');
+    
+    if (answer.classList.contains('open')) {
+      answer.classList.remove('open');
+      element.classList.remove('active');
+      icon.textContent = '+';
+    } else {
+      // Close all other FAQs
+      document.querySelectorAll('.faq-answer.open').forEach(openAnswer => {
+        openAnswer.classList.remove('open');
+        openAnswer.previousElementSibling.classList.remove('active');
+        openAnswer.previousElementSibling.querySelector('span:last-child').textContent = '+';
+      });
+      
+      // Open this FAQ
+      answer.classList.add('open');
+      element.classList.add('active');
+      icon.textContent = '−';
+    }
+  }
+  </script>
 
   <!-- Scripts -->
   <script src="assets/js/main.js"></script>
