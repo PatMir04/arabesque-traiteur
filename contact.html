@@ -212,11 +212,18 @@
     @media (max-width: 768px) {
       .max-w-4xl, .max-w-6xl { margin-left: 1rem !important; margin-right: 1rem !important; }
     }
+    .logo-img {
+      height: 48px;
+      width: auto;
+      object-fit: contain;
+    }
+    
+    @media (max-width: 768px) {
+      .logo-img { height: 40px; }
+    }
   </style>
   <!-- Performance Hints -->
-  <link rel="dns-prefetch" href="//fonts.googleapis.com">
-  <link rel="preload" href="assets/css/style.css" as="style">
-  <link rel="preload" href="assets/js/main.js" as="script">
+  
 </head>
 
 <body class="bg-white text-black overflow-x-hidden">
@@ -226,9 +233,14 @@
   <!-- Enhanced Header -->
     <header class="fixed top-0 left-0 right-0 z-40 bg-white/90 backdrop-blur border-b border-black/10">
     <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
-      <a href="index.html" class="flex items-center gap-2" aria-label="Accueil">
-        <span class="logo serif text-2xl tracking-wide">Arabesque <strong>Traiteur</strong></span>
+      <a href="index.html" class="flex items-center gap-3" aria-label="Accueil Arabesque Traiteur">
+        <img src="assets/images/logo.png" alt="Arabesque Traiteur Logo" class="logo-img" />
+        <div class="hidden sm:block">
+          <span class="logo serif text-xl tracking-wide font-semibold">Arabesque</span>
+          <span class="logo serif text-xl tracking-wide font-bold ml-1">Traiteur</span>
+        </div>
       </a>
+      
       <nav class="hidden md:flex items-center gap-6 text-sm" aria-label="Navigation principale">
         <a href="a-propos.html" class="nav-link">À propos</a>
         <a href="services.html" class="nav-link">Services</a>
