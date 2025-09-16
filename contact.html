@@ -1,411 +1,187 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Contact & Devis | Arabesque Traiteur – Cuisine Congolaise Authentique</title>
-  <meta name="description" content="Demandez votre devis gratuit pour vos événements à Kinshasa. Cuisine congolaise authentique, réponse sous 24h garantie." />
-  <link rel="icon" href="favicon.svg" />
-  <link rel="manifest" href="manifest.webmanifest" />
-  <meta name="theme-color" content="#C9AB6D" />
-  <meta name="keywords" content="devis traiteur kinshasa, contact arabesque traiteur, menu congolais prix, événement kinshasa" />
-  <meta name="author" content="Arabesque Traiteur" />
-
-  <!-- Open Graph -->
-  <meta property="og:type" content="website" />
-  <meta property="og:title" content="Contact & Devis | Arabesque Traiteur" />
-  <meta property="og:description" content="Obtenez votre devis gratuit pour un événement d'exception avec notre cuisine congolaise authentique" />
-  <meta property="og:image" content="assets/images/contact-og.jpeg" />
-  <meta property="og:url" content="https://patmir04.github.io/arabesque-traiteur/contact.html" />
-
-  <!-- Twitter -->
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Contact & Devis | Arabesque Traiteur" />
-  <meta name="twitter:description" content="Planifiez votre événement d'exception avec nous" />
-  <meta name="twitter:image" content="assets/images/contact-og.jpeg" />
-
-  <!-- Fonts & Styles -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="stylesheet" href="assets/css/style.css" />
-
-  <style>
-    /* (re-use your previously defined CSS; omitted here for brevity) */
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Contact & Devis – Arabesque Traiteur</title>
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="bg-white text-black overflow-x-hidden">
-  <!-- Header -->
-  <header class="fixed top-0 left-0 right-0 z-40 bg-white/90 backdrop-blur border-b border-black/10">
-    <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
-      <a href="index.html" class="flex items-center gap-2" aria-label="Accueil">
-        <span class="logo serif text-2xl tracking-wide">Arabesque <strong>Traiteur</strong></span>
-      </a>
-      <nav class="hidden md:flex items-center gap-6 text-sm" aria-label="Navigation principale">
-        <a href="a-propos.html" class="nav-link">À propos</a>
-        <a href="services.html" class="nav-link">Services</a>
-        <a href="menu.html" class="nav-link">Menu</a>
-        <a href="galerie.html" class="nav-link">Galerie</a>
-        <a href="equipe.html" class="nav-link">Équipe</a>
-        <a href="contact.html" class="nav-link active border border-black rounded-full px-3 py-1.5 bg-black text-white">Contact</a>
-      </nav>
-      <button id="openNav" class="md:hidden border border-black rounded-lg px-3 py-2" aria-haspopup="true" aria-controls="mobileNav" aria-expanded="false">Menu</button>
-    </div>
-    <div id="mobileNav" class="md:hidden hidden border-t border-black/10">
-      <div class="max-w-6xl mx-auto px-4 py-3 grid gap-2 text-sm">
-        <a href="a-propos.html" class="py-2">À propos</a>
-        <a href="services.html" class="py-2">Services</a>
-        <a href="menu.html" class="py-2">Menu</a>
-        <a href="galerie.html" class="py-2">Galerie</a>
-        <a href="equipe.html" class="py-2">Équipe</a>
-        <a href="contact.html" class="py-2">Contact</a>
-      </div>
-    </div>
-  </header>
-
-  <!-- Contact Hero Section -->
-  <section class="video-hero relative min-h-[60vh] flex items-center justify-center overflow-hidden pt-20">
-    <video autoplay muted loop playsinline data-auto-play class="absolute inset-0 w-full h-full object-cover opacity-80">
-      <source src="assets/videos/contact-consultation.mp4" type="video/mp4">
-      <source src="assets/videos/contact-consultation.webm" type="video/webm">
-    </video>
-    <div class="relative z-10 text-center text-white max-w-4xl mx-auto px-4">
-      <div class="reveal">
-        <span class="inline-block px-4 py-2 bg-gold/20 text-gold font-semibold text-sm rounded-full mb-4">
-          📞 Contact & Devis
-        </span>
-        <h1 class="font-display text-4xl md:text-6xl font-bold mb-6 leading-tight">
-          Planifions votre événement <span class="text-gold">d'exception</span>
-        </h1>
-        <p class="text-xl md:text-2xl mb-8 max-w-3xl mx-auto leading-relaxed">
-          Devis gratuit sous 24h • Consultation personnalisée • Sylvie Feruzi à votre écoute
-        </p>
-        <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
-          <a href="#formulaire-devis" class="btn btn-gold text-lg px-8 py-4 animate-pulse">
-            📋 Formulaire intelligent
-          </a>
-          <a href="https://wa.me/243859993833?text=Bonjour%20Arabesque%20Traiteur!%20Je%20souhaite%20obtenir%20un%20devis%20pour%20mon%20événement" 
-             target="_blank" rel="noopener"
-             class="btn btn-outline border-white text-white hover:bg-white hover:text-black text-lg px-8 py-4">
-            💬 WhatsApp Direct
-          </a>
+<body class="bg-gray-50 font-sans">
+    <header class="bg-white shadow-sm border-b border-yellow-200">
+        <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+            <div class="text-2xl font-bold text-yellow-700">Arabesque Traiteur</div>
+            <nav class="space-x-6">
+                <a href="index.html" class="text-gray-700 hover:text-yellow-600">Accueil</a>
+                <a href="menu.html" class="text-gray-700 hover:text-yellow-600">Menu</a>
+                <a href="contact.html" class="font-semibold text-yellow-700">Contact</a>
+            </nav>
         </div>
-      </div>
-    </div>
-  </section>
+    </header>
 
-  <!-- Contact/Devis Form -->
-  <section id="formulaire-devis" class="py-20 bg-white">
-    <div class="max-w-6xl mx-auto px-4">
-      <div class="text-center mb-16 reveal">
-        <span class="inline-block px-4 py-2 bg-gold/10 text-gold font-semibold text-sm rounded-full mb-4">
-          📋 Devis Intelligent
-        </span>
-        <h2 class="font-display text-4xl md:text-5xl font-bold mb-6">
-          Formulaire de devis personnalisé
-        </h2>
-        <p class="text-xl text-gray-600 max-w-3xl mx-auto">
-          Notre formulaire intelligent vous guide étape par étape pour créer votre devis personnalisé
+    <main class="max-w-4xl mx-auto py-12 px-4 bg-white rounded-xl shadow-lg mt-8">
+        <h1 class="text-3xl font-bold text-center text-yellow-800 mb-6">📞 Demande de devis</h1>
+        <p class="text-center text-lg text-gray-600 mb-10">
+            Devis gratuit sous 24h – Cuisine congolaise authentique – Événements sur mesure
         </p>
-      </div>
-
-      <div class="max-w-4xl mx-auto">
-        <div class="mb-8 reveal">
-          <div class="flex items-center justify-center gap-4 mb-4">
-            <div class="step-indicator active" data-step="1">
-              <span class="step-number">1</span>
-              <span class="step-label">Événement</span>
-            </div>
-            <div class="step-line"></div>
-            <div class="step-indicator" data-step="2">
-              <span class="step-number">2</span>
-              <span class="step-label">Contact</span>
-            </div>
-            <div class="step-line"></div>
-            <div class="step-indicator" data-step="3">
-              <span class="step-number">3</span>
-              <span class="step-label">Menu</span>
-            </div>
-            <div class="step-line"></div>
-            <div class="step-indicator" data-step="4">
-              <span class="step-number">4</span>
-              <span class="step-label">Confirmation</span>
-            </div>
-          </div>
-          <div class="progress-bar">
-            <div class="progress-fill" style="width: 25%"></div>
-          </div>
+        <!-- Barre de progression -->
+        <div class="flex justify-center mb-8 gap-4">
+            <div class="step-indicator active" data-step="1">1</div>
+            <div class="step-indicator" data-step="2">2</div>
+            <div class="step-indicator" data-step="3">3</div>
+            <div class="step-indicator" data-step="4">4</div>
         </div>
-
-        <form id="quoteForm" class="space-y-8" novalidate>
-          <!-- Step 1: Event Details -->
-          <div class="form-step active" data-step="1">
-            <div class="bg-gradient-to-br from-gray-50 to-white rounded-2xl p-8 reveal">
-              <h3 class="font-display text-2xl font-bold mb-6 text-center">📅 Détails de votre événement</h3>
-              <div class="grid md:grid-cols-2 gap-6">
-                <div class="form-group">
-                  <label class="form-label">Type d'événement *</label>
-                  <select name="event_type" class="form-input" required>
-                    <option value="">Choisissez votre événement</option>
-                    <option value="mariage">💕 Mariage</option>
-                    <option value="anniversaire">🎂 Anniversaire</option>
-                    <option value="reception_privee">🏠 Réception privée</option>
-                    <option value="entreprise">🏢 Événement d'entreprise</option>
-                    <option value="gala">🎭 Gala & Réception officielle</option>
-                    <option value="bapteme">👶 Baptême / Cérémonie religieuse</option>
-                    <option value="autre">🎉 Autre (préciser)</option>
-                  </select>
-                  <div class="form-error"></div>
-                </div>
-                <div class="form-group">
-                  <label class="form-label">Date de l'événement *</label>
-                  <input type="date" name="event_date" class="form-input" required>
-                  <div class="form-error"></div>
-                </div>
-                <div class="form-group">
-                  <label class="form-label">Nombre d'invités *</label>
-                  <input type="number" name="guests_count" min="1" max="1000" class="form-input" required placeholder="Ex: 50">
-                  <small class="form-help">Influence directement votre formule tarifaire</small>
-                  <div class="form-error"></div>
-                </div>
-                <!-- REMOVE: Old formule select, handled in Step 3 only -->
-                <!--<div class="form-group" id="formuleSelection" style="display:none;"></div>-->
-                <div class="form-group">
-                  <label class="form-label">Heure de début</label>
-                  <input type="time" name="event_time" class="form-input">
-                  <div class="form-error"></div>
-                </div>
-                <div class="form-group md:col-span-2">
-                  <label class="form-label">Lieu (Kinshasa) *</label>
-                  <input type="text" name="event_location" class="form-input" required placeholder="Ex: Salle de réception, Commune de Gombe">
-                  <small class="form-help">Précisez la commune, salle ou adresse</small>
-                  <div class="form-error"></div>
-                </div>
-              </div>
-              <div id="pricingPreview" class="mt-8 p-6 bg-gold/10 rounded-xl hidden">
-                <h4 class="font-bold mb-3 text-gold">💰 Estimation automatique</h4>
-                <div id="pricingDetails"></div>
-              </div>
-              <div class="text-center mt-8">
-                <button type="button" class="btn btn-gold next-step" data-next="2">
-                  Continuer vers contact →
-                </button>
-              </div>
-            </div>
-          </div>
-
-          <!-- Step 2: Contact Information -->
-          <div class="form-step" data-step="2">
-            <div class="bg-gradient-to-br from-gray-50 to-white rounded-2xl p-8 reveal">
-              <h3 class="font-display text-2xl font-bold mb-6 text-center">📞 Vos coordonnées</h3>
-              <div class="grid md:grid-cols-2 gap-6">
-                <div class="form-group">
-                  <label class="form-label">Nom complet *</label>
-                  <input type="text" name="client_name" class="form-input" required placeholder="Prénom Nom">
-                  <div class="form-error"></div>
-                </div>
-                <div class="form-group">
-                  <label class="form-label">Téléphone (WhatsApp) *</label>
-                  <input type="tel" name="client_phone" class="form-input" required placeholder="+243 xxx xxx xxx">
-                  <small class="form-help">De préférence WhatsApp pour un suivi rapide</small>
-                  <div class="form-error"></div>
-                </div>
-                <div class="form-group">
-                  <label class="form-label">Email *</label>
-                  <input type="email" name="client_email" class="form-input" required placeholder="votre.email@exemple.com">
-                  <small class="form-help">Pour recevoir le devis détaillé</small>
-                  <div class="form-error"></div>
-                </div>
-                <div class="form-group">
-                  <label class="form-label">Méthode de contact préférée</label>
-                  <select name="contact_preference" class="form-input">
-                    <option value="whatsapp">💬 WhatsApp</option>
-                    <option value="phone">📞 Téléphone</option>
-                    <option value="email">📧 Email</option>
-                  </select>
-                </div>
-                <div class="form-group md:col-span-2">
-                  <label class="form-label">Budget approximatif (optionnel)</label>
-                  <select name="budget_range" class="form-input">
-                    <option value="">Pas de budget défini</option>
-                    <option value="500-1000">500$ - 1,000$</option>
-                    <option value="1000-2000">1,000$ - 2,000$</option>
-                    <option value="2000-5000">2,000$ - 5,000$</option>
-                    <option value="5000+">Plus de 5,000$</option>
-                  </select>
-                  <small class="form-help">Nous aide à personnaliser notre proposition</small>
-                </div>
-              </div>
-              <div class="flex justify-between mt-8">
-                <button type="button" class="btn btn-outline prev-step" data-prev="1">
-                  ← Retour
-                </button>
-                <button type="button" class="btn btn-gold next-step" data-next="3">
-                  Continuer vers menu →
-                </button>
-              </div>
-            </div>
-          </div>
-
-          <!-- Step 3: Menu Selection & Formule Choix -->
-          <div class="form-step" data-step="3">
-            <div class="bg-gradient-to-br from-gray-50 to-white rounded-2xl p-8 reveal">
-              <h3 class="font-display text-2xl font-bold mb-6 text-center">🍽️ Sélection de menu</h3>
-              <div id="selectionCounter" class="text-center mb-6">
-                <div class="bg-white rounded-lg p-4 border border-gray-200">
-                  <span class="text-lg">Sélection actuelle: </span>
-                  <span id="currentSelection" class="font-bold text-2xl text-gold">0</span>
-                  <span>/</span>
-                  <span id="maxSelection" class="font-bold text-lg">∞</span>
-                  <span class="text-lg"> plats</span>
-                </div>
-              </div>
-              <div id="limitWarning" class="limit-warning hidden">
-                <div class="flex items-center gap-3">
-                  <span class="text-2xl">⚠️</span>
-                  <div>
-                    <p class="font-bold text-amber-800">Limite atteinte !</p>
-                    <p class="text-amber-700 text-sm">Vous avez atteint le nombre maximum de plats pour votre formule. Désélectionnez un plat pour en choisir un autre.</p>
-                  </div>
-                </div>
-              </div>
-              <div id="detectedMenu" class="mb-8 hidden"></div>
-              <div id="manualMenuSelection">
-                <div id="menuCategories"></div>
-                <div class="mb-6">
-                  <h4 class="font-bold mb-4">🍹 Service Cocktail (optionnel)</h4>
-                  <div class="bg-black text-white rounded-lg p-6">
-                    <label class="checkbox-item text-white">
-                      <input type="checkbox" name="cocktail_service" value="yes" id="cocktailService">
-                      <span class="checkmark"></span>
-                      Ajouter le service cocktail clé en main
-                    </label>
-                    <div id="cocktailDetails" class="hidden mt-4">
-                      <p class="text-gray-300 text-sm mb-3">Inclus: 2 tournées par personne, barmen professionnels, matériel complet</p>
-                      <div class="grid grid-cols-2 md:grid-cols-4 gap-2 text-center text-sm">
-                        <div class="bg-white/10 rounded p-2"><div class="text-gold font-bold">500$</div><div class="text-xs">< 55 pers.</div></div>
-                        <div class="bg-white/10 rounded p-2"><div class="text-gold font-bold">750$</div><div class="text-xs">< 105 pers.</div></div>
-                        <div class="bg-white/10 rounded p-2"><div class="text-gold font-bold">900$</div><div class="text-xs">< 155 pers.</div></div>
-                        <div class="bg-white/10 rounded p-2"><div class="text-gold font-bold">1200$</div><div class="text-xs">< 205 pers.</div></div>
-                      </div>
+        <div class="w-full h-2 bg-gray-200 rounded mb-8">
+            <div class="progress-fill h-2 rounded bg-yellow-500 transition-all duration-300" style="width: 25%;"></div>
+        </div>
+        <form id="quoteForm">
+            <!-- Étape 1 : Détails de l'événement -->
+            <div class="form-step active" data-step="1">
+                <h2 class="text-xl font-bold mb-4 text-yellow-700">📅 Détails de votre événement</h2>
+                <div class="grid md:grid-cols-2 gap-6">
+                    <div>
+                        <label class="font-semibold text-gray-600 mb-1 block">Type d'événement *</label>
+                        <select name="event_type" required class="w-full p-3 border border-gray-300 rounded">
+                            <option value="">Choisissez</option>
+                            <option>Mariage</option>
+                            <option>Anniversaire</option>
+                            <option>Réception privée</option>
+                            <option>Événement d'entreprise</option>
+                            <option>Gala</option>
+                            <option>Baptême</option>
+                            <option>Autre</option>
+                        </select>
+                        <div class="form-error"></div>
                     </div>
-                  </div>
+                    <div>
+                        <label class="font-semibold text-gray-600 mb-1 block">Date *</label>
+                        <input type="date" name="event_date" required class="w-full p-3 border border-gray-300 rounded">
+                        <div class="form-error"></div>
+                    </div>
+                    <div>
+                        <label class="font-semibold text-gray-600 mb-1 block">Invités *</label>
+                        <input type="number" min="1" max="1000" name="guests_count" required class="w-full p-3 border border-gray-300 rounded" placeholder="Ex: 80">
+                        <div class="form-error"></div>
+                    </div>
+                    <div id="formuleSelection" class="hidden">
+                        <label class="font-semibold text-gray-600 mb-1 block">Formule tarifaire *</label>
+                        <select name="formule_tarifaire" class="w-full p-3 border border-gray-300 rounded">
+                            <option value="">Choisissez votre formule</option>
+                        </select>
+                        <div class="text-xs text-gray-500 mt-1">
+                            (<span id="currentSelection">0</span> / <span id="maxSelection">14</span> plats)
+                        </div>
+                        <div class="form-error"></div>
+                    </div>
+                    <div>
+                        <label class="font-semibold text-gray-600 mb-1 block">Heure</label>
+                        <input type="time" name="event_time" class="w-full p-3 border border-gray-300 rounded">
+                    </div>
+                    <div>
+                        <label class="font-semibold text-gray-600 mb-1 block">Lieu (Kinshasa) *</label>
+                        <input type="text" name="event_location" required class="w-full p-3 border border-gray-300 rounded" placeholder="Commune, salle...">
+                        <div class="form-error"></div>
+                    </div>
                 </div>
-                <div class="form-group">
-                  <label class="form-label">Demandes ou contraintes alimentaires spéciales</label>
-                  <textarea name="dietary_requirements" rows="3" class="form-input" placeholder="Ex: allergies, régime végétarien, halal, sans gluten..."></textarea>
+                <!-- Cocktail -->
+                <div class="mt-8 mb-4 p-4 bg-yellow-100 rounded border border-yellow-300">
+                    <input type="checkbox" id="cocktailService" name="cocktail_service" class="mr-2">
+                    <label for="cocktailService" class="font-semibold text-yellow-800">🍹 Service cocktail de bienvenue</label>
+                    <span class="block text-xs text-gray-600 mt-1">Options et prix selon nombre d'invités</span>
+                    <div id="cocktailDetails" class="hidden mt-2 pl-8 text-sm text-gray-600">
+                        <ul>
+                            <li>1-54 personnes : 500$</li>
+                            <li>55-104 personnes : 750$</li>
+                            <li>105-154 personnes : 900$</li>
+                            <li>155+ personnes : 1200$</li>
+                        </ul>
+                    </div>
                 </div>
-                <div class="form-group">
-                  <label class="form-label">Message personnalisé</label>
-                  <textarea name="personal_message" rows="4" class="form-input" placeholder="Parlez-nous de votre vision, de l'ambiance souhaitée, de détails importants..."></textarea>
+                <!-- Estimation prix -->
+                <div id="pricingPreview" class="hidden mt-6 p-4 bg-yellow-50 border border-yellow-200 rounded">
+                    <h4 class="font-bold text-lg mb-2 text-center text-yellow-700">💰 Estimation automatique</h4>
+                    <div id="pricingDetails"></div>
+                    <input type="hidden" id="estimatedTotalField" name="estimated_total" value="">
                 </div>
-              </div>
-              <div class="flex justify-between mt-8">
-                <button type="button" class="btn btn-outline prev-step" data-prev="2">
-                  ← Retour
-                </button>
-                <button type="button" class="btn btn-gold next-step" data-next="4">
-                  Voir le récapitulatif →
-                </button>
-              </div>
+                <div class="mt-8 flex justify-end">
+                    <button type="button" class="btn bg-yellow-600 hover:bg-yellow-700 text-white rounded-lg next-step px-6 py-3 font-semibold" data-next="2">Continuer →</button>
+                </div>
             </div>
-          </div>
-
-          <!-- Step 4: Summary & Confirmation -->
-          <div class="form-step" data-step="4">
-            <div class="bg-gradient-to-br from-gray-50 to-white rounded-2xl p-8 reveal">
-              <h3 class="font-display text-2xl font-bold mb-6 text-center">📋 Récapitulatif de votre demande</h3>
-              <div id="quoteSummary" class="space-y-6 mb-8"></div>
-              <div id="totalEstimation" class="bg-gold/10 border border-gold/30 rounded-xl p-6 text-center mb-8">
-                <h4 class="font-bold text-lg mb-2">💰 Estimation totale</h4>
-                <div id="estimationDetails" class="text-gray-600"></div>
-                <p class="text-sm text-gray-500 mt-3">
-                  <strong>Cette estimation est indicative.</strong> Le devis final sera personnalisé selon vos besoins exacts.
-                </p>
-              </div>
-              <div class="space-y-4 mb-8">
-                <label class="checkbox-item">
-                  <input type="checkbox" name="consent_contact" required>
-                  <span class="checkmark"></span>
-                  J'accepte d'être contacté par Arabesque Traiteur pour cette demande de devis
-                </label>
-                <label class="checkbox-item">
-                  <input type="checkbox" name="consent_privacy" required>
-                  <span class="checkmark"></span>
-                  J'ai lu et j'accepte la <a href="#politique" class="text-gold underline">politique de confidentialité</a>
-                </label>
-                <label class="checkbox-item">
-                  <input type="checkbox" name="newsletter_optin">
-                  <span class="checkmark"></span>
-                  Je souhaite recevoir les actualités et offres spéciales d'Arabesque Traiteur
-                </label>
-              </div>
-              <div class="space-y-4">
-                <button type="submit" name="submit_type" value="whatsapp" class="btn bg-green-500 hover:bg-green-600 text-white w-full text-lg">
-                  💬 Envoyer via WhatsApp
-                </button>
-                <button type="button" class="btn btn-outline prev-step w-full" data-prev="3">
-                  ← Modifier ma sélection
-                </button>
-              </div>
-              <div id="formSuccess" class="hidden bg-green-50 border border-green-200 rounded-lg p-6 text-center">
-                <div class="text-green-600 text-4xl mb-4">✅</div>
-                <h4 class="font-bold text-green-800 mb-2">Demande envoyée avec succès !</h4>
-                <p class="text-green-600 mb-4">
-                  Nous vous contacterons sous 24h pour finaliser votre devis personnalisé.
-                </p>
-                <div class="flex justify-center gap-4">
-                  <a href="menu.html" class="btn btn-outline">Modifier mon menu</a>
-                  <a href="index.html" class="btn btn-gold">Retour à l'accueil</a>
+            <!-- Étape 2 : Coordonnées -->
+            <div class="form-step" data-step="2">
+                <h2 class="text-xl font-bold mb-4 text-yellow-700">👤 Vos coordonnées</h2>
+                <div class="grid md:grid-cols-2 gap-6">
+                    <div>
+                        <label class="font-semibold text-gray-600 mb-1 block">Nom *</label>
+                        <input type="text" name="client_name" required class="w-full p-3 border border-gray-300 rounded" placeholder="Nom">
+                        <div class="form-error"></div>
+                    </div>
+                    <div>
+                        <label class="font-semibold text-gray-600 mb-1 block">Téléphone *</label>
+                        <input type="tel" name="client_phone" required class="w-full p-3 border border-gray-300 rounded" placeholder="Téléphone">
+                        <div class="form-error"></div>
+                    </div>
+                    <div class="md:col-span-2">
+                        <label class="font-semibold text-gray-600 mb-1 block">Email *</label>
+                        <input type="email" name="client_email" required class="w-full p-3 border border-gray-300 rounded" placeholder="E-mail">
+                        <div class="form-error"></div>
+                    </div>
                 </div>
-              </div>
+                <div class="mt-8 flex justify-between">
+                    <button type="button" class="btn bg-gray-300 text-gray-800 rounded-lg prev-step px-6 py-3" data-prev="1">← Retour</button>
+                    <button type="button" class="btn bg-yellow-600 hover:bg-yellow-700 text-white rounded-lg next-step px-6 py-3 font-semibold" data-next="3">Continuer →</button>
+                </div>
             </div>
-          </div>
-          <!-- Hidden fields -->
-          <input type="hidden" name="menu_selection" id="menuSelectionField">
-          <input type="hidden" name="estimated_total" id="estimatedTotalField">
-          <input type="hidden" name="form_timestamp" id="formTimestampField">
+            <!-- Étape 3 : Choix du menu -->
+            <div class="form-step" data-step="3">
+                <h2 class="text-xl font-bold mb-4 text-yellow-700 text-center">🍽 Sélection du menu</h2>
+                <div id="manualMenuSelection">
+                    <div id="menuCategories"></div>
+                </div>
+                <div class="mt-8 flex justify-between">
+                    <button type="button" class="btn bg-gray-300 text-gray-800 rounded-lg prev-step px-6 py-3" data-prev="2">← Retour</button>
+                    <button type="button" class="btn bg-yellow-600 hover:bg-yellow-700 text-white rounded-lg next-step px-6 py-3 font-semibold" data-next="4">Continuer →</button>
+                </div>
+            </div>
+            <!-- Étape 4 : Résumé & validation -->
+            <div class="form-step" data-step="4">
+                <h2 class="text-xl font-bold mb-4 text-yellow-700 text-center">📋 Résumé de la demande</h2>
+                <div id="quoteSummary" class="mb-8"></div>
+                <div class="text-center mb-6 p-4 bg-yellow-50 border border-yellow-200 rounded">
+                    <h4 class="font-bold text-lg mb-2">💰 Estimation finale</h4>
+                    <div id="estimationDetails"></div>
+                    <p class="text-sm text-gray-600 mt-2">
+                        Prix indicatif – devis final après consultation personnalisée.
+                    </p>
+                </div>
+                <div class="space-y-4 mb-8">
+                    <div class="flex items-start gap-2">
+                        <input type="checkbox" name="consent_contact" required class="mt-1 w-5 h-5 rounded focus:ring-yellow-600">
+                        <label class="text-sm text-gray-700">J'accepte d'être contacté pour le suivi de ma demande *</label>
+                    </div>
+                    <div class="flex items-start gap-2">
+                        <input type="checkbox" name="consent_privacy" required class="mt-1 w-5 h-5 rounded focus:ring-yellow-600">
+                        <label class="text-sm text-gray-700">J'ai lu et j'accepte la politique de confidentialité *</label>
+                    </div>
+                </div>
+                <div class="flex justify-between">
+                    <button type="button" class="btn bg-gray-300 text-gray-800 rounded-lg prev-step px-6 py-3" data-prev="3">← Retour</button>
+                    <button type="submit" class="btn bg-yellow-600 hover:bg-yellow-700 text-white rounded-lg px-6 py-3 font-semibold">📱 Envoyer via WhatsApp</button>
+                </div>
+            </div>
         </form>
-      </div>
-    </div>
-  </section>
-
-  <!-- Service Area Map/Description -->
-  <!-- (add your service area/leaflet code/section unchanged here) -->
-
-  <!-- Footer -->
-  <footer class="bg-gray-900 text-white">
-    <div class="container mx-auto px-4">
-      <div class="grid md:grid-cols-4 gap-8 py-16">
-        <div class="md:col-span-2">
-          <div class="flex items-center gap-3 mb-6">
-            <div class="w-12 h-12 bg-gold rounded-full flex items-center justify-center">
-              <span class="text-black font-bold text-xl">A</span>
+        <!-- Success message -->
+        <div id="formSuccess" class="hidden fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
+            <div class="bg-white rounded-xl p-8 max-w-md mx-auto text-center shadow-lg">
+                <div class="text-green-500 text-6xl mb-4">✅</div>
+                <h3 class="text-2xl font-bold mb-4">Demande envoyée !</h3>
+                <p class="text-gray-600 mb-6">
+                    Votre demande a été transmise par WhatsApp.<br>
+                    Nous vous répondrons rapidement.
+                </p>
+                <button onclick="location.reload()" class="bg-yellow-600 hover:bg-yellow-700 text-white px-6 py-3 rounded font-semibold">Nouvelle demande</button>
             </div>
-            <div>
-              <div class="font-display text-xl font-bold">Arabesque Traiteur</div>
-              <div class="text-sm text-gray-400">Contact & Devis Professionnel</div>
-            </div>
-          </div>
-          <p class="text-gray-300 mb-6 max-w-md">
-            Votre partenaire de confiance pour tous vos événements d'exception à Kinshasa. 
-            Devis gratuit sous 24h, consultation personnalisée avec Sylvie Feruzi.
-          </p>
         </div>
-      </div>
-      <div class="border-t border-gray-800 py-6 text-center">
-        <p class="text-gray-400">
-          © <span id="year">2025</span> Arabesque Traiteur • Devis & Contact Professionnel
-        </p>
-      </div>
-    </div>
-  </footer>
-
-  <!-- Scripts -->
-  <script src="assets/js/main.js"></script>
-  <script src="assets/js/contact.js"></script>
-  <!-- No inline script; everything is now handled by contact.js -->
-
+    </main>
+    <script src="assets/js/contact-updated.js"></script>
 </body>
 </html>
