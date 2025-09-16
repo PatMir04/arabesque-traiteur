@@ -64,6 +64,16 @@
                 ]
             },
             {
+                id: 'specialites-rares',
+                nom: '🦎 Spécialités rares (sur commande)',
+                elements: [
+                    { id: 'crocodile', nom: 'Crocodile grillé', description: 'Viande de crocodile authentique, grillée aux épices congolaises (commande 3 semaines à l\'avance)' },
+                    { id: 'tortue', nom: 'Ragoût de Tortue', description: 'Spécialité rare traditionnelle, préparation ancestrale (selon disponibilité)' },
+                    { id: 'mashanza', nom: 'Mashanza', description: 'Spécialité locale prisée des connaisseurs (commande spéciale requise)' },
+                    { id: 'antilope', nom: 'Antilope fumée', description: 'Viande d\'antilope fumée selon la méthode traditionnelle (sur commande)' }
+                ]
+            },
+            {
                 id: 'desserts',
                 nom: '🍰 Desserts & Douceurs',
                 elements: [
@@ -99,7 +109,10 @@
         loadMenuData();
         
         // Set form timestamp
-        document.getElementById('formTimestampField').value = new Date().toISOString();
+        const timestampField = document.getElementById('formTimestampField');
+        if (timestampField) {
+            timestampField.value = new Date().toISOString();
+        }
         
         console.log('Contact form initialized successfully');
     }
@@ -412,13 +425,19 @@
         menuData.categories.forEach(category => {
             const categoryDiv = document.createElement('div');
             categoryDiv.className = 'mb-8';
+            
+            // Special styling for rare specialties
+            const isRareCategory = category.id === 'specialites-rares';
+            const categoryClass = isRareCategory ? 'text-gold border-l-4 border-gold pl-4' : 'text-gold';
+            
             categoryDiv.innerHTML = `
-                <h4 class="font-bold text-lg mb-4 text-gold">${category.nom}</h4>
+                <h4 class="font-bold text-lg mb-4 ${categoryClass}">${category.nom}</h4>
+                ${isRareCategory ? '<p class="text-sm text-gray-600 mb-4 italic">⚠️ Commande spéciale requise - Contactez-nous pour disponibilité</p>' : ''}
                 <div class="grid md:grid-cols-2 gap-4" data-category="${category.id}">
                     ${category.elements.map(element => `
-                        <div class="menu-item-card p-4 border border-gray-200 rounded-lg cursor-pointer hover:border-gold transition-all" 
+                        <div class="menu-item-card p-4 border border-gray-200 rounded-lg cursor-pointer hover:border-gold transition-all ${isRareCategory ? 'bg-gradient-to-r from-gold/5 to-amber/5' : ''}" 
                              data-item-id="${element.id}" data-item-name="${element.nom}" data-category="${category.nom}">
-                            <h5 class="font-semibold mb-2">${element.nom}</h5>
+                            <h5 class="font-semibold mb-2 ${isRareCategory ? 'text-gold' : ''}">${element.nom}</h5>
                             <p class="text-sm text-gray-600 mb-3">${element.description}</p>
                             <div class="flex justify-between items-center">
                                 <span class="text-xs text-gray-500">Cliquez pour sélectionner</span>
@@ -573,9 +592,11 @@
                         <div class="max-h-40 overflow-y-auto space-y-1">
                             ${selectedItemsArray.map(key => {
                                 const [category, item] = key.split('::');
-                                return `<div class="text-sm p-2 bg-gray-50 rounded">
+                                const isRare = category.includes('🦎');
+                                return `<div class="text-sm p-2 bg-gray-50 rounded ${isRare ? 'border-l-2 border-gold' : ''}">
                                     <strong>${item}</strong>
                                     <span class="text-gray-500"> (${category})</span>
+                                    ${isRare ? '<span class="text-gold text-xs block">⚠️ Sur commande</span>' : ''}
                                 </div>`;
                             }).join('')}
                         </div>
@@ -681,11 +702,26 @@
         if (selectedItemsArray.length > 0) {
             message += `
 
-🍽️ MENU SÉLECTIONNÉ (${selectedItemsArray.length} plats)
-${selectedItemsArray.map(key => {
+🍽️ MENU SÉLECTIONNÉ (${selectedItemsArray.length} plats)`;
+            
+            // Separate rare specialties
+            const rareItems = [];
+            const regularItems = [];
+            
+            selectedItemsArray.forEach(key => {
                 const [category, item] = key.split('::');
-                return `• ${item} (${category})`;
-            }).join('\n')}`;
+                if (category.includes('🦎')) {
+                    rareItems.push(`• ${item} (${category}) ⚠️ SUR COMMANDE`);
+                } else {
+                    regularItems.push(`• ${item} (${category})`);
+                }
+            });
+            
+            message += '\n' + regularItems.join('\n');
+            
+            if (rareItems.length > 0) {
+                message += '\n\n🦎 SPÉCIALITÉS RARES:\n' + rareItems.join('\n');
+            }
         }
 
         if (formData.get('cocktail_service')) {
