@@ -6,7 +6,8 @@
   <title>Arabesque Traiteur | Mariages & Événements d'Exception à Kinshasa</title>
   <meta name="description" content="Arabesque Traiteur – L'art culinaire au service de vos événements d'exception. Sous la direction de Sylvie Feruzi, créez des moments inoubliables à Kinshasa avec nos menus sur-mesure." />
   
-  <!-- Enhanced SEO & Social Media -->
+    <link rel="canonical" href="https://arabesquetraiteur.com/">
+<!-- Enhanced SEO & Social Media -->
   <link rel="icon" href="favicon.svg" />
   <link rel="manifest" href="manifest.webmanifest" />
   <meta name="theme-color" content="#C9AB6D" />
@@ -81,7 +82,6 @@
   <!-- Performance Hints -->
   <link rel="dns-prefetch" href="//fonts.googleapis.com">
   <link rel="dns-prefetch" href="//www.instagram.com">
-  <link rel="preload" href="assets/css/style.css" as="style">
   <link rel="preload" href="assets/js/main.js" as="script">
 </head>
 
@@ -540,14 +540,14 @@
           <div class="grid grid-cols-2 gap-6 mb-8">
             <div class="text-center">
               <div class="w-20 h-20 rounded-full bg-gold/10 flex items-center justify-center mx-auto mb-3">
-                <img src="assets/images/sylvie-avatar.jpeg" alt="Sylvie Feruzi" class="w-full h-full rounded-full object-cover">
+                <img loading="lazy" decoding="async" src="assets/images/sylvie-avatar.jpeg" alt="Sylvie Feruzi" class="w-full h-full rounded-full object-cover">
               </div>
               <h4 class="font-bold">Sylvie Feruzi</h4>
               <p class="text-sm text-gray-600">Directrice & Chef Exécutive</p>
             </div>
             <div class="text-center">
               <div class="w-20 h-20 rounded-full bg-gold/10 flex items-center justify-center mx-auto mb-3">
-                <img src="assets/images/julie-avatar.jpeg" alt="Julie Feruzi" class="w-full h-full rounded-full object-cover">
+                <img loading="lazy" decoding="async" src="assets/images/julie-avatar.jpeg" alt="Julie Feruzi" class="w-full h-full rounded-full object-cover">
               </div>
               <h4 class="font-bold">Julie Feruzi</h4>
               <p class="text-sm text-gray-600">Chef de salades</p>
@@ -564,7 +564,7 @@
               Chaque événement est unique, chaque client est spécial."
             </blockquote>
             <cite class="flex items-center gap-4">
-              <img src="assets/images/sylvie-signature.jpeg" alt="Sylvie Feruzi" class="w-12 h-12 rounded-full object-cover">
+              <img loading="lazy" decoding="async" src="assets/images/sylvie-signature.jpeg" alt="Sylvie Feruzi" class="w-12 h-12 rounded-full object-cover">
               <div>
                 <div class="font-bold text-gold">Sylvie Feruzi Kabala</div>
                 <div class="text-sm text-gray-600">Fondatrice & Directrice Générale</div>
@@ -663,10 +663,10 @@
   <section class="py-20 bg-black text-white relative overflow-hidden">
     <div class="absolute inset-0 opacity-20">
       <div class="grid grid-cols-4 gap-1 h-full">
-        <img src="assets/images/instagram-1.jpeg" alt="" class="w-full h-full object-cover">
-        <img src="assets/images/instagram-2.jpeg" alt="" class="w-full h-full object-cover">
-        <img src="assets/images/instagram-3.jpeg" alt="" class="w-full h-full object-cover">
-        <img src="assets/images/instagram-4.jpeg" alt="" class="w-full h-full object-cover">
+        <img loading="lazy" decoding="async" src="assets/images/instagram-1.jpeg" alt="" class="w-full h-full object-cover">
+        <img loading="lazy" decoding="async" src="assets/images/instagram-2.jpeg" alt="" class="w-full h-full object-cover">
+        <img loading="lazy" decoding="async" src="assets/images/instagram-3.jpeg" alt="" class="w-full h-full object-cover">
+        <img loading="lazy" decoding="async" src="assets/images/instagram-4.jpeg" alt="" class="w-full h-full object-cover">
       </div>
     </div>
     
@@ -880,15 +880,7 @@
   <script src="assets/js/main.js"></script>
   
   <!-- Google Analytics (Optional) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
   <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'GA_MEASUREMENT_ID');
-  </script>
-
-    <script>
   document.addEventListener("DOMContentLoaded", function () {
     // Sélecteur pour tous les compteurs à animer
     const counters = document.querySelectorAll('[data-counter]');
