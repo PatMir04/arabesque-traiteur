@@ -1417,6 +1417,14 @@
       // Update total
       totalPriceSpan.textContent = `$${total}`;
       
+      // Carry the estimate over to the quote form
+      const quoteLink = document.querySelector('#calculateur-prix a[href^="contact.html"]');
+      if (quoteLink && total > 0) {
+        const g = parseInt(document.getElementById('guestCount').value) || 0;
+        const ev = document.getElementById('eventType').value || '';
+        quoteLink.href = `contact.html?guests=${g}&event=${encodeURIComponent(ev)}&total=${total}`;
+      }
+
       // Animate total if changed
       totalPriceSpan.style.transform = 'scale(1.1)';
       setTimeout(() => {
