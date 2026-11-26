@@ -65,57 +65,120 @@
     return {
       formules: [
         {
-          id: 'intime',
-          nom: 'Formule Intime',
-          prix: 35,
-          nombre_repas: 14,
-          description: '1-50 personnes - Service personnalisé avec menu libre choix',
-          badge: 'INTIME',
-          color: 'rose'
-        },
-        {
-          id: 'optimale',
-          nom: 'Formule Optimale', 
-          prix: 25,
-          nombre_repas: 18,
-          description: '50-100 personnes - Excellent rapport qualité-prix',
-          badge: 'POPULAIRE',
-          color: 'green'
-        },
-        {
-          id: 'essentielle',
+          id: 'essentielle-50',
           nom: 'Formule Essentielle',
-          prix: 15,
+          prix: 30,
           nombre_repas: 14,
-          description: '100+ personnes - 14 repas au choix + salades + fruits',
+          description: '14 variétés de plats au choix — pour événements de 1 à 50 invités',
           badge: 'ÉCONOMIQUE',
           color: 'blue'
         },
         {
-          id: 'premium',
-          nom: 'Formule Premium',
-          prix: 20,
+          id: 'optimale-50',
+          nom: 'Formule Optimale',
+          prix: 35,
           nombre_repas: 18,
-          description: '50+ personnes - 18 repas au choix + salades + fruits',
+          description: '18 variétés de plats au choix — pour événements de 1 à 50 invités',
+          badge: 'POPULAIRE',
+          color: 'green'
+        },
+        {
+          id: 'premium-50',
+          nom: 'Formule Premium',
+          prix: 40,
+          nombre_repas: 20,
+          description: '20 variétés de plats au choix — pour événements de 1 à 50 invités',
           badge: 'ÉQUILIBRÉE',
           color: 'purple'
         },
         {
-          id: 'excellence',
+          id: 'excellence-50',
           nom: 'Formule Excellence',
-          prix: 25,
-          nombre_repas: 20,
-          description: '50+ personnes - 20 repas au choix + salades + fruits',
+          prix: 45,
+          nombre_repas: 22,
+          description: '22 variétés de plats au choix — pour événements de 1 à 50 invités',
           badge: 'PRESTIGE',
           color: 'amber'
         },
         {
-          id: 'vip',
-          nom: 'Formule VIP',
+          id: 'essentielle-99',
+          nom: 'Formule Essentielle',
+          prix: 25,
+          nombre_repas: 14,
+          description: '14 variétés de plats au choix — pour événements de 51 à 99 invités',
+          badge: 'ÉCONOMIQUE',
+          color: 'blue'
+        },
+        {
+          id: 'optimale-99',
+          nom: 'Formule Optimale',
+          prix: 30,
+          nombre_repas: 18,
+          description: '18 variétés de plats au choix — pour événements de 51 à 99 invités',
+          badge: 'POPULAIRE',
+          color: 'green'
+        },
+        {
+          id: 'premium-99',
+          nom: 'Formule Premium',
           prix: 35,
-          nombre_repas: 28,
-          description: '100+ personnes - 28 repas au choix + accès complet',
-          badge: 'VIP TOTAL',
+          nombre_repas: 20,
+          description: '20 variétés de plats au choix — pour événements de 51 à 99 invités',
+          badge: 'ÉQUILIBRÉE',
+          color: 'purple'
+        },
+        {
+          id: 'excellence-99',
+          nom: 'Formule Excellence',
+          prix: 40,
+          nombre_repas: 22,
+          description: '22 variétés de plats au choix — pour événements de 51 à 99 invités',
+          badge: 'PRESTIGE',
+          color: 'amber'
+        },
+        {
+          id: 'essentielle-100',
+          nom: 'Formule Essentielle',
+          prix: 20,
+          nombre_repas: 14,
+          description: '14 variétés de plats au choix — pour événements de 100 invités et plus',
+          badge: 'ÉCONOMIQUE',
+          color: 'blue'
+        },
+        {
+          id: 'optimale-100',
+          nom: 'Formule Optimale',
+          prix: 25,
+          nombre_repas: 18,
+          description: '18 variétés de plats au choix — pour événements de 100 invités et plus',
+          badge: 'POPULAIRE',
+          color: 'green'
+        },
+        {
+          id: 'premium-100',
+          nom: 'Formule Premium',
+          prix: 30,
+          nombre_repas: 20,
+          description: '20 variétés de plats au choix — pour événements de 100 invités et plus',
+          badge: 'ÉQUILIBRÉE',
+          color: 'purple'
+        },
+        {
+          id: 'excellence-100',
+          nom: 'Formule Excellence',
+          prix: 35,
+          nombre_repas: 22,
+          description: '22 variétés de plats au choix — pour événements de 100 invités et plus',
+          badge: 'PRESTIGE',
+          color: 'amber'
+        },
+        {
+          id: 'vip-100',
+          nom: 'Formule VIP',
+          prix: 40,
+          nombre_repas: 24,
+          description: '24 variétés de plats au choix — pour événements de 100 invités et plus',
+          badge: 'VIP',
           color: 'gold'
         }
       ],

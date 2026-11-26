@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Menu Authentique Congolais | Configurateur Interactif - Arabesque Traiteur</title>
-  <meta name="description" content="Découvrez la richesse de la cuisine congolaise avec notre menu authentique. Pondu, Maboke, Nga Nda, Fufu - Formules 15$ à 35$ selon vos besoins. Configurateur interactif par Sylvie Feruzi à Kinshasa." />
+  <meta name="description" content="Découvrez la richesse de la cuisine congolaise avec notre menu authentique. Pondu, Maboke, Nga Nda, Fufu - Formules de 20$ à 45$ par personne selon le nombre d'invités et de variétés choisies. Configurateur interactif par Sylvie Feruzi à Kinshasa." />
   
     <link rel="canonical" href="https://arabesquetraiteur.com/menu.html">
 <!-- Enhanced SEO & Social Media -->
@@ -200,12 +200,12 @@
             </span>
             <h3 class="font-display text-2xl font-bold mb-2">Événements Intimes</h3>
             <p class="text-gray-600 mb-4">1 à 50 personnes</p>
-            <div class="text-4xl font-bold text-rose-600 mb-2">35$</div>
-            <div class="text-sm text-gray-500">par personne</div>
+            <div class="text-4xl font-bold text-rose-600 mb-2">30$ à 45$</div>
+            <div class="text-sm text-gray-500">par personne selon les variétés</div>
           </div>
           <ul class="space-y-3 mb-8">
             <li class="flex items-center gap-2 text-sm">
-              <span class="text-rose-500">✓</span> Menu libre choix
+              <span class="text-rose-500">✓</span> 14 à 22 variétés de plats au choix
             </li>
             <li class="flex items-center gap-2 text-sm">
               <span class="text-rose-500">✓</span> Service personnalisé
@@ -217,7 +217,7 @@
               <span class="text-rose-500">✓</span> Présentation raffinée
             </li>
           </ul>
-          <button class="btn btn-outline border-rose-500 text-rose-600 hover:bg-rose-500 hover:text-white w-full select-formula" data-formula="intime">
+          <button class="btn btn-outline border-rose-500 text-rose-600 hover:bg-rose-500 hover:text-white w-full select-formula" data-formula="essentielle-50">
             Composer mon menu
           </button>
         </div>
@@ -229,13 +229,13 @@
               POPULAIRE
             </span>
             <h3 class="font-display text-2xl font-bold mb-2">Événements Moyens</h3>
-            <p class="text-gray-600 mb-4">50 à 100 personnes</p>
-            <div class="text-4xl font-bold text-green-600 mb-2">25$</div>
+            <p class="text-gray-600 mb-4">51 à 99 personnes</p>
+            <div class="text-4xl font-bold text-green-600 mb-2">25$ à 40$</div>
             <div class="text-sm text-gray-500">par personne</div>
           </div>
           <ul class="space-y-3 mb-8">
             <li class="flex items-center gap-2 text-sm">
-              <span class="text-green-500">✓</span> Menu au choix
+              <span class="text-green-500">✓</span> 14 à 22 variétés de plats au choix
             </li>
             <li class="flex items-center gap-2 text-sm">
               <span class="text-green-500">✓</span> Excellent rapport qualité-prix
@@ -247,7 +247,7 @@
               <span class="text-green-500">✓</span> Gestion professionnelle
             </li>
           </ul>
-          <button class="btn btn-gold w-full select-formula" data-formula="optimale">
+          <button class="btn btn-gold w-full select-formula" data-formula="optimale-99">
             Formule recommandée
           </button>
         </div>
@@ -260,12 +260,12 @@
             </span>
             <h3 class="font-display text-2xl font-bold mb-2">Grands Événements</h3>
             <p class="text-gray-600 mb-4">100+ personnes</p>
-            <div class="text-2xl font-bold text-blue-600 mb-2">15$ à 35$</div>
+            <div class="text-2xl font-bold text-blue-600 mb-2">20$ à 40$</div>
             <div class="text-sm text-gray-500">selon formule choisie</div>
           </div>
           <ul class="space-y-3 mb-8">
             <li class="flex items-center gap-2 text-sm">
-              <span class="text-blue-500">✓</span> 14 à 28 repas au choix
+              <span class="text-blue-500">✓</span> 14 à 24 variétés de plats au choix
             </li>
             <li class="flex items-center gap-2 text-sm">
               <span class="text-blue-500">✓</span> Tarifs dégressifs
@@ -686,7 +686,7 @@
           </div>
           <h3 class="font-display text-xl font-bold mb-4">Choisissez vos invités</h3>
           <p class="text-gray-600 leading-relaxed">
-            Déterminez le nombre d'invités pour connaître votre formule : Intime (1-50), Optimale (50-100) ou Flexible (100+)
+            Déterminez le nombre d'invités (1 à 50, 51 à 99 ou 100+) puis le nombre de variétés de plats : le prix par personne suit la grille
           </p>
         </div>
         
@@ -918,14 +918,14 @@
       let price = 0;
       
       if (guests <= 50) {
-        suggestion = 'Formule Intime recommandée';
-        price = 35;
-      } else if (guests <= 100) {
-        suggestion = 'Formule Optimale recommandée';
-        price = 20;
+        suggestion = 'Événement intime (1 à 50 invités)';
+        price = 30;
+      } else if (guests <= 99) {
+        suggestion = 'Événement moyen (51 à 99 invités)';
+        price = 25;
       } else {
-        suggestion = 'Formules flexibles disponibles (15$ à 35$)';
-        price = 15; // Starting price
+        suggestion = 'Grand événement (100 invités et plus)';
+        price = 20;
       }
       
       // Update UI with suggestion
@@ -934,7 +934,7 @@
         suggestionElement.innerHTML = `
           <div class="pricing-suggestion">
             <strong>${suggestion}</strong><br>
-            ${guests <= 100 ? `À partir de ${price}$ par personne` : 'Configurateur intelligent disponible'}
+            `À partir de ${price}$ par personne selon le nombre de variétés choisies`
           </div>
         `;
       }
