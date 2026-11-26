@@ -76,7 +76,7 @@
         {
           id: 'optimale',
           nom: 'Formule Optimale', 
-          prix: 20,
+          prix: 25,
           nombre_repas: 18,
           description: '50-100 personnes - Excellent rapport qualité-prix',
           badge: 'POPULAIRE',

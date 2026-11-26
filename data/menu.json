@@ -47,7 +47,7 @@
       "id": "optimale",
       "nom": "Formule Optimale",
       "description": "Pour événements de 50 à 100 personnes",
-      "prix": 20,
+      "prix": 25,
       "nombre_repas": "Selon choix",
       "groupe_cible": "50-100 personnes",
       "badge": "POPULAIRE",
