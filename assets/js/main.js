@@ -758,48 +758,7 @@ class ArabesqueApp {
 
     form.addEventListener('input', updateWhatsAppLink);
     
-    // Form submission with enhanced UX
-    form.addEventListener('submit', async (e) => {
-      e.preventDefault();
-      
-      if (!this.validateForm(form)) return;
-      
-      this.showFormLoading(true);
-      
-      try {
-        // Simulate processing time for better UX
-        await new Promise(resolve => setTimeout(resolve, 1000));
-        
-        const fd = new FormData(form);
-        const subject = encodeURIComponent('Demande de devis – Arabesque Traiteur');
-        const body = encodeURIComponent(this.formatEmailBody(fd));
-        
-        window.location.href = `mailto:etarabesque@gmail.com?subject=${subject}&body=${body}`;
-        
-        if (formMsg) {
-          formMsg.innerHTML = `
-            <div class="success-message">
-              <span class="success-icon">✅</span>
-              <div>
-                <strong>Email préparé avec succès!</strong>
-                <p>Votre client email va s'ouvrir avec votre demande.</p>
-              </div>
-            </div>
-          `;
-        }
-        
-        // Reset form after success
-        setTimeout(() => {
-          form.reset();
-          this.clearSelection();
-        }, 2000);
-        
-      } catch (error) {
-        this.showNotification('Erreur lors de l\'envoi', 'error');
-      } finally {
-        this.showFormLoading(false);
-      }
-    });
+    // NOTE: form submission is handled by contact.js (WhatsApp) — no mailto handler here.
 
     updateWhatsAppLink();
   }

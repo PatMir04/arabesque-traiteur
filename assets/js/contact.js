@@ -113,10 +113,60 @@
         if (timestampField) {
             timestampField.value = new Date().toISOString();
         }
+
+        // Restore context coming from other pages (Services calculator, Menu configurator)
+        restoreFromServicesCalculator();
+        restoreMenuSelection();
         
         console.log('Contact form initialized successfully');
     }
     
+    // Prefill from the Services price calculator (URL parameters)
+    function restoreFromServicesCalculator() {
+        try {
+            const params = new URLSearchParams(window.location.search);
+            const guests = parseInt(params.get('guests')) || 0;
+            const total = parseInt(params.get('total')) || 0;
+            const eventMap = { mariage: 'mariage', anniversaire: 'anniversaire', gala: 'gala', prive: 'reception_privee', corporate: 'entreprise' };
+            const eventType = eventMap[params.get('event')];
+            if (eventType) {
+                const eventSelect = document.querySelector('select[name="event_type"]');
+                if (eventSelect) eventSelect.value = eventType;
+            }
+            if (guests > 0) {
+                const guestsInput = document.querySelector('input[name="guests_count"]');
+                if (guestsInput) {
+                    guestsInput.value = guests;
+                    guestsInput.dispatchEvent(new Event('input', { bubbles: true }));
+                }
+            }
+            if (total > 0) {
+                const messageField = document.querySelector('textarea[name="personal_message"]');
+                if (messageField && !messageField.value) {
+                    messageField.value = `Estimation obtenue avec le calculateur du site : ${total}$ pour ${guests} invités (montant indicatif, à confirmer).`;
+                }
+            }
+        } catch (e) { console.warn('Services restore skipped:', e); }
+    }
+
+    // Prefill the dish selection saved by the Menu configurator (localStorage, one-shot, < 24 h)
+    function restoreMenuSelection() {
+        try {
+            const raw = localStorage.getItem('arabesqueQuoteData');
+            if (!raw) return;
+            localStorage.removeItem('arabesqueQuoteData');
+            const data = JSON.parse(raw);
+            const created = data && data.metadata && data.metadata.created ? new Date(data.metadata.created).getTime() : 0;
+            if (!created || (Date.now() - created) > 24 * 60 * 60 * 1000) return;
+            (data.selections || []).forEach(sel => {
+                const name = sel.itemName || sel.nom;
+                if (!name) return;
+                const card = Array.from(document.querySelectorAll('.menu-item-card')).find(el => el.dataset.itemName === name);
+                if (card && !card.classList.contains('selected')) card.click();
+            });
+        } catch (e) { console.warn('Menu restore skipped:', e); }
+    }
+
     // Form step navigation
     function initializeFormSteps() {
         const nextButtons = document.querySelectorAll('.next-step');
@@ -257,6 +307,10 @@
             formules = PRICING_RULES['100+'];
         }
         
+        // Reset any previously chosen formule: it belonged to the old guest bracket
+        currentFormule = null;
+        hidePricingPreview();
+
         // Clear existing options
         formuleSelect.innerHTML = '<option value="">Choisissez votre formule</option>';
         
