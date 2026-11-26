@@ -40,6 +40,13 @@ font-family:inherit;color:#26221a}\
 .cs-send{background:#b8860b;background:linear-gradient(135deg,#d4af37,#b8860b);border:none;color:#1a1a1a;\
 width:42px;height:42px;border-radius:50%;font-size:17px;cursor:pointer;flex:none}\
 .cs-typing{font-style:italic;opacity:.7}\
+.cs-wa{display:flex;align-items:center;justify-content:center;gap:8px;background:#25d366;color:#08340f;font-weight:700;font-size:13.5px;text-decoration:none;padding:9px 12px}\
+.cs-wa:hover{background:#1fb857}\
+.cs-est{align-self:stretch;background:#fff;border:1px solid #d4af37;border-radius:14px;padding:12px;display:flex;flex-direction:column;gap:8px}\
+.cs-est label{font-size:12.5px;font-weight:600;color:#6b5200;display:flex;flex-direction:column;gap:3px}\
+.cs-est select,.cs-est input{border:1px solid #d8c88f;border-radius:8px;padding:8px;font-size:14px;font-family:inherit;background:#fffdf7}\
+.cs-est button{background:linear-gradient(135deg,#d4af37,#b8860b);border:none;color:#1a1a1a;font-weight:700;border-radius:999px;padding:9px;font-size:14px;cursor:pointer;font-family:inherit}\
+.cs-cta{align-self:flex-start;background:#2b2118;color:#f5e9c9 !important;text-decoration:none !important;padding:9px 14px;border-radius:999px;font-weight:700;font-size:13.5px}\
 @media (max-width:900px){.cs-btn{width:56px;height:56px;padding:0;justify-content:center;border-radius:50%;\
 right:calc(14px + env(safe-area-inset-right));bottom:calc(14px + env(safe-area-inset-bottom))}\
 .cs-btn .cs-btn-label{display:none}.cs-panel{right:12px;bottom:82px}}';
@@ -66,8 +73,10 @@ right:calc(14px + env(safe-area-inset-right));bottom:calc(14px + env(safe-area-i
     '<div class="cs-chips">' +
     '<button class="cs-chip" type="button">Combien pour 80 invités ?</button>' +
     '<button class="cs-chip" type="button">C\'est quoi le pondu ?</button>' +
+    '<button class="cs-chip" type="button" id="cs-est-chip">🧮 Estimation rapide</button>' +
     '<button class="cs-chip" type="button">Demander un devis</button>' +
     '</div>' +
+    '<a class="cs-wa" href="https://wa.me/243859993833" target="_blank" rel="noopener">💬 Parler à l\'équipe sur WhatsApp</a>' +
     '<form class="cs-foot"><input class="cs-input" type="text" maxlength="500" placeholder="Posez votre question…" aria-label="Votre question">' +
     '<button class="cs-send" type="submit" aria-label="Envoyer">➤</button></form>';
 
@@ -106,6 +115,7 @@ right:calc(14px + env(safe-area-inset-right));bottom:calc(14px + env(safe-area-i
     ]);
   }
 
+  var history = [];
   function ask(q) {
     if (!q) return;
     addMsg(q, 'user');
@@ -115,18 +125,81 @@ right:calc(14px + env(safe-area-inset-right));bottom:calc(14px + env(safe-area-i
     fetch(WORKER_URL, {
       method: 'POST',
       headers: { 'content-type': 'application/json' },
-      body: JSON.stringify({ q: q, lang: 'fr' })
+      body: JSON.stringify({ q: q, lang: 'auto', history: history })
     }).then(function (r) { return r.json(); }).then(function (data) {
       typing.remove();
       if (data && data.text) {
         addMsg(data.text, 'bot');
         addLinks(data.links);
+        history.push({ role: 'user', text: q }, { role: 'assistant', text: data.text });
+        if (history.length > 6) history = history.slice(-6);
       } else {
         addFallback();
       }
     }).catch(function () {
       typing.remove();
       addFallback();
+    });
+  }
+
+  // ---- Estimation rapide (règles du site, calcul local instantané) ----
+  function showEstimator() {
+    var card = document.createElement('div');
+    card.className = 'cs-est';
+    card.innerHTML =
+      '<label>Type d\'événement <select class="est-event">' +
+      '<option value="mariage">Mariage</option><option value="anniversaire">Anniversaire</option>' +
+      '<option value="gala">Gala</option><option value="prive">Réception privée</option>' +
+      '<option value="corporate">Événement d\'entreprise</option><option value="">Autre</option></select></label>' +
+      '<label>Nombre d\'invités <input class="est-guests" type="number" min="1" max="2000" value="80"></label>' +
+      '<label class="est-formule-wrap" style="display:none">Formule (100 invités et +) <select class="est-formule">' +
+      '<option value="15">Essentielle — 15 $/pers</option><option value="20">Premium — 20 $/pers</option>' +
+      '<option value="25">Excellence — 25 $/pers</option><option value="30">Deluxe — 30 $/pers</option>' +
+      '<option value="35">VIP — 35 $/pers</option></select></label>' +
+      '<div class="est-auto" style="font-size:12.5px;color:#6b5200"></div>' +
+      '<button type="button" class="est-go">Calculer mon estimation</button>';
+    body.appendChild(card);
+    body.scrollTop = body.scrollHeight;
+    var guestsEl = card.querySelector('.est-guests');
+    var wrap = card.querySelector('.est-formule-wrap');
+    var auto = card.querySelector('.est-auto');
+    function refresh() {
+      var g = parseInt(guestsEl.value, 10) || 0;
+      if (g > 100) { wrap.style.display = ''; auto.textContent = ''; }
+      else {
+        wrap.style.display = 'none';
+        auto.textContent = g > 50 ? 'Formule appliquée : Optimale — 25 $/pers (50 à 100 invités)'
+          : (g > 0 ? 'Formule appliquée : Intime — 35 $/pers (1 à 50 invités)' : '');
+      }
+    }
+    guestsEl.addEventListener('input', refresh);
+    refresh();
+    card.querySelector('.est-go').addEventListener('click', function () {
+      var g = parseInt(guestsEl.value, 10) || 0;
+      if (g < 1) { addMsg("Indiquez d'abord le nombre d'invités pour calculer l'estimation.", 'bot'); return; }
+      var price, name;
+      if (g <= 50) { price = 35; name = 'Intime'; }
+      else if (g <= 100) { price = 25; name = 'Optimale'; }
+      else {
+        price = parseInt(card.querySelector('.est-formule').value, 10);
+        name = card.querySelector('.est-formule').selectedOptions[0].textContent.split(' — ')[0];
+      }
+      var total = price * g;
+      var ev = card.querySelector('.est-event').value;
+      var evLabel = card.querySelector('.est-event').selectedOptions[0].textContent;
+      addMsg('Estimation pour un(e) ' + evLabel.toLowerCase() + ' de ' + g + ' invités, formule ' + name +
+        ' : ' + price + ' $ x ' + g + ' = ' + total.toLocaleString('fr-FR') + ' $. ' +
+        'C\'est une estimation indicative — le devis personnalisé gratuit confirme le montant exact.', 'bot');
+      var wrapLinks = document.createElement('div');
+      wrapLinks.className = 'cs-links';
+      var a = document.createElement('a');
+      a.className = 'cs-cta';
+      a.href = 'contact.html?guests=' + g + (ev ? '&event=' + ev : '') + '&total=' + total + '#formulaire-devis';
+      a.textContent = '→ Continuer vers le devis pré-rempli';
+      wrapLinks.appendChild(a);
+      body.appendChild(wrapLinks);
+      body.scrollTop = body.scrollHeight;
+      card.remove();
     });
   }
 
@@ -147,6 +220,10 @@ right:calc(14px + env(safe-area-inset-right));bottom:calc(14px + env(safe-area-i
     ask(input.value.trim());
   });
   panel.querySelectorAll('.cs-chip').forEach(function (chip) {
-    chip.addEventListener('click', function () { ask(chip.textContent.trim()); });
+    if (chip.id === 'cs-est-chip') {
+      chip.addEventListener('click', function () { if (!panel.classList.contains('open')) toggle(true); showEstimator(); });
+    } else {
+      chip.addEventListener('click', function () { ask(chip.textContent.trim()); });
+    }
   });
 })();
