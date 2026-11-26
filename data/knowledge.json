@@ -1,0 +1,660 @@
+{
+ "docs": [
+  {
+   "id": "formules-prix",
+   "title": "Formules et prix",
+   "url": "https://arabesquetraiteur.com/menu.html",
+   "lang": "fr",
+   "type": "faq",
+   "text": "Formules et prix par personne d'Arabesque Traiteur (Kinshasa). Les prix sont en dollars américains (USD), par personne. Une estimation se calcule ainsi : prix de la formule multiplié par le nombre d'invités. Le devis final est toujours confirmé par l'équipe via le formulaire de devis ou WhatsApp. Formule Intime : 35 $ par personne, pour 1-50 personnes. Pour événements de 1 à 50 personnes. Nombre de plats au choix : illimité (selon choix). Avantages : Service personnalisé ; Attention particulière aux détails ; Flexibilité maximale dans les choix ; Présentation raffinée ; Service à table inclus. Formule Optimale : 25 $ par personne, pour 50-100 personnes. Pour événements de 50 à 100 personnes. Nombre de plats au choix : illimité (selon choix). Avantages : Excellent rapport qualité-prix ; Service buffet organisé ; Variété de choix garantie ; Présentation soignée ; Gestion professionnelle. Formule Essentielle : 15 $ par personne, pour 100+ personnes. 14 repas au choix pour 100+ personnes. Nombre de plats au choix : 14. Avantages : 14 repas au choix dans toute la liste ; Salades fraîches incluses ; Plateau de fruits de saison ; Accompagnements traditionnels ; Service buffet efficace. Formule Premium : 20 $ par personne, pour 100+ personnes. 18 repas au choix pour 100+ personnes. Nombre de plats au choix : 18. Avantages : 18 repas au choix dans toute la liste ; Plus de variété de plats ; Salades premium incluses ; Plateau de fruits tropical ; Accompagnements diversifiés ; Présentation améliorée. Formule Excellence : 25 $ par personne, pour 100+ personnes. 20 repas au choix pour 100+ personnes. Nombre de plats au choix : 20. Avantages : 20 repas au choix dans toute la liste ; Sélection élargie de spécialités ; Salades d'exception incluses ; Fruits exotiques premium ; Accompagnements complets ; Service amélioré. Formule Deluxe : 30 $ par personne, pour 100+ personnes. 24 repas au choix pour 100+ personnes. Nombre de plats au choix : 24. Avantages : 24 repas au choix dans toute la liste ; Accès aux spécialités rares ; Salades gastronomiques incluses ; Buffet de fruits d'exception ; Tous accompagnements disponibles ; Service personnalisé. Formule VIP : 35 $ par personne, pour 100+ personnes. 28 repas au choix pour 100+ personnes. Nombre de plats au choix : 28. Avantages : 28 repas au choix - accès total ; Toutes les spécialités incluses ; Salades signature du chef ; Fruits et desserts premium ; Accompagnements illimités ; Service VIP complet ; Présentation gastronomique. Tranches du calculateur et du configurateur : de 1 à 50 invités, la Formule Intime à 35 $ par personne ; de 50 à 100 invités, la Formule Optimale à 25 $ par personne ; au-delà de 100 invités, le client choisit parmi Essentielle 15 $, Premium 20 $, Excellence 25 $, Deluxe 30 $ et VIP 35 $ par personne. Service cocktail professionnel (option) : 500 $ pour moins de 55 invités, 750 $ de 55 à 104 invités, 900 $ de 105 à 154 invités, 1 200 $ pour 155 invités et plus. Supplément spécialités rares : 5 $ par personne. Exemples d'estimations : un mariage de 80 invités en Formule Optimale coûte environ 25 $ x 80 = 2 000 $. Un événement de 120 invités en formule VIP coûte environ 35 $ x 120 = 4 200 $. Un événement intime de 30 invités coûte environ 35 $ x 30 = 1 050 $. Ces montants sont des estimations indicatives, le devis personnalisé fait foi."
+  },
+  {
+   "id": "plat-samoussa-viande",
+   "title": "Plat : Samoussa à la Viande",
+   "url": "https://arabesquetraiteur.com/menu.html#configurateur",
+   "lang": "fr",
+   "type": "plat",
+   "text": "Samoussa à la Viande — catégorie Entrées & Amuse-Bouches. Pâte croustillante farcie de viande épicée, recette traditionnelle. Origine : Spécialité maison.  Ingrédients typiques : pâte fine croustillante, viande hachée épicée, oignons, herbes. Profil : croustillant et relevé, servi chaud. Idéal en ouverture de buffet ou en cocktail. Ce plat se choisit dans le configurateur de la page Menu, dans la limite de plats de la formule choisie."
+  },
+  {
+   "id": "plat-brochette-beignets",
+   "title": "Plat : Brochette de Beignets",
+   "url": "https://arabesquetraiteur.com/menu.html#configurateur",
+   "lang": "fr",
+   "type": "plat",
+   "text": "Brochette de Beignets — catégorie Entrées & Amuse-Bouches. Beignets moelleux en brochette, accompagnement sauce piquante. Origine : Création Arabesque.  Ingrédients typiques : beignets moelleux à base de farine, servis en brochette avec une sauce piquante. Profil : doux et fondant, relevé par la sauce. Création maison, parfaite en amuse-bouche. Ce plat se choisit dans le configurateur de la page Menu, dans la limite de plats de la formule choisie."
+  },
+  {
+   "id": "plat-saucisse-pili",
+   "title": "Plat : Saucisses Pili",
+   "url": "https://arabesquetraiteur.com/menu.html#configurateur",
+   "lang": "fr",
+   "type": "plat",
+   "text": "Saucisses Pili — catégorie Entrées & Amuse-Bouches. Saucisses locales grillées aux épices congolaises. Origine : Tradition locale.  Ingrédients typiques : saucisses locales grillées, épices congolaises, pili-pili. Profil : fumé et franchement épicé. Pour les amateurs de sensations fortes, en entrée ou en cocktail. Ce plat se choisit dans le configurateur de la page Menu, dans la limite de plats de la formule choisie."
+  },
+  {
+   "id": "plat-plateau-fromage",
+   "title": "Plat : Plateau de Fromages",
+   "url": "https://arabesquetraiteur.com/menu.html#configurateur",
+   "lang": "fr",
+   "type": "plat",
+   "text": "Plateau de Fromages — catégorie Entrées & Amuse-Bouches. Sélection de fromages internationaux et locaux. Origine : Sélection premium.  Ingrédients typiques : sélection de fromages internationaux et locaux, servis en plateau. Profil : varié, du doux à l'affiné. À partager en cocktail ou en fin de repas. Ce plat se choisit dans le configurateur de la page Menu, dans la limite de plats de la formule choisie."
+  },
+  {
+   "id": "plat-rouleau-printemps",
+   "title": "Plat : Rouleaux de Printemps",
+   "url": "https://arabesquetraiteur.com/menu.html#configurateur",
+   "lang": "fr",
+   "type": "plat",
+   "text": "Rouleaux de Printemps — catégorie Entrées & Amuse-Bouches. Rouleaux frais aux légumes croquants et herbes fraîches. Origine : Fusion asiatique.  Ingrédients typiques : galette de riz fraîche, légumes croquants, herbes fraîches. Profil : léger et frais, touche fusion asiatique. Option fraîcheur des cocktails et buffets. Ce plat se choisit dans le configurateur de la page Menu, dans la limite de plats de la formule choisie."
+  },
+  {
+   "id": "plat-mini-burger",
+   "title": "Plat : Mini Burgers",
+   "url": "https://arabesquetraiteur.com/menu.html#configurateur",
+   "lang": "fr",
+   "type": "plat",
+   "text": "Mini Burgers — catégorie Entrées & Amuse-Bouches. Petits burgers gourmands, viande locale, pain artisanal. Origine : Style américain revisité.  Ingrédients typiques : pain artisanal, viande locale, garniture gourmande. Profil : généreux et convivial, format miniature. Très apprécié des cocktails et des jeunes invités. Ce plat se choisit dans le configurateur de la page Menu, dans la limite de plats de la formule choisie."
+  },
+  {
+   "id": "cat-entrees",
+   "title": "Catégorie : Entrées & Amuse-Bouches",
+   "url": "https://arabesquetraiteur.com/menu.html#configurateur",
+   "lang": "fr",
+   "type": "menu",
+   "text": "La catégorie Entrées & Amuse-Bouches du menu d'Arabesque Traiteur : Mises en bouche savoureuses pour commencer en beauté. Elle comprend 6 plats : Samoussa à la Viande, Brochette de Beignets, Saucisses Pili, Plateau de Fromages, Rouleaux de Printemps, Mini Burgers."
+  },
+  {
+   "id": "plat-salade-grecque",
+   "title": "Plat : Salade Grecque",
+   "url": "https://arabesquetraiteur.com/menu.html#configurateur",
+   "lang": "fr",
+   "type": "plat",
+   "text": "Salade Grecque — catégorie Salades Fraîcheur. Tomates, concombres, olives, feta, oignon rouge, vinaigrette à l'huile d'olive. Origine : Méditerranéenne. Régime : végétarien.  Ingrédients typiques : tomates, concombres, olives, feta, oignon rouge, vinaigrette à l'huile d'olive. Profil : frais et acidulé, végétarien. Équilibre parfait à côté des grillades. Ce plat se choisit dans le configurateur de la page Menu, dans la limite de plats de la formule choisie."
+  },
+  {
+   "id": "plat-salade-nicoise",
+   "title": "Plat : Salade Niçoise",
+   "url": "https://arabesquetraiteur.com/menu.html#configurateur",
+   "lang": "fr",
+   "type": "plat",
+   "text": "Salade Niçoise — catégorie Salades Fraîcheur. Thon, œufs durs, tomates, anchois, olives, haricots verts. Origine : Française classique.  Ingrédients typiques : thon, œufs durs, tomates, anchois, olives, haricots verts. Profil : complet et méditerranéen, presque un plat en soi. Classique français des buffets d'été. Ce plat se choisit dans le configurateur de la page Menu, dans la limite de plats de la formule choisie."
+  },
+  {
+   "id": "plat-macedoine-legumes",
+   "title": "Plat : Macédoine de Légumes",
+   "url": "https://arabesquetraiteur.com/menu.html#configurateur",
+   "lang": "fr",
+   "type": "plat",
+   "text": "Macédoine de Légumes — catégorie Salades Fraîcheur. Mélange coloré de légumes frais en dés, mayonnaise légère. Origine : Classique international. Régime : végétarien.  Ingrédients typiques : légumes frais en petits dés, mayonnaise légère. Profil : doux et coloré, végétarien. Accompagne viandes et poissons sans les dominer. Ce plat se choisit dans le configurateur de la page Menu, dans la limite de plats de la formule choisie."
+  },
+  {
+   "id": "cat-salades",
+   "title": "Catégorie : Salades Fraîcheur",
+   "url": "https://arabesquetraiteur.com/menu.html#configurateur",
+   "lang": "fr",
+   "type": "menu",
+   "text": "La catégorie Salades Fraîcheur du menu d'Arabesque Traiteur : Accompagnements frais et colorés. Elle comprend 3 plats : Salade Grecque, Salade Niçoise, Macédoine de Légumes."
+  },
+  {
+   "id": "plat-cochon-lait-farci",
+   "title": "Plat : Cochon de Lait Farci",
+   "url": "https://arabesquetraiteur.com/menu.html#configurateur",
+   "lang": "fr",
+   "type": "plat",
+   "text": "Cochon de Lait Farci — catégorie Viandes & Spécialités. Cochon de lait tendre, farci aux herbes et épices locales. Origine : Spécialité festive congolaise. Spécialité signature de la cheffe Sylvie Feruzi. Ingrédients typiques : cochon de lait entier, farce aux herbes et épices locales, cuisson lente. Profil : peau croustillante, chair fondante — la pièce festive par excellence. Spécialité signature de la cheffe Sylvie Feruzi, pour les grandes occasions. Ce plat se choisit dans le configurateur de la page Menu, dans la limite de plats de la formule choisie."
+  },
+  {
+   "id": "plat-viande-chevre-nga-nda",
+   "title": "Plat : Viande de Chèvre façon Nga Nda",
+   "url": "https://arabesquetraiteur.com/menu.html#configurateur",
+   "lang": "fr",
+   "type": "plat",
+   "text": "Viande de Chèvre façon Nga Nda — catégorie Viandes & Spécialités. Chèvre mijotée selon la tradition Nga Nda, sauce authentique. Origine : Tradition ancestrale congolaise. Spécialité signature de la cheffe Sylvie Feruzi. Ingrédients typiques : viande de chèvre mijotée longuement, sauce traditionnelle Nga Nda aux épices ancestrales. Profil : profond, parfumé, légèrement relevé. Spécialité signature de la cheffe, servie avec fufu ou riz. Ce plat se choisit dans le configurateur de la page Menu, dans la limite de plats de la formule choisie."
+  },
+  {
+   "id": "plat-maboke-ngulu",
+   "title": "Plat : Maboke y'a Ngulu",
+   "url": "https://arabesquetraiteur.com/menu.html#configurateur",
+   "lang": "fr",
+   "type": "plat",
+   "text": "Maboke y'a Ngulu — catégorie Viandes & Spécialités. Porc fumé traditionnel dans les feuilles, cuisson ancestrale. Origine : Technique traditionnelle congolaise. Spécialité signature de la cheffe Sylvie Feruzi. Ingrédients typiques : porc fumé, feuilles de bananier pour la cuisson en papillote traditionnelle (maboke), épices locales. Profil : fumé et fondant, parfum de feuilles incomparable. Spécialité signature de la cheffe, méthode ancestrale congolaise. Ce plat se choisit dans le configurateur de la page Menu, dans la limite de plats de la formule choisie."
+  },
+  {
+   "id": "plat-brochette-boeuf",
+   "title": "Plat : Brochette de Bœuf",
+   "url": "https://arabesquetraiteur.com/menu.html#configurateur",
+   "lang": "fr",
+   "type": "plat",
+   "text": "Brochette de Bœuf — catégorie Viandes & Spécialités. Bœuf tendre grillé aux épices, marinade maison. Origine : Grillades Arabesque.  Ingrédients typiques : morceaux de bœuf tendre, marinade maison aux épices, grillade au feu. Profil : grillé et juteux. S'accorde avec frites, makemba ou riz persillé. Ce plat se choisit dans le configurateur de la page Menu, dans la limite de plats de la formule choisie."
+  },
+  {
+   "id": "plat-emince-boeuf-legumes",
+   "title": "Plat : Émincé de Bœuf aux Légumes",
+   "url": "https://arabesquetraiteur.com/menu.html#configurateur",
+   "lang": "fr",
+   "type": "plat",
+   "text": "Émincé de Bœuf aux Légumes — catégorie Viandes & Spécialités. Lamelles de bœuf sautées, légumes croquants de saison. Origine : Cuisine moderne.  Ingrédients typiques : lamelles de bœuf sautées à feu vif, légumes croquants de saison. Profil : léger et moderne, sauce courte. Bon choix pour un buffet équilibré. Ce plat se choisit dans le configurateur de la page Menu, dans la limite de plats de la formule choisie."
+  },
+  {
+   "id": "plat-cote-porc",
+   "title": "Plat : Côte de Porc",
+   "url": "https://arabesquetraiteur.com/menu.html#configurateur",
+   "lang": "fr",
+   "type": "plat",
+   "text": "Côte de Porc — catégorie Viandes & Spécialités. Côtes de porc grillées, sauce barbecue maison. Origine : Grillade premium.  Ingrédients typiques : côtes de porc grillées, sauce barbecue maison. Profil : caramélisé et généreux. Accompagner de frites maison ou de makemba. Ce plat se choisit dans le configurateur de la page Menu, dans la limite de plats de la formule choisie."
+  },
+  {
+   "id": "plat-tripes-chevre",
+   "title": "Plat : Tripes de Chèvre aux Pommes de Terre",
+   "url": "https://arabesquetraiteur.com/menu.html#configurateur",
+   "lang": "fr",
+   "type": "plat",
+   "text": "Tripes de Chèvre aux Pommes de Terre — catégorie Viandes & Spécialités. Tripes mijotées, pommes de terre ou bisamunyu. Origine : Plat traditionnel congolais.  Ingrédients typiques : tripes de chèvre mijotées longuement, pommes de terre ou bisamunyu, sauce traditionnelle. Profil : rustique et savoureux, plat de terroir congolais pour les connaisseurs. Ce plat se choisit dans le configurateur de la page Menu, dans la limite de plats de la formule choisie."
+  },
+  {
+   "id": "plat-cotes-agneau",
+   "title": "Plat : Côtes d'Agneau",
+   "url": "https://arabesquetraiteur.com/menu.html#configurateur",
+   "lang": "fr",
+   "type": "plat",
+   "text": "Côtes d'Agneau — catégorie Viandes & Spécialités. Côtes d'agneau grillées, herbes de Provence. Origine : Cuisine raffinée. Plat premium. Ingrédients typiques : côtes d'agneau grillées, herbes de Provence. Profil : raffiné et parfumé, viande premium. Pour les menus haut de gamme et les galas. Ce plat se choisit dans le configurateur de la page Menu, dans la limite de plats de la formule choisie."
+  },
+  {
+   "id": "plat-gigot-agneau",
+   "title": "Plat : Gigot d'Agneau",
+   "url": "https://arabesquetraiteur.com/menu.html#configurateur",
+   "lang": "fr",
+   "type": "plat",
+   "text": "Gigot d'Agneau — catégorie Viandes & Spécialités. Gigot d'agneau rôti, jus corsé aux épices. Origine : Grande cuisine. Plat premium. Ingrédients typiques : gigot d'agneau rôti lentement, jus corsé aux épices. Profil : fondant et majestueux, pièce de grande cuisine. Idéal en plat central d'un mariage ou d'un gala. Ce plat se choisit dans le configurateur de la page Menu, dans la limite de plats de la formule choisie."
+  },
+  {
+   "id": "plat-dinde",
+   "title": "Plat : Dinde Rôtie",
+   "url": "https://arabesquetraiteur.com/menu.html#configurateur",
+   "lang": "fr",
+   "type": "plat",
+   "text": "Dinde Rôtie — catégorie Viandes & Spécialités. Dinde fermière rôtie, farce traditionnelle. Origine : Classique des fêtes.  Ingrédients typiques : dinde fermière rôtie, farce traditionnelle aux herbes. Profil : festif et généreux, classique des fêtes de famille et de fin d'année. Ce plat se choisit dans le configurateur de la page Menu, dans la limite de plats de la formule choisie."
+  },
+  {
+   "id": "cat-repas_viandes",
+   "title": "Catégorie : Viandes & Spécialités",
+   "url": "https://arabesquetraiteur.com/menu.html#configurateur",
+   "lang": "fr",
+   "type": "menu",
+   "text": "La catégorie Viandes & Spécialités du menu d'Arabesque Traiteur : Le cœur de la cuisine congolaise authentique. Elle comprend 10 plats : Cochon de Lait Farci, Viande de Chèvre façon Nga Nda, Maboke y'a Ngulu, Brochette de Bœuf, Émincé de Bœuf aux Légumes, Côte de Porc, Tripes de Chèvre aux Pommes de Terre, Côtes d'Agneau, Gigot d'Agneau, Dinde Rôtie."
+  },
+  {
+   "id": "plat-gros-capitaine-braise",
+   "title": "Plat : Gros Capitaine Braisé",
+   "url": "https://arabesquetraiteur.com/menu.html#configurateur",
+   "lang": "fr",
+   "type": "plat",
+   "text": "Gros Capitaine Braisé — catégorie Poissons & Fruits de Mer. Poisson capitaine du Congo, braisé aux épices locales. Origine : Spécialité du fleuve Congo. Spécialité signature de la cheffe Sylvie Feruzi. Ingrédients typiques : capitaine entier du fleuve Congo, marinade d'épices locales, braise. Profil : chair ferme et parfumée, poisson noble du fleuve. Spécialité signature de la cheffe, star des grands buffets. Ce plat se choisit dans le configurateur de la page Menu, dans la limite de plats de la formule choisie."
+  },
+  {
+   "id": "plat-capitaine-sauce-maniere",
+   "title": "Plat : Capitaine à la Sauce Manière",
+   "url": "https://arabesquetraiteur.com/menu.html#configurateur",
+   "lang": "fr",
+   "type": "plat",
+   "text": "Capitaine à la Sauce Manière — catégorie Poissons & Fruits de Mer. Capitaine en sauce traditionelle congolaise. Origine : Recette authentique congolaise. Spécialité signature de la cheffe Sylvie Feruzi. Ingrédients typiques : capitaine en sauce traditionnelle congolaise (sauce manière), tomates et aromates. Profil : fondant et relevé avec douceur. Spécialité signature de la cheffe. Ce plat se choisit dans le configurateur de la page Menu, dans la limite de plats de la formule choisie."
+  },
+  {
+   "id": "plat-mbinzo",
+   "title": "Plat : Mbinzo",
+   "url": "https://arabesquetraiteur.com/menu.html#configurateur",
+   "lang": "fr",
+   "type": "plat",
+   "text": "Mbinzo — catégorie Poissons & Fruits de Mer. Poisson séché traditionnel, préparé selon la coutume. Origine : Tradition congolaise ancestrale.  Ingrédients typiques : poisson séché traditionnel réhydraté et préparé selon la coutume, sauce tomate et oignons. Profil : goût intense et authentique, pour les palais congolais nostalgiques. Ce plat se choisit dans le configurateur de la page Menu, dans la limite de plats de la formule choisie."
+  },
+  {
+   "id": "plat-ndakala",
+   "title": "Plat : Ndakala",
+   "url": "https://arabesquetraiteur.com/menu.html#configurateur",
+   "lang": "fr",
+   "type": "plat",
+   "text": "Ndakala — catégorie Poissons & Fruits de Mer. Petits poissons séchés, spécialité du Congo. Origine : Tradition du fleuve Congo.  Ingrédients typiques : petits poissons séchés du fleuve Congo, préparation traditionnelle en sauce. Profil : concentré et typé, spécialité authentique du fleuve. Ce plat se choisit dans le configurateur de la page Menu, dans la limite de plats de la formule choisie."
+  },
+  {
+   "id": "plat-poisson-fume",
+   "title": "Plat : Poisson Fumé",
+   "url": "https://arabesquetraiteur.com/menu.html#configurateur",
+   "lang": "fr",
+   "type": "plat",
+   "text": "Poisson Fumé — catégorie Poissons & Fruits de Mer. Poisson fumé artisanalement, saveur authentique. Origine : Technique traditionnelle.  Ingrédients typiques : poisson fumé artisanalement, servi en sauce ou en accompagnement de légumes-feuilles. Profil : fumé profond, base de nombreux plats traditionnels comme le matembele. Ce plat se choisit dans le configurateur de la page Menu, dans la limite de plats de la formule choisie."
+  },
+  {
+   "id": "plat-maboke-poisson-fleuve",
+   "title": "Plat : Maboke Poisson du Fleuve",
+   "url": "https://arabesquetraiteur.com/menu.html#configurateur",
+   "lang": "fr",
+   "type": "plat",
+   "text": "Maboke Poisson du Fleuve — catégorie Poissons & Fruits de Mer. Poisson du Congo cuit dans les feuilles, méthode ancestrale. Origine : Technique traditionnelle congolaise. Spécialité signature de la cheffe Sylvie Feruzi. Ingrédients typiques : poisson du fleuve Congo, feuilles pour la cuisson en papillote (maboke), épices et aromates. Profil : vapeur parfumée, chair délicate. Spécialité signature de la cheffe, méthode ancestrale. Ce plat se choisit dans le configurateur de la page Menu, dans la limite de plats de la formule choisie."
+  },
+  {
+   "id": "plat-poisson-sale",
+   "title": "Plat : Poisson Salé",
+   "url": "https://arabesquetraiteur.com/menu.html#configurateur",
+   "lang": "fr",
+   "type": "plat",
+   "text": "Poisson Salé — catégorie Poissons & Fruits de Mer. Poisson salé et séché, préparation traditionnelle. Origine : Conservation traditionnelle.  Ingrédients typiques : poisson salé et séché (makayabu de poisson), dessalé puis préparé en sauce traditionnelle. Profil : salé et corsé, goût du terroir. Souvent associé aux feuilles de manioc ou aux haricots. Ce plat se choisit dans le configurateur de la page Menu, dans la limite de plats de la formule choisie."
+  },
+  {
+   "id": "plat-tilapia-braise",
+   "title": "Plat : Tilapia Braisé",
+   "url": "https://arabesquetraiteur.com/menu.html#configurateur",
+   "lang": "fr",
+   "type": "plat",
+   "text": "Tilapia Braisé — catégorie Poissons & Fruits de Mer. Tilapia frais braisé aux tomates et épices. Origine : Poisson d'élevage local.  Ingrédients typiques : tilapia frais entier, tomates, oignons, épices locales, braise. Profil : accessible et parfumé, le braisé préféré des fêtes. Servi avec makemba, frites ou bâton de manioc. Ce plat se choisit dans le configurateur de la page Menu, dans la limite de plats de la formule choisie."
+  },
+  {
+   "id": "plat-crevettes",
+   "title": "Plat : Crevettes Sautées",
+   "url": "https://arabesquetraiteur.com/menu.html#configurateur",
+   "lang": "fr",
+   "type": "plat",
+   "text": "Crevettes Sautées — catégorie Poissons & Fruits de Mer. Crevettes fraîches sautées à l'ail et aux herbes. Origine : Fruits de mer premium. Plat premium. Ingrédients typiques : crevettes fraîches sautées à l'ail et aux herbes. Profil : délicat et premium. En entrée chaude ou en touche fruits de mer du buffet. Ce plat se choisit dans le configurateur de la page Menu, dans la limite de plats de la formule choisie."
+  },
+  {
+   "id": "cat-poissons",
+   "title": "Catégorie : Poissons & Fruits de Mer",
+   "url": "https://arabesquetraiteur.com/menu.html#configurateur",
+   "lang": "fr",
+   "type": "menu",
+   "text": "La catégorie Poissons & Fruits de Mer du menu d'Arabesque Traiteur : Trésors du fleuve Congo et spécialités aquatiques. Elle comprend 9 plats : Gros Capitaine Braisé, Capitaine à la Sauce Manière, Mbinzo, Ndakala, Poisson Fumé, Maboke Poisson du Fleuve, Poisson Salé, Tilapia Braisé, Crevettes Sautées."
+  },
+  {
+   "id": "plat-poulet-braise",
+   "title": "Plat : Poulet Braisé",
+   "url": "https://arabesquetraiteur.com/menu.html#configurateur",
+   "lang": "fr",
+   "type": "plat",
+   "text": "Poulet Braisé — catégorie Volailles. Poulet fermier braisé, sauce tomate épicée. Origine : Classique congolais.  Ingrédients typiques : poulet fermier, marinade et sauce tomate épicée, braise. Profil : le grand classique congolais des fêtes, peau grillée et chair juteuse. Avec makemba ou frites, succès garanti. Ce plat se choisit dans le configurateur de la page Menu, dans la limite de plats de la formule choisie."
+  },
+  {
+   "id": "plat-cuisse-poulet-fume",
+   "title": "Plat : Cuisse de Poulet Fumé",
+   "url": "https://arabesquetraiteur.com/menu.html#configurateur",
+   "lang": "fr",
+   "type": "plat",
+   "text": "Cuisse de Poulet Fumé — catégorie Volailles. Cuisses de poulet fumées artisanalement. Origine : Technique de fumage local.  Ingrédients typiques : cuisses de poulet fumées artisanalement selon les méthodes de la maison. Profil : fumé et fondant. Se sert en sauce ou grillées, avec riz ou légumes-feuilles. Ce plat se choisit dans le configurateur de la page Menu, dans la limite de plats de la formule choisie."
+  },
+  {
+   "id": "plat-aile-rond-poulet",
+   "title": "Plat : Aile Rond de Poulet",
+   "url": "https://arabesquetraiteur.com/menu.html#configurateur",
+   "lang": "fr",
+   "type": "plat",
+   "text": "Aile Rond de Poulet — catégorie Volailles. Ailes de poulet marinées et grillées. Origine : Grillade populaire.  Ingrédients typiques : ailes de poulet marinées puis grillées. Profil : convivial et croustillant, format parfait pour les cocktails et les buffets debout. Ce plat se choisit dans le configurateur de la page Menu, dans la limite de plats de la formule choisie."
+  },
+  {
+   "id": "plat-makayabu-goma",
+   "title": "Plat : Makayabu (Goma)",
+   "url": "https://arabesquetraiteur.com/menu.html#configurateur",
+   "lang": "fr",
+   "type": "plat",
+   "text": "Makayabu (Goma) — catégorie Volailles. Spécialité de Goma, viande séchée et épicée. Origine : Spécialité de Goma.  Ingrédients typiques : viande séchée et épicée selon la spécialité de Goma (Est de la RDC), préparation traditionnelle. Profil : intense et rare, spécialité régionale d'exception. Selon disponibilité. Ce plat se choisit dans le configurateur de la page Menu, dans la limite de plats de la formule choisie."
+  },
+  {
+   "id": "cat-volailles",
+   "title": "Catégorie : Volailles",
+   "url": "https://arabesquetraiteur.com/menu.html#configurateur",
+   "lang": "fr",
+   "type": "menu",
+   "text": "La catégorie Volailles du menu d'Arabesque Traiteur : Poulet, canard et spécialités de volaille. Elle comprend 4 plats : Poulet Braisé, Cuisse de Poulet Fumé, Aile Rond de Poulet, Makayabu (Goma)."
+  },
+  {
+   "id": "plat-pondu",
+   "title": "Plat : Pondu",
+   "url": "https://arabesquetraiteur.com/menu.html#configurateur",
+   "lang": "fr",
+   "type": "plat",
+   "text": "Pondu — catégorie Légumes Verts & Accompagnements. Feuilles de manioc pilées, plat emblématique congolais. Origine : Plat national congolais. Régime : végétarien. Spécialité signature de la cheffe Sylvie Feruzi. Ingrédients typiques : feuilles de manioc pilées, mijotées longuement, souvent relevées d'huile et d'aromates ; existe en version végétarienne ou accompagnée. Profil : LE plat national congolais, goût profond et réconfortant. Spécialité signature de la cheffe ; s'accorde avec fufu, riz ou poisson fumé. Ce plat se choisit dans le configurateur de la page Menu, dans la limite de plats de la formule choisie."
+  },
+  {
+   "id": "plat-fum-bwa",
+   "title": "Plat : Fum Bwa",
+   "url": "https://arabesquetraiteur.com/menu.html#configurateur",
+   "lang": "fr",
+   "type": "plat",
+   "text": "Fum Bwa — catégorie Légumes Verts & Accompagnements. Légumes verts traditionnels, feuilles locales. Origine : Tradition villageoise. Régime : végétarien.  Ingrédients typiques : légumes verts traditionnels, feuilles locales sélectionnées, mijotés simplement. Profil : végétal et authentique, végétarien. Goût des traditions villageoises congolaises. Ce plat se choisit dans le configurateur de la page Menu, dans la limite de plats de la formule choisie."
+  },
+  {
+   "id": "plat-haricots-verts",
+   "title": "Plat : Haricots Verts",
+   "url": "https://arabesquetraiteur.com/menu.html#configurateur",
+   "lang": "fr",
+   "type": "plat",
+   "text": "Haricots Verts — catégorie Légumes Verts & Accompagnements. Haricots verts frais sautés à l'ail. Origine : Légume classique. Régime : végétarien.  Ingrédients typiques : haricots verts frais sautés à l'ail. Profil : croquant et léger, végétarien. Accompagnement passe-partout des viandes et poissons. Ce plat se choisit dans le configurateur de la page Menu, dans la limite de plats de la formule choisie."
+  },
+  {
+   "id": "plat-aubergines-vertes",
+   "title": "Plat : Aubergines Vertes (Nyanya/Solo)",
+   "url": "https://arabesquetraiteur.com/menu.html#configurateur",
+   "lang": "fr",
+   "type": "plat",
+   "text": "Aubergines Vertes (Nyanya/Solo) — catégorie Légumes Verts & Accompagnements. Aubergines locales mijotées, sauce traditionnelle. Origine : Légume local congolais. Régime : végétarien.  Ingrédients typiques : aubergines vertes locales (nyanya/solo) mijotées en sauce traditionnelle congolaise. Profil : fondant et doux, végétarien. Légume local typique des tables congolaises. Ce plat se choisit dans le configurateur de la page Menu, dans la limite de plats de la formule choisie."
+  },
+  {
+   "id": "plat-ratatouille",
+   "title": "Plat : Ratatouille",
+   "url": "https://arabesquetraiteur.com/menu.html#configurateur",
+   "lang": "fr",
+   "type": "plat",
+   "text": "Ratatouille — catégorie Légumes Verts & Accompagnements. Mélange de légumes méditerranéens mijotés. Origine : Cuisine française. Régime : végétarien.  Ingrédients typiques : légumes méditerranéens mijotés (aubergines, courgettes, poivrons, tomates). Profil : ensoleillé et doux, végétarien. Touche française des buffets mixtes. Ce plat se choisit dans le configurateur de la page Menu, dans la limite de plats de la formule choisie."
+  },
+  {
+   "id": "plat-epinards",
+   "title": "Plat : Épinards",
+   "url": "https://arabesquetraiteur.com/menu.html#configurateur",
+   "lang": "fr",
+   "type": "plat",
+   "text": "Épinards — catégorie Légumes Verts & Accompagnements. Épinards frais sautés aux oignons. Origine : Légume santé. Régime : végétarien.  Ingrédients typiques : épinards frais sautés aux oignons et aromates. Profil : léger et sain, végétarien. Bon équilibre à côté des plats en sauce. Ce plat se choisit dans le configurateur de la page Menu, dans la limite de plats de la formule choisie."
+  },
+  {
+   "id": "plat-champignons",
+   "title": "Plat : Champignons Sautés",
+   "url": "https://arabesquetraiteur.com/menu.html#configurateur",
+   "lang": "fr",
+   "type": "plat",
+   "text": "Champignons Sautés — catégorie Légumes Verts & Accompagnements. Champignons frais sautés aux herbes. Origine : Accompagnement raffiné. Régime : végétarien.  Ingrédients typiques : champignons frais sautés aux herbes. Profil : raffiné et boisé, végétarien. Accompagnement élégant des viandes rôties. Ce plat se choisit dans le configurateur de la page Menu, dans la limite de plats de la formule choisie."
+  },
+  {
+   "id": "plat-petits-pois-carottes",
+   "title": "Plat : Petits Pois aux Carottes",
+   "url": "https://arabesquetraiteur.com/menu.html#configurateur",
+   "lang": "fr",
+   "type": "plat",
+   "text": "Petits Pois aux Carottes — catégorie Légumes Verts & Accompagnements. Mélange coloré de petits pois et carottes. Origine : Classique français. Régime : végétarien.  Ingrédients typiques : petits pois et carottes en mélange coloré, assaisonnement classique français. Profil : doux et familial, végétarien. Plaît particulièrement aux enfants. Ce plat se choisit dans le configurateur de la page Menu, dans la limite de plats de la formule choisie."
+  },
+  {
+   "id": "plat-misili",
+   "title": "Plat : Misili",
+   "url": "https://arabesquetraiteur.com/menu.html#configurateur",
+   "lang": "fr",
+   "type": "plat",
+   "text": "Misili — catégorie Légumes Verts & Accompagnements. Légume-feuille traditionnel congolais. Origine : Tradition congolaise. Régime : végétarien.  Ingrédients typiques : misili, légume-feuille traditionnel congolais, préparation authentique. Profil : végétal et typé, végétarien. Pour les invités qui cherchent les saveurs du terroir. Ce plat se choisit dans le configurateur de la page Menu, dans la limite de plats de la formule choisie."
+  },
+  {
+   "id": "plat-safu",
+   "title": "Plat : Safu",
+   "url": "https://arabesquetraiteur.com/menu.html#configurateur",
+   "lang": "fr",
+   "type": "plat",
+   "text": "Safu — catégorie Légumes Verts & Accompagnements. Fruit/légume local, préparation traditionnelle. Origine : Spécialité locale Congo. Régime : végétarien.  Ingrédients typiques : safu (prune africaine), fruit-légume local cuit selon la tradition. Profil : fondant, légèrement acidulé et beurré, végétarien. Spécialité locale congolaise, de saison. Ce plat se choisit dans le configurateur de la page Menu, dans la limite de plats de la formule choisie."
+  },
+  {
+   "id": "plat-feuille-courge-arachides",
+   "title": "Plat : Feuille de Courge aux Arachides",
+   "url": "https://arabesquetraiteur.com/menu.html#configurateur",
+   "lang": "fr",
+   "type": "plat",
+   "text": "Feuille de Courge aux Arachides — catégorie Légumes Verts & Accompagnements. Feuilles de courge, pâte d'arachide, recette ancestrale. Origine : Tradition culinaire congolaise. Régime : végétarien.  Ingrédients typiques : feuilles de courge, pâte d'arachide, recette ancestrale. Profil : onctueux et nourrissant, végétarien ; contient de l'arachide. Excellent avec le riz ou le fufu. Ce plat se choisit dans le configurateur de la page Menu, dans la limite de plats de la formule choisie."
+  },
+  {
+   "id": "plat-dongo-dongo",
+   "title": "Plat : Dongo Dongo",
+   "url": "https://arabesquetraiteur.com/menu.html#configurateur",
+   "lang": "fr",
+   "type": "plat",
+   "text": "Dongo Dongo — catégorie Légumes Verts & Accompagnements. Légume visqueux traditionnel, sauce onctueuse. Origine : Plat traditionnel congolais. Régime : végétarien.  Ingrédients typiques : dongo dongo, légume traditionnel à la texture visqueuse, sauce onctueuse authentique. Profil : texture unique, goût du terroir, végétarien. Pour les amateurs de cuisine congolaise authentique. Ce plat se choisit dans le configurateur de la page Menu, dans la limite de plats de la formule choisie."
+  },
+  {
+   "id": "plat-matembele-poisson-fume",
+   "title": "Plat : Matembele au Poisson Fumé",
+   "url": "https://arabesquetraiteur.com/menu.html#configurateur",
+   "lang": "fr",
+   "type": "plat",
+   "text": "Matembele au Poisson Fumé — catégorie Légumes Verts & Accompagnements. Feuilles de patate douce, poisson fumé. Origine : Plat complet traditionnel.  Ingrédients typiques : feuilles de patate douce (matembele), poisson fumé, sauce traditionnelle. Profil : plat complet et équilibré, fumé délicat. Grand classique des tables congolaises. Ce plat se choisit dans le configurateur de la page Menu, dans la limite de plats de la formule choisie."
+  },
+  {
+   "id": "plat-mbika",
+   "title": "Plat : Mbika",
+   "url": "https://arabesquetraiteur.com/menu.html#configurateur",
+   "lang": "fr",
+   "type": "plat",
+   "text": "Mbika — catégorie Légumes Verts & Accompagnements. Légume-feuille congolais, préparation authentique. Origine : Tradition congolaise. Régime : végétarien.  Ingrédients typiques : mbika, légume-feuille congolais (graines de courge pilées selon la tradition), préparation authentique. Profil : riche et typé, végétarien. Saveur profonde des traditions congolaises. Ce plat se choisit dans le configurateur de la page Menu, dans la limite de plats de la formule choisie."
+  },
+  {
+   "id": "cat-legumes_verts",
+   "title": "Catégorie : Légumes Verts & Accompagnements",
+   "url": "https://arabesquetraiteur.com/menu.html#configurateur",
+   "lang": "fr",
+   "type": "menu",
+   "text": "La catégorie Légumes Verts & Accompagnements du menu d'Arabesque Traiteur : Légumes traditionnels congolais et légumes verts. Elle comprend 14 plats : Pondu, Fum Bwa, Haricots Verts, Aubergines Vertes (Nyanya/Solo), Ratatouille, Épinards, Champignons Sautés, Petits Pois aux Carottes, Misili, Safu, Feuille de Courge aux Arachides, Dongo Dongo, Matembele au Poisson Fumé, Mbika."
+  },
+  {
+   "id": "plat-riz-blanc",
+   "title": "Plat : Riz Blanc",
+   "url": "https://arabesquetraiteur.com/menu.html#configurateur",
+   "lang": "fr",
+   "type": "plat",
+   "text": "Riz Blanc — catégorie Accompagnements & Féculents. Riz parfumé cuit à la vapeur. Origine : Classique universel. Régime : végétarien, sans gluten.  Ingrédients typiques : riz parfumé cuit à la vapeur. Profil : neutre et léger, végétarien et sans gluten. L'accompagnement universel de toutes les sauces. Ce plat se choisit dans le configurateur de la page Menu, dans la limite de plats de la formule choisie."
+  },
+  {
+   "id": "plat-riz-cantonais",
+   "title": "Plat : Riz Cantonais",
+   "url": "https://arabesquetraiteur.com/menu.html#configurateur",
+   "lang": "fr",
+   "type": "plat",
+   "text": "Riz Cantonais — catégorie Accompagnements & Féculents. Riz sauté aux légumes et œufs. Origine : Cuisine asiatique. Régime : végétarien.  Ingrédients typiques : riz sauté aux légumes et aux œufs. Profil : coloré et gourmand, végétarien. Touche asiatique appréciée dans les buffets variés. Ce plat se choisit dans le configurateur de la page Menu, dans la limite de plats de la formule choisie."
+  },
+  {
+   "id": "plat-riz-persille",
+   "title": "Plat : Riz Persillé",
+   "url": "https://arabesquetraiteur.com/menu.html#configurateur",
+   "lang": "fr",
+   "type": "plat",
+   "text": "Riz Persillé — catégorie Accompagnements & Féculents. Riz blanc aux herbes fraîches. Origine : Cuisine française. Régime : végétarien, sans gluten.  Ingrédients typiques : riz blanc parsemé d'herbes fraîches. Profil : parfumé et élégant, végétarien et sans gluten. Version raffinée du riz blanc. Ce plat se choisit dans le configurateur de la page Menu, dans la limite de plats de la formule choisie."
+  },
+  {
+   "id": "plat-fufu",
+   "title": "Plat : Fufu",
+   "url": "https://arabesquetraiteur.com/menu.html#configurateur",
+   "lang": "fr",
+   "type": "plat",
+   "text": "Fufu — catégorie Accompagnements & Féculents. Pâte de manioc traditionnelle, accompagnement emblématique. Origine : Tradition congolaise ancestrale. Régime : végétarien, sans gluten. Spécialité signature de la cheffe Sylvie Feruzi. Ingrédients typiques : pâte de manioc traditionnelle, pétrie à la consistance parfaite. Profil : l'accompagnement emblématique congolais, végétarien et sans gluten. Indispensable avec le pondu, le maboke et les sauces. Spécialité signature de la maison. Ce plat se choisit dans le configurateur de la page Menu, dans la limite de plats de la formule choisie."
+  },
+  {
+   "id": "plat-lituma",
+   "title": "Plat : Lituma",
+   "url": "https://arabesquetraiteur.com/menu.html#configurateur",
+   "lang": "fr",
+   "type": "plat",
+   "text": "Lituma — catégorie Accompagnements & Féculents. Pâte de maïs traditionnelle congolaise. Origine : Tradition congolaise. Régime : végétarien, sans gluten.  Ingrédients typiques : pâte de maïs traditionnelle congolaise. Profil : doux et consistant, végétarien et sans gluten. Alternative au fufu pour les sauces et les légumes-feuilles. Ce plat se choisit dans le configurateur de la page Menu, dans la limite de plats de la formule choisie."
+  },
+  {
+   "id": "plat-pommes-terre-beurre",
+   "title": "Plat : Pommes de Terre au Beurre",
+   "url": "https://arabesquetraiteur.com/menu.html#configurateur",
+   "lang": "fr",
+   "type": "plat",
+   "text": "Pommes de Terre au Beurre — catégorie Accompagnements & Féculents. Pommes de terre fondantes au beurre frais. Origine : Classique français. Régime : végétarien.  Ingrédients typiques : pommes de terre fondantes au beurre frais. Profil : doux et classique, végétarien. Accompagnement français des viandes rôties. Ce plat se choisit dans le configurateur de la page Menu, dans la limite de plats de la formule choisie."
+  },
+  {
+   "id": "plat-makemba",
+   "title": "Plat : Makemba",
+   "url": "https://arabesquetraiteur.com/menu.html#configurateur",
+   "lang": "fr",
+   "type": "plat",
+   "text": "Makemba — catégorie Accompagnements & Féculents. Bananes plantain, préparation traditionnelle congolaise. Origine : Tradition congolaise. Régime : végétarien, sans gluten.  Ingrédients typiques : bananes plantain mûres, frites ou bouillies selon la préparation traditionnelle. Profil : sucré-salé irrésistible, végétarien et sans gluten. Le compagnon classique du poulet et du poisson braisés. Ce plat se choisit dans le configurateur de la page Menu, dans la limite de plats de la formule choisie."
+  },
+  {
+   "id": "plat-frites",
+   "title": "Plat : Frites Maison",
+   "url": "https://arabesquetraiteur.com/menu.html#configurateur",
+   "lang": "fr",
+   "type": "plat",
+   "text": "Frites Maison — catégorie Accompagnements & Féculents. Pommes de terre frites, croustillantes et dorées. Origine : Classique international. Régime : végétarien.  Ingrédients typiques : pommes de terre frites maison, croustillantes et dorées. Profil : l'accompagnement préféré des enfants et des cocktails, végétarien. Ce plat se choisit dans le configurateur de la page Menu, dans la limite de plats de la formule choisie."
+  },
+  {
+   "id": "plat-bisamunyu",
+   "title": "Plat : Bisamunyu",
+   "url": "https://arabesquetraiteur.com/menu.html#configurateur",
+   "lang": "fr",
+   "type": "plat",
+   "text": "Bisamunyu — catégorie Accompagnements & Féculents. Tubercule local, préparation traditionnelle congolaise. Origine : Spécialité locale Congo. Régime : végétarien, sans gluten.  Ingrédients typiques : bisamunyu, tubercule local préparé selon la tradition congolaise. Profil : rustique et nourrissant, végétarien et sans gluten. Spécialité locale à découvrir. Ce plat se choisit dans le configurateur de la page Menu, dans la limite de plats de la formule choisie."
+  },
+  {
+   "id": "plat-patate-douce",
+   "title": "Plat : Patate Douce",
+   "url": "https://arabesquetraiteur.com/menu.html#configurateur",
+   "lang": "fr",
+   "type": "plat",
+   "text": "Patate Douce — catégorie Accompagnements & Féculents. Patates douces cuites, naturellement sucrées. Origine : Légume traditionnel. Régime : végétarien, sans gluten.  Ingrédients typiques : patates douces cuites, naturellement sucrées. Profil : doux et fondant, végétarien et sans gluten. Bel équilibre avec les plats épicés. Ce plat se choisit dans le configurateur de la page Menu, dans la limite de plats de la formule choisie."
+  },
+  {
+   "id": "plat-manioc-frais",
+   "title": "Plat : Manioc Frais",
+   "url": "https://arabesquetraiteur.com/menu.html#configurateur",
+   "lang": "fr",
+   "type": "plat",
+   "text": "Manioc Frais — catégorie Accompagnements & Féculents. Manioc frais bouilli, base alimentaire congolaise. Origine : Aliment de base congolais. Régime : végétarien, sans gluten.  Ingrédients typiques : manioc frais bouilli, base alimentaire congolaise. Profil : neutre et rassasiant, végétarien et sans gluten. Se sert en bâtons avec les sauces et les grillades. Ce plat se choisit dans le configurateur de la page Menu, dans la limite de plats de la formule choisie."
+  },
+  {
+   "id": "cat-accompaniments",
+   "title": "Catégorie : Accompagnements & Féculents",
+   "url": "https://arabesquetraiteur.com/menu.html#configurateur",
+   "lang": "fr",
+   "type": "menu",
+   "text": "La catégorie Accompagnements & Féculents du menu d'Arabesque Traiteur : Base nutritive traditionnelle congolaise. Elle comprend 11 plats : Riz Blanc, Riz Cantonais, Riz Persillé, Fufu, Lituma, Pommes de Terre au Beurre, Makemba, Frites Maison, Bisamunyu, Patate Douce, Manioc Frais."
+  },
+  {
+   "id": "plat-plateau-fruits-saison",
+   "title": "Plat : Plateau de Fruits de Saison",
+   "url": "https://arabesquetraiteur.com/menu.html#configurateur",
+   "lang": "fr",
+   "type": "plat",
+   "text": "Plateau de Fruits de Saison — catégorie Fruits & Desserts Naturels. Sélection quotidienne des meilleurs fruits locaux et importés. Origine : Fraîcheur garantie. Régime : végétarien, vegan, sans gluten.  Ingrédients typiques : sélection quotidienne des meilleurs fruits locaux et importés, présentés en plateau. Profil : frais et léger, végétarien, vegan et sans gluten. La fin de repas la plus fraîche. Ce plat se choisit dans le configurateur de la page Menu, dans la limite de plats de la formule choisie."
+  },
+  {
+   "id": "plat-fruits-tropicaux",
+   "title": "Plat : Fruits Tropicaux",
+   "url": "https://arabesquetraiteur.com/menu.html#configurateur",
+   "lang": "fr",
+   "type": "plat",
+   "text": "Fruits Tropicaux — catégorie Fruits & Desserts Naturels. Ananas, mangue, papaye, banane, fruit de la passion. Origine : Tropiques africains. Régime : végétarien, vegan, sans gluten.  Ingrédients typiques : ananas, mangue, papaye, banane, fruit de la passion. Profil : parfumé et vitaminé, végétarien, vegan et sans gluten. Couleurs des tropiques pour clore le buffet. Ce plat se choisit dans le configurateur de la page Menu, dans la limite de plats de la formule choisie."
+  },
+  {
+   "id": "cat-fruits",
+   "title": "Catégorie : Fruits & Desserts Naturels",
+   "url": "https://arabesquetraiteur.com/menu.html#configurateur",
+   "lang": "fr",
+   "type": "menu",
+   "text": "La catégorie Fruits & Desserts Naturels du menu d'Arabesque Traiteur : Fraîcheur tropicale et desserts aux fruits. Elle comprend 2 plats : Plateau de Fruits de Saison, Fruits Tropicaux."
+  },
+  {
+   "id": "plat-mashanza-patates-douces",
+   "title": "Plat : Mashanza et Patates Douces",
+   "url": "https://arabesquetraiteur.com/menu.html#configurateur",
+   "lang": "fr",
+   "type": "plat",
+   "text": "Mashanza et Patates Douces — catégorie Spécialités Rares & Exceptionnelles. Spécialité locale rare, préparation traditionnelle authentique. Origine : Tradition rare congolaise.  Ingrédients typiques : mashanza, spécialité locale rare, servie avec patates douces, préparation traditionnelle authentique. Profil : expérience rare du terroir congolais. Selon disponibilité — à demander à l'avance. Ce plat se choisit dans le configurateur de la page Menu, dans la limite de plats de la formule choisie."
+  },
+  {
+   "id": "plat-crocodile",
+   "title": "Plat : Crocodile",
+   "url": "https://arabesquetraiteur.com/menu.html#configurateur",
+   "lang": "fr",
+   "type": "plat",
+   "text": "Crocodile — catégorie Spécialités Rares & Exceptionnelles. Viande de crocodile préparée selon les techniques traditionnelles, expérience unique. Origine : Spécialité exceptionnelle. Plat premium. Ingrédients typiques : viande de crocodile préparée selon les techniques traditionnelles. Profil : expérience unique et exceptionnelle, texture entre poulet et poisson ferme. Spécialité rare, uniquement sur demande et selon disponibilité. Ce plat se choisit dans le configurateur de la page Menu, dans la limite de plats de la formule choisie."
+  },
+  {
+   "id": "plat-tortue",
+   "title": "Plat : Tortue",
+   "url": "https://arabesquetraiteur.com/menu.html#configurateur",
+   "lang": "fr",
+   "type": "plat",
+   "text": "Tortue — catégorie Spécialités Rares & Exceptionnelles. Préparation traditionnelle de tortue, mets d'exception très rare. Origine : Mets d'exception congolais. Plat premium. Ingrédients typiques : tortue préparée selon la tradition, mets d'exception très rare. Profil : plat d'exception congolais pour les occasions uniques. Uniquement sur demande spéciale et selon disponibilité. Ce plat se choisit dans le configurateur de la page Menu, dans la limite de plats de la formule choisie."
+  },
+  {
+   "id": "cat-specialites_rares",
+   "title": "Catégorie : Spécialités Rares & Exceptionnelles",
+   "url": "https://arabesquetraiteur.com/menu.html#configurateur",
+   "lang": "fr",
+   "type": "menu",
+   "text": "La catégorie Spécialités Rares & Exceptionnelles du menu d'Arabesque Traiteur : Plats uniques et expériences culinaires d'exception. Elle comprend 3 plats : Mashanza et Patates Douces, Crocodile, Tortue."
+  },
+  {
+   "id": "cheffe",
+   "title": "La cheffe Sylvie Feruzi",
+   "url": "https://arabesquetraiteur.com/equipe.html",
+   "lang": "fr",
+   "type": "faq",
+   "text": "Sylvie Feruzi Kabala est la Chef Exécutive & Directrice d'Arabesque Traiteur à Kinshasa. Sa philosophie : Préservation et modernisation de la cuisine congolaise authentique. Ses plats signatures sont le cochon de lait farci, la viande de chèvre façon Nga Nda, le maboke y'a ngulu (porc fumé dans les feuilles) et le pondu. Arabesque Traiteur est un traiteur haut de gamme spécialisé dans la cuisine congolaise authentique et les événements : mariages, galas, anniversaires, cocktails et événements d'entreprise."
+  },
+  {
+   "id": "devis-contact",
+   "title": "Demander un devis et contacter Arabesque",
+   "url": "https://arabesquetraiteur.com/contact.html",
+   "lang": "fr",
+   "type": "faq",
+   "text": "Pour demander un devis gratuit chez Arabesque Traiteur : remplissez le formulaire de devis de la page Contact (4 étapes : événement, vos coordonnées, choix des plats, récapitulatif). L'envoi se fait par WhatsApp. Vous pouvez aussi composer votre menu dans le configurateur de la page Menu puis cliquer sur « Demander un devis personnalisé » : vos plats arrivent pré-sélectionnés dans le formulaire. Contacts directs : WhatsApp et téléphone +243 859 993 833, e-mail etarabesque@gmail.com, Instagram @arabesque.traiteur. Horaires : tous les jours de 8h à 20h (Lun-Dim 8h-20h). Arabesque Traiteur est basé à Kinshasa, en République démocratique du Congo, et dessert les événements à Kinshasa. Pour une réponse rapide, WhatsApp est le meilleur canal."
+  },
+  {
+   "id": "faq",
+   "title": "Questions fréquentes",
+   "url": "https://arabesquetraiteur.com/contact.html",
+   "lang": "fr",
+   "type": "faq",
+   "text": "Questions fréquentes. Quels types d'événements ? Mariages, galas, anniversaires, cocktails, événements d'entreprise et célébrations privées à Kinshasa. Combien d'invités ? Les formules couvrent de 1 à plus de 100 invités : Intime (1-50), Optimale (50-100) et les formules au choix au-delà de 100 invités. Proposez-vous des plats végétariens ? Oui : de nombreux légumes traditionnels congolais, salades et accompagnements sont végétariens, et le plateau de fruits est aussi vegan et sans gluten ; les filtres du menu indiquent végétarien, vegan et sans gluten. Et en cas d'allergie ? Les ingrédients typiques donnés par l'assistant sont indicatifs : pour toute allergie, confirmez toujours la composition exacte avec l'équipe au +243 859 993 833 avant de commander. Quelles sont les spécialités rares ? Le crocodile, la tortue, le mashanza et le makayabu de Goma sont proposés sur demande, selon disponibilité, avec un supplément de 5 $ par personne pour les spécialités rares dans le calculateur. Comment sont calculés les prix ? Prix par personne de la formule multiplié par le nombre d'invités, plus les options (cocktail, spécialités rares). Le devis personnalisé gratuit confirme le montant exact."
+  },
+  {
+   "id": "page-index",
+   "title": "Accueil",
+   "url": "https://arabesquetraiteur.com/",
+   "lang": "fr",
+   "type": "page",
+   "text": "Arabesque Traiteur | Mariages & Événements d'Exception à Kinshasa Arabesque Traiteur À propos Services Menu Galerie Équipe Devis Gratuit Devis Transformez vos événements en expériences mémorables avec nos créations culinaires raffinées, sous la direction de Sylvie Feruzi 🍽️ Découvrir nos menus 📞 Devis gratuit Événements réalisés Ans d'expérience % satisfaction Notre Philosophie La fusion du beau et du bon Chez Arabesque Traiteur , nous croyons que chaque événement mérite une attention particulière. Sous la direction passionnée de Sylvie Feruzi Kabala , notre équipe allie tradition congolaise et raffinement international pour créer des expériences gustatives inoubliables. Créativité Chaque plat est une œuvre d'art Excellence Qualité premium garantie Passion L'amour dans chaque création Découvrir notre histoire \"Chaque événement raconte une histoire unique, et nous avons l'honneur de la sublimer à travers nos créations.\" - Sylvie Feruzi Nos Créations Composez votre menu selon vos envies Découvrez nos formules flexibles : choisissez vos éléments favoris et créez l'expérience culinaire parfaite pour votre événement POPULAIRE Formule Premium 35$ par personne Choisissez 28 repas parmi notre sélection + amuse-bouche offert Amuse-bouche de bienvenue Présentation soignée Service à table inclus Décoration basique Composer mon menu ÉCONOMIQUE Formule Classic 20$ 18 repas de qualité pour un excellent rapport qualité-prix Service buffet Qualité garantie EXCLUSIF Sur Mesure VIP Sur devis personnalisé Menu entièrement personnalisé pour mariages, galas et réceptions d'exception Consultation personnalisée Service VIP complet Décoration premium Chef sur site Demander un devis Nos spécialités les plus demandées Salade Personnalisée Création unique Julie Feruzi Bœuf Braisé Congolais Recette familiale Feruzi Cocktail Signature Création Equipe Arabesque Canapés Signature Trio raffiné maison 🍽️ Voir tous nos menus interactifs Nos Services Votre événement, notre expertise De l'intimité d'un dîner familial à la grandeur d'un gala, nous adaptons notre savoir-faire à chaque occasion Mariages Le jour le plus important de votre vie mérite une attention exceptionnelle • Wedding cake personnalisé • Menu sur mesure • Service VIP • Coordination complète En savoir plus → Anniversaires Célébrez vos moments précieux avec style et gourmandise • Gâteaux personnalisés • Buffets festifs • Animations culinaires • Décoration thématique Galas & Réceptions Événements corporatifs et réceptions officielles de prestige • Service haut de gamme • Menus gastronomiques • Protocole respecté • Chef sur site Événements Privés Dîners intimes, fêtes familiales et célébrations personnalisées • Ambiance chaleureuse • Menu adaptatif • Service personnalisé • Conseils déco Notre Équipe Des talents passionnés à votre service Chaque membre de notre équipe apporte son expertise unique pour créer des expériences culinaires d'exception. Directrice & Chef Exécutive Julie Feruzi Chef de salades Rencontrer toute l'équipe \"Notre secret ? L'amour que nous mettons dans chaque plat et l'attention que nous portons aux moindres détails. Chaque événement est unique, chaque client est spécial.\" Fondatrice & Directrice Générale Témoignages Ils nous font confiance Découvrez les retours de nos clients satisfaits qui ont fait confiance à Arabesque Traiteur pour leurs événements les plus précieux ⭐⭐⭐⭐⭐ \"Arabesque Traiteur a rendu notre mariage absolument magique ! La présentation était somptueuse et les saveurs inoubliables. Tous nos invités en parlent encore.\" Marie & Michel Kalonji Mariage • Septembre 2024 \"Professionnalisme exemplaire ! Sylvie et son équipe ont su s'adapter parfaitement aux besoins de notre gala d'entreprise. Service impeccable.\" Jean-Baptiste Mukendi Gala Corporate • Août 2024 \"Les 60 ans de maman ont été parfaits grâce à Arabesque ! Le wedding cake était magnifique et délicieux. Merci pour ce moment mémorable.\" Christine Luambo Anniversaire • Juillet 2024 Rejoignez nos clients satisfaits Planifier mon événement Suivez-nous L'inspiration en noir & blanc Découvrez nos dernières créations, les coulisses de notre atelier et l'art de dresser à la perfection Abonnés Publications % Engagement @arabesque.traiteur Prêt à commencer ? Créons ensemble votre événement d'exception Que ce soit pour un mariage intime, un anniversaire mémorable ou un gala prestigieux, notre équipe vous accompagne de A à Z pour faire de votre vision une réalité savoureuse. Devis gratuit & sans engagement Chat WhatsApp direct Réponse rapide Devis personnalisé sous 24h Sur mesure Adapté à votre budget et vos goûts Excellence garantie 15 ans d'expertise à votre service Élégance • Saveurs • Excellence Votre partenaire privilégié pour tous vos événements d'exception à Kinshasa. Sous la direction de Sylvie Feruzi, nous transformons vos moments précieux en souvenirs inoubliables. Navigation Menu interactif Contact Kinshasa, RD Congo +243 859 993 833 etarabesque@gmail.com Lun-Dim: 8h-20h 2025 Arabesque Traiteur. Tous droits réservés. Politique de confidentialité Conditions générales Made with ❤️ in Kinshasa"
+  },
+  {
+   "id": "page-a-propos",
+   "title": "À propos",
+   "url": "https://arabesquetraiteur.com/a-propos.html",
+   "lang": "fr",
+   "type": "page",
+   "text": "À propos | Arabesque Traiteur – Histoire, Mission et Valeurs Arabesque Traiteur À propos Services Menu Galerie Équipe Devis Gratuit Devis Notre histoire La fusion du beau et du bon Célébrer la cuisine congolaise avec excellence Fondé à Kinshasa par Sylvie Feruzi Kabala, Arabesque Traiteur conçoit des expériences culinaires d’exception en alliant authenticité, raffinement et sens du service. Découvrir nos services Demander un devis Une maison née d’une passion Arabesque Traiteur est né d’une conviction: la cuisine congolaise mérite d’être célébrée, magnifiée et partagée avec exigence. Depuis nos débuts, nous marions savoir-faire traditionnel et standards de service haut de gamme, pour sublimer vos moments précieux. Année après année, notre équipe s’est agrandie, notre maîtrise s’est affirmée, et notre signature s’est imposée: des plats authentiques, une présentation soignée, et un accompagnement attentif de bout en bout. 500+ Événements réalisés 98% Satisfaction clients 15 ans D’expertise à Kinshasa Sylvie Feruzi Kabala Fondatrice, Chef Exécutive \"Notre mission est simple: honorer notre héritage culinaire en le portant à son plus haut niveau, avec cœur, discipline et sens du détail.\" Découvrir l’équipe → Mission Faire rayonner la cuisine congolaise en créant des expériences gastronomiques d’exception, accessibles et mémorables. Vision Devenir la référence traiteur à Kinshasa pour les événements privés et VIP, en alliant authenticité et modernité. Valeurs Authenticité Excellence & rigueur Respect & hospitalité Transmission & fierté Une signature culinaire Nos plats signature — du Pondu authentique au Capitaine braisé — incarnent l’équilibre entre tradition et élégance. Chaque menu est construit sur-mesure, selon vos goûts, vos origines et le caractère de votre événement. • Menus congolais authentiques ou fusion • Présentation soignée et dressage photo-ready • Service à table, buffet, cocktail dinatoire • Salades personnalisées • Service cocktail avec barmen professionnels Voir le menu Nos services Nos engagements qualité Sélection des produits Ingrédients frais, locaux et de saison, sélectionnés avec exigence. Hygiène & sécurité Procédures strictes de préparation, transport et service. Respect des régimes Options végétariennes, halal, sans gluten sur demande. Ponctualité & coordination Planning précis, coordination avec vos prestataires le jour J. Ce que disent nos clients ⭐⭐⭐⭐⭐ \"Cuisine mémorable et service impeccable. Notre mariage a été sublimé.\" Marie & Kaleb — Mariage \"Prestation haut de gamme, parfaite pour notre réception VIP.\" Alain — Gala Corporate \"Le cocktail bar a fait l’unanimité. Merci à l’équipe!\" Grace — Anniversaire Prêts à imaginer votre événement ? Nous vous accompagnons de la première idée à la dernière bouchée. WhatsApp Arabesque Traiteur Élégance • Saveurs • Excellence Votre partenaire privilégié pour tous vos événements d'exception à Kinshasa. Sous la direction de Sylvie Feruzi, nous transformons vos moments précieux en souvenirs inoubliables. Navigation Notre équipe Menu interactif Contact Kinshasa, RD Congo +243 859 993 833 etarabesque@gmail.com Lun-Dim: 8h-20h 2025 Arabesque Traiteur. Tous droits réservés. Politique de confidentialité Conditions générales Made with ❤️ in Kinshasa"
+  },
+  {
+   "id": "page-equipe",
+   "title": "Notre équipe",
+   "url": "https://arabesquetraiteur.com/equipe.html",
+   "lang": "fr",
+   "type": "page",
+   "text": "Notre Équipe Culinaire | Sylvie Feruzi & Chefs Passionnés - Arabesque Traiteur Arabesque Traiteur À propos Services Menu Galerie Équipe Devis Gratuit Devis 👥 Notre Équipe Passionnée Découvrez les 11 chefs passionnés qui donnent vie à notre vision culinaire, dirigés par Sylvie Feruzi Kabala et unis par l'amour de la cuisine congolaise authentique 👩‍🍳 Rencontrer nos chefs 💫 Notre philosophie Chefs d'exception Années d'expérience Spécialités uniques % Passion congolaise 👑 Direction Culinaire L'âme d'Arabesque Traiteur Nos trois piliers dirigent avec passion et expertise l'ensemble de notre équipe culinaire FONDATRICE 15 ans Chef Exécutive & Directrice Fondatrice d'Arabesque Traiteur, Sylvie est l'âme de notre cuisine. Formée dans la tradition culinaire congolaise authentique, elle a révolutionné l'art de recevoir à Kinshasa avec ses créations signatures. 🍽️ Spécialités signatures : Pondu authentique Maboke y'a Ngulu Nga Nda traditionnel Coordination événements \"La cuisine, c'est raconter l'histoire de notre peuple à travers chaque plat. Chaque événement est une célébration de notre heritage culinaire.\" Maître cuisinière Contacter SALADE 8 ans Julie Feruzi Spécialiste en Salade Artiste des salades colorées et nutritives. Ses compositions fraîcheur équilibrent parfaitement nos menus. 🍰 Spécialités créatives : Greque Niçoise Macédoine des légumes Art décoratif \"Chaque salade raconte une histoire d'amour unique. En bref, je veux que ça soit bon.\" Artiste culinaire EXPERT 10 ans Stéphane Kambale L’incontournable — Expert en tout Avec un savoir-faire exceptionnel dans tous les domaines de la cuisine et de la mixologie, Stéphane est reconnu pour sa polyvalence remarquable : il sait tout faire et excelle dans chacun des défis qu'il entreprend. Son talent unique rayonne à Kinshasa et fait de chaque événement une expérience inoubliable. ⭐ Ses points forts : Cuisine froide & chaude Mixologie Cocktails signature Créativité & innovation Gestion d’équipe \"Chez Arabesque, l’excellence, c’est de tout savoir faire. J’aime repousser les limites pour surprendre et satisfaire chaque invité.\" 👨‍🍳 L’expert de toutes les saveurs Voir les services 👨‍🍳 Équipe Culinaire Nos chefs spécialisés Chaque chef apporte son expertise unique pour créer l'harmonie parfaite dans votre assiette POISSONS Rudy Djimbi Spécialiste Poissons du Congo Expert des trésors du fleuve Congo. Maîtrise parfaite du capitaine braisé, mbinzo et ndakala. Capitaine braisé Maboke poisson Grillade 🎣 6 ans d'expérience GRILLADES LOGISTIQUE Gad Mola Maître des Grillades Roi du barbecue congolais. Ses brochettes de bœuf et côtes d'agneau sont une révélation gustative. Il s'arrange pour que nous soyons toujours à l'heure grâce à son organisation logistique Brochettes Poulet Côtes d'agneau 🔥 8 ans d'expérience LÉGUMES Naomi Ntomo Experte Légumes Traditionnels Gardienne des recettes ancestrales. Ses feuilles de manioc et dongo dongo sont authentiques. Elle adore cuisiner les légumes de partout dans le monde en y ajoutant sa touche personnelle. Feuilles manioc Dongo dongo 🌿 7 ans d'expérience FÉCULENTS Samuella Mola Spécialiste Accompagnements Experte du fufu parfait et des accompagnements traditionnels. Excellence dans les bases culinaires. Fufu Lituma 🌾 5 ans d'expérience ENTRÉES Sylvie et Julie Chef Entrées & Amuse-bouches Complices dans la création de premières impressions mémorables. Ses samoussas et mini-burgers font sensation. Samoussas Amuse-bouches 🥂 10 ans d'expérience SPÉCIALITÉS Françoise Lundi Spécialiste Viandes Rares et plats traditionnels de la RDC Elle sait vous faire revivre les traditions culinaires de la RDC, du pondu, madesso au maboke. Experte des spécialités exceptionnelles. Seul habilité à préparer crocodile et tortue traditionnellement. Crocodile Spécialités rares 🦎 12 ans d'expérience MIXOLOGUE Peter Abili Pâtisserie, fruits, décoration assiettes Expert passionné en pâtisserie alliant la finesse des fruits à l’art délicat de la décoration d’assiettes, pour sublimer chaque création. Son savoir-faire unique transforme les desserts en véritables œuvres visuelles et gustatives, alliant créativité et élégance. Pâtisserie Fruits Décoration assiettes 🍽️ 5 ans d'expérience Equipe Arabesque Cuisine Froide & Cocktails La créativite de l'équipe nous rend maître de la mixologie et expert en cuisine froide, La diversité de l'équipe révolutionne l'art du cocktail à Kinshasa avec ses créations signature alliant saveurs locales et techniques internationales. Cocktail Arabesque Service bar pro Cuisine froide Formation équipe SERVICE Sylvie Feruzi Chef de Partie Service Coordinatrice service et dressage. Garante de la présentation impeccable de chaque assiette servie. Coordination Dressage 🍽️ 16 ans d'expérience Une famille unie par la passion Plus qu'une équipe, nous sommes une famille culinaire partageant les mêmes valeurs et la même vision de l'excellence congolaise Authenticité Chaque recette respecte la tradition culinaire congolaise, transmise avec respect et adaptée aux goûts contemporains sans perdre son âme. Excellence Nous ne transigeons jamais sur la qualité. Chaque plat, chaque service, chaque détail fait l'objet d'une attention méticuleuse. Passion Notre motivation première, c'est l'amour de notre métier et la fierté de partager la richesse culinaire congolaise avec le monde. \"Nous cuisinons avec nos mains, mais surtout avec nos cœurs. Chaque événement que nous servons devient une célébration de notre culture et un moment de bonheur partagé.\" — L'équipe Arabesque Traiteur 🎬 Dans les coulisses L'équipe au travail Découvrez comment notre équipe unie transforme chaque commande en expérience d'exception Réunion équipe Planning quotidien Préparation Mise en place Finition parfaite Moment de vérité Événements réalisés ensemble Années d'expérience cumulées % Satisfaction client Passionnés à votre service Rejoindre l'aventure Vous partagez notre Arabesque Traiteur grandit constamment. Si vous êtes un chef passionné par la cuisine congolaise ou un professionnel de l'événementiel, nous serions ravis de vous rencontrer. Candidature spontanée Nous écrire Formation continue Développez vos compétences avec les meilleurs Esprit familial Intégrez une équipe soudée et bienveillante Projets passionnants Participez à des événements d'exception Arabesque Traiteur Élégance • Saveurs • Excellence Votre partenaire privilégié pour tous vos événements d'exception à Kinshasa. Sous la direction de Sylvie Feruzi, nous transformons vos moments précieux en souvenirs inoubliables. Navigation Notre équipe Menu interactif Contact Kinshasa, RD Congo +243 859 993 833 etarabesque@gmail.com Lun-Dim: 8h-20h 2025 Arabesque Traiteur. Tous droits réservés. Politique de confidentialité Conditions générales Made with ❤️ in Kinshasa"
+  },
+  {
+   "id": "page-services",
+   "title": "Services",
+   "url": "https://arabesquetraiteur.com/services.html",
+   "lang": "fr",
+   "type": "page",
+   "text": "Services Traiteur d'Exception | Mariages, Galas, Anniversaires - Arabesque Traiteur Kinshasa Arabesque Traiteur À propos Services Menu Galerie Équipe Devis Gratuit Devis 🏆 Services d'Exception De l'intimité d'un dîner familial aux fastes d'un gala, Sylvie Feruzi et son équipe transforment chaque occasion en moment d'exception avec la richesse de la cuisine congolaise 🎯 Découvrir nos services 💰 Calculateur de prix Événements réalisés Mariages célébrés Galas VIP % de satisfaction Nos Spécialités Chaque événement a sa signature De l'intimité à l'apparat, nous adaptons notre savoir-faire culinaire congolais à chaque occasion, avec la passion et l'expertise qui nous caractérisent SERVICE COMPLET Mariages d'Exception Célébrez le plus beau jour de votre vie avec nos créations authentiques. À partir de 20$/personne Découvrir PRESTIGE Galas & Réceptions VIP Événements corporatifs et réceptions officielles. Service haut de gamme avec chef sur site. Service sur mesure POPULAIRE Anniversaires Mémorables Fêtes d'anniversaire personnalisées avec nos spécialités congolaises et gâteaux sur mesure. Flexible selon invités CLÉ EN MAIN Service Cocktail Prestation complète : barmen professionnels, 2 tournées par personne, matériel inclus. 500$ à 1200$ selon effectif 💰 Calculateur Intelligent Estimez le coût de votre événement Notre calculateur intelligent vous donne une estimation instantanée selon vos besoins Paramètres de votre événement Type d'événement 🎂 Anniversaire 💕 Mariage 🏆 Gala / Réception VIP 🏠 Événement privé 🏢 Événement corporatif Nombre d'invités Influence directement la formule tarifaire Formule menu (pour 100+ invités) Essentielle - 14 repas (15$/pers) Premium - 18 repas (20$/pers) Excellence - 20 repas (25$/pers) Deluxe - 24 repas (30$/pers) VIP - 28 repas (35$/pers) Ajouter le service cocktail Barmen + matériel + 2 tournées par personne Inclure spécialités rares (crocodile, tortue...) Supplément selon disponibilité Estimation de prix Total estimé : Cette estimation est indicative. Le devis final sera personnalisé selon vos besoins exacts. Demander un devis précis Configurer le menu 💕 Mariages d'Exception Votre jour J, notre art culinaire Célébrez l'amour avec une cuisine authentique qui raconte votre histoire. De la cérémonie traditionnelle congolaise au banquet raffiné. Votre mariage, notre signature Wedding Cake Signature Chaque gâteau est une création unique, réalisée par nos chefs pâtissiers selon vos souhaits, alliant tradition et modernité avec un savoir-faire artisanal exceptionnel. Menu Congolais Authentique Pondu, Maboke y'a Ngulu, Nga Nda, Fufu... Honorez vos racines avec nos spécialités traditionnelles préparées selon les recettes familiales transmises par Sylvie Feruzi. Coordination complète de A à Z : consultation préalable, dégustation, service le jour J, et coordination avec vos autres prestataires pour un mariage parfait. 💰 Tarification mariage 1-50 invités (intime) 35$ / personne 50-100 invités (familial) 20$ / personne 100+ invités (grand mariage) 20-35$ / personne (selon menu) Wedding cake inclus ✅ Offert Services inclus 🍰 Wedding cake personnalisé 🎭 Service à table 🌟 Coordination événement 📸 Dressage photo-ready 🎵 Synchronisation traiteur ⭐⭐⭐⭐⭐ \"Arabesque Traiteur a rendu notre mariage absolument magique ! Le wedding cake de Julie était une œuvre d'art, et les plats congolais ont ému toute notre famille. Service impeccable.\" Marie & Kaleb Mwamba Mariage • Octobre 2024 \"Sylvie et son équipe ont compris notre vision d'un mariage alliant tradition et modernité. Le menu congolais était parfait, nos invités internationaux ont adoré découvrir nos saveurs.\" Laure & Jean Mukendi Mariage • Septembre 2024 Planifier mon mariage de rêve 🏆 Galas & Réceptions VIP L'excellence au service du prestige Événements corporatifs, réceptions officielles, galas de charité... Nous maîtrisons les codes du prestige tout en valorisant notre identité culinaire congolaise. Événements Corporatifs Lancement de produit Séminaires d'entreprise Réceptions clients VIP Célébrations annuelles Networking événements À partir de 25$/personne Réceptions Officielles Protocole diplomatique Réceptions d'État Événements institutionnels Inaugurations officielles Chef sur site inclus Devis personnalisé Galas de Charité Dîners de bienfaisance Levées de fonds Événements caritatifs Réceptions humanitaires Tarifs préférentiels Conditions spéciales Service VIP Arabesque 👩‍🍳 Chef Sylvie Feruzi sur site pour supervision directe Menu adapté au protocole et aux contraintes diplomatiques Présentation gastronomique digne des plus grandes tables Coordination avec autres prestataires (sécurité, protocole) Valorisation cuisine congolaise auprès d'invités internationaux Sylvie Feruzi supervise personnellement chaque événement VIP Planifier mon événement VIP 🎂 Anniversaires & Événements Privés Célébrez vos moments précieux Des fêtes d'anniversaire aux réunions familiales, nous créons des moments chaleureux qui rassemblent autour de nos saveurs authentiques. Personnalisation totale Thèmes personnalisés Que ce soit pour les 1 an de bébé ou les 80 ans de grand-maman, nous adaptons notre menu et notre présentation au thème de votre choix. Gâteaux sur mesure Peter Abili et Stéphane Kambale, nos chefs pâtissiers, créent des gâteaux uniques qui racontent l'histoire de votre célébration avec créativité et gourmandise. 👨‍👩‍👧‍👦 Ambiance familiale Nous privilégions la convivialité avec des plats qui plaisent à tous les âges, des options enfants aux spécialités que vos aînés apprécieront. Formules anniversaire Petit comité (1-20) 35$/pers Familial (20-50) Grande fête (50+) 20-35$/pers Anniversaires Enfants • Menu adapté aux enfants • Gâteaux colorés et ludiques • Présentation amusante • Options sans allergènes • Service patient et bienveillant Anniversaires Adultes • Menu sophistiqué et raffiné • Spécialités congolaises authentiques • Service cocktail optionnel • Dressage élégant • Ambiance conviviale Célébrations Séniors • Plats traditionnels authentiques • Textures adaptées si nécessaire • Service attentionné • Hommage aux traditions • Respect du rythme familial Organiser mon anniversaire parfait 🍹 Service Cocktail Professionnel L'art du cocktail à la congolaise Prestation clé en main avec nos barmen professionnels formés par chaque chef de Equipe Arabesque, spécialiste des cocktails signature Arabesque. Prestation complète incluse 👨‍🍳 Barmen Professionnels Équipe formée par chaque chef Equipe Arabesque, expert en mixologie. Maîtrise parfaite des cocktails classiques et de nos créations signature aux saveurs congolaises. 2 Tournées par Personne Service généreux avec deux tournées complètes par invité. Cocktails avec alcool, mocktails, et boissons non-alcoolisées pour tous les goûts. Matériel Professionnel Comptoir bar, verrerie complète, glaçons, ustensiles de mixologie, décoration du bar et tout le nécessaire pour un service parfait. Transport & Installation Livraison, montage et démontage inclus. Notre équipe arrive 2h avant l'événement pour tout préparer et repart après le nettoyage complet. Tarification transparente Moins de 55 personnes Service intimiste 500$ Moins de 105 personnes Service standard 750$ Moins de 155 personnes Service élargi 900$ Moins de 205 personnes Service grand événement 1200$ 🍸 Cocktails Signature Inclus • Cocktail Arabesque (création Equipe Arabesque) • Mojito Congo (menthe locale) • Sangoma Fizz (fruits tropicaux) • Kinshasa Sunset (cocktail signature) • + tous les classiques internationaux Réserver le service cocktail Nos créations signature Cocktail Arabesque Rhum, passion, gingembre local Mojito Congo Menthe fraîche de Kinshasa Sangoma Fizz Mangue, ananas, pétillant Kinshasa Sunset Cocktail signature mystère Comment nous procédons Votre événement en 6 étapes Notre processus éprouvé garantit la réussite de votre événement, de la conception à la réalisation Consultation personnalisée Rencontre avec Sylvie Feruzi pour comprendre votre vision, vos goûts et vos contraintes. Proposition de menu Création d'un menu sur-mesure alliant vos préférences et nos spécialités authentiques. Dégustation (optionnelle) Séance de dégustation pour les événements importants (100+ personnes). Finalisation & coordination Validation définitive du menu, planning détaillé et coordination avec vos autres prestataires. Préparation & mise en place Préparation minutieuse en cuisine et installation sur site selon le planning convenu. Service & supervision Service impeccable le jour J avec supervision directe pour une expérience parfaite. 2-4 semaines Délai moyen Prêt à commencer ? Donnons vie à votre vision culinaire Chaque service Arabesque Traiteur est une promesse d'excellence, d'authenticité et de moments inoubliables. Faites confiance à notre expertise pour révéler la beauté de la cuisine congolaise lors de votre événement. Demander un devis détaillé Consultation WhatsApp Excellence garantie 15 ans d'expertise au service de vos événements Authenticité congolaise Recettes traditionnelles et spécialités rares Équipe dédiée Sylvie Feruzi et ses chefs passionnés Arabesque Traiteur Élégance • Saveurs • Excellence Votre partenaire privilégié pour tous vos événements d'exception à Kinshasa. Sous la direction de Sylvie Feruzi, nous transformons vos moments précieux en souvenirs inoubliables. Navigation Notre équipe Menu interactif Contact Kinshasa, RD Congo +243 859 993 833 etarabesque@gmail.com Lun-Dim: 8h-20h 2025 Arabesque Traiteur. Tous droits réservés. Politique de confidentialité Conditions générales Made with ❤️ in Kinshasa"
+  },
+  {
+   "id": "page-menu",
+   "title": "Menu et formules",
+   "url": "https://arabesquetraiteur.com/menu.html",
+   "lang": "fr",
+   "type": "page",
+   "text": "Menu Authentique Congolais | Configurateur Interactif - Arabesque Traiteur Arabesque Traiteur À propos Services Menu Galerie Équipe Devis Gratuit Devis 🇨🇩 Cuisine Congolaise Authentique Découvrez la richesse de notre patrimoine culinaire : Pondu Maboke y'a Ngulu Nga Nda Fufu et bien plus encore... 🍽️ Composer mon menu congolais 🦎 Spécialités rares 60+ Plats traditionnels 15 ans Savoir-faire 100% Recettes authentiques Spécialités rares Nos Tarifs Une formule adaptée à chaque événement Tarification flexible selon le nombre d'invités, avec des menus authentiquement congolais INTIME Événements Intimes 1 à 50 personnes 35$ par personne Menu libre choix Service personnalisé Attention aux détails Présentation raffinée Composer mon menu POPULAIRE Événements Moyens 50 à 100 personnes 25$ Menu au choix Excellent rapport qualité-prix Service buffet organisé Gestion professionnelle Formule recommandée FLEXIBILITÉ Grands Événements 100+ personnes 15$ à 35$ selon formule choisie 14 à 28 repas au choix Tarifs dégressifs Service adapté Configurateur intelligent Voir les formules + Service Cocktail Clé en Main Complétez votre événement avec notre service bar professionnel 500$ 750$ 900$ 1200$ 2 tournées par personne Barmen professionnels Matériel inclus Transport & installation Ajouter le service cocktail Configurateur Interactif Choisissez votre formule Plus d'invités = plus de choix et meilleurs prix. Composez le menu parfait pour votre événement Autres Tarifs Personnalisés Besoin d'une formule unique ? Contactez-nous pour discuter de vos besoins spécifiques et obtenir un tarif adapté. 📞 +243 859 993 833 💬 WhatsApp Direct Composez votre menu congolais Sélection: plats Vos plats sélectionnés 🔄 Réinitialiser 💬 Demander un devis 🇨🇩 Spécialités Congolaises Nos signatures authentiques Redécouvrez les saveurs traditionnelles du Congo avec nos plats emblématiques préparés selon les recettes ancestrales PLAT NATIONAL Feuilles de manioc pilées, plat emblématique congolais préparé selon la tradition familiale de Sylvie Feruzi. Spécialité du Chef ✨ Signature TECHNIQUE ANCESTRALE Porc fumé traditionnel cuit dans les feuilles selon la méthode ancestrale congolaise. Saveurs authentiques garanties. Cuisson traditionnelle 🔥 Fumé TRADITION RARE Chèvre façon Nga Nda Viande de chèvre mijotée selon la tradition ancestrale Nga Nda. Une recette rare transmise de génération en génération. Recette ancestrale 👑 Rare FLEUVE CONGO Gros Capitaine Braisé Poisson capitaine du fleuve Congo, braisé aux épices locales. Pêché frais et préparé selon nos standards de qualité. Poisson du fleuve 🌊 Frais ACCOMPAGNEMENT Pâte de manioc traditionnelle, accompagnement emblématique de la cuisine congolaise. Préparé selon la méthode artisanale. Base alimentaire 🌾 Artisanal PORC CONGOLAIS Ngulu - Porc Le porc congolais révèle dans sa préparation traditionnelle toute la richesse des saveurs africaines, patiemment concentrées par des marinades généreuses et une longue cuisson. Présenté avec créativité, ce plat devient un symbole d’évasion et d’émotions partagées, unissant la tradition et l’art dans chaque bouchée. Richesse des saveurs africaines 💎 Authentique 🦎 Expériences Uniques Spécialités Rares & Exceptionnelles Pour les aventuriers culinaires, découvrez nos spécialités les plus exclusives. Préparations traditionnelles d'exception. Mashanza SPÉCIALITÉ LOCALE RARE Préparation traditionnelle authentique avec patates douces. Une spécialité locale rare selon les méthodes ancestrales. Commande Spéciale Crocodile EXPÉRIENCE UNIQUE Viande de crocodile préparée selon les techniques traditionnelles. Une expérience culinaire exceptionnelle et rare. Sur Commande Uniquement Disponibilité limitée Tortue METS D'EXCEPTION Préparation traditionnelle de tortue, mets d'exception très rare selon les coutumes congolaises ancestrales. Consultation Requise Soumis à réglementation Commandes Spéciales Ces spécialités rares nécessitent une commande à l'avance et sont soumises à disponibilité. Contactez-nous pour discuter de vos souhaits culinaires exceptionnels. 📞 Appeler maintenant 💬 WhatsApp Spécialisé Comment ça marche Votre menu congolais en 4 étapes Notre processus simple et transparent pour créer le menu parfait pour votre événement authentique Choisissez vos invités Déterminez le nombre d'invités pour connaître votre formule : Intime (1-50), Optimale (50-100) ou Flexible (100+) Sélectionnez vos plats Explorez notre menu authentique et choisissez vos spécialités congolaises préférées selon votre formule Ajoutez les options Service cocktail, spécialités rares, ou adaptations spéciales - personnalisez votre expérience Validez & savourez Confirmez votre commande et laissez Sylvie Feruzi et son équipe créer votre événement d'exception Prêt pour l'authenticité ? Savourez la vraie cuisine congolaise De l'intimité d'un dîner familial aux fastes d'un mariage, nos spécialités authentiques transformeront votre événement en célébration mémorable du patrimoine culinaire congolais. Configurer mon menu Parler à un spécialiste 100% Authentique Recettes traditionnelles congolaises préservées 👩‍🍳 Chef Experte Sylvie Feruzi, spécialisée en cuisine congolaise Expériences culinaires uniques sur commande Arabesque Traiteur Élégance • Saveurs • Excellence Votre partenaire privilégié pour tous vos événements d'exception à Kinshasa. Sous la direction de Sylvie Feruzi, nous transformons vos moments précieux en souvenirs inoubliables. Navigation Notre équipe Menu interactif Contact Kinshasa, RD Congo +243 859 993 833 etarabesque@gmail.com Lun-Dim: 8h-20h 2025 Arabesque Traiteur. Tous droits réservés. Politique de confidentialité Conditions générales Made with ❤️ in Kinshasa"
+  },
+  {
+   "id": "page-galerie",
+   "title": "Galerie",
+   "url": "https://arabesquetraiteur.com/galerie.html",
+   "lang": "fr",
+   "type": "page",
+   "text": "Galerie Photo | Portfolio Culinaire Arabesque Traiteur - Mariages, Galas, Spécialités Congolaises Arabesque Traiteur À propos Services Menu Galerie Équipe Devis Gratuit Devis 📸 Portfolio d'Exception Plongez dans notre univers visuel : 500+ événements d'exception des spécialités congolaises authentiques aux wedding cakes signature, chaque création raconte une histoire d' excellence culinaire 🎯 Explorer le portfolio 🔍 Filtrer par catégorie Événements immortalisés Wedding cakes créés Galas & Réceptions VIP Plats signature Explorez par catégorie Découvrez notre univers culinaire Filtrez notre portfolio selon vos centres d'intérêt et laissez-vous inspirer Tout voir 🇨🇩 Spécialités Congolaises 💒 Buffets 👥 Notre Équipe 🎬 Coulisses 🏆 Événements Buffet Signature Arabesque Présentation raffinée avec salades composées, fruits tropicaux et accompagnements traditionnels. Service haut de gamme pour événements d'exception. Buffet Service Premium Station Buffet Complète Plateau de fruits artistiques, salades colorées et préparations traditionnelles. Décoration soignée avec plantes vertes pour une ambiance naturelle. Fruits Tropicaux Décoration Setup Événement Complet Installation professionnelle avec service chaud, saladier géant et présentation artistique des fruits. Service de qualité restaurant. Événement Installation Service Buffet Intégral Stations multiples avec plats chauds traditionnels, accompagnements variés et service professionnel. Setup pour grand événement. Grand Événement Service Multiple Buffet Tropical Premium Corbeille à fruits exotiques, plateaux artistiques et salades composées. Décoration naturelle avec ananas centerpiece et finitions professionnelles. Tropical Premium Station Service Complète Service bain-marie professionnel avec plats traditionnels, accompagnements variés et station salade. Organisation parfaite pour réceptions. Bain-Marie Réception Service Chafing Dishes Installation de chafing dishes argentés avec plats chauds signature. Nappe délicate et service assiettes empilées pour événement élégant. Chafing Dishes Élégance Table de Service Artistique Service organisé avec plats chauds, salades fraîches et plateau de fruits. Couverts empilés et présentation soignée pour événement réussi. Artistique Organisation Équipe de Service Nos professionnels en action lors d'un événement. Uniformes impeccables et présentation soignée de nos spécialités culinaires. Service Professionnels Nos Chefs Passionnés Portrait de nos chefs talentueux devant leurs créations. Savoir-faire, créativité et passion au service de vos papilles. Chefs Créativité Binôme Culinaire Collaboration parfaite entre nos chefs pour des créations d'exception. Travail d'équipe et expertise technique réunis. Collaboration Expertise Moments de Convivialité Notre équipe dans un moment de détente lors de la préparation. Bonne humeur et esprit d'équipe, ingrédients secrets de notre réussite. Convivialité Esprit d'Équipe Brochettes Signature Préparation artisanale de nos brochettes aux billes dorées. Présentation soignée et technique traditionnelle pour un résultat exceptionnel. Artisanal Brochettes Art de la Préparation Notre chef préparant avec minutie un plateau de fromages et accompagnements. Gestes précis et présentation raffinée. Minutie Fromages Brochettes Gourmandes Création de brochettes de charcuterie fine avec rose de salami. Technique de pliage artistique et présentation premium. Charcuterie Art Culinaire Fufu & Pommes de Terre Dorées Chafing dish avec fufu traditionnel et pommes de terre parfaitement assaisonnées. Garniture fraîche et présentation authentique congolaise. Fufu Traditionnel Mijoté Signature aux Oignons Plat mijoté avec sauce riche, oignons caramélisés et légumes colorés. Cuisson traditionnelle et présentation moderne dans chafing dish doré. Mijoté Signature Buffet Spécialités Congolaises Sélection de plats traditionnels avec viandes grillées, accompagnements locaux et pain maison. Authenticité et saveurs du Congo réunies. Spécialités Congo Poulet Rôti aux Épices Poulet entier rôti à la perfection avec marinade aux épices locales. Présentation traditionnelle sur lit de salade fraîche et légumes. Poulet Rôti Épices Service Événement Premium Notre chef présentant fièrement ses créations lors d'un événement dans un cadre élégant. Plateau artistique et service personnalisé. Plateau Artistique 3 Niveaux Création spectaculaire avec plateau à étages, légumes sculpés et présentation florale. Duo de chefs fier de cette œuvre d'art culinaire. Spectaculaire Installation Buffet Maison Notre chef supervisant un buffet complet à domicile avec plats traditionnels, fufu doré et service personnalisé dans un cadre intime. Service Domicile Buffet Complet Voir plus de créations Plus de 500 événements documentés dans notre portfolio complet 🌟 Témoignages Clients Ils ont vécu l'expérience Arabesque Découvrez les retours de nos clients sur leurs événements d'exception ⭐⭐⭐⭐⭐ \"Les photos ne rendent pas justice à la beauté de nos plats ! Le service d'exception de l'équipe Arabesque et les créations de nos chefs ont ému toute notre famille. Chaque détail était parfait.\" Famille Mukendi Mariage • 2024 \"Notre gala d'entreprise a été un succès retentissant ! Les photos témoignent de la qualité exceptionnelle du service et de la présentation. Nos invités internationaux ont été conquis par l'authenticité.\" Directeur Commercial Gala Corporate • 2024 \"Ces images capturent parfaitement l'ambiance de notre anniversaire. Le service cocktail de David et la créativité de toute l'équipe ont rendu cette soirée inoubliable !\" Célébration Familiale Anniversaire • 2024 Créons ensemble Votre événement sera le prochain chef-d'œuvre Chaque création de notre galerie était unique. Laissez-nous imaginer et réaliser l'événement d'exception qui vous ressemble, avec la passion et l'expertise qui nous caractérisent. Planifier mon événement Consultation WhatsApp Documentation complète Votre événement immortalisé professionnellement Création sur-mesure Chaque détail pensé selon vos souhaits Excellence garantie Résultat digne de notre portfolio Arabesque Traiteur Portfolio d'Excellence • 500+ Événements Explorez notre univers visuel d'exception. Wedding cakes Julie Feruzi, spécialités congolaises authentiques, galas VIP et événements d'exception à Kinshasa. Galerie Portfolio Spécialités congolaises Buffets & Service Événements VIP Notre Équipe Contact Portfolio +243 859 993 833 etarabesque@gmail.com Kinshasa, RD Congo 500+ événements documentés 2025 Arabesque Traiteur • Portfolio d'Excellence Politique de confidentialité Conditions générales 📸 Créations authentiques"
+  },
+  {
+   "id": "page-contact",
+   "title": "Contact et devis",
+   "url": "https://arabesquetraiteur.com/contact.html",
+   "lang": "fr",
+   "type": "page",
+   "text": "Contact & Devis | Arabesque Traiteur – Cuisine Congolaise Authentique Arabesque Traiteur À propos Services Menu Galerie Équipe Devis 📞 Contact & Devis Planifions votre événement d'exception Devis gratuit sous 24h • Consultation personnalisée • Sylvie Feruzi à votre écoute 📋 Formulaire intelligent 💬 WhatsApp Direct 🚀 Réponse Immédiate Besoin d'une réponse immédiate ? Sylvie Feruzi et son équipe sont disponibles pour vous conseiller directement WhatsApp Réponse immédiate • Photos en direct • Consultation rapide +243 859 993 833 Réponse garantie sous 2h Téléphone Discussion personnelle • Conseil expert • Disponible 8h-20h Lun-Dim : 8h00-20h00 Email Devis détaillé • Documents joints • Réponse sous 24h etarabesque@gmail.com Réponse sous 24h 🎯 Pourquoi nous choisir ? Devis personnalisé sous 24h maximum Adapté à votre budget et vos goûts 15 ans d'expertise à votre service Événements d'exception à Kinshasa Cuisine congolaise authentique Recettes traditionnelles et créations modernes 📋 Devis Intelligent Formulaire de devis personnalisé Notre formulaire intelligent vous guide étape par étape pour créer votre devis personnalisé Événement Contact Confirmation 📅 Détails de votre événement Type d'événement * Choisissez votre événement 💕 Mariage 🎂 Anniversaire 🏠 Réception privée 🏢 Événement d'entreprise 🎭 Gala & Réception officielle 👶 Baptême / Cérémonie religieuse 🎉 Autre (préciser) Date de l'événement * Nombre d'invités * Influence directement votre formule tarifaire Formule tarifaire * Choisissez votre formule Le nombre de plats maximum dépend de votre formule Heure de début Lieu (Kinshasa) * Précisez la commune, salle ou adresse 💰 Estimation automatique Continuer vers contact → 📞 Vos coordonnées Nom complet * Téléphone (WhatsApp) * De préférence WhatsApp pour un suivi rapide Email * Pour recevoir le devis détaillé Méthode de contact préférée 💬 WhatsApp 📞 Téléphone 📧 Email Budget approximatif (optionnel) Pas de budget défini 500$ - 1,000$ 1,000$ - 2,000$ 2,000$ - 5,000$ Plus de 5,000$ Nous aide à personnaliser notre proposition ← Retour Continuer vers menu → 🍽️ Sélection de menu Sélection actuelle: plats Limite atteinte ! Vous avez atteint le nombre maximum de plats pour votre formule. Désélectionnez un plat pour en choisir un autre. 🍹 Service Cocktail (optionnel) Ajouter le service cocktail clé en main Inclus: 2 tournées par personne, barmen professionnels, matériel complet 500$ 750$ 900$ 1200$ Demandes ou contraintes alimentaires spéciales Message personnalisé Voir le récapitulatif → 📋 Récapitulatif de votre demande 💰 Estimation totale Cette estimation est indicative. Le devis final sera personnalisé selon vos besoins exacts. J'accepte d'être contacté par Arabesque Traiteur pour cette demande de devis J'ai lu et j'accepte la politique de confidentialité Je souhaite recevoir les actualités et offres spéciales d'Arabesque Traiteur 💬 Envoyer via WhatsApp ← Modifier ma sélection Demande envoyée avec succès ! Nous vous contacterons sous 24h pour finaliser votre devis personnalisé. Modifier mon menu Retour à l'accueil ❓ Questions Fréquentes Questions Fréquentes Réponses aux questions les plus courantes sur nos services et nos tarifs 💰 Quels sont vos tarifs ? Nos tarifs dépendent du nombre d'invités : 1-50 invités : 35$ par personne (Formule Intime) 50-100 invités : 20-35$ par personne (4 formules disponibles) 100+ invités : 15-35$ par personne (5 formules disponibles) Le service cocktail est optionnel (500$ à 1200$ selon l'effectif). 🥗 Proposez-vous des menus végétariens ou halal ? Absolument ! Nous proposons : Options végétariennes avec légumes locaux Menus halal certifiés Adaptations pour allergies alimentaires Régimes sans gluten sur demande Précisez vos besoins dans le formulaire de devis. 📍 Dans quelles zones livrez-vous ? Oui, nous livrons dans toutes les communes de Kinshasa : Gombe, Kalamu, Lemba, Limete Périphérie (Mont-Ngafula, N'sele...) Sites événementiels spécialisés Les frais de transport sont inclus dans nos tarifs pour Kinshasa. 🦎 Avez-vous des spécialités rares ? Nos spécialités rares (crocodile, tortue, mashanza) sont authentiques mais nécessitent : Commande minimum 2 semaines à l'avance Confirmation de disponibilité Supplément selon la spécialité Contactez-nous pour vérifier la disponibilité. 📅 Quel délai pour commander ? Pour garantir la qualité optimale : Événements simples : 48h minimum Mariages/Galas : 2 semaines minimum Spécialités rares : 3 semaines Plus vous réservez tôt, plus nous pouvons personnaliser votre menu. 💳 Comment se déroule le paiement ? Notre processus de paiement sécurisé : 50% d'acompte à la commande 50% le jour de l'événement Paiement mobile money ou virement Modifications possibles jusqu'à 7 jours avant (selon disponibilité). 📍 Zone de Service Kinshasa et environs Basés au cœur de Kinshasa, nous intervenons dans toute la ville et ses environs pour apporter l'excellence culinaire congolaise à votre événement. Toutes les communes de Kinshasa Périphérie de Kinshasa (Mont-Ngafula, N'sele...) Livraison incluse dans nos tarifs Notre Bureau Principal Avenue de la Paix, Commune de Gombe Kinshasa, République Démocratique du Congo @arabesque.traiteur Zones principales Gombe (Centre-ville) Kinshasa (Résidentiel) Kalamu (Commercial) Lemba (Universitaire) Limete (Industriel) 🔒 Politique de confidentialité Collecte des données : Nous collectons uniquement les informations nécessaires pour traiter votre demande de devis et assurer le suivi de votre événement. Protection des données : Vos données sont protégées et ne sont jamais cédées à des tiers. Elles sont conservées uniquement le temps nécessaire à la prestation de service. Vos droits : Vous pouvez à tout moment demander l'accès, la modification ou la suppression de vos données personnelles en nous contactant. 📋 Conditions générales Qualité et sécurité : Arabesque Traiteur s'engage à fournir des prestations de qualité conformes aux normes d'hygiène et de sécurité alimentaire en vigueur. Commandes et annulations : Les commandes sont fermes après versement de l'acompte. Modifications possibles jusqu'à 7 jours avant l'événement (selon disponibilité). Responsabilité : Notre responsabilité est limitée au montant de la prestation. Nous recommandons une assurance événementielle pour votre tranquillité. Arabesque Traiteur Élégance • Saveurs • Excellence Votre partenaire privilégié pour tous vos événements d'exception à Kinshasa. Sous la direction de Sylvie Feruzi, nous transformons vos moments précieux en souvenirs inoubliables. Navigation Notre équipe Menu interactif Kinshasa, RD Congo Lun-Dim: 8h-20h 2025 Arabesque Traiteur. Tous droits réservés. Conditions générales Made with ❤️ in Kinshasa"
+  }
+ ]
+}

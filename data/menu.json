@@ -14,7 +14,7 @@
     },
     "medium_events": {
       "description": "50 à 100 personnes", 
-      "price_per_person": 20,
+      "price_per_person": 25,
       "currency": "USD",
       "note": "Tarif optimal pour événements moyens"
     },
