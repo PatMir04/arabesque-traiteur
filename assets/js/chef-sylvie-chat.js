@@ -40,6 +40,10 @@ font-family:inherit;color:#26221a}\
 .cs-send{background:#b8860b;background:linear-gradient(135deg,#d4af37,#b8860b);border:none;color:#1a1a1a;\
 width:42px;height:42px;border-radius:50%;font-size:17px;cursor:pointer;flex:none}\
 .cs-typing{font-style:italic;opacity:.7}\
+.cs-typing::after{content:"";animation:csdots 1.2s steps(4) infinite}\
+@keyframes csdots{0%{content:""}25%{content:"."}50%{content:".."}75%{content:"..."}}\
+.cs-writing::after{content:"▍";margin-left:1px;opacity:.6;animation:csblink .7s steps(1) infinite}\
+@keyframes csblink{50%{opacity:0}}\
 .cs-wa{display:flex;align-items:center;justify-content:center;gap:8px;background:#25d366;color:#08340f;font-weight:700;font-size:13.5px;text-decoration:none;padding:9px 12px}\
 .cs-wa:hover{background:#1fb857}\
 .cs-est{align-self:stretch;background:#fff;border:1px solid #d4af37;border-radius:14px;padding:12px;display:flex;flex-direction:column;gap:8px}\
@@ -87,12 +91,40 @@ right:calc(14px + env(safe-area-inset-right));bottom:calc(14px + env(safe-area-i
   var input = panel.querySelector('.cs-input');
   var greeted = false;
 
-  function addMsg(text, who) {
+  function addMsg(text, who, typeSlow) {
     var div = document.createElement('div');
     div.className = 'cs-msg ' + who;
-    div.textContent = text;
     body.appendChild(div);
-    body.scrollTop = body.scrollHeight;
+    if (!typeSlow || who !== 'bot') {
+      div.textContent = text;
+      body.scrollTop = body.scrollHeight;
+      return div;
+    }
+    // Frappe progressive, mot à mot, durée proportionnelle (0,8 s à 7 s max).
+    var words = text.split(/(\s+)/);
+    var total = text.length;
+    var duration = Math.min(7000, Math.max(800, total * 16));
+    var stepMs = 30;
+    var perTick = Math.max(1, Math.round(words.length / (duration / stepMs)));
+    var i = 0, done = false, timer = null;
+    div.classList.add('cs-writing');
+    function finish() {
+      if (done) return;
+      done = true;
+      if (timer) clearInterval(timer);
+      div.textContent = text;
+      div.classList.remove('cs-writing');
+      body.scrollTop = body.scrollHeight;
+      if (div._onTyped) div._onTyped();
+    }
+    div.addEventListener('click', finish);
+    div._finishTyping = finish;
+    timer = setInterval(function () {
+      i += perTick;
+      div.textContent = words.slice(0, i).join('');
+      body.scrollTop = body.scrollHeight;
+      if (i >= words.length) finish();
+    }, stepMs);
     return div;
   }
   function addLinks(links) {
@@ -108,7 +140,7 @@ right:calc(14px + env(safe-area-inset-right));bottom:calc(14px + env(safe-area-i
     body.scrollTop = body.scrollHeight;
   }
   function addFallback() {
-    addMsg(FALLBACK, 'bot');
+    addMsg(FALLBACK, 'bot', true);
     addLinks([
       { title: 'WhatsApp +243 859 993 833', url: WHATSAPP },
       { title: 'Formulaire de devis gratuit', url: 'contact.html#formulaire-devis' }
@@ -120,25 +152,30 @@ right:calc(14px + env(safe-area-inset-right));bottom:calc(14px + env(safe-area-i
     if (!q) return;
     addMsg(q, 'user');
     input.value = '';
-    var typing = addMsg('Cheffe Sylvie écrit…', 'bot');
+    var typing = addMsg('Cheffe Sylvie réfléchit', 'bot');
     typing.classList.add('cs-typing');
+    var started = Date.now();
+    function afterThinking(fn) {
+      var wait = Math.max(0, 1100 - (Date.now() - started));
+      setTimeout(function () { typing.remove(); fn(); }, wait);
+    }
     fetch(WORKER_URL, {
       method: 'POST',
       headers: { 'content-type': 'application/json' },
       body: JSON.stringify({ q: q, lang: 'auto', history: history })
     }).then(function (r) { return r.json(); }).then(function (data) {
-      typing.remove();
-      if (data && data.text) {
-        addMsg(data.text, 'bot');
-        addLinks(data.links);
-        history.push({ role: 'user', text: q }, { role: 'assistant', text: data.text });
-        if (history.length > 6) history = history.slice(-6);
-      } else {
-        addFallback();
-      }
+      afterThinking(function () {
+        if (data && data.text) {
+          var bubble = addMsg(data.text, 'bot', true);
+          bubble._onTyped = function () { addLinks(data.links); };
+          history.push({ role: 'user', text: q }, { role: 'assistant', text: data.text });
+          if (history.length > 6) history = history.slice(-6);
+        } else {
+          addFallback();
+        }
+      });
     }).catch(function () {
-      typing.remove();
-      addFallback();
+      afterThinking(addFallback);
     });
   }
 
@@ -208,7 +245,7 @@ right:calc(14px + env(safe-area-inset-right));bottom:calc(14px + env(safe-area-i
     if (open && !greeted) {
       greeted = true;
       addMsg("Bonjour et bienvenue chez Arabesque Traiteur ! Je suis Cheffe Sylvie, votre assistante virtuelle. " +
-        "Je peux vous parler de nos plats congolais, de nos formules et de leurs prix, ou vous aider à préparer votre devis. Que puis-je faire pour vous ?", 'bot');
+        "Je peux vous parler de nos plats congolais, de nos formules et de leurs prix, ou vous aider à préparer votre devis. Que puis-je faire pour vous ?", 'bot', true);
     }
     if (open) input.focus();
   }
