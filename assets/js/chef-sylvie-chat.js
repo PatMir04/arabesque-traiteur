@@ -189,10 +189,7 @@ right:calc(14px + env(safe-area-inset-right));bottom:calc(14px + env(safe-area-i
       '<option value="gala">Gala</option><option value="prive">Réception privée</option>' +
       '<option value="corporate">Événement d\'entreprise</option><option value="">Autre</option></select></label>' +
       '<label>Nombre d\'invités <input class="est-guests" type="number" min="1" max="2000" value="80"></label>' +
-      '<label class="est-formule-wrap" style="display:none">Formule (100 invités et +) <select class="est-formule">' +
-      '<option value="15">Essentielle — 15 $/pers</option><option value="20">Premium — 20 $/pers</option>' +
-      '<option value="25">Excellence — 25 $/pers</option><option value="30">Deluxe — 30 $/pers</option>' +
-      '<option value="35">VIP — 35 $/pers</option></select></label>' +
+      '<label class="est-formule-wrap">Formule <select class="est-formule"></select></label>' +
       '<div class="est-auto" style="font-size:12.5px;color:#6b5200"></div>' +
       '<button type="button" class="est-go">Calculer mon estimation</button>';
     body.appendChild(card);
@@ -200,27 +197,27 @@ right:calc(14px + env(safe-area-inset-right));bottom:calc(14px + env(safe-area-i
     var guestsEl = card.querySelector('.est-guests');
     var wrap = card.querySelector('.est-formule-wrap');
     var auto = card.querySelector('.est-auto');
+    var GRILLE = {
+      s: [[30, 'Essentielle — 14 variétés — 30 $/pers'], [35, 'Optimale — 18 variétés — 35 $/pers'], [40, 'Premium — 20 variétés — 40 $/pers'], [45, 'Excellence — 22 variétés — 45 $/pers']],
+      m: [[25, 'Essentielle — 14 variétés — 25 $/pers'], [30, 'Optimale — 18 variétés — 30 $/pers'], [35, 'Premium — 20 variétés — 35 $/pers'], [40, 'Excellence — 22 variétés — 40 $/pers']],
+      l: [[20, 'Essentielle — 14 variétés — 20 $/pers'], [25, 'Optimale — 18 variétés — 25 $/pers'], [30, 'Premium — 20 variétés — 30 $/pers'], [35, 'Excellence — 22 variétés — 35 $/pers'], [40, 'VIP — 24 variétés — 40 $/pers']]
+    };
     function refresh() {
       var g = parseInt(guestsEl.value, 10) || 0;
-      if (g > 100) { wrap.style.display = ''; auto.textContent = ''; }
-      else {
-        wrap.style.display = 'none';
-        auto.textContent = g > 50 ? 'Formule appliquée : Optimale — 25 $/pers (50 à 100 invités)'
-          : (g > 0 ? 'Formule appliquée : Intime — 35 $/pers (1 à 50 invités)' : '');
-      }
+      var key = g <= 50 ? 's' : (g <= 99 ? 'm' : 'l');
+      var sel = card.querySelector('.est-formule');
+      var current = sel.value;
+      sel.innerHTML = GRILLE[key].map(function (t) { return '<option value="' + t[0] + '">' + t[1] + '</option>'; }).join('');
+      sel.value = GRILLE[key].some(function (t) { return String(t[0]) === current; }) ? current : String(GRILLE[key][1][0]);
+      auto.textContent = g > 0 ? (key === 's' ? 'Tranche 1 à 50 invités' : (key === 'm' ? 'Tranche 51 à 99 invités' : 'Tranche 100 invités et plus')) + ' — crudités, fruits, présentation, service et matériel inclus.' : '';
     }
     guestsEl.addEventListener('input', refresh);
     refresh();
     card.querySelector('.est-go').addEventListener('click', function () {
       var g = parseInt(guestsEl.value, 10) || 0;
       if (g < 1) { addMsg("Indiquez d'abord le nombre d'invités pour calculer l'estimation.", 'bot'); return; }
-      var price, name;
-      if (g <= 50) { price = 35; name = 'Intime'; }
-      else if (g <= 100) { price = 25; name = 'Optimale'; }
-      else {
-        price = parseInt(card.querySelector('.est-formule').value, 10);
-        name = card.querySelector('.est-formule').selectedOptions[0].textContent.split(' — ')[0];
-      }
+      var price = parseInt(card.querySelector('.est-formule').value, 10);
+      var name = card.querySelector('.est-formule').selectedOptions[0].textContent.split(' — ')[0];
       var total = price * g;
       var ev = card.querySelector('.est-event').value;
       var evLabel = card.querySelector('.est-event').selectedOptions[0].textContent;

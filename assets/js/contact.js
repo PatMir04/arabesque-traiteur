@@ -7,20 +7,23 @@
     // Pricing rules configuration
     const PRICING_RULES = {
         '1-50': [
-            {price: 35, maxDishes: 14, name: "Formule Intime", id: "intime"}
+            {price: 30, maxDishes: 14, name: "Formule Essentielle", id: "essentielle-50"},
+            {price: 35, maxDishes: 18, name: "Formule Optimale", id: "optimale-50"},
+            {price: 40, maxDishes: 20, name: "Formule Premium", id: "premium-50"},
+            {price: 45, maxDishes: 22, name: "Formule Excellence", id: "excellence-50"}
         ],
         '50-100': [
-            {price: 20, maxDishes: 18, name: "Formule Essentielle", id: "essentielle"},
-            {price: 25, maxDishes: 20, name: "Formule Optimale", id: "optimale"},
-            {price: 30, maxDishes: 24, name: "Formule Premium", id: "premium"},
-            {price: 35, maxDishes: 28, name: "Formule Excellence", id: "excellence"}
+            {price: 25, maxDishes: 14, name: "Formule Essentielle", id: "essentielle-99"},
+            {price: 30, maxDishes: 18, name: "Formule Optimale", id: "optimale-99"},
+            {price: 35, maxDishes: 20, name: "Formule Premium", id: "premium-99"},
+            {price: 40, maxDishes: 22, name: "Formule Excellence", id: "excellence-99"}
         ],
         '100+': [
-            {price: 15, maxDishes: 14, name: "Formule Économique", id: "economique"},
-            {price: 20, maxDishes: 18, name: "Formule Essentielle", id: "essentielle"},
-            {price: 25, maxDishes: 20, name: "Formule Optimale", id: "optimale"},
-            {price: 30, maxDishes: 24, name: "Formule Premium", id: "premium"},
-            {price: 35, maxDishes: 28, name: "Formule Excellence", id: "excellence"}
+            {price: 20, maxDishes: 14, name: "Formule Essentielle", id: "essentielle-100"},
+            {price: 25, maxDishes: 18, name: "Formule Optimale", id: "optimale-100"},
+            {price: 30, maxDishes: 20, name: "Formule Premium", id: "premium-100"},
+            {price: 35, maxDishes: 22, name: "Formule Excellence", id: "excellence-100"},
+            {price: 40, maxDishes: 24, name: "Formule VIP", id: "vip-100"}
         ]
     };
     
@@ -301,7 +304,7 @@
         let formules;
         if (guestCount <= 50) {
             formules = PRICING_RULES['1-50'];
-        } else if (guestCount <= 100) {
+        } else if (guestCount <= 99) {
             formules = PRICING_RULES['50-100'];
         } else {
             formules = PRICING_RULES['100+'];

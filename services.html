@@ -323,12 +323,12 @@
                 
                 <div class="form-group">
                   <label class="form-label text-white">Formule menu (pour 100+ invités)</label>
-                  <select id="menuFormula" class="form-input bg-white/20 text-white border-white/30" disabled>
-                    <option value="essentielle">Essentielle - 14 repas (15$/pers)</option>
-                    <option value="premium" selected>Premium - 18 repas (20$/pers)</option>
-                    <option value="excellence">Excellence - 20 repas (25$/pers)</option>
-                    <option value="deluxe">Deluxe - 24 repas (30$/pers)</option>
-                    <option value="vip">VIP - 28 repas (35$/pers)</option>
+                  <select id="menuFormula" class="form-input bg-white/20 text-white border-white/30">
+                    <option value="essentielle">Essentielle - 14 variétés (20$/pers)</option>
+                    <option value="optimale" selected>Optimale - 18 variétés (25$/pers)</option>
+                    <option value="premium">Premium - 20 variétés (30$/pers)</option>
+                    <option value="excellence">Excellence - 22 variétés (35$/pers)</option>
+                    <option value="vip">VIP - 24 variétés (40$/pers)</option>
                   </select>
                 </div>
                 
@@ -457,15 +457,15 @@
               <div class="space-y-2 text-sm">
                 <div class="flex justify-between">
                   <span>1-50 invités (intime)</span>
-                  <span class="font-bold">35$ / personne</span>
+                  <span class="font-bold">30-45$ / personne</span>
                 </div>
                 <div class="flex justify-between">
-                  <span>50-100 invités (familial)</span>
-                  <span class="font-bold">20$ / personne</span>
+                  <span>51-99 invités (familial)</span>
+                  <span class="font-bold">25-40$ / personne</span>
                 </div>
                 <div class="flex justify-between">
                   <span>100+ invités (grand mariage)</span>
-                  <span class="font-bold">20-35$ / personne (selon menu)</span>
+                  <span class="font-bold">20-40$ / personne (selon variétés)</span>
                 </div>
                 <hr class="border-rose-200">
                 <div class="flex justify-between font-bold text-rose-600">
@@ -588,7 +588,7 @@
               </li>
             </ul>
             <div class="text-center">
-              <span class="text-sm text-gray-500">À partir de 25$/personne</span>
+              <span class="text-sm text-gray-500">À partir de 20$/personne</span>
             </div>
           </div>
           
@@ -763,15 +763,15 @@
                 <div class="space-y-2 text-sm">
                   <div class="flex justify-between gap-4">
                     <span>Petit comité (1-20)</span>
-                    <span class="font-bold">35$/pers</span>
+                    <span class="font-bold">30-45$/pers</span>
                   </div>
                   <div class="flex justify-between gap-4">
                     <span>Familial (20-50)</span>
-                    <span class="font-bold">35$/pers</span>
+                    <span class="font-bold">30-45$/pers</span>
                   </div>
                   <div class="flex justify-between gap-4">
                     <span>Grande fête (50+)</span>
-                    <span class="font-bold">20-35$/pers</span>
+                    <span class="font-bold">20-40$/pers</span>
                   </div>
                 </div>
               </div>
@@ -1286,6 +1286,30 @@
       initializeSmoothScrolling();
     }
     
+      // Grille tarifaire officielle : prix par personne selon invités et variétés
+    const GRILLE = {
+        small: [
+          {id: 'essentielle', name: 'Essentielle', varieties: 14, price: 30},
+          {id: 'optimale', name: 'Optimale', varieties: 18, price: 35},
+          {id: 'premium', name: 'Premium', varieties: 20, price: 40},
+          {id: 'excellence', name: 'Excellence', varieties: 22, price: 45}
+        ],
+        medium: [
+          {id: 'essentielle', name: 'Essentielle', varieties: 14, price: 25},
+          {id: 'optimale', name: 'Optimale', varieties: 18, price: 30},
+          {id: 'premium', name: 'Premium', varieties: 20, price: 35},
+          {id: 'excellence', name: 'Excellence', varieties: 22, price: 40}
+        ],
+        large: [
+          {id: 'essentielle', name: 'Essentielle', varieties: 14, price: 20},
+          {id: 'optimale', name: 'Optimale', varieties: 18, price: 25},
+          {id: 'premium', name: 'Premium', varieties: 20, price: 30},
+          {id: 'excellence', name: 'Excellence', varieties: 22, price: 35},
+          {id: 'vip', name: 'VIP', varieties: 24, price: 40}
+        ]
+      };
+    function bracketFor(g) { return g <= 50 ? 'small' : (g <= 99 ? 'medium' : 'large'); }
+
     function initializePriceCalculator() {
       const eventType = document.getElementById('eventType');
       const guestCount = document.getElementById('guestCount');
@@ -1301,15 +1325,16 @@
         }
       });
       
-      // Update menu formula availability based on guest count
-      guestCount.addEventListener('input', function() {
-        const guests = parseInt(this.value) || 0;
-        if (guests >= 100) {
-          menuFormula.disabled = false;
-        } else {
-          menuFormula.disabled = true;
-        }
-      });
+      function populateFormulas() {
+        const guests = parseInt(guestCount.value) || 0;
+        const tiers = GRILLE[bracketFor(guests)];
+        const current = menuFormula.value;
+        menuFormula.innerHTML = tiers.map(t =>
+          `<option value="${t.id}">${t.name} - ${t.varieties} variétés (${t.price}$/pers)</option>`).join('');
+        menuFormula.value = tiers.some(t => t.id === current) ? current : 'optimale';
+      }
+      guestCount.addEventListener('input', populateFormulas);
+      populateFormulas();
       
       // Initial calculation
       calculatePrice();
@@ -1330,46 +1355,15 @@
       let basePrice = 0;
       let priceBreakdown = [];
       
-      // Calculate base price
-      if (guests <= 50) {
-        basePrice = 35;
-        priceBreakdown.push({
-          item: `Formule Intime (${guests} personnes)`,
-          price: basePrice * guests,
-          detail: `${basePrice}$ × ${guests}`
-        });
-      } else if (guests <= 100) {
-        basePrice = 25;
-        priceBreakdown.push({
-          item: `Formule Optimale (${guests} personnes)`,
-          price: basePrice * guests,
-          detail: `${basePrice}$ × ${guests}`
-        });
-      } else {
-        // Large events with formula selection
-        const formulaPrices = {
-          'essentielle': 15,
-          'premium': 20,
-          'excellence': 25,
-          'deluxe': 30,
-          'vip': 35
-        };
-        basePrice = formulaPrices[menuFormula] || 20;
-        
-        const formulaNames = {
-          'essentielle': 'Essentielle (14 repas)',
-          'premium': 'Premium (18 repas)',
-          'excellence': 'Excellence (20 repas)',
-          'deluxe': 'Deluxe (24 repas)',
-          'vip': 'VIP (28 repas)'
-        };
-        
-        priceBreakdown.push({
-          item: `Formule ${formulaNames[menuFormula]} (${guests} personnes)`,
-          price: basePrice * guests,
-          detail: `${basePrice}$ × ${guests}`
-        });
-      }
+      // Calculate base price from the official grid
+      const tiers = GRILLE[bracketFor(guests)];
+      const tier = tiers.find(t => t.id === menuFormula) || tiers[1];
+      basePrice = tier.price;
+      priceBreakdown.push({
+        item: `Formule ${tier.name} (${tier.varieties} variétés, ${guests} personnes)`,
+        price: basePrice * guests,
+        detail: `${basePrice}$ × ${guests} — crudités, fruits, présentation, service et matériel inclus`
+      });
       
       let total = basePrice * guests;
       

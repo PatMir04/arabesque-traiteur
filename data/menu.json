@@ -6,152 +6,267 @@
     "speciality": "Cuisine congolaise authentique et internationale"
   },
   "pricing_structure": {
+    "note": "Prix par personne selon le nombre d'invités et le nombre de variétés de plats choisies. Crudités, assortiment de fruits, présentation, service du buffet et matériel inclus dans toutes les formules.",
     "small_events": {
       "description": "1 à 50 personnes",
-      "price_per_person": 35,
-      "currency": "USD",
-      "note": "Tarif premium pour événements intimes"
+      "prices": {
+        "essentielle": 30,
+        "optimale": 35,
+        "premium": 40,
+        "excellence": 45
+      }
     },
     "medium_events": {
-      "description": "50 à 100 personnes", 
-      "price_per_person": 25,
-      "currency": "USD",
-      "note": "Tarif optimal pour événements moyens"
+      "description": "51 à 99 personnes",
+      "prices": {
+        "essentielle": 25,
+        "optimale": 30,
+        "premium": 35,
+        "excellence": 40
+      }
     },
     "large_events": {
       "description": "100 personnes et plus",
-      "currency": "USD",
-      "note": "Tarifs dégressifs selon le nombre de repas choisis"
+      "prices": {
+        "essentielle": 20,
+        "optimale": 25,
+        "premium": 30,
+        "excellence": 35,
+        "vip": 40
+      }
     }
   },
   "formules": [
     {
-      "id": "intime",
-      "nom": "Formule Intime",
-      "description": "Pour événements de 1 à 50 personnes",
-      "prix": 35,
-      "nombre_repas": "Selon choix",
-      "groupe_cible": "1-50 personnes",
-      "badge": "INTIME",
-      "avantages": [
-        "Service personnalisé",
-        "Attention particulière aux détails",
-        "Flexibilité maximale dans les choix",
-        "Présentation raffinée",
-        "Service à table inclus"
-      ],
-      "color_theme": "rose",
-      "recommended": false
-    },
-    {
-      "id": "optimale",
-      "nom": "Formule Optimale",
-      "description": "Pour événements de 50 à 100 personnes",
-      "prix": 25,
-      "nombre_repas": "Selon choix",
-      "groupe_cible": "50-100 personnes",
-      "badge": "POPULAIRE",
-      "avantages": [
-        "Excellent rapport qualité-prix",
-        "Service buffet organisé",
-        "Variété de choix garantie",
-        "Présentation soignée",
-        "Gestion professionnelle"
-      ],
-      "color_theme": "green",
-      "recommended": true
-    },
-    {
-      "id": "essentielle",
+      "id": "essentielle-50",
       "nom": "Formule Essentielle",
-      "description": "14 repas au choix pour 100+ personnes",
-      "prix": 15,
+      "description": "14 variétés de plats au choix — pour événements de 1 à 50 invités",
+      "prix": 30,
       "nombre_repas": 14,
-      "groupe_cible": "100+ personnes",
+      "groupe_cible": "1 à 50 invités",
       "badge": "ÉCONOMIQUE",
       "avantages": [
-        "14 repas au choix dans toute la liste",
-        "Salades fraîches incluses",
-        "Plateau de fruits de saison",
-        "Accompagnements traditionnels",
-        "Service buffet efficace"
+        "14 variétés de plats au choix dans tout le menu",
+        "Crudités incluses",
+        "Assortiment de fruits inclus",
+        "Présentation et service du buffet inclus",
+        "Matériel inclus"
       ],
       "color_theme": "blue",
       "recommended": false
     },
     {
-      "id": "premium",
-      "nom": "Formule Premium",
-      "description": "18 repas au choix pour 100+ personnes",
-      "prix": 20,
+      "id": "optimale-50",
+      "nom": "Formule Optimale",
+      "description": "18 variétés de plats au choix — pour événements de 1 à 50 invités",
+      "prix": 35,
       "nombre_repas": 18,
-      "groupe_cible": "100+ personnes", 
-      "badge": "ÉQUILIBRÉE",
+      "groupe_cible": "1 à 50 invités",
+      "badge": "POPULAIRE",
       "avantages": [
-        "18 repas au choix dans toute la liste",
-        "Plus de variété de plats",
-        "Salades premium incluses",
-        "Plateau de fruits tropical",
-        "Accompagnements diversifiés",
-        "Présentation améliorée"
+        "18 variétés de plats au choix dans tout le menu",
+        "Crudités incluses",
+        "Assortiment de fruits inclus",
+        "Présentation et service du buffet inclus",
+        "Matériel inclus"
       ],
-      "color_theme": "gold",
+      "color_theme": "green",
       "recommended": true
     },
     {
-      "id": "excellence",
-      "nom": "Formule Excellence",
-      "description": "20 repas au choix pour 100+ personnes",
-      "prix": 25,
+      "id": "premium-50",
+      "nom": "Formule Premium",
+      "description": "20 variétés de plats au choix — pour événements de 1 à 50 invités",
+      "prix": 40,
       "nombre_repas": 20,
-      "groupe_cible": "100+ personnes",
-      "badge": "PRESTIGE",
+      "groupe_cible": "1 à 50 invités",
+      "badge": "ÉQUILIBRÉE",
       "avantages": [
-        "20 repas au choix dans toute la liste",
-        "Sélection élargie de spécialités",
-        "Salades d'exception incluses",
-        "Fruits exotiques premium",
-        "Accompagnements complets",
-        "Service amélioré"
+        "20 variétés de plats au choix dans tout le menu",
+        "Crudités incluses",
+        "Assortiment de fruits inclus",
+        "Présentation et service du buffet inclus",
+        "Matériel inclus"
       ],
       "color_theme": "purple",
       "recommended": false
     },
     {
-      "id": "deluxe",
-      "nom": "Formule Deluxe",
-      "description": "24 repas au choix pour 100+ personnes",
-      "prix": 30,
-      "nombre_repas": 24,
-      "groupe_cible": "100+ personnes",
-      "badge": "DELUXE",
+      "id": "excellence-50",
+      "nom": "Formule Excellence",
+      "description": "22 variétés de plats au choix — pour événements de 1 à 50 invités",
+      "prix": 45,
+      "nombre_repas": 22,
+      "groupe_cible": "1 à 50 invités",
+      "badge": "PRESTIGE",
       "avantages": [
-        "24 repas au choix dans toute la liste",
-        "Accès aux spécialités rares",
-        "Salades gastronomiques incluses",
-        "Buffet de fruits d'exception",
-        "Tous accompagnements disponibles",
-        "Service personnalisé"
+        "22 variétés de plats au choix dans tout le menu",
+        "Crudités incluses",
+        "Assortiment de fruits inclus",
+        "Présentation et service du buffet inclus",
+        "Matériel inclus"
       ],
-      "color_theme": "gold-dark",
+      "color_theme": "amber",
       "recommended": false
     },
     {
-      "id": "vip",
-      "nom": "Formule VIP",
-      "description": "28 repas au choix pour 100+ personnes",
+      "id": "essentielle-99",
+      "nom": "Formule Essentielle",
+      "description": "14 variétés de plats au choix — pour événements de 51 à 99 invités",
+      "prix": 25,
+      "nombre_repas": 14,
+      "groupe_cible": "51 à 99 invités",
+      "badge": "ÉCONOMIQUE",
+      "avantages": [
+        "14 variétés de plats au choix dans tout le menu",
+        "Crudités incluses",
+        "Assortiment de fruits inclus",
+        "Présentation et service du buffet inclus",
+        "Matériel inclus"
+      ],
+      "color_theme": "blue",
+      "recommended": false
+    },
+    {
+      "id": "optimale-99",
+      "nom": "Formule Optimale",
+      "description": "18 variétés de plats au choix — pour événements de 51 à 99 invités",
+      "prix": 30,
+      "nombre_repas": 18,
+      "groupe_cible": "51 à 99 invités",
+      "badge": "POPULAIRE",
+      "avantages": [
+        "18 variétés de plats au choix dans tout le menu",
+        "Crudités incluses",
+        "Assortiment de fruits inclus",
+        "Présentation et service du buffet inclus",
+        "Matériel inclus"
+      ],
+      "color_theme": "green",
+      "recommended": true
+    },
+    {
+      "id": "premium-99",
+      "nom": "Formule Premium",
+      "description": "20 variétés de plats au choix — pour événements de 51 à 99 invités",
       "prix": 35,
-      "nombre_repas": 28,
-      "groupe_cible": "100+ personnes",
+      "nombre_repas": 20,
+      "groupe_cible": "51 à 99 invités",
+      "badge": "ÉQUILIBRÉE",
+      "avantages": [
+        "20 variétés de plats au choix dans tout le menu",
+        "Crudités incluses",
+        "Assortiment de fruits inclus",
+        "Présentation et service du buffet inclus",
+        "Matériel inclus"
+      ],
+      "color_theme": "purple",
+      "recommended": false
+    },
+    {
+      "id": "excellence-99",
+      "nom": "Formule Excellence",
+      "description": "22 variétés de plats au choix — pour événements de 51 à 99 invités",
+      "prix": 40,
+      "nombre_repas": 22,
+      "groupe_cible": "51 à 99 invités",
+      "badge": "PRESTIGE",
+      "avantages": [
+        "22 variétés de plats au choix dans tout le menu",
+        "Crudités incluses",
+        "Assortiment de fruits inclus",
+        "Présentation et service du buffet inclus",
+        "Matériel inclus"
+      ],
+      "color_theme": "amber",
+      "recommended": false
+    },
+    {
+      "id": "essentielle-100",
+      "nom": "Formule Essentielle",
+      "description": "14 variétés de plats au choix — pour événements de 100 invités et plus",
+      "prix": 20,
+      "nombre_repas": 14,
+      "groupe_cible": "100 invités et plus",
+      "badge": "ÉCONOMIQUE",
+      "avantages": [
+        "14 variétés de plats au choix dans tout le menu",
+        "Crudités incluses",
+        "Assortiment de fruits inclus",
+        "Présentation et service du buffet inclus",
+        "Matériel inclus"
+      ],
+      "color_theme": "blue",
+      "recommended": false
+    },
+    {
+      "id": "optimale-100",
+      "nom": "Formule Optimale",
+      "description": "18 variétés de plats au choix — pour événements de 100 invités et plus",
+      "prix": 25,
+      "nombre_repas": 18,
+      "groupe_cible": "100 invités et plus",
+      "badge": "POPULAIRE",
+      "avantages": [
+        "18 variétés de plats au choix dans tout le menu",
+        "Crudités incluses",
+        "Assortiment de fruits inclus",
+        "Présentation et service du buffet inclus",
+        "Matériel inclus"
+      ],
+      "color_theme": "green",
+      "recommended": true
+    },
+    {
+      "id": "premium-100",
+      "nom": "Formule Premium",
+      "description": "20 variétés de plats au choix — pour événements de 100 invités et plus",
+      "prix": 30,
+      "nombre_repas": 20,
+      "groupe_cible": "100 invités et plus",
+      "badge": "ÉQUILIBRÉE",
+      "avantages": [
+        "20 variétés de plats au choix dans tout le menu",
+        "Crudités incluses",
+        "Assortiment de fruits inclus",
+        "Présentation et service du buffet inclus",
+        "Matériel inclus"
+      ],
+      "color_theme": "purple",
+      "recommended": false
+    },
+    {
+      "id": "excellence-100",
+      "nom": "Formule Excellence",
+      "description": "22 variétés de plats au choix — pour événements de 100 invités et plus",
+      "prix": 35,
+      "nombre_repas": 22,
+      "groupe_cible": "100 invités et plus",
+      "badge": "PRESTIGE",
+      "avantages": [
+        "22 variétés de plats au choix dans tout le menu",
+        "Crudités incluses",
+        "Assortiment de fruits inclus",
+        "Présentation et service du buffet inclus",
+        "Matériel inclus"
+      ],
+      "color_theme": "amber",
+      "recommended": false
+    },
+    {
+      "id": "vip-100",
+      "nom": "Formule VIP",
+      "description": "24 variétés de plats au choix — pour événements de 100 invités et plus",
+      "prix": 40,
+      "nombre_repas": 24,
+      "groupe_cible": "100 invités et plus",
       "badge": "VIP",
       "avantages": [
-        "28 repas au choix - accès total",
-        "Toutes les spécialités incluses",
-        "Salades signature du chef",
-        "Fruits et desserts premium",
-        "Accompagnements illimités",
-        "Service VIP complet",
-        "Présentation gastronomique"
+        "24 variétés de plats au choix dans tout le menu",
+        "Crudités incluses",
+        "Assortiment de fruits inclus",
+        "Présentation et service du buffet inclus",
+        "Matériel inclus"
       ],
       "color_theme": "gold",
       "recommended": false
@@ -162,7 +277,7 @@
     "description": "Prestation complète pour vos événements",
     "inclus": [
       "Cocktails préparés sur place (2 tournées par personne)",
-      "Équipe de barmen professionnels", 
+      "Équipe de barmen professionnels",
       "Glaçons, bacs, verrerie, ustensiles",
       "Transport et installation"
     ],
@@ -173,7 +288,7 @@
         "currency": "USD"
       },
       {
-        "groupe": "Moins de 105 personnes", 
+        "groupe": "Moins de 105 personnes",
         "prix": 750,
         "currency": "USD"
       },
@@ -206,7 +321,7 @@
           "image": "assets/images/samoussa-viande.jpeg"
         },
         {
-          "id": "brochette-beignets", 
+          "id": "brochette-beignets",
           "nom": "Brochette de Beignets",
           "description": "Beignets moelleux en brochette, accompagnement sauce piquante",
           "type": "entree",
@@ -215,7 +330,7 @@
         },
         {
           "id": "saucisse-pili",
-          "nom": "Saucisses Pili", 
+          "nom": "Saucisses Pili",
           "description": "Saucisses locales grillées aux épices congolaises",
           "type": "entree",
           "origine": "Tradition locale",
@@ -261,11 +376,13 @@
           "type": "salade",
           "origine": "Méditerranéenne",
           "image": "assets/images/salade-grecque.jpeg",
-          "dietary": ["vegetarien"]
+          "dietary": [
+            "vegetarien"
+          ]
         },
         {
           "id": "salade-nicoise",
-          "nom": "Salade Niçoise", 
+          "nom": "Salade Niçoise",
           "description": "Thon, œufs durs, tomates, anchois, olives, haricots verts",
           "type": "salade",
           "origine": "Française classique",
@@ -278,7 +395,9 @@
           "type": "salade",
           "origine": "Classique international",
           "image": "assets/images/macedoine-legumes.jpeg",
-          "dietary": ["vegetarien"]
+          "dietary": [
+            "vegetarien"
+          ]
         }
       ]
     },
@@ -309,7 +428,7 @@
         },
         {
           "id": "maboke-ngulu",
-          "nom": "Maboke y'a Ngulu", 
+          "nom": "Maboke y'a Ngulu",
           "description": "Porc fumé traditionnel dans les feuilles, cuisson ancestrale",
           "type": "viande",
           "origine": "Technique traditionnelle congolaise",
@@ -320,7 +439,7 @@
           "id": "brochette-boeuf",
           "nom": "Brochette de Bœuf",
           "description": "Bœuf tendre grillé aux épices, marinade maison",
-          "type": "viande", 
+          "type": "viande",
           "origine": "Grillades Arabesque",
           "image": "assets/images/brochette-boeuf.jpeg"
         },
@@ -393,7 +512,7 @@
           "image": "assets/images/capitaine-braise.jpeg"
         },
         {
-          "id": "capitaine-sauce-maniere", 
+          "id": "capitaine-sauce-maniere",
           "nom": "Capitaine à la Sauce Manière",
           "description": "Capitaine en sauce traditionelle congolaise",
           "type": "poisson",
@@ -414,7 +533,7 @@
           "nom": "Ndakala",
           "description": "Petits poissons séchés, spécialité du Congo",
           "type": "poisson",
-          "origine": "Tradition du fleuve Congo", 
+          "origine": "Tradition du fleuve Congo",
           "image": "assets/images/ndakala.jpeg"
         },
         {
@@ -465,7 +584,7 @@
       "id": "volailles",
       "nom": "Volailles",
       "description": "Poulet, canard et spécialités de volaille",
-      "icon": "🐔", 
+      "icon": "🐔",
       "video_bg": "assets/videos/volailles-grillees.mp4",
       "elements": [
         {
@@ -517,7 +636,9 @@
           "type": "legume",
           "origine": "Plat national congolais",
           "chef_special": true,
-          "dietary": ["vegetarien"],
+          "dietary": [
+            "vegetarien"
+          ],
           "image": "assets/images/pondu.jpeg"
         },
         {
@@ -526,7 +647,9 @@
           "description": "Légumes verts traditionnels, feuilles locales",
           "type": "legume",
           "origine": "Tradition villageoise",
-          "dietary": ["vegetarien"],
+          "dietary": [
+            "vegetarien"
+          ],
           "image": "assets/images/fum-bwa.jpeg"
         },
         {
@@ -535,16 +658,20 @@
           "description": "Haricots verts frais sautés à l'ail",
           "type": "legume",
           "origine": "Légume classique",
-          "dietary": ["vegetarien"],
+          "dietary": [
+            "vegetarien"
+          ],
           "image": "assets/images/haricots-verts.jpeg"
         },
         {
           "id": "aubergines-vertes",
           "nom": "Aubergines Vertes (Nyanya/Solo)",
           "description": "Aubergines locales mijotées, sauce traditionnelle",
-          "type": "legume", 
+          "type": "legume",
           "origine": "Légume local congolais",
-          "dietary": ["vegetarien"],
+          "dietary": [
+            "vegetarien"
+          ],
           "image": "assets/images/aubergines-vertes.jpeg"
         },
         {
@@ -553,7 +680,9 @@
           "description": "Mélange de légumes méditerranéens mijotés",
           "type": "legume",
           "origine": "Cuisine française",
-          "dietary": ["vegetarien"],
+          "dietary": [
+            "vegetarien"
+          ],
           "image": "assets/images/ratatouille.jpeg"
         },
         {
@@ -562,7 +691,9 @@
           "description": "Épinards frais sautés aux oignons",
           "type": "legume",
           "origine": "Légume santé",
-          "dietary": ["vegetarien"],
+          "dietary": [
+            "vegetarien"
+          ],
           "image": "assets/images/epinards.jpeg"
         },
         {
@@ -571,7 +702,9 @@
           "description": "Champignons frais sautés aux herbes",
           "type": "legume",
           "origine": "Accompagnement raffiné",
-          "dietary": ["vegetarien"],
+          "dietary": [
+            "vegetarien"
+          ],
           "image": "assets/images/champignons.jpeg"
         },
         {
@@ -580,7 +713,9 @@
           "description": "Mélange coloré de petits pois et carottes",
           "type": "legume",
           "origine": "Classique français",
-          "dietary": ["vegetarien"],
+          "dietary": [
+            "vegetarien"
+          ],
           "image": "assets/images/petits-pois-carottes.jpeg"
         },
         {
@@ -589,7 +724,9 @@
           "description": "Légume-feuille traditionnel congolais",
           "type": "legume",
           "origine": "Tradition congolaise",
-          "dietary": ["vegetarien"],
+          "dietary": [
+            "vegetarien"
+          ],
           "image": "assets/images/misili.jpeg"
         },
         {
@@ -598,7 +735,9 @@
           "description": "Fruit/légume local, préparation traditionnelle",
           "type": "legume",
           "origine": "Spécialité locale Congo",
-          "dietary": ["vegetarien"],
+          "dietary": [
+            "vegetarien"
+          ],
           "image": "assets/images/safu.jpeg"
         },
         {
@@ -607,7 +746,9 @@
           "description": "Feuilles de courge, pâte d'arachide, recette ancestrale",
           "type": "legume",
           "origine": "Tradition culinaire congolaise",
-          "dietary": ["vegetarien"],
+          "dietary": [
+            "vegetarien"
+          ],
           "image": "assets/images/feuille-courge.jpeg"
         },
         {
@@ -616,7 +757,9 @@
           "description": "Légume visqueux traditionnel, sauce onctueuse",
           "type": "legume",
           "origine": "Plat traditionnel congolais",
-          "dietary": ["vegetarien"],
+          "dietary": [
+            "vegetarien"
+          ],
           "image": "assets/images/dongo-dongo.jpeg"
         },
         {
@@ -633,7 +776,9 @@
           "description": "Légume-feuille congolais, préparation authentique",
           "type": "legume",
           "origine": "Tradition congolaise",
-          "dietary": ["vegetarien"],
+          "dietary": [
+            "vegetarien"
+          ],
           "image": "assets/images/mbika.jpeg"
         }
       ]
@@ -651,7 +796,10 @@
           "description": "Riz parfumé cuit à la vapeur",
           "type": "accompagnement",
           "origine": "Classique universel",
-          "dietary": ["vegetarien", "sans_gluten"],
+          "dietary": [
+            "vegetarien",
+            "sans_gluten"
+          ],
           "image": "assets/images/riz-blanc.jpeg"
         },
         {
@@ -660,7 +808,9 @@
           "description": "Riz sauté aux légumes et œufs",
           "type": "accompagnement",
           "origine": "Cuisine asiatique",
-          "dietary": ["vegetarien"],
+          "dietary": [
+            "vegetarien"
+          ],
           "image": "assets/images/riz-cantonais.jpeg"
         },
         {
@@ -669,7 +819,10 @@
           "description": "Riz blanc aux herbes fraîches",
           "type": "accompagnement",
           "origine": "Cuisine française",
-          "dietary": ["vegetarien", "sans_gluten"],
+          "dietary": [
+            "vegetarien",
+            "sans_gluten"
+          ],
           "image": "assets/images/riz-persille.jpeg"
         },
         {
@@ -679,7 +832,10 @@
           "type": "accompagnement",
           "origine": "Tradition congolaise ancestrale",
           "chef_special": true,
-          "dietary": ["vegetarien", "sans_gluten"],
+          "dietary": [
+            "vegetarien",
+            "sans_gluten"
+          ],
           "image": "assets/images/fufu.jpeg"
         },
         {
@@ -688,7 +844,10 @@
           "description": "Pâte de maïs traditionnelle congolaise",
           "type": "accompagnement",
           "origine": "Tradition congolaise",
-          "dietary": ["vegetarien", "sans_gluten"],
+          "dietary": [
+            "vegetarien",
+            "sans_gluten"
+          ],
           "image": "assets/images/lituma.jpeg"
         },
         {
@@ -697,7 +856,9 @@
           "description": "Pommes de terre fondantes au beurre frais",
           "type": "accompagnement",
           "origine": "Classique français",
-          "dietary": ["vegetarien"],
+          "dietary": [
+            "vegetarien"
+          ],
           "image": "assets/images/pommes-terre-beurre.jpeg"
         },
         {
@@ -706,7 +867,10 @@
           "description": "Bananes plantain, préparation traditionnelle congolaise",
           "type": "accompagnement",
           "origine": "Tradition congolaise",
-          "dietary": ["vegetarien", "sans_gluten"],
+          "dietary": [
+            "vegetarien",
+            "sans_gluten"
+          ],
           "image": "assets/images/makemba.jpeg"
         },
         {
@@ -715,7 +879,9 @@
           "description": "Pommes de terre frites, croustillantes et dorées",
           "type": "accompagnement",
           "origine": "Classique international",
-          "dietary": ["vegetarien"],
+          "dietary": [
+            "vegetarien"
+          ],
           "image": "assets/images/frites.jpeg"
         },
         {
@@ -724,7 +890,10 @@
           "description": "Tubercule local, préparation traditionnelle congolaise",
           "type": "accompagnement",
           "origine": "Spécialité locale Congo",
-          "dietary": ["vegetarien", "sans_gluten"],
+          "dietary": [
+            "vegetarien",
+            "sans_gluten"
+          ],
           "image": "assets/images/bisamunyu.jpeg"
         },
         {
@@ -733,7 +902,10 @@
           "description": "Patates douces cuites, naturellement sucrées",
           "type": "accompagnement",
           "origine": "Légume traditionnel",
-          "dietary": ["vegetarien", "sans_gluten"],
+          "dietary": [
+            "vegetarien",
+            "sans_gluten"
+          ],
           "image": "assets/images/patate-douce.jpeg"
         },
         {
@@ -742,7 +914,10 @@
           "description": "Manioc frais bouilli, base alimentaire congolaise",
           "type": "accompagnement",
           "origine": "Aliment de base congolais",
-          "dietary": ["vegetarien", "sans_gluten"],
+          "dietary": [
+            "vegetarien",
+            "sans_gluten"
+          ],
           "image": "assets/images/manioc-frais.jpeg"
         }
       ]
@@ -760,7 +935,11 @@
           "description": "Sélection quotidienne des meilleurs fruits locaux et importés",
           "type": "fruit",
           "origine": "Fraîcheur garantie",
-          "dietary": ["vegetarien", "vegan", "sans_gluten"],
+          "dietary": [
+            "vegetarien",
+            "vegan",
+            "sans_gluten"
+          ],
           "image": "assets/images/plateau-fruits.jpeg"
         },
         {
@@ -769,7 +948,11 @@
           "description": "Ananas, mangue, papaye, banane, fruit de la passion",
           "type": "fruit",
           "origine": "Tropiques africains",
-          "dietary": ["vegetarien", "vegan", "sans_gluten"],
+          "dietary": [
+            "vegetarien",
+            "vegan",
+            "sans_gluten"
+          ],
           "image": "assets/images/fruits-tropicaux.jpeg"
         }
       ]

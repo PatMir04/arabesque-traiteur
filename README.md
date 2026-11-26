@@ -37,8 +37,11 @@ Créatrice d’Arabesque Traiteur, elle allie inspiration africaine et gastronom
 
 Notre concept : **vous composez votre menu en fonction de votre budget**.
 
-- **Formule 10 $** → Choisissez **5 éléments** du menu  
-- **Formule 8 $** → Choisissez **4 éléments** du menu  
+Prix par personne selon le nombre d'invités et de variétés de plats (crudités, fruits, présentation, service du buffet et matériel inclus) :
+
+- **1 à 50 invités** : Essentielle 30 $ (14 variétés) · Optimale 35 $ (18) · Premium 40 $ (20) · Excellence 45 $ (22)
+- **51 à 99 invités** : Essentielle 25 $ (14) · Optimale 30 $ (18) · Premium 35 $ (20) · Excellence 40 $ (22)
+- **100 invités et plus** : Essentielle 20 $ (14) · Optimale 25 $ (18) · Premium 30 $ (20) · Excellence 35 $ (22) · VIP 40 $ (24)
 - **Formules sur mesure** pour mariages, réceptions VIP et galas
 
 📂 Les éléments du menu sont définis dans [`data/menu.json`](./data/menu.json).
