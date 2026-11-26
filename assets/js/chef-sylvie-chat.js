@@ -1,4 +1,4 @@
-/* Chef Sylvie — assistante virtuelle d'Arabesque Traiteur.
+/* Cheffe Sylvie — assistante virtuelle d'Arabesque Traiteur.
  * Widget autonome : bouton flottant + panneau de discussion.
  * Les réponses viennent du worker arabesque-chat (base de connaissances du site).
  * En cas d'échec ou de réponse inconnue, le widget oriente vers WhatsApp et le
@@ -51,16 +51,16 @@ right:calc(14px + env(safe-area-inset-right));bottom:calc(14px + env(safe-area-i
   var btn = document.createElement('button');
   btn.className = 'cs-btn';
   btn.type = 'button';
-  btn.setAttribute('aria-label', 'Discuter avec Chef Sylvie, assistante virtuelle');
-  btn.innerHTML = '<span aria-hidden="true">💬</span><span class="cs-btn-label">Chef Sylvie</span>';
+  btn.setAttribute('aria-label', 'Discuter avec Cheffe Sylvie, assistante virtuelle');
+  btn.innerHTML = '<span aria-hidden="true">💬</span><span class="cs-btn-label">Cheffe Sylvie</span>';
 
   var panel = document.createElement('div');
   panel.className = 'cs-panel';
   panel.setAttribute('role', 'dialog');
-  panel.setAttribute('aria-label', 'Discussion avec Chef Sylvie');
+  panel.setAttribute('aria-label', 'Discussion avec Cheffe Sylvie');
   panel.innerHTML =
     '<div class="cs-head"><div class="cs-avatar" aria-hidden="true">👩🏾‍🍳</div>' +
-    '<div><h3>Chef Sylvie</h3><p>Assistante virtuelle · Arabesque Traiteur</p></div>' +
+    '<div><h3>Cheffe Sylvie</h3><p>Assistante virtuelle · Arabesque Traiteur</p></div>' +
     '<button class="cs-close" type="button" aria-label="Fermer">×</button></div>' +
     '<div class="cs-body"></div>' +
     '<div class="cs-chips">' +
@@ -110,7 +110,7 @@ right:calc(14px + env(safe-area-inset-right));bottom:calc(14px + env(safe-area-i
     if (!q) return;
     addMsg(q, 'user');
     input.value = '';
-    var typing = addMsg('Chef Sylvie écrit…', 'bot');
+    var typing = addMsg('Cheffe Sylvie écrit…', 'bot');
     typing.classList.add('cs-typing');
     fetch(WORKER_URL, {
       method: 'POST',
@@ -134,7 +134,7 @@ right:calc(14px + env(safe-area-inset-right));bottom:calc(14px + env(safe-area-i
     panel.classList.toggle('open', open);
     if (open && !greeted) {
       greeted = true;
-      addMsg("Bonjour et bienvenue chez Arabesque Traiteur ! Je suis Chef Sylvie, votre assistante virtuelle. " +
+      addMsg("Bonjour et bienvenue chez Arabesque Traiteur ! Je suis Cheffe Sylvie, votre assistante virtuelle. " +
         "Je peux vous parler de nos plats congolais, de nos formules et de leurs prix, ou vous aider à préparer votre devis. Que puis-je faire pour vous ?", 'bot');
     }
     if (open) input.focus();
