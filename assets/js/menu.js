@@ -251,6 +251,13 @@
     data = createFallbackData();
   }
 
+  // Normalize dish limits: menu.json uses the string "Selon choix" for unlimited
+  // formules — only a positive number is a real limit, anything else becomes null.
+  data.formules.forEach(f => {
+    const n = parseInt(f.nombre_repas);
+    f.nombre_repas = (Number.isFinite(n) && n > 0) ? n : null;
+  });
+
   // Initialiser avec la première formule
   currentFormule = data.formules[0];
 
@@ -349,6 +356,7 @@
         wrapper.querySelector('.text-3xl').classList.remove('text-gray-700');
         
         currentFormule = formule; 
+         radio.checked = true;
         enforceLimit(); 
         updateUI();
         
@@ -849,23 +857,9 @@
           prix: quoteData.formule.prix
         });
         
-        // Feedback utilisateur avec détails
-        const summaryMessage = `
-✅ Menu configuré avec succès !
-
-📋 Récapitulatif :
-• ${selected.size} plat${selected.size > 1 ? 's' : ''} sélectionné${selected.size > 1 ? 's' : ''}
-• ${currentFormule.nom} (${currentFormule.prix}$ par personne)
-• ${currentFormule.nombre_repas ? `${currentFormule.nombre_repas} plats maximum` : 'Choix illimité'}
-
-Vous allez être redirigé vers le formulaire de devis qui sera automatiquement pré-rempli avec votre sélection.
-
-Continuer ?`;
-        
-        if (confirm(summaryMessage)) {
-          // Redirection avec smooth scroll vers formulaire
-          window.location.href = 'contact.html#formulaire-devis';
-        }
+        // Direct redirect — the selection summary is already visible on this page,
+        // and a confirm() dialog can be silently blocked by some browsers.
+        window.location.href = 'contact.html#formulaire-devis';
         
       } catch (error) {
         console.error('❌ Erreur de sauvegarde :', error);
