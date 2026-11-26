@@ -245,7 +245,7 @@ right:calc(14px + env(safe-area-inset-right));bottom:calc(14px + env(safe-area-i
     if (open && !greeted) {
       greeted = true;
       addMsg("Bonjour et bienvenue chez Arabesque Traiteur ! Je suis Cheffe Sylvie, votre assistante virtuelle. " +
-        "Je peux vous parler de nos plats congolais, de nos formules et de leurs prix, ou vous aider à préparer votre devis. Que puis-je faire pour vous ?", 'bot', true);
+        "Je peux vous parler de nos plats congolais, de nos formules et de leurs prix, ou vous aider à préparer votre devis. Je peux aussi vous saluer en lingala, swahili, kikongo et tshiluba. Que puis-je faire pour vous ?", 'bot', true);
     }
     if (open) input.focus();
   }
