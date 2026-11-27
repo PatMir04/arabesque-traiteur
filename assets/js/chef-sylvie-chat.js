@@ -48,11 +48,14 @@ width:42px;height:42px;border-radius:50%;font-size:17px;cursor:pointer;flex:none
 .cs-wa:hover{background:#1fb857}\
 .cs-est{align-self:stretch;background:#fff;border:1px solid #d4af37;border-radius:14px;padding:12px;display:flex;flex-direction:column;gap:8px}\
 .cs-est label{font-size:12.5px;font-weight:600;color:#6b5200;display:flex;flex-direction:column;gap:3px}\
-.cs-dishes{background:#fffdf4;border:1px solid #e7d48a;border-radius:14px;padding:12px 14px;margin:0 14px 10px;max-height:300px;overflow-y:auto}\
-.cs-dish-cat{font-weight:700;color:#6b5200;font-size:13px;margin:10px 0 6px}\
+.cs-dishes{flex:0 0 auto;align-self:stretch;height:min(400px,58vh);display:flex;flex-direction:column;background:#fffdf6;border:2px solid #d4af37;border-radius:14px;box-shadow:0 4px 14px rgba(90,66,0,.18);overflow:hidden}\
+.cs-dishes-head{background:#2b2103;color:#f3d27a;font-weight:700;font-size:13.5px;padding:10px 14px;flex:0 0 auto}\
+.cs-dishes-scroll{overflow-y:auto;flex:1;padding:10px 12px}\
+.cs-dish-cat{position:sticky;top:-10px;background:#3a2c05;color:#ffd968;font-weight:700;font-size:13.5px;padding:7px 10px;border-radius:8px;margin:12px 0 8px;z-index:1}\
 .cs-dish-cat:first-child{margin-top:0}\
-.cs-dish-btn{display:inline-block;background:#fff;border:1px solid #d4af37;color:#5c4300;border-radius:999px;padding:5px 10px;font-size:12.5px;margin:0 5px 6px 0;cursor:pointer;font-family:inherit}\
+.cs-dish-btn{display:inline-block;background:#fff;border:1.5px solid #b8912a;color:#4a3500;font-weight:600;border-radius:999px;padding:7px 12px;font-size:13px;margin:0 5px 7px 0;cursor:pointer;font-family:inherit;box-shadow:0 1px 3px rgba(90,66,0,.20)}\
 .cs-dish-btn:hover{background:#f7ecc9}\
+.cs-dishes-hint{flex:0 0 auto;text-align:center;font-size:12px;font-weight:700;color:#6b5200;background:#fdf3d0;padding:7px;border-top:1px solid #e7d48a;transition:opacity .3s}\
 .cs-est select,.cs-est input{border:1px solid #d8c88f;border-radius:8px;padding:8px;font-size:14px;font-family:inherit;background:#fffdf7}\
 .cs-est button{background:linear-gradient(135deg,#d4af37,#b8860b);border:none;color:#1a1a1a;font-weight:700;border-radius:999px;padding:9px;font-size:14px;cursor:pointer;font-family:inherit}\
 .cs-cta{align-self:flex-start;background:#2b2118;color:#f5e9c9 !important;text-decoration:none !important;padding:9px 14px;border-radius:999px;font-weight:700;font-size:13.5px}\
@@ -159,30 +162,45 @@ right:calc(14px + env(safe-area-inset-right));bottom:calc(14px + env(safe-area-i
     addMsg("Voici la liste complète de nos plats, par catégorie. Touchez un plat et je vous le présente en détail 👇", 'bot', true);
     var card = document.createElement('div');
     card.className = 'cs-dishes';
-    card.textContent = 'Chargement des plats…';
+    var head = document.createElement('div');
+    head.className = 'cs-dishes-head';
+    head.textContent = '🍽️ Nos 62 plats — touchez un plat pour le découvrir';
+    var scroll = document.createElement('div');
+    scroll.className = 'cs-dishes-scroll';
+    scroll.textContent = 'Chargement des plats…';
+    var hint = document.createElement('div');
+    hint.className = 'cs-dishes-hint';
+    hint.textContent = '▼ Faites défiler pour voir les 62 plats ▼';
+    scroll.addEventListener('scroll', function () { hint.style.opacity = scroll.scrollTop > 10 ? '0' : '1'; });
+    card.appendChild(head);
+    card.appendChild(scroll);
+    card.appendChild(hint);
     body.appendChild(card);
     body.scrollTop = body.scrollHeight;
     function render(data) {
-      card.innerHTML = '';
+      scroll.innerHTML = '';
+      var total = 0;
+      (data.categories || []).forEach(function (cat) { total += (cat.elements || []).length; });
+      head.textContent = '🍽️ Nos ' + total + ' plats — touchez un plat pour le découvrir';
       (data.categories || []).forEach(function (cat) {
         var h = document.createElement('div');
         h.className = 'cs-dish-cat';
         h.textContent = cat.nom;
-        card.appendChild(h);
+        scroll.appendChild(h);
         (cat.elements || []).forEach(function (el) {
           var b = document.createElement('button');
           b.type = 'button';
           b.className = 'cs-dish-btn';
           b.textContent = el.nom;
           b.addEventListener('click', function () { ask('Parle-moi de ce plat : ' + el.nom); });
-          card.appendChild(b);
+          scroll.appendChild(b);
         });
       });
       body.scrollTop = body.scrollHeight;
     }
     fetch('data/menu.json').then(function (r) { return r.json(); }).then(render).catch(function () {
       fetch('https://arabesquetraiteur.com/data/menu.json').then(function (r) { return r.json(); }).then(render).catch(function () {
-        card.textContent = 'La liste ne charge pas ici — retrouvez tous nos plats sur la page Menu.';
+        scroll.textContent = 'La liste ne charge pas ici — retrouvez tous nos plats sur la page Menu.';
       });
     });
   }
